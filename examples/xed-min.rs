@@ -43,9 +43,8 @@ fn main() -> Result<()> {
             "{} {}",
             i,
             match xedd.decode(&itext[..i]) {
-                Ok(_) => Errno::None,
+                Ok(_) => Errno::NONE,
                 Err(Error::Errno(err)) => err,
-                _ => unreachable!(),
             }
         )
     }

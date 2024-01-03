@@ -41,9 +41,9 @@ impl Inst {
     pub fn decode<T: AsRef<[u8]>>(&mut self, bytes: T) -> Result<()> {
         let b = bytes.as_ref();
 
-        let errno = Errno::try_from(unsafe {
+        let errno = Errno::from(unsafe {
             ffi::xed_decode(&mut self.0 as *mut _, b.as_ptr(), b.len() as u32)
-        })?;
+        });
 
         if errno.is_none() {
             Ok(())
