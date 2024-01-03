@@ -83,14 +83,6 @@ impl Error {
     pub const BAD_REG_MATCH: Error = Error(ffi::XED_ERROR_BAD_REG_MATCH);
 }
 
-impl Error {
-    pub fn is_none(self) -> bool {
-        self == Self::NONE
-    }
-}
-
-impl std::error::Error for Error {}
-
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.write_str(unsafe {

@@ -1,5 +1,23 @@
+use lazy_static::lazy_static;
+
+use crate::ffi;
+
 mod attribute;
 pub use self::attribute::*;
+
+impl Attribute {
+    pub fn tables() -> &'static [Attribute] {
+        &*TABLE
+    }
+}
+
+lazy_static! {
+    static ref TABLE: Vec<Attribute> = unsafe {
+        (0..ffi::xed_attribute_max())
+            .map(|i| ffi::xed_attribute(i).into())
+            .collect()
+    };
+}
 
 mod category;
 pub use self::category::*;
@@ -11,7 +29,15 @@ mod cpuid_bit;
 pub use self::cpuid_bit::*;
 
 mod error;
-pub use self::error::*;
+pub use self::error::Error as Errno;
+
+impl Errno {
+    pub fn is_none(self) -> bool {
+        self == Self::NONE
+    }
+}
+
+impl std::error::Error for Errno {}
 
 mod exception;
 pub use self::exception::*;
@@ -60,6 +86,12 @@ pub use self::operand_width::*;
 
 mod operand;
 pub use self::operand::*;
+
+impl Operand {
+    pub fn is_register(&self) -> bool {
+        unsafe { ffi::xed_operand_is_register((*self).into()) != 0 }
+    }
+}
 
 mod reg_class;
 pub use self::reg_class::*;
