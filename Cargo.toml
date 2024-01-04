@@ -20,6 +20,7 @@ xed-sys = { version = "0.4", path = "../xed-sys" }
 anyhow = "1"
 array-concat = "0.5"
 clap = { version = "4.4", features = ["derive"] }
+hex = "0.4"
 
 [build-dependencies]
 anyhow = "1"
@@ -29,4 +30,5 @@ name = "xed-min"
 required-features = ["clap"]
 
 [[example]]
-name = "xed-tables"
+name = "xed-ex1"
+required-features = ["clap"]

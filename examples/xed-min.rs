@@ -6,7 +6,7 @@ use clap::Parser;
 
 use xed::{tables, AddressWidth, DecodedInst, Errno, Error, MachineMode};
 
-#[derive(Parser, Debug)]
+#[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
 struct Opts {
     /// Machine mode

@@ -1,6 +1,6 @@
 use lazy_static::lazy_static;
 
-use crate::ffi;
+use crate::{enum_properties, ffi};
 
 mod attribute;
 pub use self::attribute::*;
@@ -54,6 +54,13 @@ pub use self::flag::*;
 mod iclass;
 pub use self::iclass::*;
 
+impl Iclass {
+    enum_properties! {
+        iform_max: u32 { xed_iform_max_per_iclass }
+        iform_first: u32 { xed_iform_first_per_iclass }
+    }
+}
+
 mod iform;
 pub use self::iform::*;
 
@@ -85,11 +92,11 @@ mod operand_width;
 pub use self::operand_width::*;
 
 mod operand;
-pub use self::operand::*;
+pub use self::operand::Operand as Op;
 
-impl Operand {
-    pub fn is_register(&self) -> bool {
-        unsafe { ffi::xed_operand_is_register((*self).into()) != 0 }
+impl Op {
+    enum_properties! {
+        is_register: bool { xed_operand_is_register }
     }
 }
 
@@ -97,7 +104,36 @@ mod reg_class;
 pub use self::reg_class::*;
 
 mod reg;
-pub use self::reg::*;
+pub use self::reg::Reg;
+
+impl Reg {
+    enum_properties! {
+        /// Returns the register class of the given input register.
+        class: RegClass? { xed_reg_class }
+
+        /// Returns the specific width GPR reg class
+        gpr_class: RegClass? { xed_gpr_reg_class }
+
+        /// Returns the largest enclosing register for any kind of register
+        ///
+        /// This is mostly useful for GPRs. (64b mode assumed)
+        largest_enclosing_register: Reg { xed_get_largest_enclosing_register }
+
+        /// Returns the largest enclosing register for any kind of register
+        ///
+        /// This is mostly useful for GPRs in 32b mode.
+        largest_enclosing_register32: Reg { xed_get_largest_enclosing_register32 }
+
+        /// Returns the width, in bits, of the named register. 32b mode
+        width_bits: u32 { xed_get_register_width_bits }
+
+        /// Returns the width, in bits, of the named register. 64b mode
+        width_bits64: u32 { xed_get_register_width_bits64 }
+    }
+}
 
 mod syntax;
 pub use self::syntax::*;
+
+mod operand_element_type;
+pub use self::operand_element_type::*;

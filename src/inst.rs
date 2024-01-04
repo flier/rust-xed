@@ -2,7 +2,11 @@ use std::{mem, slice};
 
 use lazy_static::lazy_static;
 
-use crate::{ffi, Attribute, Category, Extension, Iclass, Iform, IsaSet, Operand};
+use crate::{
+    ffi, properties,
+    raw::{AsMutPtr, AsPtr},
+    Attribute, Category, Exception, Extension, Iclass, Iform, IsaSet, Operand,
+};
 
 /// constant information about a decoded instruction form,
 /// including the pointer to the constant operand properties `Operand` for this instruction form.
@@ -10,55 +14,54 @@ use crate::{ffi, Attribute, Category, Extension, Iclass, Iform, IsaSet, Operand}
 #[derive(Clone, Debug)]
 pub struct Inst(ffi::xed_inst_t);
 
+impl AsPtr for Inst {
+    type CType = ffi::xed_inst_t;
+
+    fn as_ptr(&self) -> *const Self::CType {
+        &self.0 as *const _
+    }
+}
+
+impl AsMutPtr for Inst {
+    fn as_mut_ptr(&mut self) -> *mut Self::CType {
+        &mut self.0 as *mut _
+    }
+}
+
 impl Inst {
+    properties! {
+        iform: Iform { xed_inst_iform_enum }
+        iclass: Iclass { xed_inst_iclass }
+        category: Category { xed_inst_category }
+        extension: Extension { xed_inst_extension }
+        isa_set: IsaSet { xed_inst_isa_set }
+
+        /// Return #xed_exception_enum_t if present for the specified instruction.
+        ///
+        /// This is currently only used for SSE and AVX instructions.
+        exception: Exception? { xed_inst_exception }
+    }
+
     pub fn tables() -> &'static [Inst] {
         &*TABLE
     }
 
-    fn as_ptr(&self) -> *const ffi::xed_inst_t {
-        &self.0 as *const _
-    }
-
-    pub fn iclass(&self) -> Iclass {
-        unsafe { ffi::xed_inst_iclass(self.as_ptr()) }.into()
-    }
-
-    pub fn iform(&self) -> Iform {
-        unsafe { ffi::xed_inst_iform_enum(self.as_ptr()) }.into()
-    }
-
-    pub fn category(&self) -> Category {
-        unsafe { ffi::xed_inst_category(self.as_ptr()) }.into()
-    }
-
-    pub fn extension(&self) -> Extension {
-        unsafe { ffi::xed_inst_extension(self.as_ptr()) }.into()
-    }
-
-    pub fn isa_set(&self) -> IsaSet {
-        unsafe { ffi::xed_inst_isa_set(self.as_ptr()) }.into()
-    }
-
-    pub fn attrs(&self) -> Vec<Attribute> {
+    pub fn attrs<'a>(&'a self) -> impl Iterator<Item = Attribute> + 'a {
         Attribute::tables()
             .iter()
             .filter(|&&attr| unsafe {
                 ffi::xed_inst_get_attribute(self.as_ptr(), attr.into()) != 0
             })
             .cloned()
-            .collect()
     }
 
-    pub fn operands(&self) -> Vec<&Operand> {
+    pub fn operands(&self) -> impl Iterator<Item = &Operand> {
         unsafe {
-            (0..ffi::xed_inst_noperands(self.as_ptr()))
-                .map(|i| {
-                    ffi::xed_inst_operand(self.as_ptr(), i)
-                        .cast::<Operand>()
-                        .as_ref()
-                        .unwrap()
-                })
-                .collect()
+            (0..ffi::xed_inst_noperands(self.as_ptr())).flat_map(|i| {
+                ffi::xed_inst_operand(self.as_ptr(), i)
+                    .cast::<Operand>()
+                    .as_ref()
+            })
         }
     }
 }
