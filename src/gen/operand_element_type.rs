@@ -15,38 +15,43 @@ use crate::ffi;
 pub struct OperandElementType(ffi::xed_operand_element_type_enum_t);
 
 impl OperandElementType {
-    
-    pub const INVALID : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_INVALID);
+    pub const INVALID: OperandElementType =
+        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_INVALID);
 
     /// Unsigned integer
-    pub const UINT : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_UINT);
+    pub const UINT: OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_UINT);
 
     /// Signed integer
-    pub const INT : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_INT);
+    pub const INT: OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_INT);
 
     /// 32b FP single precision
-    pub const SINGLE : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_SINGLE);
+    pub const SINGLE: OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_SINGLE);
 
     /// 64b FP double precision
-    pub const DOUBLE : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_DOUBLE);
+    pub const DOUBLE: OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_DOUBLE);
 
     /// 80b FP x87
-    pub const LONGDOUBLE : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_LONGDOUBLE);
+    pub const LONGDOUBLE: OperandElementType =
+        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_LONGDOUBLE);
 
     /// 80b decimal BCD
-    pub const LONGBCD : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_LONGBCD);
+    pub const LONGBCD: OperandElementType =
+        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_LONGBCD);
 
     /// a structure of various fields
-    pub const STRUCT : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_STRUCT);
+    pub const STRUCT: OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_STRUCT);
 
     /// depends on other fields in the instruction
-    pub const VARIABLE : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_VARIABLE);
+    pub const VARIABLE: OperandElementType =
+        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_VARIABLE);
 
     /// 16b floating point
-    pub const FLOAT16 : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_FLOAT16);
+    pub const FLOAT16: OperandElementType =
+        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_FLOAT16);
 
     /// bfloat16 floating point
-    pub const BFLOAT16 : OperandElementType = OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_BFLOAT16);
+    pub const BFLOAT16: OperandElementType =
+        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_BFLOAT16);
 }
 
 impl fmt::Display for OperandElementType {
@@ -65,6 +70,8 @@ impl FromStr for OperandElementType {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let s = CString::new(s)?;
 
-        Ok(OperandElementType(unsafe { ffi::str2xed_operand_element_type_enum_t(s.as_ptr()) }))
+        Ok(OperandElementType(unsafe {
+            ffi::str2xed_operand_element_type_enum_t(s.as_ptr())
+        }))
     }
 }

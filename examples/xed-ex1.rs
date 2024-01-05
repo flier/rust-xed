@@ -3,7 +3,7 @@ use std::fmt::Write;
 use anyhow::Result;
 use clap::Parser;
 
-use xed::{tables, AddressWidth, Chip, DecodedInst, MachineMode, Op, Operand, SignExtend};
+use xed::{tables, AddressWidth, Attribute, Chip, DecodedInst, MachineMode, Op, SignExtend};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -99,25 +99,25 @@ fn print_operands(xedd: &DecodedInst) -> Result<()> {
 
         print!("{:<21}", buf);
 
-        let oi = xedd.operand(i as u32);
+        if let Some(oi) = xedd.operand(i as u32) {
+            print!(
+                "{:<10} {:3} {:>7} ",
+                op.visibility().to_string(),
+                oi.action().to_string(),
+                op.width().to_string()
+            );
 
-        print!(
-            "{:<10} {:3} {:>7} ",
-            op.visibility().to_string(),
-            oi.action().to_string(),
-            op.width().to_string()
-        );
+            let bits = oi.length_bits();
 
-        let bits = oi.length_bits();
-
-        print!("  {:<3}", bits);
-        /* rounding, bits might not be a multiple of 8 */
-        print!(" {:^4}", (bits + 7) / 8);
-        print!("   {:2}", oi.elements());
-        print!("    {:3}", oi.element_size_bits());
-        print!("  {:>10}", oi.element_type().to_string());
-        if let Some(clz) = xedd.reg(name).class() {
-            print!(" {:>10}", clz.to_string());
+            print!("  {:<3}", bits);
+            /* rounding, bits might not be a multiple of 8 */
+            print!(" {:^4}", (bits + 7) / 8);
+            print!("   {:2}", oi.elements());
+            print!("    {:3}", oi.element_size_bits());
+            print!("  {:>10}", oi.element_type().to_string());
+            if let Some(clz) = xedd.reg(name).class() {
+                print!(" {:>10}", clz.to_string());
+            }
         }
 
         println!()
@@ -180,10 +180,54 @@ fn print_memops(xedd: &DecodedInst) -> Result<()> {
 }
 
 fn print_flags(xedd: &DecodedInst) -> Result<()> {
+    if xedd.uses_rflags() {
+        if let Some(rfi) = xedd.rflags_info() {
+            println!("FLAGS:");
+
+            if rfi.reads_flags() {
+                print!("   reads-rflags ");
+            } else if rfi.writes_flags() {
+                if rfi.may_write() {
+                    print!("  may-write-rflags ");
+                }
+            }
+
+            for action in rfi.actions() {
+                print!("{} ", action);
+            }
+            println!();
+
+            // or as as bit-union
+            let read_set = rfi.read_set();
+            let written_set = rfi.written_set();
+            let undefined_set = rfi.undefined_set();
+
+            println!("       read: {:30} mask=0x{:x}", read_set, read_set.mask());
+            println!(
+                "    written: {:30} mask=0x{:x}",
+                written_set,
+                written_set.mask()
+            );
+            println!(
+                "  undefined: {:30} mask=0x{:x}",
+                undefined_set,
+                undefined_set.mask()
+            );
+        }
+    }
+
     Ok(())
 }
 
 fn print_reads_zf_flag(xedd: &DecodedInst) -> Result<()> {
+    if xedd.uses_rflags() {
+        if let Some(rfi) = xedd.rflags_info() {
+            if rfi.read_set().zf() != 0 {
+                print!("READS ZF");
+            }
+        }
+    }
+
     Ok(())
 }
 
@@ -200,6 +244,103 @@ fn print_attributes(xedd: &DecodedInst) -> Result<()> {
 }
 
 fn print_misc(xedd: &DecodedInst) -> Result<()> {
+    let ov = xedd.operands();
+    let xi = xedd.inst();
+
+    if ov.has_real_rep() {
+        let norep = xedd.iclass().rep_remove();
+
+        println!("REAL REP \tcorresponding no-rep iclass: {}", norep)
+    }
+    if ov.has_rep_prefix() {
+        println!("F3 PREFIX");
+    }
+    if ov.has_repne_prefix() {
+        println!("F2 PREFIX");
+    }
+    if ov.has_address_size_prefix() {
+        println!("67 PREFIX");
+    }
+    if ov.has_operand_size_prefix() {
+        // this 66 prefix is not part of the opcode
+        println!("66-OSZ PREFIX");
+    }
+    if ov.has_66_prefix() {
+        // this is any 66 prefix including the above
+        println!("ANY 66 PREFIX");
+    }
+    if xedd.has_attr(Attribute::RING0) {
+        println!("RING0 only");
+    }
+    if let Some(e) = xi.exception() {
+        println!("EXCEPTION TYPE: {}", e);
+    }
+    if xedd.is_broadcast() {
+        println!("BROADCAST");
+    }
+    if xedd.sse() || xedd.avx() || xedd.avx512() {
+        if xedd.avx512_maskop() {
+            println!("AVX512 KMASK-OP");
+        } else {
+            if xedd.sse() {
+                println!("SSE");
+            } else if xedd.avx() {
+                println!("AVX");
+            } else if xedd.avx512() {
+                println!("AVX512");
+            }
+
+            if xedd.has_attr(Attribute::SIMD_SCALAR) {
+                println!("SCALAR");
+            } else {
+                // vector_length_bits is only for VEX/EVEX instr.
+                // This will print 128 vl for FXSAVE and LD/ST MXCSR which is unfortunate.
+                let vl_bits = if xedd.sse() {
+                    128
+                } else {
+                    xedd.vector_length_bits()
+                };
+                println!("Vector length: {}", vl_bits);
+            }
+
+            if xedd.avx512() {
+                let vec_elements = xedd.avx512_dest_elements();
+                println!("AVX512 vector elements: {}", vec_elements);
+            }
+        }
+    }
+
+    // does not include instructions that have XED_ATTRIBUTE_MASK_AS_CONTROL.
+    // does not include vetor instructions that have k0 as a mask register.
+    if xedd.masked_vector_operation() {
+        println!("WRITE-MASKING");
+    }
+
+    let np = xedd.nprefixes();
+    if np > 0 {
+        println!("Number of legacy prefixes: {}", np);
+    }
+
+    let isa_set = xedd.isa_set();
+
+    println!("ISA SET: [{}]", isa_set);
+
+    for (i, bit) in isa_set.cpuid_bits().enumerate() {
+        println!("{}\tCPUID BIT NAME: [{}]", i, bit);
+
+        if let Some(crec) = bit.rec() {
+            println!(
+                "\tLeaf 0x{:08x}, subleaf 0x{:08x}, {}[{}]",
+                crec.leaf,
+                crec.subleaf,
+                crec.reg(),
+                crec.bit
+            );
+        } else {
+            println!("Could not find cpuid leaf information");
+        }
+    }
+
     Ok(())
 }
 

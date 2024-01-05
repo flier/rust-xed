@@ -2,6 +2,18 @@
 macro_rules! properties {
     () => {};
     (
+        $(#[$attr:meta])* $name:ident : & $ty:tt ? { $fn:ident } $($rest:tt)*
+    ) => {
+        properties!( __getter_cast_opt $(#[$attr])* $name $ty $fn );
+        properties!( $( $rest )* );
+    };
+    (
+        $(#[$attr:meta])* $name:ident : & $ty:tt { $fn:ident } $($rest:tt)*
+    ) => {
+        properties!( __getter_cast $(#[$attr])* $name $ty $fn );
+        properties!( $( $rest )* );
+    };
+    (
         $(#[$attr:meta])* $name:ident : $ty:tt ? { $fn:ident } $($rest:tt)*
     ) => {
         properties!( __getter_opt $(#[$attr])* $name $ty $fn );
@@ -22,7 +34,6 @@ macro_rules! properties {
             unsafe { ffi::$fn(self.as_ptr()) != 0 }
         }
     };
-
     (
         __getter $(#[$attr:meta])* $name:ident $ty:tt $fn:ident
     ) => {
@@ -40,6 +51,33 @@ macro_rules! properties {
             let res = unsafe { ffi::$fn(self.as_ptr()) };
 
             (res != 0).then_some(res.into())
+        }
+    };
+
+    (
+        __getter_cast $(#[$attr:meta])* $name:ident $ty:tt $fn:ident
+    ) => {
+        $(#[$attr])*
+        pub fn $name(&self) -> & $ty {
+            unsafe {
+                ffi::$fn(self.as_ptr())
+                    .cast::<$ty>()
+                    .as_ref()
+                    .unwrap()
+            }
+        }
+    };
+
+    (
+        __getter_cast_opt $(#[$attr:meta])* $name:ident $ty:tt $fn:ident
+    ) => {
+        $(#[$attr])*
+        pub fn $name(&self) -> Option<& $ty> {
+            unsafe {
+                ffi::$fn(self.as_ptr())
+                    .cast::<$ty>()
+                    .as_ref()
+            }
         }
     };
 }

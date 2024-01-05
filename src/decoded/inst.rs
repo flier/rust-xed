@@ -1,11 +1,15 @@
-use std::{mem::MaybeUninit, ops::Range};
+use std::{
+    mem::MaybeUninit,
+    ops::{Index, Range},
+    slice,
+};
 
 use crate::{
     decoded::{Operand, Operands},
     ffi, properties,
-    raw::{AsMutPtr, AsPtr},
-    AddressWidth, Category, Chip, Errno, Extension, Iclass, Iform, Inst as InstTemplate, IsaSet,
-    MachineMode, Op, Reg, Result,
+    raw::{AsMutPtr, AsPtr, ToBool},
+    AddressWidth, Attribute, Category, Chip, Errno, Extension, Iclass, Iform, Inst as InstTemplate,
+    IsaSet, MachineMode, Op, Reg, Result, SimpleFlag,
 };
 
 use super::mem::MemOperand;
@@ -17,6 +21,14 @@ pub struct Inst(ffi::xed_decoded_inst_t);
 impl Default for Inst {
     fn default() -> Self {
         Self::new()
+    }
+}
+
+impl Index<usize> for Inst {
+    type Output = u8;
+
+    fn index(&self, i: usize) -> &Self::Output {
+        unsafe { self.as_bytes().get_unchecked(i) }
     }
 }
 
@@ -36,23 +48,42 @@ impl AsMutPtr for Inst {
 
 impl Inst {
     properties! {
+        /// Return true if the instruction is valid
+        valid: bool { xed_decoded_inst_valid }
+
         // Return the user-specified `Chip` name
         chip: Chip? { xed_decoded_inst_get_input_chip }
 
-        iclass: Iclass { xed_decoded_inst_get_iclass }
         category: Category { xed_decoded_inst_get_category }
         extension: Extension { xed_decoded_inst_get_extension }
         isa_set: IsaSet { xed_decoded_inst_get_isa_set }
+        iclass: Iclass { xed_decoded_inst_get_iclass }
 
+        /// Returns true if the instruction is xacquire.
         is_xacquire: bool { xed_decoded_inst_is_xacquire }
+
+        /// Returns true if the instruction is xrelease.
         is_xrelease: bool { xed_decoded_inst_is_xrelease }
+
+        /// Returns true if the instruction has mpx prefix.
         has_mpx_prefix: bool { xed_decoded_inst_has_mpx_prefix }
 
         /// Returns the modrm byte
         modrm: u8 { xed_decoded_inst_get_modrm }
 
+        /// Returns 128, 256 or 512 for operations in the VEX, EVEX (or XOP)
+        /// encoding space and returns 0 for (most) nonvector operations.
+        ///
+        /// This usually the content of the VEX.L or EVEX.LL field, reinterpreted.
+        /// Some GPR instructions (like the BMI1/BMI2) are encoded in the VEX space
+        /// and return non-zero values from this API.
+        vector_length_bits: u32 { xed_decoded_inst_vector_length_bits }
+
         /// Returns the number of legacy prefixes.
         nprefixes: u32 { xed_decoded_inst_get_nprefixes }
+
+        /// Return the number of operands
+        noperands: u32 { xed_decoded_inst_noperands }
 
         /// The instruction uses write-masking
         masking: bool { xed_decoded_inst_masking }
@@ -109,6 +140,9 @@ impl Inst {
         signed_immediate: i32 { xed_decoded_inst_get_signed_immediate }
         second_immediate: u8 { xed_decoded_inst_get_second_immediate }
 
+        /// See the comment on xed_decoded_inst_uses_rflags().
+        rflags_info: &SimpleFlag? { xed_decoded_inst_get_rflags_info }
+
         /// This returns true if the flags are read or written.
         uses_rflags: bool { xed_decoded_inst_uses_rflags }
 
@@ -127,6 +161,18 @@ impl Inst {
 
         /// Return true for AVX512 load-op instructions using the broadcast feature,
         uses_embedded_broadcast: bool { xed_decoded_inst_uses_embedded_broadcast }
+
+        /// True for AVX512 (EVEX-encoded) SIMD and (VEX encoded) K-mask instructions
+        avx512: bool { xed_classify_avx512 }
+
+        /// True for AVX512 (VEX-encoded) K-mask operations
+        avx512_maskop: bool { xed_classify_avx512_maskop }
+
+        /// True for AVX/AVX2 SIMD VEX-encoded operations. Does not include BMI/BMI2 instructions.
+        avx: bool { xed_classify_avx }
+
+        /// True for SSE/SSE2/etc. SIMD operations.  Includes AES and PCLMULQDQ
+        sse: bool { xed_classify_sse }
     }
 
     /// Create and zero the decode structure completely.
@@ -159,6 +205,11 @@ impl Inst {
         unsafe { ffi::xed_decoded_inst_set_input_chip(self.as_mut_ptr(), chip.into()) }
     }
 
+    /// Indicate if this decoded instruction is valid for the specified `Chip`
+    pub fn valid_for_chip(&self, chip: Chip) -> bool {
+        unsafe { ffi::xed_decoded_inst_valid_for_chip(self.as_ptr(), chip.into()) }.bool()
+    }
+
     /// Return the `Inst` for this instruction.
     ///
     /// This is the route to the basic operands form information.
@@ -171,8 +222,13 @@ impl Inst {
         }
     }
 
+    /// Returns true if the attribute is defined for this instruction.
+    pub fn has_attr(&self, attr: Attribute) -> bool {
+        unsafe { ffi::xed_decoded_inst_get_attribute(self.as_ptr(), attr.into()) != 0 }
+    }
+
     /// Returns the attribute bitvector
-    pub fn attributes(&self) -> Range<u64> {
+    pub fn attrs(&self) -> Range<u64> {
         let attrs = unsafe { ffi::xed_decoded_inst_get_attributes(self.as_ptr()) };
 
         attrs.a1..attrs.a2
@@ -183,11 +239,52 @@ impl Inst {
         self.into()
     }
 
-    pub fn operand(&self, i: u32) -> Operand<&Inst> {
-        (self, i).into()
+    /// Obtain a non-constant reference to the operands
+    pub fn operands_mut(&mut self) -> Operands<&mut Inst> {
+        self.into()
     }
 
-    pub fn mem_operands<'a>(&'a self) -> impl Iterator<Item = MemOperand<&Inst>> + 'a {
+    pub fn operand(&self, i: u32) -> Option<Operand<&Inst>> {
+        if i < self.noperands() {
+            Some((self, i).into())
+        } else {
+            None
+        }
+    }
+
+    pub const fn as_bytes(&self) -> &[u8] {
+        unsafe { slice::from_raw_parts(self.0._byte_array._dec, self.0._decoded_length as usize) }
+    }
+
+    /// Read itext byte.
+    pub fn get(&self, i: u32) -> Option<u8> {
+        if i < self.length() {
+            Some(unsafe { ffi::xed_decoded_inst_get_byte(self.as_ptr(), i) })
+        } else {
+            None
+        }
+    }
+
+    /// Return a user data field for arbitrary use by the user after decoding.
+    pub fn user_data(&self) -> Option<u64> {
+        let n = unsafe { ffi::xed_decoded_inst_get_user_data(self.as_ptr() as *mut _) };
+
+        (n != 0).then_some(n)
+    }
+
+    /// Modify the user data field.
+    pub fn set_user_data(&mut self, n: u64) {
+        unsafe { ffi::xed_decoded_inst_set_user_data(self.as_mut_ptr(), n) }
+    }
+
+    /// Returns true if the instruction uses destination-masking.
+    ///
+    /// This is false for blend operations that use their mask field as a control.
+    pub fn masked_vector_operation(&self) -> bool {
+        unsafe { ffi::xed_decoded_inst_masked_vector_operation(self.as_ptr() as *mut _) }.bool()
+    }
+
+    pub fn mem_operands(&self) -> impl Iterator<Item = MemOperand<&Inst>> {
         (0..self.number_of_memory_operands()).map(move |idx| (self, idx).into())
     }
 

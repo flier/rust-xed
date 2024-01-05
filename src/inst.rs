@@ -43,10 +43,10 @@ impl Inst {
     }
 
     pub fn tables() -> &'static [Inst] {
-        &*TABLE
+        &TABLE
     }
 
-    pub fn attrs<'a>(&'a self) -> impl Iterator<Item = Attribute> + 'a {
+    pub fn attrs(&self) -> impl Iterator<Item = Attribute> + '_ {
         Attribute::tables()
             .iter()
             .filter(|&&attr| unsafe {

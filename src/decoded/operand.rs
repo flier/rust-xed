@@ -11,9 +11,6 @@ impl<I> From<(I, u32)> for Operand<I> {
 
 impl Operand<&DecodedInst> {
     indexed_properties! {
-        /// Interpret the operand action in light of AVX512 masking and zeroing/merging.
-        action: OperandAction { xed_decoded_inst_operand_action }
-
         /// Return the length in bits of the  self.idx'th operand.
         length_bits: u32 { xed_decoded_inst_operand_length_bits }
 
@@ -25,5 +22,8 @@ impl Operand<&DecodedInst> {
 
         /// Return the type of an element of type #xed_operand_element_type_enum_t (for SSE and AVX operands)
         element_type: OperandElementType { xed_decoded_inst_operand_element_type }
+
+        /// Interpret the operand action in light of AVX512 masking and zeroing/merging.
+        action: OperandAction { xed_decoded_inst_operand_action }
     }
 }
