@@ -174,6 +174,7 @@ impl Inst {
     }
 
     /// instruction with three operands
+    #[allow(clippy::too_many_arguments)]
     pub fn inst4<W, O1, O2, O3, O4>(
         &mut self,
         mode: State,
@@ -208,6 +209,7 @@ impl Inst {
     }
 
     /// instruction with five operands
+    #[allow(clippy::too_many_arguments)]
     pub fn inst5<W, O1, O2, O3, O4, O5>(
         &mut self,
         mode: State,
