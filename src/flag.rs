@@ -4,19 +4,19 @@ use std::mem::MaybeUninit;
 use std::ops::Deref;
 
 use crate::{
-    ffi, gen,
+    ffi,
     raw::{AsPtr, ToBool},
-    Flag,
+    Flag, FlagAction,
 };
 
 /// a union of flags bits
 #[repr(transparent)]
 #[derive(Clone, Debug)]
-pub struct FlagSet(ffi::xed_flag_set_t);
+pub struct Set(ffi::xed_flag_set_t);
 
-impl_as_ptr!(FlagSet(ffi::xed_flag_set_t));
+impl_as_ptr!(Set(ffi::xed_flag_set_t));
 
-impl Deref for FlagSet {
+impl Deref for Set {
     type Target = ffi::xed_flag_set_s__bindgen_ty_1;
 
     fn deref(&self) -> &Self::Target {
@@ -24,7 +24,7 @@ impl Deref for FlagSet {
     }
 }
 
-impl fmt::Display for FlagSet {
+impl fmt::Display for Set {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let mut buf = MaybeUninit::<[u8; Self::BUF_LEN]>::zeroed();
 
@@ -45,7 +45,7 @@ impl fmt::Display for FlagSet {
     }
 }
 
-impl FlagSet {
+impl Set {
     const BUF_LEN: usize = 256;
 
     properties! {
@@ -62,11 +62,11 @@ impl FlagSet {
 /// Associated with each flag field there can be one action.
 #[repr(transparent)]
 #[derive(Clone, Debug)]
-pub struct FlagAction(ffi::xed_flag_action_t);
+pub struct Action(ffi::xed_flag_action_t);
 
-impl_as_ptr!(FlagAction(ffi::xed_flag_action_t));
+impl_as_ptr!(Action(ffi::xed_flag_action_t));
 
-impl fmt::Display for FlagAction {
+impl fmt::Display for Action {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{}", self.name())?;
 
@@ -78,7 +78,7 @@ impl fmt::Display for FlagAction {
     }
 }
 
-impl FlagAction {
+impl Action {
     properties! {
         /// get the name of the flag
         name: Flag { xed_flag_action_get_flag_name }
@@ -90,14 +90,14 @@ impl FlagAction {
         write: bool { xed_flag_action_writes_flag }
     }
 
-    pub fn action(&self, i: u32) -> Option<gen::FlagAction> {
+    pub fn action(&self, i: u32) -> Option<FlagAction> {
         let action = unsafe { ffi::xed_flag_action_get_action(self.as_ptr(), i) };
 
         (action != 0).then(|| action.into())
     }
 }
 
-/// A collection of FlagAction's and unions of read and written flags
+/// A collection of Action's and unions of read and written flags
 #[repr(transparent)]
 #[derive(Clone, Debug)]
 pub struct SimpleFlag(ffi::xed_simple_flag_t);
@@ -133,13 +133,13 @@ impl SimpleFlag {
         nflags: u32 { get; }
 
         /// return union of bits for read flags
-        read_flag_set: &FlagSet { get; }
+        read_flag_set: &Set { get; }
 
         /// return union of bits for written flags
-        written_flag_set: &FlagSet { get; }
+        written_flag_set: &Set { get; }
 
         /// return union of bits for undefined flags
-        undefined_flag_set: &FlagSet { get; }
+        undefined_flag_set: &Set { get; }
 
         /// Indicates the flags are only conditionally written.
         ///
@@ -156,21 +156,21 @@ impl SimpleFlag {
         writes_flags: bool { xed_simple_flag_writes_flags }
     }
 
-    pub fn actions(&self) -> impl Iterator<Item = &FlagAction> {
+    pub fn actions(&self) -> impl Iterator<Item = &Action> {
         unsafe {
             (0..ffi::xed_simple_flag_get_nflags(self.as_ptr())).flat_map(|i| {
                 ffi::xed_simple_flag_get_flag_action(self.as_ptr(), i)
-                    .cast::<FlagAction>()
+                    .cast::<Action>()
                     .as_ref()
             })
         }
     }
 
     /// return the specific flag-action. Very detailed low level information
-    pub fn action(&self, i: u32) -> &FlagAction {
+    pub fn action(&self, i: u32) -> &Action {
         unsafe {
             ffi::xed_simple_flag_get_flag_action(self.as_ptr(), i)
-                .cast::<FlagAction>()
+                .cast::<Action>()
                 .as_ref()
                 .unwrap()
         }

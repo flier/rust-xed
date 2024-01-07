@@ -9,7 +9,7 @@ use std::{
 use derive_more::{From, Into};
 
 use crate::{
-    chip_features::ChipFeatures,
+    chip::Features,
     dec::{Operand, Operands},
     ffi, properties,
     raw::{AsMutPtr, AsPtr, ToBool},
@@ -327,7 +327,7 @@ impl Inst {
     pub fn decode_with_features<T: AsRef<[u8]>>(
         &mut self,
         bytes: T,
-        features: ChipFeatures,
+        features: Features,
     ) -> Result<()> {
         let b = bytes.as_ref();
 

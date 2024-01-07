@@ -3,7 +3,7 @@
 use anyhow::{bail, Result};
 use clap::Parser;
 
-use xed::{dec::Inst, format, tables, AddressWidth, Errno, Error, MachineMode, Syntax};
+use xed::{dec::Inst, fmt, tables, AddressWidth, Errno, Error, MachineMode, Syntax};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -42,8 +42,8 @@ impl Opts {
         )?)
     }
 
-    pub fn format_options(&self) -> format::Options {
-        let mut opts = format::Options::default();
+    pub fn format_options(&self) -> fmt::Options {
+        let mut opts = fmt::Options::default();
 
         if self.xml {
             opts.xml_output();
@@ -106,7 +106,7 @@ fn main() -> Result<()> {
     }
 
     for syntax in [Syntax::XED, Syntax::ATT, Syntax::INTEL] {
-        if let Some(code) = format::context::<()>(syntax, &xedd, None, None, None) {
+        if let Some(code) = fmt::context::<()>(syntax, &xedd, None, None, None) {
             println!("{syntax} syntax: {code}");
         } else {
             bail!("Error disassembling {syntax} syntax");

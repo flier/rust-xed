@@ -3,13 +3,13 @@ pub extern crate xed_sys as ffi;
 #[macro_use]
 mod macros;
 
-mod address;
-mod chip_features;
+mod addr;
+mod chip;
 pub mod dec;
 pub mod enc;
 mod error;
-mod flags;
-pub mod format;
+pub mod flag;
+pub mod fmt;
 mod gen;
 mod inst;
 mod machine;
@@ -19,9 +19,10 @@ mod state;
 pub mod tables;
 mod util;
 
-pub use self::address::Width as AddressWidth;
+pub use self::addr::Width as AddressWidth;
+pub use self::chip::Features as ChipFeatures;
 pub use self::error::{Error, Result};
-pub use self::flags::{FlagAction, FlagSet, SimpleFlag};
+pub use self::flag::SimpleFlag;
 pub use self::gen::*;
 pub use self::inst::Inst;
 pub use self::machine::Mode as MachineMode;

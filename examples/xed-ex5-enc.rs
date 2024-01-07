@@ -3,7 +3,7 @@ use anyhow::{anyhow, bail, Result};
 use xed::{
     dec::Inst as DecodedInst,
     enc::{disp, imm0, mem_b, mem_bd, mem_bisd, mem_gbisd, other, relbr, simm0, Inst, Request},
-    format, tables, Iclass, Op, Reg, State, Syntax,
+    fmt, tables, Iclass, Op, Reg, State, Syntax,
 };
 
 fn main() -> Result<()> {
@@ -172,7 +172,7 @@ fn main() -> Result<()> {
         xedd.reset_mode(mode);
         xedd.decode(bytes)?;
 
-        let code = format::context::<()>(Syntax::INTEL, &xedd, None, None, None)
+        let code = fmt::context::<()>(Syntax::INTEL, &xedd, None, None, None)
             .ok_or_else(|| anyhow!("DISASSEMBLY ERROR"))?;
 
         println!("\t{code}");

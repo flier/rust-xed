@@ -6,11 +6,11 @@ use crate::{ffi, impl_as_ptr, raw::AsMutPtr, Chip, IsaSet};
 
 #[repr(transparent)]
 #[derive(Clone, Debug, From, Into)]
-pub struct ChipFeatures(ffi::xed_chip_features_t);
+pub struct Features(ffi::xed_chip_features_t);
 
-impl_as_ptr!(ChipFeatures(ffi::xed_chip_features_t));
+impl_as_ptr!(Features(ffi::xed_chip_features_t));
 
-impl ChipFeatures {
+impl Features {
     pub fn modify(&mut self, isa_set: IsaSet, enable: bool) {
         unsafe {
             ffi::xed_modify_chip_features(
@@ -23,7 +23,7 @@ impl ChipFeatures {
 }
 
 impl Chip {
-    pub fn features(&self) -> ChipFeatures {
+    pub fn features(&self) -> Features {
         let mut features = MaybeUninit::zeroed();
 
         unsafe {
