@@ -1,4 +1,6 @@
 use std::{
+    ffi::CStr,
+    fmt,
     mem::MaybeUninit,
     ops::{Index, Range},
     slice,
@@ -32,6 +34,24 @@ impl Index<usize> for Inst {
 
     fn index(&self, i: usize) -> &Self::Output {
         unsafe { self.as_bytes().get_unchecked(i) }
+    }
+}
+
+impl fmt::Display for Inst {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let mut buf = MaybeUninit::<[u8; 4096]>::zeroed();
+
+        unsafe {
+            ffi::xed_decoded_inst_dump(self.as_ptr(), buf.as_mut_ptr().cast(), 4096);
+
+            let buf = buf.assume_init();
+
+            f.write_str(
+                &CStr::from_bytes_until_nul(&buf[..])
+                    .unwrap()
+                    .to_string_lossy(),
+            )
+        }
     }
 }
 

@@ -22,3 +22,8 @@ impl SignExtend for u32 {
         unsafe { ffi::xed_sign_extend_arbitrary_to_32(self, bits) }
     }
 }
+
+/// Set the verbosity level for XED
+pub fn set_verbosity(level: i32) {
+    unsafe { ffi::xed_set_verbosity(level) }
+}

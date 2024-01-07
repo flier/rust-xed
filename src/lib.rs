@@ -9,6 +9,7 @@ mod decoded;
 pub mod enc;
 mod error;
 mod flags;
+pub mod format;
 mod gen;
 mod inst;
 mod machine;
