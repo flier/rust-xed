@@ -83,10 +83,10 @@ impl FlagAction {
         invalid: bool { xed_flag_action_action_invalid }
 
         /// test to see if the specific action is a read
-        write: bool { xed_flag_action_read_action }
+        read: bool { xed_flag_action_read_action }
 
         /// test to see if a specific action is a write
-        read_action: bool { xed_flag_action_write_action }
+        write: bool { xed_flag_action_write_action }
     }
 }
 
@@ -175,9 +175,9 @@ pub use self::operand_width::*;
 mod operand;
 pub use self::operand::Operand as Op;
 
-impl Op {
-    enum_properties! {
-        is_register: bool { xed_operand_is_register }
+impl PartialOrd for Op {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        i32::from(*self).partial_cmp(&i32::from(*other))
     }
 }
 

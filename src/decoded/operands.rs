@@ -1,6 +1,10 @@
 use derive_more::From;
 
-use crate::{ffi, properties, raw::AsPtr, DecodedInst, Iclass, Reg};
+use crate::{
+    ffi, properties,
+    raw::{AsMutPtr, AsPtr},
+    DecodedInst, Iclass, Reg,
+};
 
 #[repr(transparent)]
 #[derive(Clone, Copy, Debug, From)]
@@ -14,7 +18,24 @@ impl AsPtr for Operands<&DecodedInst> {
     }
 }
 
-impl Operands<&DecodedInst> {
+impl AsPtr for Operands<&mut DecodedInst> {
+    type CType = ffi::xed_operand_values_t;
+
+    fn as_ptr(&self) -> *const Self::CType {
+        self.0.as_ptr().cast()
+    }
+}
+
+impl AsMutPtr for Operands<&mut DecodedInst> {
+    fn as_mut_ptr(&mut self) -> *mut Self::CType {
+        self.0.as_mut_ptr().cast()
+    }
+}
+
+impl<I> Operands<I>
+where
+    Self: AsPtr<CType = ffi::xed_operand_values_t>,
+{
     properties! {
         /// True if the instruction has a real REP prefix.
         ///
@@ -147,4 +168,11 @@ impl Operands<&DecodedInst> {
 
         iclass: Iclass { xed_operand_values_get_iclass }
     }
+}
+
+impl<I> Operands<I>
+where
+    Self: AsMutPtr<CType = ffi::xed_operand_values_t>,
+{
+    properties! {}
 }

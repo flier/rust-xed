@@ -3,9 +3,8 @@ use std::{mem, slice};
 use lazy_static::lazy_static;
 
 use crate::{
-    ffi, properties,
-    raw::{AsMutPtr, AsPtr},
-    Attribute, Category, Exception, Extension, Iclass, Iform, IsaSet, Operand,
+    ffi, properties, raw::AsPtr, Attribute, Category, Exception, Extension, Iclass, Iform, IsaSet,
+    Operand,
 };
 
 /// constant information about a decoded instruction form,
@@ -14,19 +13,7 @@ use crate::{
 #[derive(Clone, Debug)]
 pub struct Inst(ffi::xed_inst_t);
 
-impl AsPtr for Inst {
-    type CType = ffi::xed_inst_t;
-
-    fn as_ptr(&self) -> *const Self::CType {
-        &self.0 as *const _
-    }
-}
-
-impl AsMutPtr for Inst {
-    fn as_mut_ptr(&mut self) -> *mut Self::CType {
-        &mut self.0 as *mut _
-    }
-}
+impl_as_ptr!(Inst(ffi::xed_inst_t));
 
 impl Inst {
     properties! {

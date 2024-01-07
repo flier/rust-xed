@@ -1,18 +1,20 @@
 use std::{
+    convert::Infallible,
     ffi::{CStr, CString},
     fmt,
     str::FromStr,
 };
 
-use num_enum::{IntoPrimitive, TryFromPrimitive, TryFromPrimitiveError};
+use num_enum::{FromPrimitive, IntoPrimitive};
 
 use crate::ffi;
 
 #[repr(i32)]
-#[derive(Clone, Copy, Debug, PartialEq, Eq, IntoPrimitive, TryFromPrimitive)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, IntoPrimitive, FromPrimitive)]
 #[cfg_attr(feature = "clap", derive(clap::ValueEnum))]
 pub enum Mode {
     /// 64b operating mode
+    #[default]
     Long64 = ffi::XED_MACHINE_MODE_LONG_64,
     /// 32b protected mode
     LongCompat32 = ffi::XED_MACHINE_MODE_LONG_COMPAT_32,
@@ -39,11 +41,11 @@ impl fmt::Display for Mode {
 }
 
 impl FromStr for Mode {
-    type Err = TryFromPrimitiveError<Mode>;
+    type Err = Infallible;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let s = CString::new(s).unwrap();
 
-        Mode::try_from(unsafe { ffi::str2xed_address_width_enum_t(s.as_ptr()) })
+        Ok(unsafe { ffi::str2xed_address_width_enum_t(s.as_ptr()) }.into())
     }
 }

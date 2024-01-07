@@ -1,4 +1,4 @@
-use crate::{ffi, indexed_properties, raw::AsPtr, DecodedInst, Reg};
+use crate::{ffi, indexed_properties, DecodedInst, Reg};
 
 #[derive(Clone, Copy, Debug)]
 pub struct MemOperand<I>(I, u32);

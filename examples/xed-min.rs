@@ -4,7 +4,7 @@ use anyhow::Result;
 use array_concat::concat_arrays;
 use clap::Parser;
 
-use xed::{tables, AddressWidth, DecodedInst, Errno, Error, MachineMode};
+use xed::{tables, AddressWidth, DecodedInst, Errno, MachineMode};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -39,14 +39,10 @@ fn main() -> Result<()> {
     for i in 0..=15 {
         let mut xedd = DecodedInst::with_mode(opts.mode, opts.width);
 
-        println!(
-            "{} {}",
-            i,
-            match xedd.decode(&itext[..i]) {
-                Ok(_) => Errno::NONE,
-                Err(Error::Errno(err)) => err,
-            }
-        )
+        match xedd.decode(&itext[..i]) {
+            Ok(_) => println!("{} {}", i, Errno::NONE),
+            Err(err) => println!("{} {}", i, err),
+        }
     }
 
     Ok(())

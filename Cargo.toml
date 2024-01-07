@@ -6,13 +6,20 @@ resolver = "2"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+default = ["full"]
+full = ["clap", "enc-lang"]
+enc-lang = ["nom"]
+
 [dependencies]
 derive_more = { version = "=1.0.0-beta.6", features = ["full"] }
 lazy_static = "1.4"
 num_enum = "0.7"
+paste = "1.0"
 thiserror = "1"
 
 clap = { version = "4.4", features = ["derive"], optional = true }
+nom = { version = "7.1", optional = true }
 
 xed-sys = { version = "0.4", path = "../xed-sys" }
 
@@ -32,3 +39,7 @@ required-features = ["clap"]
 [[example]]
 name = "xed-ex1"
 required-features = ["clap"]
+
+[[example]]
+name = "xed-ex3"
+required-features = ["clap", "enc-lang"]

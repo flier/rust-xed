@@ -1,8 +1,6 @@
 use crate::{
-    ffi, properties,
-    raw::{AsMutPtr, AsPtr},
-    Nonterminal, Op, OperandAction, OperandElementXtype, OperandType, OperandVisibility,
-    OperandWidth, Reg,
+    ffi, properties, raw::AsPtr, Nonterminal, Op, OperandAction, OperandElementXtype, OperandType,
+    OperandVisibility, OperandWidth, Reg,
 };
 
 /// Constant information about an individual generic operand, like an operand template, describing the operand properties.
@@ -10,19 +8,7 @@ use crate::{
 #[derive(Clone, Debug)]
 pub struct Operand(ffi::xed_operand_t);
 
-impl AsPtr for Operand {
-    type CType = ffi::xed_operand_t;
-
-    fn as_ptr(&self) -> *const Self::CType {
-        &self.0 as *const _
-    }
-}
-
-impl AsMutPtr for Operand {
-    fn as_mut_ptr(&mut self) -> *mut Self::CType {
-        &mut self.0 as *mut _
-    }
-}
+impl_as_ptr!(Operand(ffi::xed_operand_t));
 
 impl Operand {
     properties! {

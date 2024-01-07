@@ -4,7 +4,9 @@ pub extern crate xed_sys as ffi;
 mod macros;
 
 mod address;
+mod chip_features;
 mod decoded;
+pub mod enc;
 mod error;
 mod flags;
 mod gen;
@@ -12,6 +14,7 @@ mod inst;
 mod machine;
 mod operand;
 mod raw;
+mod state;
 pub mod tables;
 mod util;
 
@@ -25,4 +28,5 @@ pub use self::gen::*;
 pub use self::inst::Inst;
 pub use self::machine::Mode as MachineMode;
 pub use self::operand::Operand;
+pub use self::state::State;
 pub use self::util::*;

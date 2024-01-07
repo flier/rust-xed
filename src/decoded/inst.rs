@@ -5,6 +5,7 @@ use std::{
 };
 
 use crate::{
+    chip_features::ChipFeatures,
     decoded::{Operand, Operands},
     ffi, properties,
     raw::{AsMutPtr, AsPtr, ToBool},
@@ -17,6 +18,8 @@ use super::mem::MemOperand;
 #[repr(transparent)]
 #[derive(Clone, Copy, Debug)]
 pub struct Inst(ffi::xed_decoded_inst_t);
+
+impl_as_ptr!(Inst(ffi::xed_decoded_inst_t));
 
 impl Default for Inst {
     fn default() -> Self {
@@ -32,44 +35,34 @@ impl Index<usize> for Inst {
     }
 }
 
-impl AsPtr for Inst {
-    type CType = ffi::xed_decoded_inst_t;
-
-    fn as_ptr(&self) -> *const Self::CType {
-        &self.0 as *const _
-    }
-}
-
-impl AsMutPtr for Inst {
-    fn as_mut_ptr(&mut self) -> *mut Self::CType {
-        &mut self.0 as *mut _
-    }
-}
-
 impl Inst {
-    properties! {
+    properties! { prefix = xed_decoded_inst;
         /// Return true if the instruction is valid
-        valid: bool { xed_decoded_inst_valid }
+        valid: bool
 
-        // Return the user-specified `Chip` name
-        chip: Chip? { xed_decoded_inst_get_input_chip }
+        input_chip: Chip? {
+            // Return the user-specified `Chip` name
+            get;
+            // Set a user-specified `Chip` name for restricting decode
+            set;
+        }
 
-        category: Category { xed_decoded_inst_get_category }
-        extension: Extension { xed_decoded_inst_get_extension }
-        isa_set: IsaSet { xed_decoded_inst_get_isa_set }
-        iclass: Iclass { xed_decoded_inst_get_iclass }
+        category: Category { get; }
+        extension: Extension { get; }
+        isa_set: IsaSet { get; }
+        iclass: Iclass { get; }
 
         /// Returns true if the instruction is xacquire.
-        is_xacquire: bool { xed_decoded_inst_is_xacquire }
+        is_xacquire: bool
 
         /// Returns true if the instruction is xrelease.
-        is_xrelease: bool { xed_decoded_inst_is_xrelease }
+        is_xrelease: bool
 
         /// Returns true if the instruction has mpx prefix.
-        has_mpx_prefix: bool { xed_decoded_inst_has_mpx_prefix }
+        has_mpx_prefix: bool
 
         /// Returns the modrm byte
-        modrm: u8 { xed_decoded_inst_get_modrm }
+        modrm: u8 { get; }
 
         /// Returns 128, 256 or 512 for operations in the VEX, EVEX (or XOP)
         /// encoding space and returns 0 for (most) nonvector operations.
@@ -77,102 +70,101 @@ impl Inst {
         /// This usually the content of the VEX.L or EVEX.LL field, reinterpreted.
         /// Some GPR instructions (like the BMI1/BMI2) are encoded in the VEX space
         /// and return non-zero values from this API.
-        vector_length_bits: u32 { xed_decoded_inst_vector_length_bits }
+        vector_length_bits: u32
 
         /// Returns the number of legacy prefixes.
-        nprefixes: u32 { xed_decoded_inst_get_nprefixes }
+        nprefixes: u32 { get; }
 
         /// Return the number of operands
-        noperands: u32 { xed_decoded_inst_noperands }
+        noperands: u32
 
         /// The instruction uses write-masking
-        masking: bool { xed_decoded_inst_masking }
+        masking: bool
 
         /// The instruction uses write-masking with merging
-        merging: bool { xed_decoded_inst_merging }
+        merging: bool
 
         /// The instruction uses write-masking with zeroing
-        zeroing: bool { xed_decoded_inst_zeroing }
+        zeroing: bool
 
         /// Returns the maximum number elements processed for an AVX512 vector instruction.
         ///
         /// Scalars report 1 element.
-        avx512_dest_elements: u32 { xed_decoded_inst_avx512_dest_elements }
+        avx512_dest_elements: u32
 
         /// Return the length of the decoded instruction in bytes.
-        length: u32 { xed_decoded_inst_get_length }
+        length: u32 { get; }
 
         /// Returns 16/32/64 indicating the machine mode with in bits.
         ///
         /// This is derived from the input mode information.
-        machine_mode_bits: u32 { xed_decoded_inst_get_machine_mode_bits }
+        machine_mode_bits: u32 { get; }
 
         /// Returns 16/32/64 indicating the stack addressing mode with in bits.
         ///
         /// This is derived from the input mode information.
-        stack_address_mode_bits: u32 { xed_decoded_inst_get_stack_address_mode_bits }
+        stack_address_mode_bits: u32 { get; }
 
         /// Returns the operand width in bits: 8/16/32/64.
-        operand_width: u32 { xed_decoded_inst_get_operand_width }
-
-        /// Return the user-specified `chip` name
-        input_chip: Chip? { xed_decoded_inst_get_input_chip }
+        operand_width: u32 { get; }
 
         iform: Iform { xed_decoded_inst_get_iform_enum }
 
         /// Return the instruction zero-based iform number based on masking the corresponding `Iform`.
         iform_dispatch: u32 { xed_decoded_inst_get_iform_enum_dispatch }
 
-        branch_displacement: i32 { xed_decoded_inst_get_branch_displacement }
-        branch_displacement_width: u32 { xed_decoded_inst_get_branch_displacement_width }
+        branch_displacement: i32 { get; }
+        branch_displacement_width: u32 { get; }
 
-        unsigned_immediate: u64 { xed_decoded_inst_get_unsigned_immediate }
+        unsigned_immediate: u64 { get; }
 
         /// Return true if the first immediate (IMM0)  is signed
-        immediate_is_signed: bool { xed_decoded_inst_get_immediate_is_signed }
+        immediate_is_signed: bool { get; }
 
         /// Return the immediate width in BYTES.
-        immediate_width: u32 { xed_decoded_inst_get_immediate_width }
+        immediate_width: u32 { get; }
 
         /// Return the immediate width in BITS.
-        immediate_width_bits: u32 { xed_decoded_inst_get_immediate_width_bits }
+        immediate_width_bits: u32 { get; }
 
-        signed_immediate: i32 { xed_decoded_inst_get_signed_immediate }
-        second_immediate: u8 { xed_decoded_inst_get_second_immediate }
+        signed_immediate: i32 { get; }
+        second_immediate: u8 { get; }
 
         /// See the comment on xed_decoded_inst_uses_rflags().
-        rflags_info: &SimpleFlag? { xed_decoded_inst_get_rflags_info }
+        rflags_info: &SimpleFlag? { get; }
 
         /// This returns true if the flags are read or written.
-        uses_rflags: bool { xed_decoded_inst_uses_rflags }
+        uses_rflags: bool
 
-        number_of_memory_operands: u32 { xed_decoded_inst_number_of_memory_operands }
+        number_of_memory_operands: u32
 
-        conditionally_writes_registers: bool { xed_decoded_inst_conditionally_writes_registers }
+        conditionally_writes_registers: bool
 
         /// Returns true if the instruction is a prefetch
-        is_prefetch: bool { xed_decoded_inst_is_prefetch }
+        is_prefetch: bool
 
         /// Return true for broadcast instructions or AVX512 load-op instructions using the broadcast feature
-        is_broadcast: bool { xed_decoded_inst_is_broadcast }
+        is_broadcast: bool
 
         /// Return true for broadcast instruction. (NOT including AVX512 load-op instructions)
-        is_broadcast_instruction: bool { xed_decoded_inst_is_broadcast_instruction }
+        is_broadcast_instruction: bool
 
         /// Return true for AVX512 load-op instructions using the broadcast feature,
-        uses_embedded_broadcast: bool { xed_decoded_inst_uses_embedded_broadcast }
+        uses_embedded_broadcast: bool
+    }
 
+    properties! { prefix = xed_classify;
         /// True for AVX512 (EVEX-encoded) SIMD and (VEX encoded) K-mask instructions
-        avx512: bool { xed_classify_avx512 }
+        avx512: bool
 
         /// True for AVX512 (VEX-encoded) K-mask operations
-        avx512_maskop: bool { xed_classify_avx512_maskop }
+        avx512_maskop: bool
 
         /// True for AVX/AVX2 SIMD VEX-encoded operations. Does not include BMI/BMI2 instructions.
-        avx: bool { xed_classify_avx }
+        avx: bool
 
         /// True for SSE/SSE2/etc. SIMD operations.  Includes AES and PCLMULQDQ
-        sse: bool { xed_classify_sse }
+        sse: bool
     }
 
     /// Create and zero the decode structure completely.
@@ -198,11 +190,6 @@ impl Inst {
     /// Set the machine mode and stack addressing width directly.
     pub fn set_mode(&mut self, mode: MachineMode, width: AddressWidth) {
         unsafe { ffi::xed_decoded_inst_set_mode(self.as_mut_ptr(), mode.into(), width.into()) }
-    }
-
-    // Set a user-specified `Chip` name for restricting decode
-    pub fn set_chip(&mut self, chip: Chip) {
-        unsafe { ffi::xed_decoded_inst_set_input_chip(self.as_mut_ptr(), chip.into()) }
     }
 
     /// Indicate if this decoded instruction is valid for the specified `Chip`
@@ -267,7 +254,7 @@ impl Inst {
 
     /// Return a user data field for arbitrary use by the user after decoding.
     pub fn user_data(&self) -> Option<u64> {
-        let n = unsafe { ffi::xed_decoded_inst_get_user_data(self.as_ptr() as *mut _) };
+        let n = unsafe { ffi::xed_decoded_inst_get_user_data(self.as_ptr().cast_mut()) };
 
         (n != 0).then_some(n)
     }
@@ -281,7 +268,7 @@ impl Inst {
     ///
     /// This is false for blend operations that use their mask field as a control.
     pub fn masked_vector_operation(&self) -> bool {
-        unsafe { ffi::xed_decoded_inst_masked_vector_operation(self.as_ptr() as *mut _) }.bool()
+        unsafe { ffi::xed_decoded_inst_masked_vector_operation(self.as_ptr().cast_mut()) }.bool()
     }
 
     pub fn mem_operands(&self) -> impl Iterator<Item = MemOperand<&Inst>> {
@@ -299,13 +286,30 @@ impl Inst {
     pub fn decode<T: AsRef<[u8]>>(&mut self, bytes: T) -> Result<()> {
         let b = bytes.as_ref();
 
-        let errno =
-            Errno::from(unsafe { ffi::xed_decode(self.as_mut_ptr(), b.as_ptr(), b.len() as u32) });
+        Errno::from(unsafe { ffi::xed_decode(self.as_mut_ptr(), b.as_ptr(), b.len() as u32) })
+            .into()
+    }
 
-        if errno.is_none() {
-            Ok(())
-        } else {
-            Err(errno.into())
-        }
+    /// Decode bytes to instruction
+    ///
+    /// This version of the decode API adds a CPUID feature vector
+    /// to support restricting decode based on both a specified chip via set_input_chip and a modify-able cpuid feature
+    /// vector obtained from #xed_get_chip_features().
+    pub fn decode_with_features<T: AsRef<[u8]>>(
+        &mut self,
+        bytes: T,
+        features: ChipFeatures,
+    ) -> Result<()> {
+        let b = bytes.as_ref();
+
+        Errno::from(unsafe {
+            ffi::xed_decode_with_features(
+                self.as_mut_ptr(),
+                b.as_ptr(),
+                b.len() as u32,
+                features.as_ptr().cast_mut(),
+            )
+        })
+        .into()
     }
 }

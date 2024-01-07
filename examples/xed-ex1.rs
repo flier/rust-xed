@@ -9,11 +9,11 @@ use xed::{tables, AddressWidth, Attribute, Chip, DecodedInst, MachineMode, Op, S
 #[command(author, version, about, long_about = None)]
 struct Opts {
     /// Machine mode
-    #[arg(short, long, value_enum, default_value_t = MachineMode::Legacy32)]
+    #[arg(short, long, value_enum, default_value_t = MachineMode::Long64)]
     pub mode: MachineMode,
 
     /// Address width
-    #[arg(short, long, value_enum, default_value_t = AddressWidth::Dword)]
+    #[arg(short, long, value_enum, default_value_t = AddressWidth::Qword)]
     pub width: AddressWidth,
 
     /// Chip model
@@ -21,6 +21,18 @@ struct Opts {
     pub chip: Option<Chip>,
 
     pub bytes: Vec<String>,
+}
+
+impl Opts {
+    pub fn bytes(&self) -> Result<Vec<u8>> {
+        Ok(hex::decode(
+            self.bytes
+                .iter()
+                .map(|s| s.bytes())
+                .flatten()
+                .collect::<Vec<_>>(),
+        )?)
+    }
 }
 
 fn print_operands(xedd: &DecodedInst) -> Result<()> {
@@ -198,9 +210,9 @@ fn print_flags(xedd: &DecodedInst) -> Result<()> {
             println!();
 
             // or as as bit-union
-            let read_set = rfi.read_set();
-            let written_set = rfi.written_set();
-            let undefined_set = rfi.undefined_set();
+            let read_set = rfi.read_flag_set();
+            let written_set = rfi.written_flag_set();
+            let undefined_set = rfi.undefined_flag_set();
 
             println!("       read: {:30} mask=0x{:x}", read_set, read_set.mask());
             println!(
@@ -222,7 +234,7 @@ fn print_flags(xedd: &DecodedInst) -> Result<()> {
 fn print_reads_zf_flag(xedd: &DecodedInst) -> Result<()> {
     if xedd.uses_rflags() {
         if let Some(rfi) = xedd.rflags_info() {
-            if rfi.read_set().zf() != 0 {
+            if rfi.read_flag_set().zf() != 0 {
                 print!("READS ZF");
             }
         }
@@ -366,18 +378,14 @@ fn main() -> Result<()> {
 
     let mut xedd = DecodedInst::new();
 
+    xedd.set_mode(opts.mode, opts.width);
+
     if let Some(chip) = opts.chip {
-        xedd.set_chip(chip)
+        xedd.set_input_chip(chip);
     }
 
     // convert ascii hex to hex bytes
-    let bytes = hex::decode(
-        opts.bytes
-            .into_iter()
-            .map(|s| s.into_bytes())
-            .flatten()
-            .collect::<Vec<_>>(),
-    )?;
+    let bytes = opts.bytes()?;
 
     println!("Attempting to decode: {}", hex::encode(&bytes));
 

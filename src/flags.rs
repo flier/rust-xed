@@ -14,19 +14,13 @@ use crate::{
 #[derive(Clone, Debug)]
 pub struct FlagSet(ffi::xed_flag_set_t);
 
+impl_as_ptr!(FlagSet(ffi::xed_flag_set_t));
+
 impl Deref for FlagSet {
     type Target = ffi::xed_flag_set_s__bindgen_ty_1;
 
     fn deref(&self) -> &Self::Target {
         unsafe { &self.0.s }
-    }
-}
-
-impl AsPtr for FlagSet {
-    type CType = ffi::xed_flag_set_t;
-
-    fn as_ptr(&self) -> *const Self::CType {
-        &self.0 as *const _
     }
 }
 
@@ -70,13 +64,7 @@ impl FlagSet {
 #[derive(Clone, Debug)]
 pub struct FlagAction(ffi::xed_flag_action_t);
 
-impl AsPtr for FlagAction {
-    type CType = ffi::xed_flag_action_t;
-
-    fn as_ptr(&self) -> *const Self::CType {
-        &self.0 as *const _
-    }
-}
+impl_as_ptr!(FlagAction(ffi::xed_flag_action_t));
 
 impl fmt::Display for FlagAction {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -114,13 +102,7 @@ impl FlagAction {
 #[derive(Clone, Debug)]
 pub struct SimpleFlag(ffi::xed_simple_flag_t);
 
-impl AsPtr for SimpleFlag {
-    type CType = ffi::xed_simple_flag_t;
-
-    fn as_ptr(&self) -> *const Self::CType {
-        &self.0 as *const _
-    }
-}
+impl_as_ptr!(SimpleFlag(ffi::xed_simple_flag_t));
 
 impl fmt::Display for SimpleFlag {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -146,26 +128,26 @@ impl fmt::Display for SimpleFlag {
 impl SimpleFlag {
     const BUF_LEN: usize = 256;
 
-    properties! {
+    properties! { prefix = xed_simple_flag;
         /// returns the number of flag-actions
-        nflags: u32 { xed_simple_flag_get_nflags }
+        nflags: u32 { get; }
 
         /// return union of bits for read flags
-        read_set: &FlagSet { xed_simple_flag_get_read_flag_set }
+        read_flag_set: &FlagSet { get; }
 
         /// return union of bits for written flags
-        written_set: &FlagSet { xed_simple_flag_get_written_flag_set }
+        written_flag_set: &FlagSet { get; }
 
         /// return union of bits for undefined flags
-        undefined_set: &FlagSet { xed_simple_flag_get_undefined_flag_set }
+        undefined_flag_set: &FlagSet { get; }
 
         /// Indicates the flags are only conditionally written.
         ///
         /// Usually MAY-writes of the flags instructions that are dependent on a REP count.
-        may_write: bool { xed_simple_flag_get_may_write }
+        may_write: bool { get; }
 
         /// the flags always written
-        must_write: bool { xed_simple_flag_get_must_write }
+        must_write: bool { get; }
 
         /// boolean test to see if flags are read, scans the flags
         reads_flags: bool { xed_simple_flag_reads_flags }

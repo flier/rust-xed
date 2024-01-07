@@ -8,4 +8,20 @@ pub type Result<T> = std::result::Result<T, Error>;
 pub enum Error {
     #[error(transparent)]
     Errno(#[from] Errno),
+
+    #[error("unexpected expression, {0}")]
+    UnexpectedExpr(String),
+
+    #[error("parse encode expression failed, {0:?}")]
+    Parse(nom::error::ErrorKind),
+}
+
+impl From<Errno> for Result<()> {
+    fn from(err: Errno) -> Self {
+        if err.is_none() {
+            Ok(())
+        } else {
+            Err(err.into())
+        }
+    }
 }
