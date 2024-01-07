@@ -11,7 +11,7 @@ use crate::{ffi, raw::AsMutPtr, AddressWidth, MachineMode};
 /// For all modes other than the 64b long mode (MachineMode::Long64), a default addressing width,
 /// and a stack addressing width must be supplied of type AddressWidth.
 #[repr(transparent)]
-#[derive(Clone, From, Into)]
+#[derive(Clone, Copy, From, Into)]
 pub struct State(ffi::xed_state_t);
 
 impl_as_ptr!(State(ffi::xed_state_t));
@@ -39,6 +39,21 @@ impl fmt::Debug for State {
 }
 
 impl State {
+    pub const LEGACY16: State = State(ffi::xed_state_t {
+        mmode: ffi::XED_MACHINE_MODE_LEGACY_16,
+        stack_addr_width: ffi::XED_ADDRESS_WIDTH_16b,
+    });
+
+    pub const LEGACY32: State = State(ffi::xed_state_t {
+        mmode: ffi::XED_MACHINE_MODE_LEGACY_32,
+        stack_addr_width: ffi::XED_ADDRESS_WIDTH_32b,
+    });
+
+    pub const LONG64: State = State(ffi::xed_state_t {
+        mmode: ffi::XED_MACHINE_MODE_LONG_64,
+        stack_addr_width: ffi::XED_ADDRESS_WIDTH_64b,
+    });
+
     properties! { prefix = xed_state;
         machine_mode: MachineMode {
             /// return the machine mode

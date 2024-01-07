@@ -101,8 +101,8 @@ where
         unsafe { ffi::xed_encoder_request_zero(self.as_mut_ptr()) }
     }
 
-    pub fn set_mode(&mut self, state: &State) {
-        unsafe { ffi::xed_encoder_request_zero_set_mode(self.as_mut_ptr(), state.as_ptr()) }
+    pub fn reset_mode<S: Into<State>>(&mut self, state: S) {
+        unsafe { ffi::xed_encoder_request_zero_set_mode(self.as_mut_ptr(), state.into().as_ptr()) }
     }
 
     /// Set the operands array element indexed by operand to the actual register name reg.
@@ -291,7 +291,7 @@ pub fn compile(expr: &str, state: State) -> Result<Request<DecodedInst>> {
     let inst = DecodedInst::new();
     let mut req = Request(inst);
 
-    req.set_mode(&state);
+    req.reset_mode(state);
     req.apply(expr);
 
     Ok(req)

@@ -6,19 +6,21 @@ use std::{
     slice,
 };
 
+use derive_more::{From, Into};
+
 use crate::{
     chip_features::ChipFeatures,
     decoded::{Operand, Operands},
     ffi, properties,
     raw::{AsMutPtr, AsPtr, ToBool},
     AddressWidth, Attribute, Category, Chip, Errno, Extension, Iclass, Iform, Inst as InstTemplate,
-    IsaSet, MachineMode, Op, Reg, Result, SimpleFlag,
+    IsaSet, MachineMode, Op, Reg, Result, SimpleFlag, State,
 };
 
 use super::mem::MemOperand;
 
 #[repr(transparent)]
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, From, Into)]
 pub struct Inst(ffi::xed_decoded_inst_t);
 
 impl_as_ptr!(Inst(ffi::xed_decoded_inst_t));
@@ -205,6 +207,13 @@ impl Inst {
         inst.set_mode(mode, width);
 
         inst
+    }
+
+    /// Zero the decode structure, but set the machine state/mode information.
+    ///
+    /// Re-initializes all operands.
+    pub fn reset_mode<S: Into<State>>(&mut self, state: S) {
+        unsafe { ffi::xed_decoded_inst_zero_set_mode(self.as_mut_ptr(), state.into().as_ptr()) }
     }
 
     /// Set the machine mode and stack addressing width directly.
