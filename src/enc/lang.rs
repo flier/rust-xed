@@ -297,8 +297,8 @@ impl fmt::Display for Seg {
 ///
 /// ```
 /// # use xed::{enc::lang::{seg, Seg}, Reg};
-/// assert_eq!(seg("SEG:GS").unwrap(), ("", Seg { id: 0, reg: Reg::GS }));
-/// assert_eq!(seg("SEG1:DS").unwrap(), ("", Seg { id: 1, reg: Reg::DS }));
+/// assert_eq!(seg("SEG:GS").unwrap(), ("", Seg { id: None, reg: Reg::GS }));
+/// assert_eq!(seg("SEG1:DS").unwrap(), ("", Seg { id: Some(1), reg: Reg::DS }));
 /// ```
 pub fn seg(input: &str) -> IResult<&str, Seg> {
     map(

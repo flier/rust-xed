@@ -5,7 +5,7 @@ mod macros;
 
 mod address;
 mod chip_features;
-mod decoded;
+pub mod dec;
 pub mod enc;
 mod error;
 mod flags;
@@ -20,9 +20,6 @@ pub mod tables;
 mod util;
 
 pub use self::address::Width as AddressWidth;
-pub use self::decoded::{
-    Inst as DecodedInst, Operand as DecodedOperand, Operands as DecodedOperands,
-};
 pub use self::error::{Error, Result};
 pub use self::flags::{FlagAction, FlagSet, SimpleFlag};
 pub use self::gen::*;

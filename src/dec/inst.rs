@@ -10,7 +10,7 @@ use derive_more::{From, Into};
 
 use crate::{
     chip_features::ChipFeatures,
-    decoded::{Operand, Operands},
+    dec::{Operand, Operands},
     ffi, properties,
     raw::{AsMutPtr, AsPtr, ToBool},
     AddressWidth, Attribute, Category, Chip, Errno, Extension, Iclass, Iform, Inst as InstTemplate,

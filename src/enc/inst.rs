@@ -3,9 +3,10 @@ use std::mem::{self, MaybeUninit};
 use derive_more::{Deref, DerefMut, From, Into};
 
 use crate::{
+    dec::Inst as DecodedInst,
     ffi,
     raw::{AsMutPtr, AsPtr, ToBool},
-    DecodedInst, Iclass, State,
+    Iclass, State,
 };
 
 use super::{Operand, Request};

@@ -3,7 +3,7 @@ use std::fmt::Write;
 use anyhow::Result;
 use clap::Parser;
 
-use xed::{tables, AddressWidth, Attribute, Chip, DecodedInst, MachineMode, Op, SignExtend};
+use xed::{dec::Inst, tables, AddressWidth, Attribute, Chip, MachineMode, Op, SignExtend};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -35,7 +35,7 @@ impl Opts {
     }
 }
 
-fn print_operands(xedd: &DecodedInst) -> Result<()> {
+fn print_operands(xedd: &Inst) -> Result<()> {
     let xi = xedd.inst();
 
     println!("Operands");
@@ -138,7 +138,7 @@ fn print_operands(xedd: &DecodedInst) -> Result<()> {
     Ok(())
 }
 
-fn print_memops(xedd: &DecodedInst) -> Result<()> {
+fn print_memops(xedd: &Inst) -> Result<()> {
     println!("Memory Operands");
 
     for (i, op) in xedd.mem_operands().enumerate() {
@@ -191,7 +191,7 @@ fn print_memops(xedd: &DecodedInst) -> Result<()> {
     Ok(())
 }
 
-fn print_flags(xedd: &DecodedInst) -> Result<()> {
+fn print_flags(xedd: &Inst) -> Result<()> {
     if xedd.uses_rflags() {
         if let Some(rfi) = xedd.rflags_info() {
             println!("FLAGS:");
@@ -231,7 +231,7 @@ fn print_flags(xedd: &DecodedInst) -> Result<()> {
     Ok(())
 }
 
-fn print_reads_zf_flag(xedd: &DecodedInst) -> Result<()> {
+fn print_reads_zf_flag(xedd: &Inst) -> Result<()> {
     if xedd.uses_rflags() {
         if let Some(rfi) = xedd.rflags_info() {
             if rfi.read_flag_set().zf() != 0 {
@@ -243,7 +243,7 @@ fn print_reads_zf_flag(xedd: &DecodedInst) -> Result<()> {
     Ok(())
 }
 
-fn print_attributes(xedd: &DecodedInst) -> Result<()> {
+fn print_attributes(xedd: &Inst) -> Result<()> {
     let xi = xedd.inst();
 
     print!("ATTRIBUTES: ");
@@ -255,7 +255,7 @@ fn print_attributes(xedd: &DecodedInst) -> Result<()> {
     Ok(())
 }
 
-fn print_misc(xedd: &DecodedInst) -> Result<()> {
+fn print_misc(xedd: &Inst) -> Result<()> {
     let ov = xedd.operands();
     let xi = xedd.inst();
 
@@ -356,7 +356,7 @@ fn print_misc(xedd: &DecodedInst) -> Result<()> {
     Ok(())
 }
 
-fn print_branch_hints(xedd: &DecodedInst) -> Result<()> {
+fn print_branch_hints(xedd: &Inst) -> Result<()> {
     let op = xedd.operands();
 
     if op.branch_not_taken_hint() {
@@ -376,7 +376,7 @@ fn main() -> Result<()> {
     // initialize the XED tables -- one time.
     tables::init();
 
-    let mut xedd = DecodedInst::new();
+    let mut xedd = Inst::new();
 
     xedd.set_mode(opts.mode, opts.width);
 

@@ -1,16 +1,17 @@
 use derive_more::From;
 
 use crate::{
+    dec::Inst,
     ffi, properties,
     raw::{AsMutPtr, AsPtr},
-    DecodedInst, Iclass, Reg,
+    Iclass, Reg,
 };
 
 #[repr(transparent)]
 #[derive(Clone, Copy, Debug, From)]
 pub struct Operands<I>(I);
 
-impl AsPtr for Operands<&DecodedInst> {
+impl AsPtr for Operands<&Inst> {
     type CType = ffi::xed_operand_values_t;
 
     fn as_ptr(&self) -> *const Self::CType {
@@ -18,7 +19,7 @@ impl AsPtr for Operands<&DecodedInst> {
     }
 }
 
-impl AsPtr for Operands<&mut DecodedInst> {
+impl AsPtr for Operands<&mut Inst> {
     type CType = ffi::xed_operand_values_t;
 
     fn as_ptr(&self) -> *const Self::CType {
@@ -26,7 +27,7 @@ impl AsPtr for Operands<&mut DecodedInst> {
     }
 }
 
-impl AsMutPtr for Operands<&mut DecodedInst> {
+impl AsMutPtr for Operands<&mut Inst> {
     fn as_mut_ptr(&mut self) -> *mut Self::CType {
         self.0.as_mut_ptr().cast()
     }

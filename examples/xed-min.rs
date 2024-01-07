@@ -4,7 +4,7 @@ use anyhow::Result;
 use array_concat::concat_arrays;
 use clap::Parser;
 
-use xed::{tables, AddressWidth, DecodedInst, Errno, MachineMode};
+use xed::{dec::Inst, tables, AddressWidth, Errno, MachineMode};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -37,7 +37,7 @@ fn main() -> Result<()> {
     // Try different instruction lengths to see when XED recognizes an
     // instruction as valid.
     for i in 0..=15 {
-        let mut xedd = DecodedInst::with_mode(opts.mode, opts.width);
+        let mut xedd = Inst::with_mode(opts.mode, opts.width);
 
         match xedd.decode(&itext[..i]) {
             Ok(_) => println!("{} {}", i, Errno::NONE),

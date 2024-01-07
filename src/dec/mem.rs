@@ -1,4 +1,4 @@
-use crate::{ffi, indexed_properties, DecodedInst, Reg};
+use crate::{dec::Inst, ffi, indexed_properties, Reg};
 
 #[derive(Clone, Copy, Debug)]
 pub struct MemOperand<I>(I, u32);
@@ -9,7 +9,7 @@ impl<I> From<(I, u32)> for MemOperand<I> {
     }
 }
 
-impl MemOperand<&DecodedInst> {
+impl MemOperand<&Inst> {
     indexed_properties! {
         seg: Reg? { xed_decoded_inst_get_seg_reg }
         base: Reg? { xed_decoded_inst_get_base_reg }

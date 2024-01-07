@@ -3,7 +3,7 @@
 use anyhow::{bail, Result};
 use clap::Parser;
 
-use xed::{format, tables, AddressWidth, DecodedInst, Errno, Error, MachineMode, State, Syntax};
+use xed::{dec::Inst, format, tables, AddressWidth, Errno, Error, MachineMode, Syntax};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -71,7 +71,7 @@ fn main() -> Result<()> {
 
     // begin processing of instructions...
 
-    let mut xedd = DecodedInst::new();
+    let mut xedd = Inst::new();
 
     xedd.set_mode(opts.mode, opts.width);
 

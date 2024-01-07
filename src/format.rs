@@ -4,7 +4,7 @@ use std::{
     ptr, slice,
 };
 
-use crate::{ffi, raw::AsPtr, DecodedInst, Syntax};
+use crate::{dec::Inst, ffi, raw::AsPtr, Syntax};
 
 #[repr(transparent)]
 #[derive(Clone, Debug)]
@@ -86,7 +86,7 @@ pub type DisassemblyCallback<T> = fn(addr: u64, symbol: &mut [u8], ctx: Option<&
 /// The output buffer must be at least 25 bytes long.
 pub fn context<T>(
     syntax: Syntax,
-    xedd: &DecodedInst,
+    xedd: &Inst,
     runtime_instruction_address: Option<u64>,
     context: Option<T>,
     symbolic_callback: Option<DisassemblyCallback<T>>,

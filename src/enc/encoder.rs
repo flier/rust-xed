@@ -4,10 +4,11 @@ use derive_more::From;
 use nom::Finish;
 
 use crate::{
-    decoded::Operands,
+    dec::Inst as DecodedInst,
+    dec::Operands,
     ffi,
     raw::{AsMutPtr, AsPtr},
-    DecodedInst, Errno, Error, Iclass, Op, Reg, RegClass, Result, State,
+    Errno, Error, Iclass, Op, Reg, RegClass, Result, State,
 };
 
 use super::lang::{inst, Immed, Inst, Operand};

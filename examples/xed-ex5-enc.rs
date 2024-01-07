@@ -1,10 +1,9 @@
 use anyhow::{anyhow, bail, Result};
 
 use xed::{
-    enc::{
-        disp, imm0, mem_b, mem_bd, mem_bisd, mem_gbisd, other, relbr, simm0, Inst, Operand, Request,
-    },
-    format, tables, DecodedInst, Iclass, Op, Reg, State, Syntax,
+    dec::Inst as DecodedInst,
+    enc::{disp, imm0, mem_b, mem_bd, mem_bisd, mem_gbisd, other, relbr, simm0, Inst, Request},
+    format, tables, Iclass, Op, Reg, State, Syntax,
 };
 
 fn main() -> Result<()> {

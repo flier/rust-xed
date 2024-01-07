@@ -1,4 +1,4 @@
-use crate::{ffi, indexed_properties, DecodedInst, OperandAction, OperandElementType};
+use crate::{dec::Inst, ffi, indexed_properties, OperandAction, OperandElementType};
 
 #[derive(Clone, Copy, Debug)]
 pub struct Operand<I>(I, u32);
@@ -9,7 +9,7 @@ impl<I> From<(I, u32)> for Operand<I> {
     }
 }
 
-impl Operand<&DecodedInst> {
+impl Operand<&Inst> {
     indexed_properties! {
         /// Return the length in bits of the  self.idx'th operand.
         length_bits: u32 { xed_decoded_inst_operand_length_bits }
