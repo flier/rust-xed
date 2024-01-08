@@ -43,3 +43,19 @@ required-features = ["clap"]
 [[example]]
 name = "xed-ex3"
 required-features = ["clap", "enc-lang"]
+
+[[example]]
+name = "xed-ex4"
+required-features = ["clap"]
+
+[[example]]
+name = "xed-ex6"
+required-features = ["clap"]
+
+[[example]]
+name = "xed-ex7"
+required-features = ["clap"]
+
+[[example]]
+name = "xed-ex8"
+required-features = ["clap"]
