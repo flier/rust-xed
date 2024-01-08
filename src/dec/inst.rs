@@ -212,7 +212,7 @@ impl Inst {
     /// Zero the decode structure, but set the machine state/mode information.
     ///
     /// Re-initializes all operands.
-    pub fn reset_mode<S: Into<State>>(&mut self, state: S) {
+    pub fn reset<S: Into<State>>(&mut self, state: S) {
         unsafe { ffi::xed_decoded_inst_zero_set_mode(self.as_mut_ptr(), state.into().as_ptr()) }
     }
 

@@ -1,10 +1,12 @@
 #[cfg(feature = "enc-lang")]
 pub mod lang;
 
-mod encoder;
+mod compile;
 mod inst;
 mod operand;
+mod req;
 
-pub use self::encoder::{compile, nop, Request};
+pub use self::compile::compile;
 pub use self::inst::Inst;
 pub use self::operand::*;
+pub use self::req::{nop, Request};

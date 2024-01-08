@@ -159,7 +159,7 @@ fn main() -> Result<()> {
     for inst in insts.iter().take(end + 1) {
         let mode = State::from(inst.mode);
 
-        enc_req.reset_mode(mode);
+        enc_req.reset(mode);
 
         if !inst.convert_to(&mut enc_req) {
             bail!("conversion to encode request failed")
@@ -169,7 +169,7 @@ fn main() -> Result<()> {
 
         println!("Result! {}", hex::encode(&bytes));
 
-        xedd.reset_mode(mode);
+        xedd.reset(mode);
         xedd.decode(bytes)?;
 
         let code = fmt::context::<()>(Syntax::INTEL, &xedd, None, None, None)
