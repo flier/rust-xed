@@ -12,7 +12,7 @@ struct Opts {
     #[arg(short, long, value_enum, default_value_t = MachineMode::Long64)]
     pub mode: MachineMode,
 
-    /// Stack Address width
+    /// Stack address width
     #[arg(short, long, value_enum, default_value_t = AddressWidth::Qword)]
     pub width: AddressWidth,
 
