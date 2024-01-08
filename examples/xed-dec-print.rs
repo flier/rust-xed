@@ -8,7 +8,7 @@ fn main() {
     let mut xedd = dec::Inst::with_state(State::LEGACY32);
 
     match xedd.decode(&[00, 00]) {
-        Ok(code_) => {
+        Ok(_) => {
             if let Some(code) = fmt::context::<()>(Syntax::ATT, &xedd, None, None, None) {
                 println!("{code}")
             } else {
