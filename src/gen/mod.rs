@@ -3,6 +3,7 @@ use std::mem::MaybeUninit;
 use derive_more::Deref;
 use lazy_static::lazy_static;
 
+use crate::raw::ToBool;
 use crate::{enum_properties, ffi};
 
 mod attribute;
@@ -33,11 +34,11 @@ pub use self::cpuid_bit::CpuidBit;
 
 impl CpuidBit {
     /// This provides the details of the CPUID bit specification, if the enumeration value is not sufficient.  
-    pub fn rec(&self) -> Option<CpuidRec> {
+    pub fn rec(self) -> Option<CpuidRec> {
         let mut rec = MaybeUninit::zeroed();
 
         unsafe {
-            if ffi::xed_get_cpuid_rec((*self).into(), rec.as_mut_ptr()) != 0 {
+            if ffi::xed_get_cpuid_rec(self.into(), rec.as_mut_ptr()) != 0 {
                 Some(CpuidRec(rec.assume_init()))
             } else {
                 None
@@ -140,10 +141,10 @@ pub use self::isa_set::IsaSet;
 
 impl IsaSet {
     /// Returns the name of the i'th cpuid bit associated with this isa-set.
-    pub fn cpuid_bits(&self) -> impl Iterator<Item = CpuidBit> + '_ {
+    pub fn cpuid_bits(self) -> impl Iterator<Item = CpuidBit> {
         unsafe {
-            (0..ffi::XED_MAX_CPUID_BITS_PER_ISA_SET).flat_map(|i| {
-                let bit = ffi::xed_get_cpuid_bit_for_isa_set((*self).into(), i);
+            (0..ffi::XED_MAX_CPUID_BITS_PER_ISA_SET).flat_map(move |i| {
+                let bit = ffi::xed_get_cpuid_bit_for_isa_set(self.into(), i);
 
                 (bit != 0).then(|| bit.into())
             })
@@ -178,6 +179,18 @@ pub use self::operand::Operand as Op;
 impl PartialOrd for Op {
     fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
         i32::from(*self).partial_cmp(&i32::from(*other))
+    }
+}
+
+impl Op {
+    /// Tests the operand for inclusion in XED_OPERAND_REG0 through XED_OPERAND_REG9.
+    pub fn is_register(self) -> bool {
+        unsafe { ffi::xed_operand_is_register(self.into()) }.bool()
+    }
+
+    /// Tests the operand for inclusion in XED_OPERAND_{BASE0,BASE1,INDEX,SEG0,SEG1}
+    pub fn is_memory_addressing_register(self) -> bool {
+        unsafe { ffi::xed_operand_is_memory_addressing_register(self.into()) }.bool()
     }
 }
 
