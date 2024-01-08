@@ -11,6 +11,7 @@ use derive_more::{From, Into};
 use crate::{
     chip::Features,
     dec::{Operand, Operands},
+    enc::Request,
     ffi, properties,
     raw::{AsMutPtr, AsPtr, ToBool},
     AddressWidth, Attribute, Category, Chip, Errno, Extension, Iclass, Iform, Inst as InstTemplate,
@@ -244,6 +245,14 @@ impl Inst {
                 .as_ref()
                 .unwrap()
         }
+    }
+
+    pub fn req(mut self) -> Request<Self> {
+        unsafe {
+            ffi::xed_encoder_request_init_from_decode(self.as_mut_ptr());
+        }
+
+        Request::from(self)
     }
 
     /// Returns true if the attribute is defined for this instruction.

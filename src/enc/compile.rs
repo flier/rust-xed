@@ -24,8 +24,7 @@ pub fn compile(expr: &str, state: State) -> Result<Request<DecodedInst>> {
         Err(nom::error::Error { input: _, code }) => return Err(Error::Parse(code)),
     };
 
-    let inst = DecodedInst::new();
-    let mut req = Request::from(inst);
+    let mut req = Request::new();
 
     req.reset(state);
     req.apply(expr);

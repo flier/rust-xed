@@ -155,7 +155,7 @@ fn main() -> Result<()> {
         other(Op::ZEROING, 1),
     );
 
-    let mut enc_req = Request::from(DecodedInst::new());
+    let mut enc_req = Request::new();
     let mut xedd = DecodedInst::new();
 
     for inst in insts.iter().take(end + 1) {

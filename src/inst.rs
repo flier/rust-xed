@@ -3,8 +3,9 @@ use std::{mem, slice};
 use lazy_static::lazy_static;
 
 use crate::{
-    ffi, properties, raw::AsPtr, Attribute, Category, Exception, Extension, Iclass, Iform, IsaSet,
-    Operand,
+    ffi, properties,
+    raw::{AsPtr, ToBool},
+    Attribute, Category, Exception, Extension, Iclass, Iform, IsaSet, Operand,
 };
 
 /// constant information about a decoded instruction form,
@@ -33,13 +34,27 @@ impl Inst {
         &TABLE
     }
 
+    pub fn has_attr(&self, attr: Attribute) -> bool {
+        unsafe { ffi::xed_inst_get_attribute(self.as_ptr(), attr.into()) }.bool()
+    }
+
     pub fn attrs(&self) -> impl Iterator<Item = Attribute> + '_ {
         Attribute::tables()
             .iter()
-            .filter(|&&attr| unsafe {
-                ffi::xed_inst_get_attribute(self.as_ptr(), attr.into()) != 0
-            })
+            .filter(|&&attr| self.has_attr(attr))
             .cloned()
+    }
+
+    pub fn operand(&self, i: u32) -> Option<&Operand> {
+        unsafe {
+            if i < ffi::xed_inst_noperands(self.as_ptr()) {
+                ffi::xed_inst_operand(self.as_ptr(), i)
+                    .cast::<Operand>()
+                    .as_ref()
+            } else {
+                None
+            }
+        }
     }
 
     pub fn operands(&self) -> impl Iterator<Item = &Operand> {

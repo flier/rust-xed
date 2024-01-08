@@ -1,9 +1,9 @@
-//! decoder->encoder example.
+//! decoder example - finding mov to cr3
 
 use anyhow::{bail, Result};
 
 use clap::Parser;
-use xed::{dec::Inst, fmt, tables, AddressWidth, Errno, Error, MachineMode, State, Syntax};
+use xed::{dec::Inst, tables, AddressWidth, Errno, Error, Iclass, MachineMode, Op, Reg, State};
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
@@ -59,6 +59,26 @@ impl Opts {
     }
 }
 
+fn check_for_mov_to_cr3(xedd: &Inst) {
+    if xedd.iclass() == Iclass::MOV_CR {
+        // we know mov_cr has 2 operands so we do not check
+        // xed_inst_noperands.
+
+        // get the skeleton (static info)
+        let xi = xedd.inst();
+
+        // get the dest operand (operand 0)
+        let op = xi.operand(0).unwrap();
+
+        let op_name = op.name();
+        if op_name == Op::REG0 {
+            if xedd.reg(op_name) == Reg::CR3 {
+                println!("Found a mov to CR3")
+            }
+        }
+    }
+}
+
 fn main() -> Result<()> {
     let opts = Opts::parse();
 
@@ -99,43 +119,7 @@ fn main() -> Result<()> {
         }
     }
 
-    for syntax in [Syntax::XED, Syntax::ATT, Syntax::INTEL] {
-        if let Some(code) = fmt::context::<()>(syntax, &xedd, None, None, None) {
-            println!("{syntax} syntax: {code}");
-        } else {
-            bail!("Error disassembling {syntax} syntax");
-        }
-    }
-
-    println!("\n\nPreparing to encode ...");
-
-    if opts.change_to_long_mode {
-        // change to 64b mode
-        xedd.operands_mut().set_mode(State::LONG64);
-    }
-
-    let mut enc_req = xedd.req();
-
-    if opts.change_to_long_mode {
-        enc_req
-            .set_effective_address_size(64)
-            .set_effective_operand_width(32);
-
-        // need to fix base regs...
-        //xed_operand_values_set_operand_reg(ov, XED_OPERAND_BASE0, XED_REG_RSI);
-    }
-
-    println!("Encoding...");
-
-    let code = enc_req.encode()?;
-
-    println!(
-        "Encodable: {}",
-        code.iter()
-            .map(|b| format!("{b:02x}"))
-            .collect::<Vec<_>>()
-            .join(" ")
-    );
+    check_for_mov_to_cr3(&xedd);
 
     Ok(())
 }
