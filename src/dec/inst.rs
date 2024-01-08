@@ -10,8 +10,8 @@ use derive_more::{From, Into};
 
 use crate::{
     chip::Features,
-    dec::{Operand, Operands},
-    enc::Request,
+    dec::{self, Operands},
+    enc::{self, Displacement, Request},
     ffi, properties,
     raw::{AsMutPtr, AsPtr, ToBool},
     AddressWidth, Attribute, Category, Chip, Errno, Extension, Iclass, Iform, Inst as InstTemplate,
@@ -59,6 +59,8 @@ impl fmt::Display for Inst {
 }
 
 impl Inst {
+    pub const MAX_BYTES: usize = ffi::XED_MAX_INSTRUCTION_BYTES as usize;
+
     properties! { prefix = xed_decoded_inst;
         /// Return true if the instruction is valid
         valid: bool
@@ -247,7 +249,7 @@ impl Inst {
         }
     }
 
-    pub fn req(mut self) -> Request<Self> {
+    pub fn request(mut self) -> Request<Self> {
         unsafe {
             ffi::xed_encoder_request_init_from_decode(self.as_mut_ptr());
         }
@@ -277,7 +279,7 @@ impl Inst {
         self.into()
     }
 
-    pub fn operand(&self, i: u32) -> Option<Operand<&Inst>> {
+    pub fn operand(&self, i: u32) -> Option<dec::Operand<&Inst>> {
         if i < self.noperands() {
             Some((self, i).into())
         } else {
@@ -357,5 +359,26 @@ impl Inst {
             )
         })
         .into()
+    }
+
+    /// Replace a memory displacement.
+    ///
+    /// The widths of original displacement and replacement must match.
+    pub fn patch_disp(&mut self, bytes: &mut [u8], disp: Displacement) -> bool {
+        unsafe { ffi::xed_patch_disp(self.as_mut_ptr(), bytes.as_mut_ptr(), disp.into()) }.bool()
+    }
+
+    /// Replace a branch displacement.
+    ///
+    /// The widths of original displacement and replacement must match.
+    pub fn patch_relbr(&mut self, bytes: &mut [u8], disp: enc::Operand) -> bool {
+        unsafe { ffi::xed_patch_relbr(self.as_mut_ptr(), bytes.as_mut_ptr(), disp.into()) }.bool()
+    }
+
+    /// Replace an imm0 immediate value.
+    ///
+    /// The widths of original immediate and replacement must match.
+    pub fn patch_imm0(&mut self, bytes: &mut [u8], imm0: enc::Operand) -> bool {
+        unsafe { ffi::xed_patch_imm0(self.as_mut_ptr(), bytes.as_mut_ptr(), imm0.into()) }.bool()
     }
 }

@@ -10,6 +10,10 @@ pub fn disp(disp: i64, disp_bits: u32) -> Displacement {
     Displacement(unsafe { ffi::xed_disp(disp, disp_bits) })
 }
 
+impl Displacement {
+    pub const MAX_BYTES: usize = ffi::XED_MAX_DISPLACEMENT_BYTES as usize;
+}
+
 #[repr(transparent)]
 #[derive(Clone, Debug, Deref, DerefMut, From, Into)]
 pub struct Type(ffi::xed_encoder_operand_type_t);

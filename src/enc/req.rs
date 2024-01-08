@@ -221,8 +221,21 @@ impl Request<&mut DecodedInst> {
     }
 }
 
+impl Default for Request<DecodedInst> {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Request<DecodedInst> {
     pub fn new() -> Self {
         Self(DecodedInst::new())
+    }
+
+    pub fn with_mode(state: State) -> Self {
+        let mut req = Self::new();
+
+        req.reset(state);
+        req
     }
 }

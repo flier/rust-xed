@@ -17,6 +17,8 @@ pub struct Inst(ffi::xed_inst_t);
 impl_as_ptr!(Inst(ffi::xed_inst_t));
 
 impl Inst {
+    pub const MAX_BYTES: usize = ffi::XED_MAX_INSTRUCTION_BYTES as usize;
+
     properties! {
         iform: Iform { xed_inst_iform_enum }
         iclass: Iclass { xed_inst_iclass }

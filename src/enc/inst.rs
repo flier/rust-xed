@@ -24,6 +24,8 @@ impl Default for Inst {
 }
 
 impl Inst {
+    pub const MAX_BYTES: usize = ffi::XED_MAX_INSTRUCTION_BYTES as usize;
+
     pub fn mode(&self) -> State {
         self.0.mode.into()
     }

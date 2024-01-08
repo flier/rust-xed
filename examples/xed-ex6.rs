@@ -114,7 +114,7 @@ fn main() -> Result<()> {
         xedd.operands_mut().set_mode(State::LONG64);
     }
 
-    let mut enc_req = xedd.req();
+    let mut enc_req = xedd.request();
 
     if opts.change_to_long_mode {
         enc_req
