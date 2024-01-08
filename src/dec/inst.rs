@@ -209,6 +209,14 @@ impl Inst {
         inst
     }
 
+    /// Create with the state.
+    pub fn with_state<S: Into<State>>(state: S) -> Self {
+        let mut inst = Self::new();
+
+        inst.reset(state);
+        inst
+    }
+
     /// Zero the decode structure, but set the machine state/mode information.
     ///
     /// Re-initializes all operands.

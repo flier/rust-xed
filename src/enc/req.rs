@@ -11,20 +11,16 @@ use crate::{
 };
 
 #[repr(transparent)]
-#[derive(Clone, Copy, Debug, From)]
+#[derive(Clone, Copy, Debug)]
 pub struct Request<I>(I);
 
-impl AsPtr for Request<&mut DecodedInst> {
-    type CType = ffi::xed_encoder_request_t;
+impl From<DecodedInst> for Request<DecodedInst> {
+    fn from(mut inst: DecodedInst) -> Self {
+        unsafe {
+            ffi::xed_encoder_request_init_from_decode(inst.as_mut_ptr());
+        }
 
-    fn as_ptr(&self) -> *const Self::CType {
-        self.0.as_ptr().cast()
-    }
-}
-
-impl AsMutPtr for Request<&mut DecodedInst> {
-    fn as_mut_ptr(&mut self) -> *mut Self::CType {
-        self.0.as_mut_ptr().cast()
+        Self(inst)
     }
 }
 

@@ -1,3 +1,5 @@
+//! encoder example. (uses decoder too)
+
 use anyhow::{anyhow, bail, Result};
 
 use xed::{

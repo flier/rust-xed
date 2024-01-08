@@ -4,7 +4,7 @@ use crate::{
     dec::Inst,
     ffi, properties,
     raw::{AsMutPtr, AsPtr},
-    Iclass, Reg,
+    Iclass, Reg, State,
 };
 
 #[repr(transparent)]
@@ -175,5 +175,7 @@ impl<I> Operands<I>
 where
     Self: AsMutPtr<CType = ffi::xed_operand_values_t>,
 {
-    properties! {}
+    pub fn set_mode(&mut self, state: State) {
+        unsafe { ffi::xed_operand_values_set_mode(self.as_mut_ptr(), state.as_ptr()) }
+    }
 }
