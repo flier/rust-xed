@@ -107,6 +107,8 @@ impl Chip {
 
     pub const SNOW_RIDGE: Chip = Chip(ffi::XED_CHIP_SNOW_RIDGE);
 
+    pub const LAKEFIELD: Chip = Chip(ffi::XED_CHIP_LAKEFIELD);
+
     pub const SANDYBRIDGE: Chip = Chip(ffi::XED_CHIP_SANDYBRIDGE);
 
     pub const IVYBRIDGE: Chip = Chip(ffi::XED_CHIP_IVYBRIDGE);
@@ -140,6 +142,20 @@ impl Chip {
     pub const ALDER_LAKE: Chip = Chip(ffi::XED_CHIP_ALDER_LAKE);
 
     pub const SAPPHIRE_RAPIDS: Chip = Chip(ffi::XED_CHIP_SAPPHIRE_RAPIDS);
+
+    pub const EMERALD_RAPIDS: Chip = Chip(ffi::XED_CHIP_EMERALD_RAPIDS);
+
+    pub const GRANITE_RAPIDS: Chip = Chip(ffi::XED_CHIP_GRANITE_RAPIDS);
+
+    pub const SIERRA_FOREST: Chip = Chip(ffi::XED_CHIP_SIERRA_FOREST);
+
+    pub const CLEARWATER_FOREST: Chip = Chip(ffi::XED_CHIP_CLEARWATER_FOREST);
+
+    pub const ARROW_LAKE: Chip = Chip(ffi::XED_CHIP_ARROW_LAKE);
+
+    pub const LUNAR_LAKE: Chip = Chip(ffi::XED_CHIP_LUNAR_LAKE);
+
+    pub const PANTHER_LAKE: Chip = Chip(ffi::XED_CHIP_PANTHER_LAKE);
 
     pub const FUTURE: Chip = Chip(ffi::XED_CHIP_FUTURE);
 

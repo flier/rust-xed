@@ -21,7 +21,11 @@ impl Iclass {
 
     pub const AAD: Iclass = Iclass(ffi::XED_ICLASS_AAD);
 
+    pub const AADD: Iclass = Iclass(ffi::XED_ICLASS_AADD);
+
     pub const AAM: Iclass = Iclass(ffi::XED_ICLASS_AAM);
+
+    pub const AAND: Iclass = Iclass(ffi::XED_ICLASS_AAND);
 
     pub const AAS: Iclass = Iclass(ffi::XED_ICLASS_AAS);
 
@@ -91,7 +95,11 @@ impl Iclass {
 
     pub const AND_LOCK: Iclass = Iclass(ffi::XED_ICLASS_AND_LOCK);
 
+    pub const AOR: Iclass = Iclass(ffi::XED_ICLASS_AOR);
+
     pub const ARPL: Iclass = Iclass(ffi::XED_ICLASS_ARPL);
+
+    pub const AXOR: Iclass = Iclass(ffi::XED_ICLASS_AXOR);
 
     pub const BEXTR: Iclass = Iclass(ffi::XED_ICLASS_BEXTR);
 
@@ -169,9 +177,73 @@ impl Iclass {
 
     pub const CBW: Iclass = Iclass(ffi::XED_ICLASS_CBW);
 
+    pub const CCMPB: Iclass = Iclass(ffi::XED_ICLASS_CCMPB);
+
+    pub const CCMPBE: Iclass = Iclass(ffi::XED_ICLASS_CCMPBE);
+
+    pub const CCMPF: Iclass = Iclass(ffi::XED_ICLASS_CCMPF);
+
+    pub const CCMPL: Iclass = Iclass(ffi::XED_ICLASS_CCMPL);
+
+    pub const CCMPLE: Iclass = Iclass(ffi::XED_ICLASS_CCMPLE);
+
+    pub const CCMPNB: Iclass = Iclass(ffi::XED_ICLASS_CCMPNB);
+
+    pub const CCMPNBE: Iclass = Iclass(ffi::XED_ICLASS_CCMPNBE);
+
+    pub const CCMPNL: Iclass = Iclass(ffi::XED_ICLASS_CCMPNL);
+
+    pub const CCMPNLE: Iclass = Iclass(ffi::XED_ICLASS_CCMPNLE);
+
+    pub const CCMPNO: Iclass = Iclass(ffi::XED_ICLASS_CCMPNO);
+
+    pub const CCMPNS: Iclass = Iclass(ffi::XED_ICLASS_CCMPNS);
+
+    pub const CCMPNZ: Iclass = Iclass(ffi::XED_ICLASS_CCMPNZ);
+
+    pub const CCMPO: Iclass = Iclass(ffi::XED_ICLASS_CCMPO);
+
+    pub const CCMPS: Iclass = Iclass(ffi::XED_ICLASS_CCMPS);
+
+    pub const CCMPT: Iclass = Iclass(ffi::XED_ICLASS_CCMPT);
+
+    pub const CCMPZ: Iclass = Iclass(ffi::XED_ICLASS_CCMPZ);
+
     pub const CDQ: Iclass = Iclass(ffi::XED_ICLASS_CDQ);
 
     pub const CDQE: Iclass = Iclass(ffi::XED_ICLASS_CDQE);
+
+    pub const CFCMOVB: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVB);
+
+    pub const CFCMOVBE: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVBE);
+
+    pub const CFCMOVL: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVL);
+
+    pub const CFCMOVLE: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVLE);
+
+    pub const CFCMOVNB: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNB);
+
+    pub const CFCMOVNBE: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNBE);
+
+    pub const CFCMOVNL: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNL);
+
+    pub const CFCMOVNLE: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNLE);
+
+    pub const CFCMOVNO: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNO);
+
+    pub const CFCMOVNP: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNP);
+
+    pub const CFCMOVNS: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNS);
+
+    pub const CFCMOVNZ: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVNZ);
+
+    pub const CFCMOVO: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVO);
+
+    pub const CFCMOVP: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVP);
+
+    pub const CFCMOVS: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVS);
+
+    pub const CFCMOVZ: Iclass = Iclass(ffi::XED_ICLASS_CFCMOVZ);
 
     pub const CLAC: Iclass = Iclass(ffi::XED_ICLASS_CLAC);
 
@@ -235,9 +307,37 @@ impl Iclass {
 
     pub const CMP: Iclass = Iclass(ffi::XED_ICLASS_CMP);
 
+    pub const CMPBEXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPBEXADD);
+
+    pub const CMPBXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPBXADD);
+
+    pub const CMPLEXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPLEXADD);
+
+    pub const CMPLXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPLXADD);
+
+    pub const CMPNBEXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNBEXADD);
+
+    pub const CMPNBXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNBXADD);
+
+    pub const CMPNLEXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNLEXADD);
+
+    pub const CMPNLXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNLXADD);
+
+    pub const CMPNOXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNOXADD);
+
+    pub const CMPNPXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNPXADD);
+
+    pub const CMPNSXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNSXADD);
+
+    pub const CMPNZXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPNZXADD);
+
+    pub const CMPOXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPOXADD);
+
     pub const CMPPD: Iclass = Iclass(ffi::XED_ICLASS_CMPPD);
 
     pub const CMPPS: Iclass = Iclass(ffi::XED_ICLASS_CMPPS);
+
+    pub const CMPPXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPPXADD);
 
     pub const CMPSB: Iclass = Iclass(ffi::XED_ICLASS_CMPSB);
 
@@ -251,6 +351,8 @@ impl Iclass {
 
     pub const CMPSW: Iclass = Iclass(ffi::XED_ICLASS_CMPSW);
 
+    pub const CMPSXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPSXADD);
+
     pub const CMPXCHG: Iclass = Iclass(ffi::XED_ICLASS_CMPXCHG);
 
     pub const CMPXCHG16B: Iclass = Iclass(ffi::XED_ICLASS_CMPXCHG16B);
@@ -263,6 +365,8 @@ impl Iclass {
 
     pub const CMPXCHG_LOCK: Iclass = Iclass(ffi::XED_ICLASS_CMPXCHG_LOCK);
 
+    pub const CMPZXADD: Iclass = Iclass(ffi::XED_ICLASS_CMPZXADD);
+
     pub const COMISD: Iclass = Iclass(ffi::XED_ICLASS_COMISD);
 
     pub const COMISS: Iclass = Iclass(ffi::XED_ICLASS_COMISS);
@@ -272,6 +376,38 @@ impl Iclass {
     pub const CQO: Iclass = Iclass(ffi::XED_ICLASS_CQO);
 
     pub const CRC32: Iclass = Iclass(ffi::XED_ICLASS_CRC32);
+
+    pub const CTESTB: Iclass = Iclass(ffi::XED_ICLASS_CTESTB);
+
+    pub const CTESTBE: Iclass = Iclass(ffi::XED_ICLASS_CTESTBE);
+
+    pub const CTESTF: Iclass = Iclass(ffi::XED_ICLASS_CTESTF);
+
+    pub const CTESTL: Iclass = Iclass(ffi::XED_ICLASS_CTESTL);
+
+    pub const CTESTLE: Iclass = Iclass(ffi::XED_ICLASS_CTESTLE);
+
+    pub const CTESTNB: Iclass = Iclass(ffi::XED_ICLASS_CTESTNB);
+
+    pub const CTESTNBE: Iclass = Iclass(ffi::XED_ICLASS_CTESTNBE);
+
+    pub const CTESTNL: Iclass = Iclass(ffi::XED_ICLASS_CTESTNL);
+
+    pub const CTESTNLE: Iclass = Iclass(ffi::XED_ICLASS_CTESTNLE);
+
+    pub const CTESTNO: Iclass = Iclass(ffi::XED_ICLASS_CTESTNO);
+
+    pub const CTESTNS: Iclass = Iclass(ffi::XED_ICLASS_CTESTNS);
+
+    pub const CTESTNZ: Iclass = Iclass(ffi::XED_ICLASS_CTESTNZ);
+
+    pub const CTESTO: Iclass = Iclass(ffi::XED_ICLASS_CTESTO);
+
+    pub const CTESTS: Iclass = Iclass(ffi::XED_ICLASS_CTESTS);
+
+    pub const CTESTT: Iclass = Iclass(ffi::XED_ICLASS_CTESTT);
+
+    pub const CTESTZ: Iclass = Iclass(ffi::XED_ICLASS_CTESTZ);
 
     pub const CVTDQ2PD: Iclass = Iclass(ffi::XED_ICLASS_CVTDQ2PD);
 
@@ -364,6 +500,10 @@ impl Iclass {
     pub const ENQCMDS: Iclass = Iclass(ffi::XED_ICLASS_ENQCMDS);
 
     pub const ENTER: Iclass = Iclass(ffi::XED_ICLASS_ENTER);
+
+    pub const ERETS: Iclass = Iclass(ffi::XED_ICLASS_ERETS);
+
+    pub const ERETU: Iclass = Iclass(ffi::XED_ICLASS_ERETU);
 
     pub const EXTRACTPS: Iclass = Iclass(ffi::XED_ICLASS_EXTRACTPS);
 
@@ -649,6 +789,8 @@ impl Iclass {
 
     pub const JMP: Iclass = Iclass(ffi::XED_ICLASS_JMP);
 
+    pub const JMPABS: Iclass = Iclass(ffi::XED_ICLASS_JMPABS);
+
     pub const JMP_FAR: Iclass = Iclass(ffi::XED_ICLASS_JMP_FAR);
 
     pub const JNB: Iclass = Iclass(ffi::XED_ICLASS_JNB);
@@ -806,6 +948,8 @@ impl Iclass {
     pub const LGS: Iclass = Iclass(ffi::XED_ICLASS_LGS);
 
     pub const LIDT: Iclass = Iclass(ffi::XED_ICLASS_LIDT);
+
+    pub const LKGS: Iclass = Iclass(ffi::XED_ICLASS_LKGS);
 
     pub const LLDT: Iclass = Iclass(ffi::XED_ICLASS_LLDT);
 
@@ -1065,6 +1209,8 @@ impl Iclass {
 
     pub const PBLENDW: Iclass = Iclass(ffi::XED_ICLASS_PBLENDW);
 
+    pub const PBNDKB: Iclass = Iclass(ffi::XED_ICLASS_PBNDKB);
+
     pub const PCLMULQDQ: Iclass = Iclass(ffi::XED_ICLASS_PCLMULQDQ);
 
     pub const PCMPEQB: Iclass = Iclass(ffi::XED_ICLASS_PCMPEQB);
@@ -1249,6 +1395,10 @@ impl Iclass {
 
     pub const POP: Iclass = Iclass(ffi::XED_ICLASS_POP);
 
+    pub const POP2: Iclass = Iclass(ffi::XED_ICLASS_POP2);
+
+    pub const POP2P: Iclass = Iclass(ffi::XED_ICLASS_POP2P);
+
     pub const POPA: Iclass = Iclass(ffi::XED_ICLASS_POPA);
 
     pub const POPAD: Iclass = Iclass(ffi::XED_ICLASS_POPAD);
@@ -1261,7 +1411,13 @@ impl Iclass {
 
     pub const POPFQ: Iclass = Iclass(ffi::XED_ICLASS_POPFQ);
 
+    pub const POPP: Iclass = Iclass(ffi::XED_ICLASS_POPP);
+
     pub const POR: Iclass = Iclass(ffi::XED_ICLASS_POR);
+
+    pub const PREFETCHIT0: Iclass = Iclass(ffi::XED_ICLASS_PREFETCHIT0);
+
+    pub const PREFETCHIT1: Iclass = Iclass(ffi::XED_ICLASS_PREFETCHIT1);
 
     pub const PREFETCHNTA: Iclass = Iclass(ffi::XED_ICLASS_PREFETCHNTA);
 
@@ -1359,6 +1515,10 @@ impl Iclass {
 
     pub const PUSH: Iclass = Iclass(ffi::XED_ICLASS_PUSH);
 
+    pub const PUSH2: Iclass = Iclass(ffi::XED_ICLASS_PUSH2);
+
+    pub const PUSH2P: Iclass = Iclass(ffi::XED_ICLASS_PUSH2P);
+
     pub const PUSHA: Iclass = Iclass(ffi::XED_ICLASS_PUSHA);
 
     pub const PUSHAD: Iclass = Iclass(ffi::XED_ICLASS_PUSHAD);
@@ -1368,6 +1528,8 @@ impl Iclass {
     pub const PUSHFD: Iclass = Iclass(ffi::XED_ICLASS_PUSHFD);
 
     pub const PUSHFQ: Iclass = Iclass(ffi::XED_ICLASS_PUSHFQ);
+
+    pub const PUSHP: Iclass = Iclass(ffi::XED_ICLASS_PUSHP);
 
     pub const PVALIDATE: Iclass = Iclass(ffi::XED_ICLASS_PVALIDATE);
 
@@ -1386,6 +1548,8 @@ impl Iclass {
     pub const RDGSBASE: Iclass = Iclass(ffi::XED_ICLASS_RDGSBASE);
 
     pub const RDMSR: Iclass = Iclass(ffi::XED_ICLASS_RDMSR);
+
+    pub const RDMSRLIST: Iclass = Iclass(ffi::XED_ICLASS_RDMSRLIST);
 
     pub const RDPID: Iclass = Iclass(ffi::XED_ICLASS_RDPID);
 
@@ -1683,7 +1847,7 @@ impl Iclass {
 
     pub const SYSCALL: Iclass = Iclass(ffi::XED_ICLASS_SYSCALL);
 
-    pub const SYSCALL_AMD: Iclass = Iclass(ffi::XED_ICLASS_SYSCALL_AMD);
+    pub const SYSCALL_32: Iclass = Iclass(ffi::XED_ICLASS_SYSCALL_32);
 
     pub const SYSENTER: Iclass = Iclass(ffi::XED_ICLASS_SYSENTER);
 
@@ -1697,6 +1861,10 @@ impl Iclass {
 
     pub const T1MSKC: Iclass = Iclass(ffi::XED_ICLASS_T1MSKC);
 
+    pub const TCMMIMFP16PS: Iclass = Iclass(ffi::XED_ICLASS_TCMMIMFP16PS);
+
+    pub const TCMMRLFP16PS: Iclass = Iclass(ffi::XED_ICLASS_TCMMRLFP16PS);
+
     pub const TDCALL: Iclass = Iclass(ffi::XED_ICLASS_TDCALL);
 
     pub const TDPBF16PS: Iclass = Iclass(ffi::XED_ICLASS_TDPBF16PS);
@@ -1708,6 +1876,8 @@ impl Iclass {
     pub const TDPBUSD: Iclass = Iclass(ffi::XED_ICLASS_TDPBUSD);
 
     pub const TDPBUUD: Iclass = Iclass(ffi::XED_ICLASS_TDPBUUD);
+
+    pub const TDPFP16PS: Iclass = Iclass(ffi::XED_ICLASS_TDPFP16PS);
 
     pub const TEST: Iclass = Iclass(ffi::XED_ICLASS_TEST);
 
@@ -1755,6 +1925,10 @@ impl Iclass {
 
     pub const UNPCKLPS: Iclass = Iclass(ffi::XED_ICLASS_UNPCKLPS);
 
+    pub const URDMSR: Iclass = Iclass(ffi::XED_ICLASS_URDMSR);
+
+    pub const UWRMSR: Iclass = Iclass(ffi::XED_ICLASS_UWRMSR);
+
     pub const V4FMADDPS: Iclass = Iclass(ffi::XED_ICLASS_V4FMADDPS);
 
     pub const V4FMADDSS: Iclass = Iclass(ffi::XED_ICLASS_V4FMADDSS);
@@ -1765,9 +1939,13 @@ impl Iclass {
 
     pub const VADDPD: Iclass = Iclass(ffi::XED_ICLASS_VADDPD);
 
+    pub const VADDPH: Iclass = Iclass(ffi::XED_ICLASS_VADDPH);
+
     pub const VADDPS: Iclass = Iclass(ffi::XED_ICLASS_VADDPS);
 
     pub const VADDSD: Iclass = Iclass(ffi::XED_ICLASS_VADDSD);
+
+    pub const VADDSH: Iclass = Iclass(ffi::XED_ICLASS_VADDSH);
 
     pub const VADDSS: Iclass = Iclass(ffi::XED_ICLASS_VADDSS);
 
@@ -1798,6 +1976,10 @@ impl Iclass {
     pub const VANDPD: Iclass = Iclass(ffi::XED_ICLASS_VANDPD);
 
     pub const VANDPS: Iclass = Iclass(ffi::XED_ICLASS_VANDPS);
+
+    pub const VBCSTNEBF162PS: Iclass = Iclass(ffi::XED_ICLASS_VBCSTNEBF162PS);
+
+    pub const VBCSTNESH2PS: Iclass = Iclass(ffi::XED_ICLASS_VBCSTNESH2PS);
 
     pub const VBLENDMPD: Iclass = Iclass(ffi::XED_ICLASS_VBLENDMPD);
 
@@ -1841,13 +2023,19 @@ impl Iclass {
 
     pub const VCMPPD: Iclass = Iclass(ffi::XED_ICLASS_VCMPPD);
 
+    pub const VCMPPH: Iclass = Iclass(ffi::XED_ICLASS_VCMPPH);
+
     pub const VCMPPS: Iclass = Iclass(ffi::XED_ICLASS_VCMPPS);
 
     pub const VCMPSD: Iclass = Iclass(ffi::XED_ICLASS_VCMPSD);
 
+    pub const VCMPSH: Iclass = Iclass(ffi::XED_ICLASS_VCMPSH);
+
     pub const VCMPSS: Iclass = Iclass(ffi::XED_ICLASS_VCMPSS);
 
     pub const VCOMISD: Iclass = Iclass(ffi::XED_ICLASS_VCOMISD);
+
+    pub const VCOMISH: Iclass = Iclass(ffi::XED_ICLASS_VCOMISH);
 
     pub const VCOMISS: Iclass = Iclass(ffi::XED_ICLASS_VCOMISS);
 
@@ -1857,13 +2045,25 @@ impl Iclass {
 
     pub const VCVTDQ2PD: Iclass = Iclass(ffi::XED_ICLASS_VCVTDQ2PD);
 
+    pub const VCVTDQ2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTDQ2PH);
+
     pub const VCVTDQ2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTDQ2PS);
 
     pub const VCVTNE2PS2BF16: Iclass = Iclass(ffi::XED_ICLASS_VCVTNE2PS2BF16);
 
+    pub const VCVTNEEBF162PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTNEEBF162PS);
+
+    pub const VCVTNEEPH2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTNEEPH2PS);
+
+    pub const VCVTNEOBF162PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTNEOBF162PS);
+
+    pub const VCVTNEOPH2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTNEOPH2PS);
+
     pub const VCVTNEPS2BF16: Iclass = Iclass(ffi::XED_ICLASS_VCVTNEPS2BF16);
 
     pub const VCVTPD2DQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPD2DQ);
+
+    pub const VCVTPD2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTPD2PH);
 
     pub const VCVTPD2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTPD2PS);
 
@@ -1873,13 +2073,31 @@ impl Iclass {
 
     pub const VCVTPD2UQQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPD2UQQ);
 
+    pub const VCVTPH2DQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2DQ);
+
+    pub const VCVTPH2PD: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2PD);
+
     pub const VCVTPH2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2PS);
+
+    pub const VCVTPH2PSX: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2PSX);
+
+    pub const VCVTPH2QQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2QQ);
+
+    pub const VCVTPH2UDQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2UDQ);
+
+    pub const VCVTPH2UQQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2UQQ);
+
+    pub const VCVTPH2UW: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2UW);
+
+    pub const VCVTPH2W: Iclass = Iclass(ffi::XED_ICLASS_VCVTPH2W);
 
     pub const VCVTPS2DQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPS2DQ);
 
     pub const VCVTPS2PD: Iclass = Iclass(ffi::XED_ICLASS_VCVTPS2PD);
 
     pub const VCVTPS2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTPS2PH);
+
+    pub const VCVTPS2PHX: Iclass = Iclass(ffi::XED_ICLASS_VCVTPS2PHX);
 
     pub const VCVTPS2QQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTPS2QQ);
 
@@ -1889,7 +2107,11 @@ impl Iclass {
 
     pub const VCVTQQ2PD: Iclass = Iclass(ffi::XED_ICLASS_VCVTQQ2PD);
 
+    pub const VCVTQQ2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTQQ2PH);
+
     pub const VCVTQQ2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTQQ2PS);
+
+    pub const VCVTSD2SH: Iclass = Iclass(ffi::XED_ICLASS_VCVTSD2SH);
 
     pub const VCVTSD2SI: Iclass = Iclass(ffi::XED_ICLASS_VCVTSD2SI);
 
@@ -1897,11 +2119,23 @@ impl Iclass {
 
     pub const VCVTSD2USI: Iclass = Iclass(ffi::XED_ICLASS_VCVTSD2USI);
 
+    pub const VCVTSH2SD: Iclass = Iclass(ffi::XED_ICLASS_VCVTSH2SD);
+
+    pub const VCVTSH2SI: Iclass = Iclass(ffi::XED_ICLASS_VCVTSH2SI);
+
+    pub const VCVTSH2SS: Iclass = Iclass(ffi::XED_ICLASS_VCVTSH2SS);
+
+    pub const VCVTSH2USI: Iclass = Iclass(ffi::XED_ICLASS_VCVTSH2USI);
+
     pub const VCVTSI2SD: Iclass = Iclass(ffi::XED_ICLASS_VCVTSI2SD);
+
+    pub const VCVTSI2SH: Iclass = Iclass(ffi::XED_ICLASS_VCVTSI2SH);
 
     pub const VCVTSI2SS: Iclass = Iclass(ffi::XED_ICLASS_VCVTSI2SS);
 
     pub const VCVTSS2SD: Iclass = Iclass(ffi::XED_ICLASS_VCVTSS2SD);
+
+    pub const VCVTSS2SH: Iclass = Iclass(ffi::XED_ICLASS_VCVTSS2SH);
 
     pub const VCVTSS2SI: Iclass = Iclass(ffi::XED_ICLASS_VCVTSS2SI);
 
@@ -1915,6 +2149,18 @@ impl Iclass {
 
     pub const VCVTTPD2UQQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPD2UQQ);
 
+    pub const VCVTTPH2DQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPH2DQ);
+
+    pub const VCVTTPH2QQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPH2QQ);
+
+    pub const VCVTTPH2UDQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPH2UDQ);
+
+    pub const VCVTTPH2UQQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPH2UQQ);
+
+    pub const VCVTTPH2UW: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPH2UW);
+
+    pub const VCVTTPH2W: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPH2W);
+
     pub const VCVTTPS2DQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPS2DQ);
 
     pub const VCVTTPS2QQ: Iclass = Iclass(ffi::XED_ICLASS_VCVTTPS2QQ);
@@ -1927,29 +2173,47 @@ impl Iclass {
 
     pub const VCVTTSD2USI: Iclass = Iclass(ffi::XED_ICLASS_VCVTTSD2USI);
 
+    pub const VCVTTSH2SI: Iclass = Iclass(ffi::XED_ICLASS_VCVTTSH2SI);
+
+    pub const VCVTTSH2USI: Iclass = Iclass(ffi::XED_ICLASS_VCVTTSH2USI);
+
     pub const VCVTTSS2SI: Iclass = Iclass(ffi::XED_ICLASS_VCVTTSS2SI);
 
     pub const VCVTTSS2USI: Iclass = Iclass(ffi::XED_ICLASS_VCVTTSS2USI);
 
     pub const VCVTUDQ2PD: Iclass = Iclass(ffi::XED_ICLASS_VCVTUDQ2PD);
 
+    pub const VCVTUDQ2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTUDQ2PH);
+
     pub const VCVTUDQ2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTUDQ2PS);
 
     pub const VCVTUQQ2PD: Iclass = Iclass(ffi::XED_ICLASS_VCVTUQQ2PD);
+
+    pub const VCVTUQQ2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTUQQ2PH);
 
     pub const VCVTUQQ2PS: Iclass = Iclass(ffi::XED_ICLASS_VCVTUQQ2PS);
 
     pub const VCVTUSI2SD: Iclass = Iclass(ffi::XED_ICLASS_VCVTUSI2SD);
 
+    pub const VCVTUSI2SH: Iclass = Iclass(ffi::XED_ICLASS_VCVTUSI2SH);
+
     pub const VCVTUSI2SS: Iclass = Iclass(ffi::XED_ICLASS_VCVTUSI2SS);
+
+    pub const VCVTUW2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTUW2PH);
+
+    pub const VCVTW2PH: Iclass = Iclass(ffi::XED_ICLASS_VCVTW2PH);
 
     pub const VDBPSADBW: Iclass = Iclass(ffi::XED_ICLASS_VDBPSADBW);
 
     pub const VDIVPD: Iclass = Iclass(ffi::XED_ICLASS_VDIVPD);
 
+    pub const VDIVPH: Iclass = Iclass(ffi::XED_ICLASS_VDIVPH);
+
     pub const VDIVPS: Iclass = Iclass(ffi::XED_ICLASS_VDIVPS);
 
     pub const VDIVSD: Iclass = Iclass(ffi::XED_ICLASS_VDIVSD);
+
+    pub const VDIVSH: Iclass = Iclass(ffi::XED_ICLASS_VDIVSH);
 
     pub const VDIVSS: Iclass = Iclass(ffi::XED_ICLASS_VDIVSS);
 
@@ -1993,6 +2257,14 @@ impl Iclass {
 
     pub const VEXTRACTPS: Iclass = Iclass(ffi::XED_ICLASS_VEXTRACTPS);
 
+    pub const VFCMADDCPH: Iclass = Iclass(ffi::XED_ICLASS_VFCMADDCPH);
+
+    pub const VFCMADDCSH: Iclass = Iclass(ffi::XED_ICLASS_VFCMADDCSH);
+
+    pub const VFCMULCPH: Iclass = Iclass(ffi::XED_ICLASS_VFCMULCPH);
+
+    pub const VFCMULCSH: Iclass = Iclass(ffi::XED_ICLASS_VFCMULCSH);
+
     pub const VFIXUPIMMPD: Iclass = Iclass(ffi::XED_ICLASS_VFIXUPIMMPD);
 
     pub const VFIXUPIMMPS: Iclass = Iclass(ffi::XED_ICLASS_VFIXUPIMMPS);
@@ -2003,27 +2275,43 @@ impl Iclass {
 
     pub const VFMADD132PD: Iclass = Iclass(ffi::XED_ICLASS_VFMADD132PD);
 
+    pub const VFMADD132PH: Iclass = Iclass(ffi::XED_ICLASS_VFMADD132PH);
+
     pub const VFMADD132PS: Iclass = Iclass(ffi::XED_ICLASS_VFMADD132PS);
 
     pub const VFMADD132SD: Iclass = Iclass(ffi::XED_ICLASS_VFMADD132SD);
+
+    pub const VFMADD132SH: Iclass = Iclass(ffi::XED_ICLASS_VFMADD132SH);
 
     pub const VFMADD132SS: Iclass = Iclass(ffi::XED_ICLASS_VFMADD132SS);
 
     pub const VFMADD213PD: Iclass = Iclass(ffi::XED_ICLASS_VFMADD213PD);
 
+    pub const VFMADD213PH: Iclass = Iclass(ffi::XED_ICLASS_VFMADD213PH);
+
     pub const VFMADD213PS: Iclass = Iclass(ffi::XED_ICLASS_VFMADD213PS);
 
     pub const VFMADD213SD: Iclass = Iclass(ffi::XED_ICLASS_VFMADD213SD);
+
+    pub const VFMADD213SH: Iclass = Iclass(ffi::XED_ICLASS_VFMADD213SH);
 
     pub const VFMADD213SS: Iclass = Iclass(ffi::XED_ICLASS_VFMADD213SS);
 
     pub const VFMADD231PD: Iclass = Iclass(ffi::XED_ICLASS_VFMADD231PD);
 
+    pub const VFMADD231PH: Iclass = Iclass(ffi::XED_ICLASS_VFMADD231PH);
+
     pub const VFMADD231PS: Iclass = Iclass(ffi::XED_ICLASS_VFMADD231PS);
 
     pub const VFMADD231SD: Iclass = Iclass(ffi::XED_ICLASS_VFMADD231SD);
 
+    pub const VFMADD231SH: Iclass = Iclass(ffi::XED_ICLASS_VFMADD231SH);
+
     pub const VFMADD231SS: Iclass = Iclass(ffi::XED_ICLASS_VFMADD231SS);
+
+    pub const VFMADDCPH: Iclass = Iclass(ffi::XED_ICLASS_VFMADDCPH);
+
+    pub const VFMADDCSH: Iclass = Iclass(ffi::XED_ICLASS_VFMADDCSH);
 
     pub const VFMADDPD: Iclass = Iclass(ffi::XED_ICLASS_VFMADDPD);
 
@@ -2035,13 +2323,19 @@ impl Iclass {
 
     pub const VFMADDSUB132PD: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB132PD);
 
+    pub const VFMADDSUB132PH: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB132PH);
+
     pub const VFMADDSUB132PS: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB132PS);
 
     pub const VFMADDSUB213PD: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB213PD);
 
+    pub const VFMADDSUB213PH: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB213PH);
+
     pub const VFMADDSUB213PS: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB213PS);
 
     pub const VFMADDSUB231PD: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB231PD);
+
+    pub const VFMADDSUB231PH: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB231PH);
 
     pub const VFMADDSUB231PS: Iclass = Iclass(ffi::XED_ICLASS_VFMADDSUB231PS);
 
@@ -2051,37 +2345,55 @@ impl Iclass {
 
     pub const VFMSUB132PD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB132PD);
 
+    pub const VFMSUB132PH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB132PH);
+
     pub const VFMSUB132PS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB132PS);
 
     pub const VFMSUB132SD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB132SD);
+
+    pub const VFMSUB132SH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB132SH);
 
     pub const VFMSUB132SS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB132SS);
 
     pub const VFMSUB213PD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB213PD);
 
+    pub const VFMSUB213PH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB213PH);
+
     pub const VFMSUB213PS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB213PS);
 
     pub const VFMSUB213SD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB213SD);
+
+    pub const VFMSUB213SH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB213SH);
 
     pub const VFMSUB213SS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB213SS);
 
     pub const VFMSUB231PD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB231PD);
 
+    pub const VFMSUB231PH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB231PH);
+
     pub const VFMSUB231PS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB231PS);
 
     pub const VFMSUB231SD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB231SD);
+
+    pub const VFMSUB231SH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB231SH);
 
     pub const VFMSUB231SS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUB231SS);
 
     pub const VFMSUBADD132PD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD132PD);
 
+    pub const VFMSUBADD132PH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD132PH);
+
     pub const VFMSUBADD132PS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD132PS);
 
     pub const VFMSUBADD213PD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD213PD);
 
+    pub const VFMSUBADD213PH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD213PH);
+
     pub const VFMSUBADD213PS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD213PS);
 
     pub const VFMSUBADD231PD: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD231PD);
+
+    pub const VFMSUBADD231PH: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD231PH);
 
     pub const VFMSUBADD231PS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBADD231PS);
 
@@ -2097,27 +2409,43 @@ impl Iclass {
 
     pub const VFMSUBSS: Iclass = Iclass(ffi::XED_ICLASS_VFMSUBSS);
 
+    pub const VFMULCPH: Iclass = Iclass(ffi::XED_ICLASS_VFMULCPH);
+
+    pub const VFMULCSH: Iclass = Iclass(ffi::XED_ICLASS_VFMULCSH);
+
     pub const VFNMADD132PD: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD132PD);
+
+    pub const VFNMADD132PH: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD132PH);
 
     pub const VFNMADD132PS: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD132PS);
 
     pub const VFNMADD132SD: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD132SD);
 
+    pub const VFNMADD132SH: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD132SH);
+
     pub const VFNMADD132SS: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD132SS);
 
     pub const VFNMADD213PD: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD213PD);
+
+    pub const VFNMADD213PH: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD213PH);
 
     pub const VFNMADD213PS: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD213PS);
 
     pub const VFNMADD213SD: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD213SD);
 
+    pub const VFNMADD213SH: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD213SH);
+
     pub const VFNMADD213SS: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD213SS);
 
     pub const VFNMADD231PD: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD231PD);
 
+    pub const VFNMADD231PH: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD231PH);
+
     pub const VFNMADD231PS: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD231PS);
 
     pub const VFNMADD231SD: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD231SD);
+
+    pub const VFNMADD231SH: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD231SH);
 
     pub const VFNMADD231SS: Iclass = Iclass(ffi::XED_ICLASS_VFNMADD231SS);
 
@@ -2131,25 +2459,37 @@ impl Iclass {
 
     pub const VFNMSUB132PD: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB132PD);
 
+    pub const VFNMSUB132PH: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB132PH);
+
     pub const VFNMSUB132PS: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB132PS);
 
     pub const VFNMSUB132SD: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB132SD);
+
+    pub const VFNMSUB132SH: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB132SH);
 
     pub const VFNMSUB132SS: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB132SS);
 
     pub const VFNMSUB213PD: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB213PD);
 
+    pub const VFNMSUB213PH: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB213PH);
+
     pub const VFNMSUB213PS: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB213PS);
 
     pub const VFNMSUB213SD: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB213SD);
+
+    pub const VFNMSUB213SH: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB213SH);
 
     pub const VFNMSUB213SS: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB213SS);
 
     pub const VFNMSUB231PD: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB231PD);
 
+    pub const VFNMSUB231PH: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB231PH);
+
     pub const VFNMSUB231PS: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB231PS);
 
     pub const VFNMSUB231SD: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB231SD);
+
+    pub const VFNMSUB231SH: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB231SH);
 
     pub const VFNMSUB231SS: Iclass = Iclass(ffi::XED_ICLASS_VFNMSUB231SS);
 
@@ -2163,9 +2503,13 @@ impl Iclass {
 
     pub const VFPCLASSPD: Iclass = Iclass(ffi::XED_ICLASS_VFPCLASSPD);
 
+    pub const VFPCLASSPH: Iclass = Iclass(ffi::XED_ICLASS_VFPCLASSPH);
+
     pub const VFPCLASSPS: Iclass = Iclass(ffi::XED_ICLASS_VFPCLASSPS);
 
     pub const VFPCLASSSD: Iclass = Iclass(ffi::XED_ICLASS_VFPCLASSSD);
+
+    pub const VFPCLASSSH: Iclass = Iclass(ffi::XED_ICLASS_VFPCLASSSH);
 
     pub const VFPCLASSSS: Iclass = Iclass(ffi::XED_ICLASS_VFPCLASSSS);
 
@@ -2203,17 +2547,25 @@ impl Iclass {
 
     pub const VGETEXPPD: Iclass = Iclass(ffi::XED_ICLASS_VGETEXPPD);
 
+    pub const VGETEXPPH: Iclass = Iclass(ffi::XED_ICLASS_VGETEXPPH);
+
     pub const VGETEXPPS: Iclass = Iclass(ffi::XED_ICLASS_VGETEXPPS);
 
     pub const VGETEXPSD: Iclass = Iclass(ffi::XED_ICLASS_VGETEXPSD);
+
+    pub const VGETEXPSH: Iclass = Iclass(ffi::XED_ICLASS_VGETEXPSH);
 
     pub const VGETEXPSS: Iclass = Iclass(ffi::XED_ICLASS_VGETEXPSS);
 
     pub const VGETMANTPD: Iclass = Iclass(ffi::XED_ICLASS_VGETMANTPD);
 
+    pub const VGETMANTPH: Iclass = Iclass(ffi::XED_ICLASS_VGETMANTPH);
+
     pub const VGETMANTPS: Iclass = Iclass(ffi::XED_ICLASS_VGETMANTPS);
 
     pub const VGETMANTSD: Iclass = Iclass(ffi::XED_ICLASS_VGETMANTSD);
+
+    pub const VGETMANTSH: Iclass = Iclass(ffi::XED_ICLASS_VGETMANTSH);
 
     pub const VGETMANTSS: Iclass = Iclass(ffi::XED_ICLASS_VGETMANTSS);
 
@@ -2265,9 +2617,13 @@ impl Iclass {
 
     pub const VMAXPD: Iclass = Iclass(ffi::XED_ICLASS_VMAXPD);
 
+    pub const VMAXPH: Iclass = Iclass(ffi::XED_ICLASS_VMAXPH);
+
     pub const VMAXPS: Iclass = Iclass(ffi::XED_ICLASS_VMAXPS);
 
     pub const VMAXSD: Iclass = Iclass(ffi::XED_ICLASS_VMAXSD);
+
+    pub const VMAXSH: Iclass = Iclass(ffi::XED_ICLASS_VMAXSH);
 
     pub const VMAXSS: Iclass = Iclass(ffi::XED_ICLASS_VMAXSS);
 
@@ -2279,9 +2635,13 @@ impl Iclass {
 
     pub const VMINPD: Iclass = Iclass(ffi::XED_ICLASS_VMINPD);
 
+    pub const VMINPH: Iclass = Iclass(ffi::XED_ICLASS_VMINPH);
+
     pub const VMINPS: Iclass = Iclass(ffi::XED_ICLASS_VMINPS);
 
     pub const VMINSD: Iclass = Iclass(ffi::XED_ICLASS_VMINSD);
+
+    pub const VMINSH: Iclass = Iclass(ffi::XED_ICLASS_VMINSH);
 
     pub const VMINSS: Iclass = Iclass(ffi::XED_ICLASS_VMINSS);
 
@@ -2343,6 +2703,8 @@ impl Iclass {
 
     pub const VMOVSD: Iclass = Iclass(ffi::XED_ICLASS_VMOVSD);
 
+    pub const VMOVSH: Iclass = Iclass(ffi::XED_ICLASS_VMOVSH);
+
     pub const VMOVSHDUP: Iclass = Iclass(ffi::XED_ICLASS_VMOVSHDUP);
 
     pub const VMOVSLDUP: Iclass = Iclass(ffi::XED_ICLASS_VMOVSLDUP);
@@ -2352,6 +2714,8 @@ impl Iclass {
     pub const VMOVUPD: Iclass = Iclass(ffi::XED_ICLASS_VMOVUPD);
 
     pub const VMOVUPS: Iclass = Iclass(ffi::XED_ICLASS_VMOVUPS);
+
+    pub const VMOVW: Iclass = Iclass(ffi::XED_ICLASS_VMOVW);
 
     pub const VMPSADBW: Iclass = Iclass(ffi::XED_ICLASS_VMPSADBW);
 
@@ -2369,9 +2733,13 @@ impl Iclass {
 
     pub const VMULPD: Iclass = Iclass(ffi::XED_ICLASS_VMULPD);
 
+    pub const VMULPH: Iclass = Iclass(ffi::XED_ICLASS_VMULPH);
+
     pub const VMULPS: Iclass = Iclass(ffi::XED_ICLASS_VMULPS);
 
     pub const VMULSD: Iclass = Iclass(ffi::XED_ICLASS_VMULSD);
+
+    pub const VMULSH: Iclass = Iclass(ffi::XED_ICLASS_VMULSH);
 
     pub const VMULSS: Iclass = Iclass(ffi::XED_ICLASS_VMULSS);
 
@@ -2547,13 +2915,37 @@ impl Iclass {
 
     pub const VPCONFLICTQ: Iclass = Iclass(ffi::XED_ICLASS_VPCONFLICTQ);
 
+    pub const VPDPBSSD: Iclass = Iclass(ffi::XED_ICLASS_VPDPBSSD);
+
+    pub const VPDPBSSDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPBSSDS);
+
+    pub const VPDPBSUD: Iclass = Iclass(ffi::XED_ICLASS_VPDPBSUD);
+
+    pub const VPDPBSUDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPBSUDS);
+
     pub const VPDPBUSD: Iclass = Iclass(ffi::XED_ICLASS_VPDPBUSD);
 
     pub const VPDPBUSDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPBUSDS);
 
+    pub const VPDPBUUD: Iclass = Iclass(ffi::XED_ICLASS_VPDPBUUD);
+
+    pub const VPDPBUUDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPBUUDS);
+
     pub const VPDPWSSD: Iclass = Iclass(ffi::XED_ICLASS_VPDPWSSD);
 
     pub const VPDPWSSDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPWSSDS);
+
+    pub const VPDPWSUD: Iclass = Iclass(ffi::XED_ICLASS_VPDPWSUD);
+
+    pub const VPDPWSUDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPWSUDS);
+
+    pub const VPDPWUSD: Iclass = Iclass(ffi::XED_ICLASS_VPDPWUSD);
+
+    pub const VPDPWUSDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPWUSDS);
+
+    pub const VPDPWUUD: Iclass = Iclass(ffi::XED_ICLASS_VPDPWUUD);
+
+    pub const VPDPWUUDS: Iclass = Iclass(ffi::XED_ICLASS_VPDPWUUDS);
 
     pub const VPERM2F128: Iclass = Iclass(ffi::XED_ICLASS_VPERM2F128);
 
@@ -3079,23 +3471,35 @@ impl Iclass {
 
     pub const VRCP28SS: Iclass = Iclass(ffi::XED_ICLASS_VRCP28SS);
 
+    pub const VRCPPH: Iclass = Iclass(ffi::XED_ICLASS_VRCPPH);
+
     pub const VRCPPS: Iclass = Iclass(ffi::XED_ICLASS_VRCPPS);
+
+    pub const VRCPSH: Iclass = Iclass(ffi::XED_ICLASS_VRCPSH);
 
     pub const VRCPSS: Iclass = Iclass(ffi::XED_ICLASS_VRCPSS);
 
     pub const VREDUCEPD: Iclass = Iclass(ffi::XED_ICLASS_VREDUCEPD);
 
+    pub const VREDUCEPH: Iclass = Iclass(ffi::XED_ICLASS_VREDUCEPH);
+
     pub const VREDUCEPS: Iclass = Iclass(ffi::XED_ICLASS_VREDUCEPS);
 
     pub const VREDUCESD: Iclass = Iclass(ffi::XED_ICLASS_VREDUCESD);
+
+    pub const VREDUCESH: Iclass = Iclass(ffi::XED_ICLASS_VREDUCESH);
 
     pub const VREDUCESS: Iclass = Iclass(ffi::XED_ICLASS_VREDUCESS);
 
     pub const VRNDSCALEPD: Iclass = Iclass(ffi::XED_ICLASS_VRNDSCALEPD);
 
+    pub const VRNDSCALEPH: Iclass = Iclass(ffi::XED_ICLASS_VRNDSCALEPH);
+
     pub const VRNDSCALEPS: Iclass = Iclass(ffi::XED_ICLASS_VRNDSCALEPS);
 
     pub const VRNDSCALESD: Iclass = Iclass(ffi::XED_ICLASS_VRNDSCALESD);
+
+    pub const VRNDSCALESH: Iclass = Iclass(ffi::XED_ICLASS_VRNDSCALESH);
 
     pub const VRNDSCALESS: Iclass = Iclass(ffi::XED_ICLASS_VRNDSCALESS);
 
@@ -3123,15 +3527,23 @@ impl Iclass {
 
     pub const VRSQRT28SS: Iclass = Iclass(ffi::XED_ICLASS_VRSQRT28SS);
 
+    pub const VRSQRTPH: Iclass = Iclass(ffi::XED_ICLASS_VRSQRTPH);
+
     pub const VRSQRTPS: Iclass = Iclass(ffi::XED_ICLASS_VRSQRTPS);
+
+    pub const VRSQRTSH: Iclass = Iclass(ffi::XED_ICLASS_VRSQRTSH);
 
     pub const VRSQRTSS: Iclass = Iclass(ffi::XED_ICLASS_VRSQRTSS);
 
     pub const VSCALEFPD: Iclass = Iclass(ffi::XED_ICLASS_VSCALEFPD);
 
+    pub const VSCALEFPH: Iclass = Iclass(ffi::XED_ICLASS_VSCALEFPH);
+
     pub const VSCALEFPS: Iclass = Iclass(ffi::XED_ICLASS_VSCALEFPS);
 
     pub const VSCALEFSD: Iclass = Iclass(ffi::XED_ICLASS_VSCALEFSD);
+
+    pub const VSCALEFSH: Iclass = Iclass(ffi::XED_ICLASS_VSCALEFSH);
 
     pub const VSCALEFSS: Iclass = Iclass(ffi::XED_ICLASS_VSCALEFSS);
 
@@ -3159,6 +3571,12 @@ impl Iclass {
 
     pub const VSCATTERQPS: Iclass = Iclass(ffi::XED_ICLASS_VSCATTERQPS);
 
+    pub const VSHA512MSG1: Iclass = Iclass(ffi::XED_ICLASS_VSHA512MSG1);
+
+    pub const VSHA512MSG2: Iclass = Iclass(ffi::XED_ICLASS_VSHA512MSG2);
+
+    pub const VSHA512RNDS2: Iclass = Iclass(ffi::XED_ICLASS_VSHA512RNDS2);
+
     pub const VSHUFF32X4: Iclass = Iclass(ffi::XED_ICLASS_VSHUFF32X4);
 
     pub const VSHUFF64X2: Iclass = Iclass(ffi::XED_ICLASS_VSHUFF64X2);
@@ -3171,11 +3589,25 @@ impl Iclass {
 
     pub const VSHUFPS: Iclass = Iclass(ffi::XED_ICLASS_VSHUFPS);
 
+    pub const VSM3MSG1: Iclass = Iclass(ffi::XED_ICLASS_VSM3MSG1);
+
+    pub const VSM3MSG2: Iclass = Iclass(ffi::XED_ICLASS_VSM3MSG2);
+
+    pub const VSM3RNDS2: Iclass = Iclass(ffi::XED_ICLASS_VSM3RNDS2);
+
+    pub const VSM4KEY4: Iclass = Iclass(ffi::XED_ICLASS_VSM4KEY4);
+
+    pub const VSM4RNDS4: Iclass = Iclass(ffi::XED_ICLASS_VSM4RNDS4);
+
     pub const VSQRTPD: Iclass = Iclass(ffi::XED_ICLASS_VSQRTPD);
+
+    pub const VSQRTPH: Iclass = Iclass(ffi::XED_ICLASS_VSQRTPH);
 
     pub const VSQRTPS: Iclass = Iclass(ffi::XED_ICLASS_VSQRTPS);
 
     pub const VSQRTSD: Iclass = Iclass(ffi::XED_ICLASS_VSQRTSD);
+
+    pub const VSQRTSH: Iclass = Iclass(ffi::XED_ICLASS_VSQRTSH);
 
     pub const VSQRTSS: Iclass = Iclass(ffi::XED_ICLASS_VSQRTSS);
 
@@ -3183,9 +3615,13 @@ impl Iclass {
 
     pub const VSUBPD: Iclass = Iclass(ffi::XED_ICLASS_VSUBPD);
 
+    pub const VSUBPH: Iclass = Iclass(ffi::XED_ICLASS_VSUBPH);
+
     pub const VSUBPS: Iclass = Iclass(ffi::XED_ICLASS_VSUBPS);
 
     pub const VSUBSD: Iclass = Iclass(ffi::XED_ICLASS_VSUBSD);
+
+    pub const VSUBSH: Iclass = Iclass(ffi::XED_ICLASS_VSUBSH);
 
     pub const VSUBSS: Iclass = Iclass(ffi::XED_ICLASS_VSUBSS);
 
@@ -3194,6 +3630,8 @@ impl Iclass {
     pub const VTESTPS: Iclass = Iclass(ffi::XED_ICLASS_VTESTPS);
 
     pub const VUCOMISD: Iclass = Iclass(ffi::XED_ICLASS_VUCOMISD);
+
+    pub const VUCOMISH: Iclass = Iclass(ffi::XED_ICLASS_VUCOMISH);
 
     pub const VUCOMISS: Iclass = Iclass(ffi::XED_ICLASS_VUCOMISS);
 
@@ -3222,6 +3660,10 @@ impl Iclass {
     pub const WRGSBASE: Iclass = Iclass(ffi::XED_ICLASS_WRGSBASE);
 
     pub const WRMSR: Iclass = Iclass(ffi::XED_ICLASS_WRMSR);
+
+    pub const WRMSRLIST: Iclass = Iclass(ffi::XED_ICLASS_WRMSRLIST);
+
+    pub const WRMSRNS: Iclass = Iclass(ffi::XED_ICLASS_WRMSRNS);
 
     pub const WRPKRU: Iclass = Iclass(ffi::XED_ICLASS_WRPKRU);
 

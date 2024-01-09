@@ -255,15 +255,23 @@ impl OperandWidth {
 
     pub const M384: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_M384);
 
-    pub const M512: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_M512);
-
     pub const PTR: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_PTR);
 
     pub const TMEMROW: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_TMEMROW);
 
     pub const TMEMCOL: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_TMEMCOL);
 
+    pub const M512: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_M512);
+
     pub const TV: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_TV);
+
+    pub const ZF16: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_ZF16);
+
+    pub const Z2F16: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_Z2F16);
+
+    pub const YU: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_YU);
+
+    pub const ZD0: OperandWidth = OperandWidth(ffi::XED_OPERAND_WIDTH_ZD0);
 }
 
 impl fmt::Display for OperandWidth {

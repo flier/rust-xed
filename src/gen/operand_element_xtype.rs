@@ -17,6 +17,18 @@ pub struct OperandElementXtype(ffi::xed_operand_element_xtype_enum_t);
 impl OperandElementXtype {
     pub const INVALID: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_INVALID);
 
+    pub const _2BF16: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_2BF16);
+
+    pub const _2F16: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_2F16);
+
+    pub const _2I16: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_2I16);
+
+    pub const _2U16: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_2U16);
+
+    pub const _4I8: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_4I8);
+
+    pub const _4U8: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_4U8);
+
     pub const B80: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_B80);
 
     pub const BF16: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_BF16);
@@ -30,6 +42,8 @@ impl OperandElementXtype {
     pub const F80: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_F80);
 
     pub const I1: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_I1);
+
+    pub const I128: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_I128);
 
     pub const I16: OperandElementXtype = OperandElementXtype(ffi::XED_OPERAND_XTYPE_I16);
 

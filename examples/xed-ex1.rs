@@ -337,16 +337,18 @@ fn print_misc(xedd: &Inst) -> Result<()> {
 
     println!("ISA SET: [{}]", isa_set);
 
-    for (i, bit) in isa_set.cpuid_bits().enumerate() {
-        println!("{}\tCPUID BIT NAME: [{}]", i, bit);
+    for (i, rec) in isa_set.cpuid_recs().enumerate() {
+        println!("{i}\tCPUID RECORD NAME: [{rec}]");
 
-        if let Some(crec) = bit.rec() {
+        if let Some(crec) = rec.rec() {
             println!(
-                "\tLeaf 0x{:08x}, subleaf 0x{:08x}, {}[{}]",
+                "\t\t{{Leaf 0x{:08x}, subleaf 0x{:08x}, {}[{}:{}] = {}",
                 crec.leaf,
                 crec.subleaf,
                 crec.reg(),
-                crec.bit
+                crec.bit_start,
+                crec.bit_end,
+                crec.value
             );
         } else {
             println!("Could not find cpuid leaf information");

@@ -42,9 +42,6 @@ impl Error {
     /// A REX prefix was found where none is allowed.
     pub const BAD_REX_PREFIX: Error = Error(ffi::XED_ERROR_BAD_REX_PREFIX);
 
-    /// An illegal value for the EVEX.U bit was present in the instruction.
-    pub const BAD_EVEX_UBIT: Error = Error(ffi::XED_ERROR_BAD_EVEX_UBIT);
-
     /// An illegal value for the MAP field was detected in the instruction.
     pub const BAD_MAP: Error = Error(ffi::XED_ERROR_BAD_MAP);
 
@@ -79,7 +76,7 @@ impl Error {
     /// EVEX.LL must not ==3 unless using embedded rounding
     pub const BAD_EVEX_LL: Error = Error(ffi::XED_ERROR_BAD_EVEX_LL);
 
-    /// Source registers must not match the destination register for this instruction.
+    /// Some registers must not match for this instruction (e.g. source with dest or dest with dest).
     pub const BAD_REG_MATCH: Error = Error(ffi::XED_ERROR_BAD_REG_MATCH);
 }
 

@@ -20,7 +20,8 @@ pub struct Type(ffi::xed_encoder_operand_type_t);
 
 impl Type {
     pub const INVALID: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_INVALID);
-    pub const BRDISP: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_BRDISP);
+    pub const REL_BRDISP: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_REL_BRDISP);
+    pub const ABS_BRDISP: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_ABS_BRDISP);
     pub const REG: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_REG);
     pub const IMM0: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_IMM0);
     pub const SIMM0: Type = Type(ffi::XED_ENCODER_OPERAND_TYPE_SIMM0);

@@ -127,7 +127,7 @@ where
         unsafe { ffi::xed_encoder_request_zero_operand_order(self.as_mut_ptr()) }
     }
 
-    pub fn set_branch_displacement(&mut self, brdisp: i32, nbytes: u32) -> &mut Self {
+    pub fn set_branch_displacement(&mut self, brdisp: i64, nbytes: u32) -> &mut Self {
         unsafe {
             ffi::xed_encoder_request_set_branch_displacement(self.as_mut_ptr(), brdisp, nbytes);
         }

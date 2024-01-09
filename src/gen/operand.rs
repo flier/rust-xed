@@ -17,6 +17,8 @@ pub struct Operand(ffi::xed_operand_enum_t);
 impl Operand {
     pub const INVALID: Operand = Operand(ffi::XED_OPERAND_INVALID);
 
+    pub const ABSBR: Operand = Operand(ffi::XED_OPERAND_ABSBR);
+
     pub const AGEN: Operand = Operand(ffi::XED_OPERAND_AGEN);
 
     pub const AMD3DNOW: Operand = Operand(ffi::XED_OPERAND_AMD3DNOW);
@@ -65,7 +67,11 @@ impl Operand {
 
     pub const ESRC: Operand = Operand(ffi::XED_OPERAND_ESRC);
 
+    pub const EVVSPACE: Operand = Operand(ffi::XED_OPERAND_EVVSPACE);
+
     pub const FIRST_F2F3: Operand = Operand(ffi::XED_OPERAND_FIRST_F2F3);
+
+    pub const HAS_EGPR: Operand = Operand(ffi::XED_OPERAND_HAS_EGPR);
 
     pub const HAS_MODRM: Operand = Operand(ffi::XED_OPERAND_HAS_MODRM);
 
@@ -131,6 +137,8 @@ impl Operand {
 
     pub const MUST_USE_EVEX: Operand = Operand(ffi::XED_OPERAND_MUST_USE_EVEX);
 
+    pub const ND: Operand = Operand(ffi::XED_OPERAND_ND);
+
     pub const NEEDREX: Operand = Operand(ffi::XED_OPERAND_NEEDREX);
 
     pub const NEED_MEMDISP: Operand = Operand(ffi::XED_OPERAND_NEED_MEMDISP);
@@ -139,11 +147,19 @@ impl Operand {
 
     pub const NELEM: Operand = Operand(ffi::XED_OPERAND_NELEM);
 
+    pub const NF: Operand = Operand(ffi::XED_OPERAND_NF);
+
     pub const NOMINAL_OPCODE: Operand = Operand(ffi::XED_OPERAND_NOMINAL_OPCODE);
 
     pub const NOREX: Operand = Operand(ffi::XED_OPERAND_NOREX);
 
-    pub const NO_SCALE_DISP8: Operand = Operand(ffi::XED_OPERAND_NO_SCALE_DISP8);
+    pub const NOREX2: Operand = Operand(ffi::XED_OPERAND_NOREX2);
+
+    pub const NO_APX: Operand = Operand(ffi::XED_OPERAND_NO_APX);
+
+    pub const NO_EVEX: Operand = Operand(ffi::XED_OPERAND_NO_EVEX);
+
+    pub const NO_VEX: Operand = Operand(ffi::XED_OPERAND_NO_VEX);
 
     pub const NPREFIXES: Operand = Operand(ffi::XED_OPERAND_NPREFIXES);
 
@@ -205,15 +221,21 @@ impl Operand {
 
     pub const REX: Operand = Operand(ffi::XED_OPERAND_REX);
 
+    pub const REX2: Operand = Operand(ffi::XED_OPERAND_REX2);
+
     pub const REXB: Operand = Operand(ffi::XED_OPERAND_REXB);
+
+    pub const REXB4: Operand = Operand(ffi::XED_OPERAND_REXB4);
 
     pub const REXR: Operand = Operand(ffi::XED_OPERAND_REXR);
 
-    pub const REXRR: Operand = Operand(ffi::XED_OPERAND_REXRR);
+    pub const REXR4: Operand = Operand(ffi::XED_OPERAND_REXR4);
 
     pub const REXW: Operand = Operand(ffi::XED_OPERAND_REXW);
 
     pub const REXX: Operand = Operand(ffi::XED_OPERAND_REXX);
+
+    pub const REXX4: Operand = Operand(ffi::XED_OPERAND_REXX4);
 
     pub const RM: Operand = Operand(ffi::XED_OPERAND_RM);
 
@@ -222,6 +244,8 @@ impl Operand {
     pub const SAE: Operand = Operand(ffi::XED_OPERAND_SAE);
 
     pub const SCALE: Operand = Operand(ffi::XED_OPERAND_SCALE);
+
+    pub const SCC: Operand = Operand(ffi::XED_OPERAND_SCC);
 
     pub const SEG0: Operand = Operand(ffi::XED_OPERAND_SEG0);
 
@@ -234,6 +258,8 @@ impl Operand {
     pub const SIBINDEX: Operand = Operand(ffi::XED_OPERAND_SIBINDEX);
 
     pub const SIBSCALE: Operand = Operand(ffi::XED_OPERAND_SIBSCALE);
+
+    pub const SKIP_OSZ: Operand = Operand(ffi::XED_OPERAND_SKIP_OSZ);
 
     pub const SMODE: Operand = Operand(ffi::XED_OPERAND_SMODE);
 
@@ -264,6 +290,8 @@ impl Operand {
     pub const VEX_PREFIX: Operand = Operand(ffi::XED_OPERAND_VEX_PREFIX);
 
     pub const VL: Operand = Operand(ffi::XED_OPERAND_VL);
+
+    pub const VL_IGN: Operand = Operand(ffi::XED_OPERAND_VL_IGN);
 
     pub const WBNOINVD: Operand = Operand(ffi::XED_OPERAND_WBNOINVD);
 

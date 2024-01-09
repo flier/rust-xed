@@ -165,9 +165,13 @@ where
         /// Return the branch displacement width in bits
         branch_displacement_length_bits: u32 { xed_operand_values_get_branch_displacement_length_bits }
 
-        branch_displacement_int32: i32 { xed_operand_values_get_branch_displacement_int32 }
+        branch_displacement_int64: i64 { xed_operand_values_get_branch_displacement_int64 }
 
         iclass: Iclass { xed_operand_values_get_iclass }
+    }
+
+    pub fn get_branch_displacement_byte(&self, i: u32) -> u8 {
+        unsafe { ffi::xed_operand_values_get_branch_displacement_byte(self.as_ptr(), i) }
     }
 }
 

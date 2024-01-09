@@ -27,11 +27,13 @@ impl Extension {
 
     pub const AMD_INVLPGB: Extension = Extension(ffi::XED_EXTENSION_AMD_INVLPGB);
 
-    pub const AMX_BF16: Extension = Extension(ffi::XED_EXTENSION_AMX_BF16);
-
-    pub const AMX_INT8: Extension = Extension(ffi::XED_EXTENSION_AMX_INT8);
+    pub const AMX_FP16: Extension = Extension(ffi::XED_EXTENSION_AMX_FP16);
 
     pub const AMX_TILE: Extension = Extension(ffi::XED_EXTENSION_AMX_TILE);
+
+    pub const APXEVEX: Extension = Extension(ffi::XED_EXTENSION_APXEVEX);
+
+    pub const APXLEGACY: Extension = Extension(ffi::XED_EXTENSION_APXLEGACY);
 
     pub const AVX: Extension = Extension(ffi::XED_EXTENSION_AVX);
 
@@ -45,7 +47,15 @@ impl Extension {
 
     pub const AVXAES: Extension = Extension(ffi::XED_EXTENSION_AVXAES);
 
+    pub const AVX_IFMA: Extension = Extension(ffi::XED_EXTENSION_AVX_IFMA);
+
+    pub const AVX_NE_CONVERT: Extension = Extension(ffi::XED_EXTENSION_AVX_NE_CONVERT);
+
     pub const AVX_VNNI: Extension = Extension(ffi::XED_EXTENSION_AVX_VNNI);
+
+    pub const AVX_VNNI_INT16: Extension = Extension(ffi::XED_EXTENSION_AVX_VNNI_INT16);
+
+    pub const AVX_VNNI_INT8: Extension = Extension(ffi::XED_EXTENSION_AVX_VNNI_INT8);
 
     pub const BASE: Extension = Extension(ffi::XED_EXTENSION_BASE);
 
@@ -65,6 +75,8 @@ impl Extension {
 
     pub const CLZERO: Extension = Extension(ffi::XED_EXTENSION_CLZERO);
 
+    pub const CMPCCXADD: Extension = Extension(ffi::XED_EXTENSION_CMPCCXADD);
+
     pub const ENQCMD: Extension = Extension(ffi::XED_EXTENSION_ENQCMD);
 
     pub const F16C: Extension = Extension(ffi::XED_EXTENSION_F16C);
@@ -73,15 +85,21 @@ impl Extension {
 
     pub const FMA4: Extension = Extension(ffi::XED_EXTENSION_FMA4);
 
+    pub const FRED: Extension = Extension(ffi::XED_EXTENSION_FRED);
+
     pub const GFNI: Extension = Extension(ffi::XED_EXTENSION_GFNI);
 
     pub const HRESET: Extension = Extension(ffi::XED_EXTENSION_HRESET);
+
+    pub const ICACHE_PREFETCH: Extension = Extension(ffi::XED_EXTENSION_ICACHE_PREFETCH);
 
     pub const INVPCID: Extension = Extension(ffi::XED_EXTENSION_INVPCID);
 
     pub const KEYLOCKER: Extension = Extension(ffi::XED_EXTENSION_KEYLOCKER);
 
     pub const KEYLOCKER_WIDE: Extension = Extension(ffi::XED_EXTENSION_KEYLOCKER_WIDE);
+
+    pub const LKGS: Extension = Extension(ffi::XED_EXTENSION_LKGS);
 
     pub const LONGMODE: Extension = Extension(ffi::XED_EXTENSION_LONGMODE);
 
@@ -101,7 +119,11 @@ impl Extension {
 
     pub const MPX: Extension = Extension(ffi::XED_EXTENSION_MPX);
 
+    pub const MSRLIST: Extension = Extension(ffi::XED_EXTENSION_MSRLIST);
+
     pub const PAUSE: Extension = Extension(ffi::XED_EXTENSION_PAUSE);
+
+    pub const PBNDKB: Extension = Extension(ffi::XED_EXTENSION_PBNDKB);
 
     pub const PCLMULQDQ: Extension = Extension(ffi::XED_EXTENSION_PCLMULQDQ);
 
@@ -112,6 +134,8 @@ impl Extension {
     pub const PREFETCHWT1: Extension = Extension(ffi::XED_EXTENSION_PREFETCHWT1);
 
     pub const PTWRITE: Extension = Extension(ffi::XED_EXTENSION_PTWRITE);
+
+    pub const RAO_INT: Extension = Extension(ffi::XED_EXTENSION_RAO_INT);
 
     pub const RDPID: Extension = Extension(ffi::XED_EXTENSION_RDPID);
 
@@ -134,6 +158,12 @@ impl Extension {
     pub const SGX_ENCLV: Extension = Extension(ffi::XED_EXTENSION_SGX_ENCLV);
 
     pub const SHA: Extension = Extension(ffi::XED_EXTENSION_SHA);
+
+    pub const SHA512: Extension = Extension(ffi::XED_EXTENSION_SHA512);
+
+    pub const SM3: Extension = Extension(ffi::XED_EXTENSION_SM3);
+
+    pub const SM4: Extension = Extension(ffi::XED_EXTENSION_SM4);
 
     pub const SMAP: Extension = Extension(ffi::XED_EXTENSION_SMAP);
 
@@ -163,6 +193,8 @@ impl Extension {
 
     pub const UINTR: Extension = Extension(ffi::XED_EXTENSION_UINTR);
 
+    pub const USER_MSR: Extension = Extension(ffi::XED_EXTENSION_USER_MSR);
+
     pub const VAES: Extension = Extension(ffi::XED_EXTENSION_VAES);
 
     pub const VIA_PADLOCK_AES: Extension = Extension(ffi::XED_EXTENSION_VIA_PADLOCK_AES);
@@ -182,6 +214,8 @@ impl Extension {
     pub const WAITPKG: Extension = Extension(ffi::XED_EXTENSION_WAITPKG);
 
     pub const WBNOINVD: Extension = Extension(ffi::XED_EXTENSION_WBNOINVD);
+
+    pub const WRMSRNS: Extension = Extension(ffi::XED_EXTENSION_WRMSRNS);
 
     pub const X87: Extension = Extension(ffi::XED_EXTENSION_X87);
 

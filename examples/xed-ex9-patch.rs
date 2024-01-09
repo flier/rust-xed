@@ -74,7 +74,7 @@ fn main() -> Result<()> {
 
     // patch the displacements or immediates
     if let Some((xedd, ref mut itext)) = decoded.get_mut(0) {
-        if !xedd.patch_relbr(itext, relbr(0x55667788, 32)) {
+        if !xedd.patch_brdisp(itext, relbr(0x55667788, 32)) {
             eprintln!("Patching failed for 1st instr");
         }
     }

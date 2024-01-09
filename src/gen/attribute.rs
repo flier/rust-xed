@@ -19,6 +19,12 @@ impl Attribute {
 
     pub const AMDONLY: Attribute = Attribute(ffi::XED_ATTRIBUTE_AMDONLY);
 
+    pub const APX_NDD: Attribute = Attribute(ffi::XED_ATTRIBUTE_APX_NDD);
+
+    pub const APX_NF: Attribute = Attribute(ffi::XED_ATTRIBUTE_APX_NF);
+
+    pub const ATOMIC: Attribute = Attribute(ffi::XED_ATTRIBUTE_ATOMIC);
+
     pub const ATT_OPERAND_ORDER_EXCEPTION: Attribute =
         Attribute(ffi::XED_ATTRIBUTE_ATT_OPERAND_ORDER_EXCEPTION);
 
@@ -65,6 +71,10 @@ impl Attribute {
 
     pub const DISP8_MOVDDUP: Attribute = Attribute(ffi::XED_ATTRIBUTE_DISP8_MOVDDUP);
 
+    pub const DISP8_NO_SCALE: Attribute = Attribute(ffi::XED_ATTRIBUTE_DISP8_NO_SCALE);
+
+    pub const DISP8_QUARTER: Attribute = Attribute(ffi::XED_ATTRIBUTE_DISP8_QUARTER);
+
     pub const DISP8_QUARTERMEM: Attribute = Attribute(ffi::XED_ATTRIBUTE_DISP8_QUARTERMEM);
 
     pub const DISP8_SCALAR: Attribute = Attribute(ffi::XED_ATTRIBUTE_DISP8_SCALAR);
@@ -100,6 +110,12 @@ impl Attribute {
     pub const FIXED_BASE0: Attribute = Attribute(ffi::XED_ATTRIBUTE_FIXED_BASE0);
 
     pub const FIXED_BASE1: Attribute = Attribute(ffi::XED_ATTRIBUTE_FIXED_BASE1);
+
+    pub const FIXED_ROUNDING_RNE: Attribute = Attribute(ffi::XED_ATTRIBUTE_FIXED_ROUNDING_RNE);
+
+    pub const FLUSH_INPUT_DENORM: Attribute = Attribute(ffi::XED_ATTRIBUTE_FLUSH_INPUT_DENORM);
+
+    pub const FLUSH_OUTPUT_DENORM: Attribute = Attribute(ffi::XED_ATTRIBUTE_FLUSH_OUTPUT_DENORM);
 
     pub const GATHER: Attribute = Attribute(ffi::XED_ATTRIBUTE_GATHER);
 
@@ -156,6 +172,8 @@ impl Attribute {
 
     pub const NO_RIP_REL: Attribute = Attribute(ffi::XED_ATTRIBUTE_NO_RIP_REL);
 
+    pub const NO_SRC_DEST_MATCH: Attribute = Attribute(ffi::XED_ATTRIBUTE_NO_SRC_DEST_MATCH);
+
     pub const PREFETCH: Attribute = Attribute(ffi::XED_ATTRIBUTE_PREFETCH);
 
     pub const PROTECTED_MODE: Attribute = Attribute(ffi::XED_ATTRIBUTE_PROTECTED_MODE);
@@ -165,6 +183,12 @@ impl Attribute {
     pub const REP: Attribute = Attribute(ffi::XED_ATTRIBUTE_REP);
 
     pub const REQUIRES_ALIGNMENT: Attribute = Attribute(ffi::XED_ATTRIBUTE_REQUIRES_ALIGNMENT);
+
+    pub const REQUIRES_ALIGNMENT_4B: Attribute =
+        Attribute(ffi::XED_ATTRIBUTE_REQUIRES_ALIGNMENT_4B);
+
+    pub const REQUIRES_ALIGNMENT_8B: Attribute =
+        Attribute(ffi::XED_ATTRIBUTE_REQUIRES_ALIGNMENT_8B);
 
     pub const RING0: Attribute = Attribute(ffi::XED_ATTRIBUTE_RING0);
 
@@ -188,6 +212,12 @@ impl Attribute {
     pub const STACKPUSH0: Attribute = Attribute(ffi::XED_ATTRIBUTE_STACKPUSH0);
 
     pub const STACKPUSH1: Attribute = Attribute(ffi::XED_ATTRIBUTE_STACKPUSH1);
+
+    pub const UNDOCUMENTED: Attribute = Attribute(ffi::XED_ATTRIBUTE_UNDOCUMENTED);
+
+    pub const USES_DAZ: Attribute = Attribute(ffi::XED_ATTRIBUTE_USES_DAZ);
+
+    pub const USES_FTZ: Attribute = Attribute(ffi::XED_ATTRIBUTE_USES_FTZ);
 
     pub const X87_CONTROL: Attribute = Attribute(ffi::XED_ATTRIBUTE_X87_CONTROL);
 

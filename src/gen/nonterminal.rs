@@ -29,6 +29,38 @@ impl Nonterminal {
 
     pub const AR15: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR15);
 
+    pub const AR16: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR16);
+
+    pub const AR17: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR17);
+
+    pub const AR18: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR18);
+
+    pub const AR19: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR19);
+
+    pub const AR20: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR20);
+
+    pub const AR21: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR21);
+
+    pub const AR22: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR22);
+
+    pub const AR23: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR23);
+
+    pub const AR24: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR24);
+
+    pub const AR25: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR25);
+
+    pub const AR26: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR26);
+
+    pub const AR27: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR27);
+
+    pub const AR28: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR28);
+
+    pub const AR29: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR29);
+
+    pub const AR30: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR30);
+
+    pub const AR31: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR31);
+
     pub const AR8: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR8);
 
     pub const AR9: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_AR9);
@@ -73,6 +105,8 @@ impl Nonterminal {
 
     pub const BRDISP32: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_BRDISP32);
 
+    pub const BRDISP64: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_BRDISP64);
+
     pub const BRDISP8: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_BRDISP8);
 
     pub const BRDISPZ: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_BRDISPZ);
@@ -86,6 +120,8 @@ impl Nonterminal {
     pub const CR_WIDTH: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_CR_WIDTH);
 
     pub const DF64: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_DF64);
+
+    pub const DFV: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_DFV);
 
     pub const DR_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_DR_R);
 
@@ -104,6 +140,12 @@ impl Nonterminal {
     pub const ESIZE_64_BITS: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_ESIZE_64_BITS);
 
     pub const ESIZE_8_BITS: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_ESIZE_8_BITS);
+
+    pub const EVAPX: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_EVAPX);
+
+    pub const EVAPX_SCC: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_EVAPX_SCC);
+
+    pub const EVEXR4_ONE: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_EVEXR4_ONE);
 
     pub const EVEX_INSTRUCTIONS: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_EVEX_INSTRUCTIONS);
 
@@ -144,33 +186,43 @@ impl Nonterminal {
 
     pub const GPR16_B: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR16_B);
 
+    pub const GPR16_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR16_N);
+
     pub const GPR16_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR16_R);
 
     pub const GPR16_SB: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR16_SB);
 
     pub const GPR32_B: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR32_B);
 
+    pub const GPR32_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR32_N);
+
     pub const GPR32_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR32_R);
 
     pub const GPR32_SB: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR32_SB);
 
-    pub const GPR32_X: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR32_X);
-
     pub const GPR64_B: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_B);
+
+    pub const GPR64_B_NORSP: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_B_NORSP);
+
+    pub const GPR64_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_N);
+
+    pub const GPR64_N_NORSP: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_N_NORSP);
 
     pub const GPR64_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_R);
 
     pub const GPR64_SB: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_SB);
 
-    pub const GPR64_X: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR64_X);
-
     pub const GPR8_B: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR8_B);
+
+    pub const GPR8_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR8_N);
 
     pub const GPR8_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR8_R);
 
     pub const GPR8_SB: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPR8_SB);
 
     pub const GPRV_B: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPRV_B);
+
+    pub const GPRV_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPRV_N);
 
     pub const GPRV_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_GPRV_R);
 
@@ -280,6 +332,8 @@ impl Nonterminal {
 
     pub const NELEM_MOVDDUP: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_NELEM_MOVDDUP);
 
+    pub const NELEM_QUARTER: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_NELEM_QUARTER);
+
     pub const NELEM_QUARTERMEM: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_NELEM_QUARTERMEM);
 
     pub const NELEM_SCALAR: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_NELEM_SCALAR);
@@ -360,6 +414,8 @@ impl Nonterminal {
     pub const TMM_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_TMM_N);
 
     pub const TMM_R: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_TMM_R);
+
+    pub const TMM_R3: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_TMM_R3);
 
     pub const UIMM16: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_UIMM16);
 
@@ -451,6 +507,14 @@ impl Nonterminal {
     pub const XMM_B_32: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_B_32);
 
     pub const XMM_B_64: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_B_64);
+
+    pub const XMM_L_B3: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_L_B3);
+
+    pub const XMM_L_B3_64: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_L_B3_64);
+
+    pub const XMM_L_R3: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_L_R3);
+
+    pub const XMM_L_R3_64: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_L_R3_64);
 
     pub const XMM_N: Nonterminal = Nonterminal(ffi::XED_NONTERMINAL_XMM_N);
 

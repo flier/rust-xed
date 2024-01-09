@@ -149,12 +149,12 @@ where
                         .set_operand_order(operand_index, Op::IMM1);
                 }
                 Operand::BrDisp(disp) => {
-                    self.set_branch_displacement(disp.value as i32, disp.width_bits / 8)
+                    self.set_branch_displacement(disp.value, disp.width_bits / 8)
                         .set_operand_order(operand_index, Op::RELBR)
                         .set_relbr();
                 }
                 Operand::Ptr(disp) => {
-                    self.set_branch_displacement(disp.value as i32, disp.width_bits / 8)
+                    self.set_branch_displacement(disp.value, disp.width_bits / 8)
                         .set_operand_order(operand_index, Op::PTR)
                         .set_ptr();
                 }

@@ -19,8 +19,6 @@ impl IsaSet {
 
     pub const _3DNOW: IsaSet = IsaSet(ffi::XED_ISA_SET_3DNOW);
 
-    pub const _3DNOW_PREFETCH: IsaSet = IsaSet(ffi::XED_ISA_SET_3DNOW_PREFETCH);
-
     pub const ADOX_ADCX: IsaSet = IsaSet(ffi::XED_ISA_SET_ADOX_ADCX);
 
     pub const AES: IsaSet = IsaSet(ffi::XED_ISA_SET_AES);
@@ -31,9 +29,59 @@ impl IsaSet {
 
     pub const AMX_BF16: IsaSet = IsaSet(ffi::XED_ISA_SET_AMX_BF16);
 
+    pub const AMX_COMPLEX: IsaSet = IsaSet(ffi::XED_ISA_SET_AMX_COMPLEX);
+
+    pub const AMX_FP16: IsaSet = IsaSet(ffi::XED_ISA_SET_AMX_FP16);
+
     pub const AMX_INT8: IsaSet = IsaSet(ffi::XED_ISA_SET_AMX_INT8);
 
     pub const AMX_TILE: IsaSet = IsaSet(ffi::XED_ISA_SET_AMX_TILE);
+
+    pub const APX_F: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F);
+
+    pub const APX_F_ADX: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_ADX);
+
+    pub const APX_F_AMX: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_AMX);
+
+    pub const APX_F_BMI1: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_BMI1);
+
+    pub const APX_F_BMI2: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_BMI2);
+
+    pub const APX_F_CET: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_CET);
+
+    pub const APX_F_CMPCCXADD: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_CMPCCXADD);
+
+    pub const APX_F_ENQCMD: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_ENQCMD);
+
+    pub const APX_F_INVPCID: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_INVPCID);
+
+    pub const APX_F_KEYLOCKER: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_KEYLOCKER);
+
+    pub const APX_F_KEYLOCKER_WIDE: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_KEYLOCKER_WIDE);
+
+    pub const APX_F_KOPB: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_KOPB);
+
+    pub const APX_F_KOPD: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_KOPD);
+
+    pub const APX_F_KOPQ: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_KOPQ);
+
+    pub const APX_F_KOPW: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_KOPW);
+
+    pub const APX_F_LZCNT: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_LZCNT);
+
+    pub const APX_F_MOVBE: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_MOVBE);
+
+    pub const APX_F_MOVDIR64B: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_MOVDIR64B);
+
+    pub const APX_F_MOVDIRI: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_MOVDIRI);
+
+    pub const APX_F_RAO_INT: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_RAO_INT);
+
+    pub const APX_F_SHA: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_SHA);
+
+    pub const APX_F_USER_MSR: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_USER_MSR);
+
+    pub const APX_F_VMX: IsaSet = IsaSet(ffi::XED_ISA_SET_APX_F_VMX);
 
     pub const AVX: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX);
 
@@ -49,7 +97,9 @@ impl IsaSet {
 
     pub const AVX512BW_512: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512BW_512);
 
-    pub const AVX512BW_KOP: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512BW_KOP);
+    pub const AVX512BW_KOPD: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512BW_KOPD);
+
+    pub const AVX512BW_KOPQ: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512BW_KOPQ);
 
     pub const AVX512CD_128: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512CD_128);
 
@@ -65,7 +115,9 @@ impl IsaSet {
 
     pub const AVX512DQ_512: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512DQ_512);
 
-    pub const AVX512DQ_KOP: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512DQ_KOP);
+    pub const AVX512DQ_KOPB: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512DQ_KOPB);
+
+    pub const AVX512DQ_KOPW: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512DQ_KOPW);
 
     pub const AVX512DQ_SCALAR: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512DQ_SCALAR);
 
@@ -81,7 +133,7 @@ impl IsaSet {
 
     pub const AVX512F_512: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512F_512);
 
-    pub const AVX512F_KOP: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512F_KOP);
+    pub const AVX512F_KOPW: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512F_KOPW);
 
     pub const AVX512F_SCALAR: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512F_SCALAR);
 
@@ -104,6 +156,16 @@ impl IsaSet {
     pub const AVX512_BITALG_256: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_BITALG_256);
 
     pub const AVX512_BITALG_512: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_BITALG_512);
+
+    pub const AVX512_FP16_128: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_FP16_128);
+
+    pub const AVX512_FP16_128N: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_FP16_128N);
+
+    pub const AVX512_FP16_256: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_FP16_256);
+
+    pub const AVX512_FP16_512: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_FP16_512);
+
+    pub const AVX512_FP16_SCALAR: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_FP16_SCALAR);
 
     pub const AVX512_GFNI_128: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX512_GFNI_128);
 
@@ -163,7 +225,15 @@ impl IsaSet {
 
     pub const AVX_GFNI: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX_GFNI);
 
+    pub const AVX_IFMA: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX_IFMA);
+
+    pub const AVX_NE_CONVERT: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX_NE_CONVERT);
+
     pub const AVX_VNNI: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX_VNNI);
+
+    pub const AVX_VNNI_INT16: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX_VNNI_INT16);
+
+    pub const AVX_VNNI_INT8: IsaSet = IsaSet(ffi::XED_ISA_SET_AVX_VNNI_INT8);
 
     pub const BMI1: IsaSet = IsaSet(ffi::XED_ISA_SET_BMI1);
 
@@ -183,6 +253,8 @@ impl IsaSet {
 
     pub const CMOV: IsaSet = IsaSet(ffi::XED_ISA_SET_CMOV);
 
+    pub const CMPCCXADD: IsaSet = IsaSet(ffi::XED_ISA_SET_CMPCCXADD);
+
     pub const CMPXCHG16B: IsaSet = IsaSet(ffi::XED_ISA_SET_CMPXCHG16B);
 
     pub const ENQCMD: IsaSet = IsaSet(ffi::XED_ISA_SET_ENQCMD);
@@ -193,9 +265,13 @@ impl IsaSet {
 
     pub const FCMOV: IsaSet = IsaSet(ffi::XED_ISA_SET_FCMOV);
 
+    pub const FCOMI: IsaSet = IsaSet(ffi::XED_ISA_SET_FCOMI);
+
     pub const FMA: IsaSet = IsaSet(ffi::XED_ISA_SET_FMA);
 
     pub const FMA4: IsaSet = IsaSet(ffi::XED_ISA_SET_FMA4);
+
+    pub const FRED: IsaSet = IsaSet(ffi::XED_ISA_SET_FRED);
 
     pub const FXSAVE: IsaSet = IsaSet(ffi::XED_ISA_SET_FXSAVE);
 
@@ -219,6 +295,8 @@ impl IsaSet {
 
     pub const I86: IsaSet = IsaSet(ffi::XED_ISA_SET_I86);
 
+    pub const ICACHE_PREFETCH: IsaSet = IsaSet(ffi::XED_ISA_SET_ICACHE_PREFETCH);
+
     pub const INVPCID: IsaSet = IsaSet(ffi::XED_ISA_SET_INVPCID);
 
     pub const KEYLOCKER: IsaSet = IsaSet(ffi::XED_ISA_SET_KEYLOCKER);
@@ -226,6 +304,8 @@ impl IsaSet {
     pub const KEYLOCKER_WIDE: IsaSet = IsaSet(ffi::XED_ISA_SET_KEYLOCKER_WIDE);
 
     pub const LAHF: IsaSet = IsaSet(ffi::XED_ISA_SET_LAHF);
+
+    pub const LKGS: IsaSet = IsaSet(ffi::XED_ISA_SET_LKGS);
 
     pub const LONGMODE: IsaSet = IsaSet(ffi::XED_ISA_SET_LONGMODE);
 
@@ -241,11 +321,17 @@ impl IsaSet {
 
     pub const MOVBE: IsaSet = IsaSet(ffi::XED_ISA_SET_MOVBE);
 
-    pub const MOVDIR: IsaSet = IsaSet(ffi::XED_ISA_SET_MOVDIR);
+    pub const MOVDIR64B: IsaSet = IsaSet(ffi::XED_ISA_SET_MOVDIR64B);
+
+    pub const MOVDIRI: IsaSet = IsaSet(ffi::XED_ISA_SET_MOVDIRI);
 
     pub const MPX: IsaSet = IsaSet(ffi::XED_ISA_SET_MPX);
 
+    pub const MSRLIST: IsaSet = IsaSet(ffi::XED_ISA_SET_MSRLIST);
+
     pub const PAUSE: IsaSet = IsaSet(ffi::XED_ISA_SET_PAUSE);
+
+    pub const PBNDKB: IsaSet = IsaSet(ffi::XED_ISA_SET_PBNDKB);
 
     pub const PCLMULQDQ: IsaSet = IsaSet(ffi::XED_ISA_SET_PCLMULQDQ);
 
@@ -273,6 +359,8 @@ impl IsaSet {
 
     pub const PTWRITE: IsaSet = IsaSet(ffi::XED_ISA_SET_PTWRITE);
 
+    pub const RAO_INT: IsaSet = IsaSet(ffi::XED_ISA_SET_RAO_INT);
+
     pub const RDPID: IsaSet = IsaSet(ffi::XED_ISA_SET_RDPID);
 
     pub const RDPMC: IsaSet = IsaSet(ffi::XED_ISA_SET_RDPMC);
@@ -296,6 +384,12 @@ impl IsaSet {
     pub const SGX_ENCLV: IsaSet = IsaSet(ffi::XED_ISA_SET_SGX_ENCLV);
 
     pub const SHA: IsaSet = IsaSet(ffi::XED_ISA_SET_SHA);
+
+    pub const SHA512: IsaSet = IsaSet(ffi::XED_ISA_SET_SHA512);
+
+    pub const SM3: IsaSet = IsaSet(ffi::XED_ISA_SET_SM3);
+
+    pub const SM4: IsaSet = IsaSet(ffi::XED_ISA_SET_SM4);
 
     pub const SMAP: IsaSet = IsaSet(ffi::XED_ISA_SET_SMAP);
 
@@ -337,6 +431,8 @@ impl IsaSet {
 
     pub const UINTR: IsaSet = IsaSet(ffi::XED_ISA_SET_UINTR);
 
+    pub const USER_MSR: IsaSet = IsaSet(ffi::XED_ISA_SET_USER_MSR);
+
     pub const VAES: IsaSet = IsaSet(ffi::XED_ISA_SET_VAES);
 
     pub const VIA_PADLOCK_AES: IsaSet = IsaSet(ffi::XED_ISA_SET_VIA_PADLOCK_AES);
@@ -356,6 +452,8 @@ impl IsaSet {
     pub const WAITPKG: IsaSet = IsaSet(ffi::XED_ISA_SET_WAITPKG);
 
     pub const WBNOINVD: IsaSet = IsaSet(ffi::XED_ISA_SET_WBNOINVD);
+
+    pub const WRMSRNS: IsaSet = IsaSet(ffi::XED_ISA_SET_WRMSRNS);
 
     pub const X87: IsaSet = IsaSet(ffi::XED_ISA_SET_X87);
 

@@ -309,7 +309,7 @@ pub fn seg(input: &str) -> IResult<&str, Seg> {
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct Immed {
-    pub value: u32,
+    pub value: i64,
     pub width_bits: u32,
 }
 
@@ -329,7 +329,7 @@ impl fmt::Display for Immed {
 fn immed(input: &str) -> IResult<&str, Immed> {
     map(
         map_res(hex_digit1, |s: &str| {
-            u32::from_str_radix(s, 16).map(|n| (n, s.len() as u32 * 4))
+            i64::from_str_radix(s, 16).map(|n| (n, s.len() as u32 * 4))
         }),
         |(value, width_bits)| Immed { value, width_bits },
     )(input)

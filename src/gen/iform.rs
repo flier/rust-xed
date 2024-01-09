@@ -21,7 +21,23 @@ impl Iform {
 
     pub const AAD_IMMB: Iform = Iform(ffi::XED_IFORM_AAD_IMMb);
 
+    pub const AADD_MEM32_GPR32: Iform = Iform(ffi::XED_IFORM_AADD_MEM32_GPR32);
+
+    pub const AADD_MEM64_GPR64: Iform = Iform(ffi::XED_IFORM_AADD_MEM64_GPR64);
+
+    pub const AADD_MEMI32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_AADD_MEMi32_GPR32i32_APX);
+
+    pub const AADD_MEMI64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_AADD_MEMi64_GPR64i64_APX);
+
     pub const AAM_IMMB: Iform = Iform(ffi::XED_IFORM_AAM_IMMb);
+
+    pub const AAND_MEM32_GPR32: Iform = Iform(ffi::XED_IFORM_AAND_MEM32_GPR32);
+
+    pub const AAND_MEM64_GPR64: Iform = Iform(ffi::XED_IFORM_AAND_MEM64_GPR64);
+
+    pub const AAND_MEMI32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_AAND_MEMi32_GPR32i32_APX);
+
+    pub const AAND_MEMI64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_AAND_MEMi64_GPR64i64_APX);
 
     pub const AAS: Iform = Iform(ffi::XED_IFORM_AAS);
 
@@ -37,15 +53,56 @@ impl Iform {
 
     pub const ADC_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_ADC_GPR8_MEMb);
 
+    pub const ADC_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPR8i8_GPR8i8_APX);
+
+    pub const ADC_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_ADC_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const ADC_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const ADC_GPR8I8_GPR8I8_MEMI8_APX: Iform =
+        Iform(ffi::XED_IFORM_ADC_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const ADC_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPR8i8_IMM8_APX);
+
+    pub const ADC_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPR8i8_MEMi8_APX);
+
+    pub const ADC_GPR8I8_MEMI8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_ADC_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const ADC_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPR8i8_MEMi8_IMM8_APX);
+
     pub const ADC_GPRV_GPRV_11: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_11);
 
     pub const ADC_GPRV_GPRV_13: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_13);
+
+    pub const ADC_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_APX);
+
+    pub const ADC_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_GPRv_APX);
+
+    pub const ADC_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_IMM8_APX);
+
+    pub const ADC_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_IMMz_APX);
+
+    pub const ADC_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_GPRv_MEMv_APX);
+
+    pub const ADC_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_IMM8_APX);
 
     pub const ADC_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_IMMb);
 
     pub const ADC_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_IMMz);
 
+    pub const ADC_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_IMMz_APX);
+
     pub const ADC_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_MEMv);
+
+    pub const ADC_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_MEMv_APX);
+
+    pub const ADC_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_MEMv_GPRv_APX);
+
+    pub const ADC_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_MEMv_IMM8_APX);
+
+    pub const ADC_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADC_GPRv_MEMv_IMMz_APX);
 
     pub const ADC_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_ADC_MEMb_GPR8);
 
@@ -53,17 +110,47 @@ impl Iform {
 
     pub const ADC_MEMB_IMMB_82R2: Iform = Iform(ffi::XED_IFORM_ADC_MEMb_IMMb_82r2);
 
+    pub const ADC_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_ADC_MEMi8_GPR8i8_APX);
+
+    pub const ADC_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_MEMi8_IMM8_APX);
+
     pub const ADC_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_ADC_MEMv_GPRv);
+
+    pub const ADC_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADC_MEMv_GPRv_APX);
+
+    pub const ADC_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADC_MEMv_IMM8_APX);
 
     pub const ADC_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_ADC_MEMv_IMMb);
 
     pub const ADC_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_ADC_MEMv_IMMz);
+
+    pub const ADC_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADC_MEMv_IMMz_APX);
 
     pub const ADC_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_ADC_OrAX_IMMz);
 
     pub const ADCX_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_ADCX_GPR32d_GPR32d);
 
     pub const ADCX_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_ADCX_GPR32d_MEMd);
+
+    pub const ADCX_GPR32I32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_ADCX_GPR32i32_GPR32i32_APX);
+
+    pub const ADCX_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_ADCX_GPR32i32_GPR32i32_GPR32i32_APX);
+
+    pub const ADCX_GPR32I32_GPR32I32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_ADCX_GPR32i32_GPR32i32_MEMi32_APX);
+
+    pub const ADCX_GPR32I32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_ADCX_GPR32i32_MEMi32_APX);
+
+    pub const ADCX_GPR64I64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_ADCX_GPR64i64_GPR64i64_APX);
+
+    pub const ADCX_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_ADCX_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const ADCX_GPR64I64_GPR64I64_MEMI64_APX: Iform =
+        Iform(ffi::XED_IFORM_ADCX_GPR64i64_GPR64i64_MEMi64_APX);
+
+    pub const ADCX_GPR64I64_MEMI64_APX: Iform = Iform(ffi::XED_IFORM_ADCX_GPR64i64_MEMi64_APX);
 
     pub const ADCX_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_ADCX_GPR64q_GPR64q);
 
@@ -93,15 +180,56 @@ impl Iform {
 
     pub const ADD_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_ADD_GPR8_MEMb);
 
+    pub const ADD_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPR8i8_GPR8i8_APX);
+
+    pub const ADD_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_ADD_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const ADD_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const ADD_GPR8I8_GPR8I8_MEMI8_APX: Iform =
+        Iform(ffi::XED_IFORM_ADD_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const ADD_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPR8i8_IMM8_APX);
+
+    pub const ADD_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPR8i8_MEMi8_APX);
+
+    pub const ADD_GPR8I8_MEMI8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_ADD_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const ADD_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPR8i8_MEMi8_IMM8_APX);
+
     pub const ADD_GPRV_GPRV_01: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_01);
 
     pub const ADD_GPRV_GPRV_03: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_03);
+
+    pub const ADD_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_APX);
+
+    pub const ADD_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_GPRv_APX);
+
+    pub const ADD_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_IMM8_APX);
+
+    pub const ADD_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_IMMz_APX);
+
+    pub const ADD_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_GPRv_MEMv_APX);
+
+    pub const ADD_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_IMM8_APX);
 
     pub const ADD_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_IMMb);
 
     pub const ADD_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_IMMz);
 
+    pub const ADD_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_IMMz_APX);
+
     pub const ADD_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_MEMv);
+
+    pub const ADD_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_MEMv_APX);
+
+    pub const ADD_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_MEMv_GPRv_APX);
+
+    pub const ADD_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_MEMv_IMM8_APX);
+
+    pub const ADD_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADD_GPRv_MEMv_IMMz_APX);
 
     pub const ADD_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_ADD_MEMb_GPR8);
 
@@ -109,11 +237,21 @@ impl Iform {
 
     pub const ADD_MEMB_IMMB_82R0: Iform = Iform(ffi::XED_IFORM_ADD_MEMb_IMMb_82r0);
 
+    pub const ADD_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_ADD_MEMi8_GPR8i8_APX);
+
+    pub const ADD_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_MEMi8_IMM8_APX);
+
     pub const ADD_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_ADD_MEMv_GPRv);
+
+    pub const ADD_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_ADD_MEMv_GPRv_APX);
+
+    pub const ADD_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ADD_MEMv_IMM8_APX);
 
     pub const ADD_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_ADD_MEMv_IMMb);
 
     pub const ADD_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_ADD_MEMv_IMMz);
+
+    pub const ADD_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_ADD_MEMv_IMMz_APX);
 
     pub const ADD_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_ADD_OrAX_IMMz);
 
@@ -157,6 +295,26 @@ impl Iform {
 
     pub const ADOX_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_ADOX_GPR32d_MEMd);
 
+    pub const ADOX_GPR32I32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_ADOX_GPR32i32_GPR32i32_APX);
+
+    pub const ADOX_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_ADOX_GPR32i32_GPR32i32_GPR32i32_APX);
+
+    pub const ADOX_GPR32I32_GPR32I32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_ADOX_GPR32i32_GPR32i32_MEMi32_APX);
+
+    pub const ADOX_GPR32I32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_ADOX_GPR32i32_MEMi32_APX);
+
+    pub const ADOX_GPR64I64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_ADOX_GPR64i64_GPR64i64_APX);
+
+    pub const ADOX_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_ADOX_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const ADOX_GPR64I64_GPR64I64_MEMI64_APX: Iform =
+        Iform(ffi::XED_IFORM_ADOX_GPR64i64_GPR64i64_MEMi64_APX);
+
+    pub const ADOX_GPR64I64_MEMI64_APX: Iform = Iform(ffi::XED_IFORM_ADOX_GPR64i64_MEMi64_APX);
+
     pub const ADOX_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_ADOX_GPR64q_GPR64q);
 
     pub const ADOX_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_ADOX_GPR64q_MEMq);
@@ -167,7 +325,13 @@ impl Iform {
 
     pub const AESDEC128KL_XMMU8_MEMU8: Iform = Iform(ffi::XED_IFORM_AESDEC128KL_XMMu8_MEMu8);
 
+    pub const AESDEC128KL_XMMU8_MEMU8_APX: Iform =
+        Iform(ffi::XED_IFORM_AESDEC128KL_XMMu8_MEMu8_APX);
+
     pub const AESDEC256KL_XMMU8_MEMU8: Iform = Iform(ffi::XED_IFORM_AESDEC256KL_XMMu8_MEMu8);
+
+    pub const AESDEC256KL_XMMU8_MEMU8_APX: Iform =
+        Iform(ffi::XED_IFORM_AESDEC256KL_XMMu8_MEMu8_APX);
 
     pub const AESDECLAST_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_AESDECLAST_XMMdq_MEMdq);
 
@@ -175,7 +339,11 @@ impl Iform {
 
     pub const AESDECWIDE128KL_MEMU8: Iform = Iform(ffi::XED_IFORM_AESDECWIDE128KL_MEMu8);
 
+    pub const AESDECWIDE128KL_MEMU8_APX: Iform = Iform(ffi::XED_IFORM_AESDECWIDE128KL_MEMu8_APX);
+
     pub const AESDECWIDE256KL_MEMU8: Iform = Iform(ffi::XED_IFORM_AESDECWIDE256KL_MEMu8);
+
+    pub const AESDECWIDE256KL_MEMU8_APX: Iform = Iform(ffi::XED_IFORM_AESDECWIDE256KL_MEMu8_APX);
 
     pub const AESENC_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_AESENC_XMMdq_MEMdq);
 
@@ -183,7 +351,13 @@ impl Iform {
 
     pub const AESENC128KL_XMMU8_MEMU8: Iform = Iform(ffi::XED_IFORM_AESENC128KL_XMMu8_MEMu8);
 
+    pub const AESENC128KL_XMMU8_MEMU8_APX: Iform =
+        Iform(ffi::XED_IFORM_AESENC128KL_XMMu8_MEMu8_APX);
+
     pub const AESENC256KL_XMMU8_MEMU8: Iform = Iform(ffi::XED_IFORM_AESENC256KL_XMMu8_MEMu8);
+
+    pub const AESENC256KL_XMMU8_MEMU8_APX: Iform =
+        Iform(ffi::XED_IFORM_AESENC256KL_XMMu8_MEMu8_APX);
 
     pub const AESENCLAST_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_AESENCLAST_XMMdq_MEMdq);
 
@@ -191,7 +365,11 @@ impl Iform {
 
     pub const AESENCWIDE128KL_MEMU8: Iform = Iform(ffi::XED_IFORM_AESENCWIDE128KL_MEMu8);
 
+    pub const AESENCWIDE128KL_MEMU8_APX: Iform = Iform(ffi::XED_IFORM_AESENCWIDE128KL_MEMu8_APX);
+
     pub const AESENCWIDE256KL_MEMU8: Iform = Iform(ffi::XED_IFORM_AESENCWIDE256KL_MEMu8);
+
+    pub const AESENCWIDE256KL_MEMU8_APX: Iform = Iform(ffi::XED_IFORM_AESENCWIDE256KL_MEMu8_APX);
 
     pub const AESIMC_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_AESIMC_XMMdq_MEMdq);
 
@@ -215,15 +393,56 @@ impl Iform {
 
     pub const AND_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_AND_GPR8_MEMb);
 
+    pub const AND_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPR8i8_GPR8i8_APX);
+
+    pub const AND_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_AND_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const AND_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const AND_GPR8I8_GPR8I8_MEMI8_APX: Iform =
+        Iform(ffi::XED_IFORM_AND_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const AND_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPR8i8_IMM8_APX);
+
+    pub const AND_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPR8i8_MEMi8_APX);
+
+    pub const AND_GPR8I8_MEMI8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_AND_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const AND_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPR8i8_MEMi8_IMM8_APX);
+
     pub const AND_GPRV_GPRV_21: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_21);
 
     pub const AND_GPRV_GPRV_23: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_23);
+
+    pub const AND_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_APX);
+
+    pub const AND_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_GPRv_APX);
+
+    pub const AND_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_IMM8_APX);
+
+    pub const AND_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_IMMz_APX);
+
+    pub const AND_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_GPRv_MEMv_APX);
+
+    pub const AND_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_IMM8_APX);
 
     pub const AND_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_AND_GPRv_IMMb);
 
     pub const AND_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_AND_GPRv_IMMz);
 
+    pub const AND_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_IMMz_APX);
+
     pub const AND_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_AND_GPRv_MEMv);
+
+    pub const AND_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_MEMv_APX);
+
+    pub const AND_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_MEMv_GPRv_APX);
+
+    pub const AND_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_MEMv_IMM8_APX);
+
+    pub const AND_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_AND_GPRv_MEMv_IMMz_APX);
 
     pub const AND_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_AND_MEMb_GPR8);
 
@@ -231,23 +450,43 @@ impl Iform {
 
     pub const AND_MEMB_IMMB_82R4: Iform = Iform(ffi::XED_IFORM_AND_MEMb_IMMb_82r4);
 
+    pub const AND_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_AND_MEMi8_GPR8i8_APX);
+
+    pub const AND_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_MEMi8_IMM8_APX);
+
     pub const AND_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_AND_MEMv_GPRv);
+
+    pub const AND_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_AND_MEMv_GPRv_APX);
+
+    pub const AND_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_AND_MEMv_IMM8_APX);
 
     pub const AND_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_AND_MEMv_IMMb);
 
     pub const AND_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_AND_MEMv_IMMz);
 
+    pub const AND_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_AND_MEMv_IMMz_APX);
+
     pub const AND_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_AND_OrAX_IMMz);
 
-    pub const ANDN_VGPR32D_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_ANDN_VGPR32d_VGPR32d_MEMd);
+    pub const ANDN_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_ANDN_GPR32d_GPR32d_GPR32d);
 
-    pub const ANDN_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_ANDN_VGPR32d_VGPR32d_VGPR32d);
+    pub const ANDN_GPR32D_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_ANDN_GPR32d_GPR32d_MEMd);
 
-    pub const ANDN_VGPR64Q_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_ANDN_VGPR64q_VGPR64q_MEMq);
+    pub const ANDN_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_ANDN_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const ANDN_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_ANDN_VGPR64q_VGPR64q_VGPR64q);
+    pub const ANDN_GPR32I32_GPR32I32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_ANDN_GPR32i32_GPR32i32_MEMi32_APX);
+
+    pub const ANDN_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_ANDN_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const ANDN_GPR64I64_GPR64I64_MEMI64_APX: Iform =
+        Iform(ffi::XED_IFORM_ANDN_GPR64i64_GPR64i64_MEMi64_APX);
+
+    pub const ANDN_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_ANDN_GPR64q_GPR64q_GPR64q);
+
+    pub const ANDN_GPR64Q_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_ANDN_GPR64q_GPR64q_MEMq);
 
     pub const ANDNPD_XMMXUQ_MEMXUQ: Iform = Iform(ffi::XED_IFORM_ANDNPD_XMMxuq_MEMxuq);
 
@@ -277,70 +516,94 @@ impl Iform {
 
     pub const AND_LOCK_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_AND_LOCK_MEMv_IMMz);
 
+    pub const AOR_MEM32_GPR32: Iform = Iform(ffi::XED_IFORM_AOR_MEM32_GPR32);
+
+    pub const AOR_MEM64_GPR64: Iform = Iform(ffi::XED_IFORM_AOR_MEM64_GPR64);
+
+    pub const AOR_MEMI32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_AOR_MEMi32_GPR32i32_APX);
+
+    pub const AOR_MEMI64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_AOR_MEMi64_GPR64i64_APX);
+
     pub const ARPL_GPR16_GPR16: Iform = Iform(ffi::XED_IFORM_ARPL_GPR16_GPR16);
 
     pub const ARPL_MEMW_GPR16: Iform = Iform(ffi::XED_IFORM_ARPL_MEMw_GPR16);
 
-    pub const BEXTR_VGPR32D_MEMD_VGPR32D: Iform = Iform(ffi::XED_IFORM_BEXTR_VGPR32d_MEMd_VGPR32d);
+    pub const AXOR_MEM32_GPR32: Iform = Iform(ffi::XED_IFORM_AXOR_MEM32_GPR32);
 
-    pub const BEXTR_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_BEXTR_VGPR32d_VGPR32d_VGPR32d);
+    pub const AXOR_MEM64_GPR64: Iform = Iform(ffi::XED_IFORM_AXOR_MEM64_GPR64);
 
-    pub const BEXTR_VGPR64Q_MEMQ_VGPR64Q: Iform = Iform(ffi::XED_IFORM_BEXTR_VGPR64q_MEMq_VGPR64q);
+    pub const AXOR_MEMI32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_AXOR_MEMi32_GPR32i32_APX);
 
-    pub const BEXTR_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_BEXTR_VGPR64q_VGPR64q_VGPR64q);
+    pub const AXOR_MEMI64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_AXOR_MEMi64_GPR64i64_APX);
 
-    pub const BEXTR_XOP_VGPR32D_MEMD_IMMD: Iform =
-        Iform(ffi::XED_IFORM_BEXTR_XOP_VGPR32d_MEMd_IMMd);
+    pub const BEXTR_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BEXTR_GPR32d_GPR32d_GPR32d);
 
-    pub const BEXTR_XOP_VGPR32D_VGPR32D_IMMD: Iform =
-        Iform(ffi::XED_IFORM_BEXTR_XOP_VGPR32d_VGPR32d_IMMd);
+    pub const BEXTR_GPR32D_MEMD_GPR32D: Iform = Iform(ffi::XED_IFORM_BEXTR_GPR32d_MEMd_GPR32d);
 
-    pub const BEXTR_XOP_VGPRYY_MEMY_IMMD: Iform = Iform(ffi::XED_IFORM_BEXTR_XOP_VGPRyy_MEMy_IMMd);
+    pub const BEXTR_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_BEXTR_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const BEXTR_XOP_VGPRYY_VGPRYY_IMMD: Iform =
-        Iform(ffi::XED_IFORM_BEXTR_XOP_VGPRyy_VGPRyy_IMMd);
+    pub const BEXTR_GPR32I32_MEMI32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_BEXTR_GPR32i32_MEMi32_GPR32i32_APX);
 
-    pub const BLCFILL_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCFILL_VGPR32d_MEMd);
+    pub const BEXTR_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_BEXTR_GPR64i64_GPR64i64_GPR64i64_APX);
 
-    pub const BLCFILL_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLCFILL_VGPR32d_VGPR32d);
+    pub const BEXTR_GPR64I64_MEMI64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_BEXTR_GPR64i64_MEMi64_GPR64i64_APX);
 
-    pub const BLCFILL_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCFILL_VGPRyy_MEMy);
+    pub const BEXTR_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_BEXTR_GPR64q_GPR64q_GPR64q);
 
-    pub const BLCFILL_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLCFILL_VGPRyy_VGPRyy);
+    pub const BEXTR_GPR64Q_MEMQ_GPR64Q: Iform = Iform(ffi::XED_IFORM_BEXTR_GPR64q_MEMq_GPR64q);
 
-    pub const BLCI_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCI_VGPR32d_MEMd);
+    pub const BEXTR_XOP_GPR32D_GPR32D_IMMD: Iform =
+        Iform(ffi::XED_IFORM_BEXTR_XOP_GPR32d_GPR32d_IMMd);
 
-    pub const BLCI_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLCI_VGPR32d_VGPR32d);
+    pub const BEXTR_XOP_GPR32D_MEMD_IMMD: Iform = Iform(ffi::XED_IFORM_BEXTR_XOP_GPR32d_MEMd_IMMd);
 
-    pub const BLCI_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCI_VGPRyy_MEMy);
+    pub const BEXTR_XOP_GPRYY_GPRYY_IMMD: Iform = Iform(ffi::XED_IFORM_BEXTR_XOP_GPRyy_GPRyy_IMMd);
 
-    pub const BLCI_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLCI_VGPRyy_VGPRyy);
+    pub const BEXTR_XOP_GPRYY_MEMY_IMMD: Iform = Iform(ffi::XED_IFORM_BEXTR_XOP_GPRyy_MEMy_IMMd);
 
-    pub const BLCIC_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCIC_VGPR32d_MEMd);
+    pub const BLCFILL_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLCFILL_GPR32d_GPR32d);
 
-    pub const BLCIC_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLCIC_VGPR32d_VGPR32d);
+    pub const BLCFILL_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCFILL_GPR32d_MEMd);
 
-    pub const BLCIC_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCIC_VGPRyy_MEMy);
+    pub const BLCFILL_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLCFILL_GPRyy_GPRyy);
 
-    pub const BLCIC_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLCIC_VGPRyy_VGPRyy);
+    pub const BLCFILL_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCFILL_GPRyy_MEMy);
 
-    pub const BLCMSK_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCMSK_VGPR32d_MEMd);
+    pub const BLCI_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLCI_GPR32d_GPR32d);
 
-    pub const BLCMSK_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLCMSK_VGPR32d_VGPR32d);
+    pub const BLCI_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCI_GPR32d_MEMd);
 
-    pub const BLCMSK_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCMSK_VGPRyy_MEMy);
+    pub const BLCI_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLCI_GPRyy_GPRyy);
 
-    pub const BLCMSK_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLCMSK_VGPRyy_VGPRyy);
+    pub const BLCI_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCI_GPRyy_MEMy);
 
-    pub const BLCS_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCS_VGPR32d_MEMd);
+    pub const BLCIC_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLCIC_GPR32d_GPR32d);
 
-    pub const BLCS_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLCS_VGPR32d_VGPR32d);
+    pub const BLCIC_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCIC_GPR32d_MEMd);
 
-    pub const BLCS_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCS_VGPRyy_MEMy);
+    pub const BLCIC_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLCIC_GPRyy_GPRyy);
 
-    pub const BLCS_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLCS_VGPRyy_VGPRyy);
+    pub const BLCIC_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCIC_GPRyy_MEMy);
+
+    pub const BLCMSK_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLCMSK_GPR32d_GPR32d);
+
+    pub const BLCMSK_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCMSK_GPR32d_MEMd);
+
+    pub const BLCMSK_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLCMSK_GPRyy_GPRyy);
+
+    pub const BLCMSK_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCMSK_GPRyy_MEMy);
+
+    pub const BLCS_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLCS_GPR32d_GPR32d);
+
+    pub const BLCS_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLCS_GPR32d_MEMd);
+
+    pub const BLCS_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLCS_GPRyy_GPRyy);
+
+    pub const BLCS_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLCS_GPRyy_MEMy);
 
     pub const BLENDPD_XMMDQ_MEMDQ_IMMB: Iform = Iform(ffi::XED_IFORM_BLENDPD_XMMdq_MEMdq_IMMb);
 
@@ -358,45 +621,71 @@ impl Iform {
 
     pub const BLENDVPS_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_BLENDVPS_XMMdq_XMMdq);
 
-    pub const BLSFILL_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSFILL_VGPR32d_MEMd);
+    pub const BLSFILL_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLSFILL_GPR32d_GPR32d);
 
-    pub const BLSFILL_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLSFILL_VGPR32d_VGPR32d);
+    pub const BLSFILL_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSFILL_GPR32d_MEMd);
 
-    pub const BLSFILL_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLSFILL_VGPRyy_MEMy);
+    pub const BLSFILL_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLSFILL_GPRyy_GPRyy);
 
-    pub const BLSFILL_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLSFILL_VGPRyy_VGPRyy);
+    pub const BLSFILL_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLSFILL_GPRyy_MEMy);
 
-    pub const BLSI_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSI_VGPR32d_MEMd);
+    pub const BLSI_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLSI_GPR32d_GPR32d);
 
-    pub const BLSI_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLSI_VGPR32d_VGPR32d);
+    pub const BLSI_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSI_GPR32d_MEMd);
 
-    pub const BLSI_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_BLSI_VGPR64q_MEMq);
+    pub const BLSI_GPR32I32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_BLSI_GPR32i32_GPR32i32_APX);
 
-    pub const BLSI_VGPR64Q_VGPR64Q: Iform = Iform(ffi::XED_IFORM_BLSI_VGPR64q_VGPR64q);
+    pub const BLSI_GPR32I32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_BLSI_GPR32i32_MEMi32_APX);
 
-    pub const BLSIC_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSIC_VGPR32d_MEMd);
+    pub const BLSI_GPR64I64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_BLSI_GPR64i64_GPR64i64_APX);
 
-    pub const BLSIC_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLSIC_VGPR32d_VGPR32d);
+    pub const BLSI_GPR64I64_MEMI64_APX: Iform = Iform(ffi::XED_IFORM_BLSI_GPR64i64_MEMi64_APX);
 
-    pub const BLSIC_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLSIC_VGPRyy_MEMy);
+    pub const BLSI_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_BLSI_GPR64q_GPR64q);
 
-    pub const BLSIC_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_BLSIC_VGPRyy_VGPRyy);
+    pub const BLSI_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_BLSI_GPR64q_MEMq);
 
-    pub const BLSMSK_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSMSK_VGPR32d_MEMd);
+    pub const BLSIC_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLSIC_GPR32d_GPR32d);
 
-    pub const BLSMSK_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLSMSK_VGPR32d_VGPR32d);
+    pub const BLSIC_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSIC_GPR32d_MEMd);
 
-    pub const BLSMSK_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_BLSMSK_VGPR64q_MEMq);
+    pub const BLSIC_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_BLSIC_GPRyy_GPRyy);
 
-    pub const BLSMSK_VGPR64Q_VGPR64Q: Iform = Iform(ffi::XED_IFORM_BLSMSK_VGPR64q_VGPR64q);
+    pub const BLSIC_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_BLSIC_GPRyy_MEMy);
 
-    pub const BLSR_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSR_VGPR32d_MEMd);
+    pub const BLSMSK_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLSMSK_GPR32d_GPR32d);
 
-    pub const BLSR_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_BLSR_VGPR32d_VGPR32d);
+    pub const BLSMSK_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSMSK_GPR32d_MEMd);
 
-    pub const BLSR_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_BLSR_VGPR64q_MEMq);
+    pub const BLSMSK_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_BLSMSK_GPR32i32_GPR32i32_APX);
 
-    pub const BLSR_VGPR64Q_VGPR64Q: Iform = Iform(ffi::XED_IFORM_BLSR_VGPR64q_VGPR64q);
+    pub const BLSMSK_GPR32I32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_BLSMSK_GPR32i32_MEMi32_APX);
+
+    pub const BLSMSK_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_BLSMSK_GPR64i64_GPR64i64_APX);
+
+    pub const BLSMSK_GPR64I64_MEMI64_APX: Iform = Iform(ffi::XED_IFORM_BLSMSK_GPR64i64_MEMi64_APX);
+
+    pub const BLSMSK_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_BLSMSK_GPR64q_GPR64q);
+
+    pub const BLSMSK_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_BLSMSK_GPR64q_MEMq);
+
+    pub const BLSR_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BLSR_GPR32d_GPR32d);
+
+    pub const BLSR_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_BLSR_GPR32d_MEMd);
+
+    pub const BLSR_GPR32I32_GPR32I32_APX: Iform = Iform(ffi::XED_IFORM_BLSR_GPR32i32_GPR32i32_APX);
+
+    pub const BLSR_GPR32I32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_BLSR_GPR32i32_MEMi32_APX);
+
+    pub const BLSR_GPR64I64_GPR64I64_APX: Iform = Iform(ffi::XED_IFORM_BLSR_GPR64i64_GPR64i64_APX);
+
+    pub const BLSR_GPR64I64_MEMI64_APX: Iform = Iform(ffi::XED_IFORM_BLSR_GPR64i64_MEMi64_APX);
+
+    pub const BLSR_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_BLSR_GPR64q_GPR64q);
+
+    pub const BLSR_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_BLSR_GPR64q_MEMq);
 
     pub const BNDCL_BND_AGEN: Iform = Iform(ffi::XED_IFORM_BNDCL_BND_AGEN);
 
@@ -494,15 +783,25 @@ impl Iform {
 
     pub const BTS_LOCK_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_BTS_LOCK_MEMv_IMMb);
 
-    pub const BZHI_VGPR32D_MEMD_VGPR32D: Iform = Iform(ffi::XED_IFORM_BZHI_VGPR32d_MEMd_VGPR32d);
+    pub const BZHI_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_BZHI_GPR32d_GPR32d_GPR32d);
 
-    pub const BZHI_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_BZHI_VGPR32d_VGPR32d_VGPR32d);
+    pub const BZHI_GPR32D_MEMD_GPR32D: Iform = Iform(ffi::XED_IFORM_BZHI_GPR32d_MEMd_GPR32d);
 
-    pub const BZHI_VGPR64Q_MEMQ_VGPR64Q: Iform = Iform(ffi::XED_IFORM_BZHI_VGPR64q_MEMq_VGPR64q);
+    pub const BZHI_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_BZHI_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const BZHI_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_BZHI_VGPR64q_VGPR64q_VGPR64q);
+    pub const BZHI_GPR32I32_MEMI32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_BZHI_GPR32i32_MEMi32_GPR32i32_APX);
+
+    pub const BZHI_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_BZHI_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const BZHI_GPR64I64_MEMI64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_BZHI_GPR64i64_MEMi64_GPR64i64_APX);
+
+    pub const BZHI_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_BZHI_GPR64q_GPR64q_GPR64q);
+
+    pub const BZHI_GPR64Q_MEMQ_GPR64Q: Iform = Iform(ffi::XED_IFORM_BZHI_GPR64q_MEMq_GPR64q);
 
     pub const CALL_FAR_MEMP2: Iform = Iform(ffi::XED_IFORM_CALL_FAR_MEMp2);
 
@@ -518,9 +817,609 @@ impl Iform {
 
     pub const CBW: Iform = Iform(ffi::XED_IFORM_CBW);
 
+    pub const CCMPB_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPB_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPB_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPB_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPB_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPB_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPB_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPB_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPB_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPB_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPB_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPB_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPB_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPB_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPBE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPBE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPBE_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPBE_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPBE_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPBE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPBE_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPBE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPBE_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPBE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPBE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPBE_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPBE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPBE_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPBE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPBE_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPF_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPF_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPF_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPF_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPF_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPF_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPF_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPF_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPF_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPF_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPF_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPF_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPF_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPF_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPL_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPL_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPL_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPL_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPL_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPL_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPL_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPL_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPL_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPL_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPL_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPL_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPL_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPL_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPLE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPLE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPLE_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPLE_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPLE_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPLE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPLE_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPLE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPLE_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPLE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPLE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPLE_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPLE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPLE_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPLE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPLE_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNB_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNB_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNB_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNB_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNB_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNB_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNB_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNB_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNB_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNB_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNB_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNB_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNB_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNB_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNB_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNB_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNBE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNBE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNBE_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNBE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNBE_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNBE_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNBE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNBE_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNBE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNBE_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNBE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNBE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNBE_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNBE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNBE_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNBE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNBE_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNL_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNL_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNL_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNL_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNL_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNL_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNL_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNL_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNL_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNL_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNL_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNL_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNL_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNL_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNL_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNL_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNLE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNLE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNLE_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNLE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNLE_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNLE_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNLE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNLE_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNLE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNLE_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNLE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNLE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNLE_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNLE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNLE_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNLE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNLE_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNO_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNO_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNO_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNO_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNO_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNO_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNO_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNO_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNO_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNO_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNO_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNO_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNO_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNO_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNO_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNO_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNS_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNS_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNS_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNS_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNS_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNS_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNS_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNS_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNS_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNS_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNS_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNS_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNS_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNS_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNS_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNS_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPNZ_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNZ_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPNZ_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPNZ_GPR8I8_MEMI8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNZ_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPNZ_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPNZ_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPNZ_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPNZ_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPNZ_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPNZ_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPNZ_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPNZ_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPNZ_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPNZ_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPNZ_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPO_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPO_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPO_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPO_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPO_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPO_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPO_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPO_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPO_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPO_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPO_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPO_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPO_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPO_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPS_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPS_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPS_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPS_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPS_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPS_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPS_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPS_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPS_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPS_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPS_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPS_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPS_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPS_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPT_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPT_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPT_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPT_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPT_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPT_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPT_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPT_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPT_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPT_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPT_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPT_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPT_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPT_MEMv_IMMz_DFV_APX);
+
+    pub const CCMPZ_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CCMPZ_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CCMPZ_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_GPR8i8_IMM8_DFV_APX);
+
+    pub const CCMPZ_GPR8I8_MEMI8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_GPR8i8_MEMi8_DFV_APX);
+
+    pub const CCMPZ_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_GPRv_GPRv_DFV_APX);
+
+    pub const CCMPZ_GPRV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_GPRv_IMM8_DFV_APX);
+
+    pub const CCMPZ_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_GPRv_IMMz_DFV_APX);
+
+    pub const CCMPZ_GPRV_MEMV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_GPRv_MEMv_DFV_APX);
+
+    pub const CCMPZ_MEMI8_GPR8I8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CCMPZ_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_MEMi8_IMM8_DFV_APX);
+
+    pub const CCMPZ_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_MEMv_GPRv_DFV_APX);
+
+    pub const CCMPZ_MEMV_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_MEMv_IMM8_DFV_APX);
+
+    pub const CCMPZ_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CCMPZ_MEMv_IMMz_DFV_APX);
+
     pub const CDQ: Iform = Iform(ffi::XED_IFORM_CDQ);
 
     pub const CDQE: Iform = Iform(ffi::XED_IFORM_CDQE);
+
+    pub const CFCMOVB_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVB_GPRv_GPRv_APX);
+
+    pub const CFCMOVB_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVB_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVB_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVB_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVB_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVB_GPRv_MEMv_APX);
+
+    pub const CFCMOVB_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVB_MEMv_GPRv_APX);
+
+    pub const CFCMOVBE_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVBE_GPRv_GPRv_APX);
+
+    pub const CFCMOVBE_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVBE_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVBE_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVBE_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVBE_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVBE_GPRv_MEMv_APX);
+
+    pub const CFCMOVBE_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVBE_MEMv_GPRv_APX);
+
+    pub const CFCMOVL_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVL_GPRv_GPRv_APX);
+
+    pub const CFCMOVL_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVL_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVL_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVL_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVL_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVL_GPRv_MEMv_APX);
+
+    pub const CFCMOVL_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVL_MEMv_GPRv_APX);
+
+    pub const CFCMOVLE_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVLE_GPRv_GPRv_APX);
+
+    pub const CFCMOVLE_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVLE_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVLE_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVLE_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVLE_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVLE_GPRv_MEMv_APX);
+
+    pub const CFCMOVLE_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVLE_MEMv_GPRv_APX);
+
+    pub const CFCMOVNB_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNB_GPRv_GPRv_APX);
+
+    pub const CFCMOVNB_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNB_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNB_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNB_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNB_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNB_GPRv_MEMv_APX);
+
+    pub const CFCMOVNB_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNB_MEMv_GPRv_APX);
+
+    pub const CFCMOVNBE_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNBE_GPRv_GPRv_APX);
+
+    pub const CFCMOVNBE_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNBE_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNBE_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNBE_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNBE_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNBE_GPRv_MEMv_APX);
+
+    pub const CFCMOVNBE_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNBE_MEMv_GPRv_APX);
+
+    pub const CFCMOVNL_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNL_GPRv_GPRv_APX);
+
+    pub const CFCMOVNL_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNL_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNL_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNL_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNL_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNL_GPRv_MEMv_APX);
+
+    pub const CFCMOVNL_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNL_MEMv_GPRv_APX);
+
+    pub const CFCMOVNLE_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNLE_GPRv_GPRv_APX);
+
+    pub const CFCMOVNLE_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNLE_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNLE_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNLE_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNLE_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNLE_GPRv_MEMv_APX);
+
+    pub const CFCMOVNLE_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNLE_MEMv_GPRv_APX);
+
+    pub const CFCMOVNO_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNO_GPRv_GPRv_APX);
+
+    pub const CFCMOVNO_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNO_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNO_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNO_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNO_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNO_GPRv_MEMv_APX);
+
+    pub const CFCMOVNO_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNO_MEMv_GPRv_APX);
+
+    pub const CFCMOVNP_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNP_GPRv_GPRv_APX);
+
+    pub const CFCMOVNP_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNP_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNP_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNP_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNP_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNP_GPRv_MEMv_APX);
+
+    pub const CFCMOVNP_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNP_MEMv_GPRv_APX);
+
+    pub const CFCMOVNS_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNS_GPRv_GPRv_APX);
+
+    pub const CFCMOVNS_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNS_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNS_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNS_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNS_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNS_GPRv_MEMv_APX);
+
+    pub const CFCMOVNS_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNS_MEMv_GPRv_APX);
+
+    pub const CFCMOVNZ_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNZ_GPRv_GPRv_APX);
+
+    pub const CFCMOVNZ_GPRV_GPRV_GPRV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNZ_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVNZ_GPRV_GPRV_MEMV_APX: Iform =
+        Iform(ffi::XED_IFORM_CFCMOVNZ_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVNZ_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNZ_GPRv_MEMv_APX);
+
+    pub const CFCMOVNZ_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVNZ_MEMv_GPRv_APX);
+
+    pub const CFCMOVO_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVO_GPRv_GPRv_APX);
+
+    pub const CFCMOVO_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVO_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVO_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVO_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVO_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVO_GPRv_MEMv_APX);
+
+    pub const CFCMOVO_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVO_MEMv_GPRv_APX);
+
+    pub const CFCMOVP_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVP_GPRv_GPRv_APX);
+
+    pub const CFCMOVP_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVP_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVP_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVP_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVP_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVP_GPRv_MEMv_APX);
+
+    pub const CFCMOVP_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVP_MEMv_GPRv_APX);
+
+    pub const CFCMOVS_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVS_GPRv_GPRv_APX);
+
+    pub const CFCMOVS_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVS_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVS_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVS_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVS_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVS_GPRv_MEMv_APX);
+
+    pub const CFCMOVS_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVS_MEMv_GPRv_APX);
+
+    pub const CFCMOVZ_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVZ_GPRv_GPRv_APX);
+
+    pub const CFCMOVZ_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVZ_GPRv_GPRv_GPRv_APX);
+
+    pub const CFCMOVZ_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVZ_GPRv_GPRv_MEMv_APX);
+
+    pub const CFCMOVZ_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVZ_GPRv_MEMv_APX);
+
+    pub const CFCMOVZ_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CFCMOVZ_MEMv_GPRv_APX);
 
     pub const CLAC: Iform = Iform(ffi::XED_IFORM_CLAC);
 
@@ -552,65 +1451,129 @@ impl Iform {
 
     pub const CMOVB_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVB_GPRv_GPRv);
 
+    pub const CMOVB_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVB_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVB_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVB_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVB_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVB_GPRv_MEMv);
 
     pub const CMOVBE_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVBE_GPRv_GPRv);
+
+    pub const CMOVBE_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVBE_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVBE_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVBE_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVBE_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVBE_GPRv_MEMv);
 
     pub const CMOVL_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVL_GPRv_GPRv);
 
+    pub const CMOVL_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVL_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVL_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVL_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVL_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVL_GPRv_MEMv);
 
     pub const CMOVLE_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVLE_GPRv_GPRv);
+
+    pub const CMOVLE_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVLE_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVLE_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVLE_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVLE_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVLE_GPRv_MEMv);
 
     pub const CMOVNB_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNB_GPRv_GPRv);
 
+    pub const CMOVNB_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNB_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNB_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNB_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVNB_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNB_GPRv_MEMv);
 
     pub const CMOVNBE_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNBE_GPRv_GPRv);
+
+    pub const CMOVNBE_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNBE_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNBE_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNBE_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVNBE_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNBE_GPRv_MEMv);
 
     pub const CMOVNL_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNL_GPRv_GPRv);
 
+    pub const CMOVNL_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNL_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNL_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNL_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVNL_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNL_GPRv_MEMv);
 
     pub const CMOVNLE_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNLE_GPRv_GPRv);
+
+    pub const CMOVNLE_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNLE_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNLE_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNLE_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVNLE_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNLE_GPRv_MEMv);
 
     pub const CMOVNO_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNO_GPRv_GPRv);
 
+    pub const CMOVNO_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNO_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNO_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNO_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVNO_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNO_GPRv_MEMv);
 
     pub const CMOVNP_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNP_GPRv_GPRv);
+
+    pub const CMOVNP_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNP_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNP_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNP_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVNP_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNP_GPRv_MEMv);
 
     pub const CMOVNS_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNS_GPRv_GPRv);
 
+    pub const CMOVNS_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNS_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNS_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNS_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVNS_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNS_GPRv_MEMv);
 
     pub const CMOVNZ_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVNZ_GPRv_GPRv);
+
+    pub const CMOVNZ_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNZ_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVNZ_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVNZ_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVNZ_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVNZ_GPRv_MEMv);
 
     pub const CMOVO_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVO_GPRv_GPRv);
 
+    pub const CMOVO_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVO_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVO_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVO_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVO_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVO_GPRv_MEMv);
 
     pub const CMOVP_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVP_GPRv_GPRv);
+
+    pub const CMOVP_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVP_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVP_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVP_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVP_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVP_GPRv_MEMv);
 
     pub const CMOVS_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVS_GPRv_GPRv);
 
+    pub const CMOVS_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVS_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVS_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVS_GPRv_GPRv_MEMv_APX);
+
     pub const CMOVS_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVS_GPRv_MEMv);
 
     pub const CMOVZ_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_CMOVZ_GPRv_GPRv);
+
+    pub const CMOVZ_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CMOVZ_GPRv_GPRv_GPRv_APX);
+
+    pub const CMOVZ_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CMOVZ_GPRv_GPRv_MEMv_APX);
 
     pub const CMOVZ_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_CMOVZ_GPRv_MEMv);
 
@@ -650,6 +1613,162 @@ impl Iform {
 
     pub const CMP_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_CMP_OrAX_IMMz);
 
+    pub const CMPBEXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPBEXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPBEXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPBEXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPBEXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPBEXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPBEXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPBEXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPBXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPBXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPBXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPBXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPBXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPBXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPBXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPBXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPLEXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPLEXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPLEXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPLEXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPLEXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPLEXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPLEXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPLEXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPLXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPLXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPLXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPLXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPLXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPLXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPLXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPLXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNBEXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNBEXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNBEXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNBEXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNBEXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNBEXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNBEXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNBEXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNBXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNBXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNBXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNBXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNBXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNBXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNBXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNBXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNLEXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNLEXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNLEXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNLEXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNLEXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNLEXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNLEXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNLEXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNLXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNLXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNLXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNLXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNLXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNLXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNLXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNLXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNOXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNOXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNOXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNOXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNOXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNOXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNOXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNOXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNPXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNPXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNPXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNPXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNPXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNPXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNPXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNPXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNSXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNSXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNSXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNSXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNSXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNSXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNSXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNSXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPNZXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPNZXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPNZXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNZXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPNZXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPNZXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPNZXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPNZXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
+    pub const CMPOXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPOXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPOXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPOXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPOXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPOXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPOXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPOXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
     pub const CMPPD_XMMPD_MEMPD_IMMB: Iform = Iform(ffi::XED_IFORM_CMPPD_XMMpd_MEMpd_IMMb);
 
     pub const CMPPD_XMMPD_XMMPD_IMMB: Iform = Iform(ffi::XED_IFORM_CMPPD_XMMpd_XMMpd_IMMb);
@@ -657,6 +1776,18 @@ impl Iform {
     pub const CMPPS_XMMPS_MEMPS_IMMB: Iform = Iform(ffi::XED_IFORM_CMPPS_XMMps_MEMps_IMMb);
 
     pub const CMPPS_XMMPS_XMMPS_IMMB: Iform = Iform(ffi::XED_IFORM_CMPPS_XMMps_XMMps_IMMb);
+
+    pub const CMPPXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPPXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPPXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPPXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPPXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPPXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPPXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPPXADD_MEMu64_GPR64u64_GPR64u64_APX);
 
     pub const CMPSB: Iform = Iform(ffi::XED_IFORM_CMPSB);
 
@@ -673,6 +1804,18 @@ impl Iform {
     pub const CMPSS_XMMSS_XMMSS_IMMB: Iform = Iform(ffi::XED_IFORM_CMPSS_XMMss_XMMss_IMMb);
 
     pub const CMPSW: Iform = Iform(ffi::XED_IFORM_CMPSW);
+
+    pub const CMPSXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPSXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPSXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPSXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPSXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPSXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPSXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPSXADD_MEMu64_GPR64u64_GPR64u64_APX);
 
     pub const CMPXCHG_GPR8_GPR8: Iform = Iform(ffi::XED_IFORM_CMPXCHG_GPR8_GPR8);
 
@@ -694,6 +1837,18 @@ impl Iform {
 
     pub const CMPXCHG_LOCK_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_CMPXCHG_LOCK_MEMv_GPRv);
 
+    pub const CMPZXADD_MEMU32_GPR32U32_GPR32U32: Iform =
+        Iform(ffi::XED_IFORM_CMPZXADD_MEMu32_GPR32u32_GPR32u32);
+
+    pub const CMPZXADD_MEMU32_GPR32U32_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPZXADD_MEMu32_GPR32u32_GPR32u32_APX);
+
+    pub const CMPZXADD_MEMU64_GPR64U64_GPR64U64: Iform =
+        Iform(ffi::XED_IFORM_CMPZXADD_MEMu64_GPR64u64_GPR64u64);
+
+    pub const CMPZXADD_MEMU64_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_CMPZXADD_MEMu64_GPR64u64_GPR64u64_APX);
+
     pub const COMISD_XMMSD_MEMSD: Iform = Iform(ffi::XED_IFORM_COMISD_XMMsd_MEMsd);
 
     pub const COMISD_XMMSD_XMMSD: Iform = Iform(ffi::XED_IFORM_COMISD_XMMsd_XMMsd);
@@ -706,6 +1861,14 @@ impl Iform {
 
     pub const CQO: Iform = Iform(ffi::XED_IFORM_CQO);
 
+    pub const CRC32_GPRY_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_CRC32_GPRy_GPR8i8_APX);
+
+    pub const CRC32_GPRY_GPRV_APX: Iform = Iform(ffi::XED_IFORM_CRC32_GPRy_GPRv_APX);
+
+    pub const CRC32_GPRY_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_CRC32_GPRy_MEMi8_APX);
+
+    pub const CRC32_GPRY_MEMV_APX: Iform = Iform(ffi::XED_IFORM_CRC32_GPRy_MEMv_APX);
+
     pub const CRC32_GPRYY_GPR8B: Iform = Iform(ffi::XED_IFORM_CRC32_GPRyy_GPR8b);
 
     pub const CRC32_GPRYY_GPRV: Iform = Iform(ffi::XED_IFORM_CRC32_GPRyy_GPRv);
@@ -713,6 +1876,305 @@ impl Iform {
     pub const CRC32_GPRYY_MEMB: Iform = Iform(ffi::XED_IFORM_CRC32_GPRyy_MEMb);
 
     pub const CRC32_GPRYY_MEMV: Iform = Iform(ffi::XED_IFORM_CRC32_GPRyy_MEMv);
+
+    pub const CTESTB_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTB_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTB_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTB_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTB_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTB_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTB_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTB_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTB_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTB_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTB_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTB_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTB_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTB_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTB_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTB_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTBE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTBE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTBE_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTBE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTBE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTBE_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTBE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTBE_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTBE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTBE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTBE_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTBE_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTBE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTBE_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTBE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTBE_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTF_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTF_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTF_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTF_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTF_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTF_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTF_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTF_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTF_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTF_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTF_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTF_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTF_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTF_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTF_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTF_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTL_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTL_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTL_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTL_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTL_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTL_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTL_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTL_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTL_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTL_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTL_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTL_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTL_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTL_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTL_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTL_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTLE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTLE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTLE_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTLE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTLE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTLE_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTLE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTLE_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTLE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTLE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTLE_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTLE_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTLE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTLE_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTLE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTLE_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNB_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNB_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNB_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNB_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNB_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNB_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNB_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNB_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNB_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNB_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNB_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNB_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNB_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNB_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNB_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNB_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNBE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNBE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNBE_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNBE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNBE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNBE_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNBE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNBE_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNBE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNBE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNBE_MEMI8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNBE_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNBE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNBE_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNBE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNBE_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNL_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNL_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNL_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNL_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNL_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNL_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNL_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNL_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNL_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNL_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNL_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNL_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNL_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNL_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNL_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNL_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNLE_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNLE_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNLE_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNLE_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNLE_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNLE_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNLE_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNLE_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNLE_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNLE_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNLE_MEMI8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNLE_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNLE_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNLE_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNLE_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNLE_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNO_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNO_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNO_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNO_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNO_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNO_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNO_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNO_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNO_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNO_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNO_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNO_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNO_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNO_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNO_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNO_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNS_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNS_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNS_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNS_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNS_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNS_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNS_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNS_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNS_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNS_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNS_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNS_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNS_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNS_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNS_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNS_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTNZ_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNZ_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTNZ_GPR8I8_IMM8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNZ_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTNZ_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNZ_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTNZ_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNZ_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTNZ_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTNZ_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTNZ_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNZ_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTNZ_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNZ_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTNZ_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTNZ_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTO_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTO_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTO_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTO_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTO_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTO_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTO_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTO_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTO_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTO_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTO_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTO_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTO_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTO_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTO_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTO_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTS_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTS_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTS_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTS_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTS_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTS_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTS_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTS_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTS_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTS_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTS_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTS_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTS_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTS_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTS_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTS_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTT_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTT_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTT_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTT_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTT_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTT_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTT_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTT_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTT_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTT_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTT_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTT_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTT_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTT_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTT_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTT_MEMv_IMMz_DFV_APX);
+
+    pub const CTESTZ_GPR8I8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTZ_GPR8i8_GPR8i8_DFV_APX);
+
+    pub const CTESTZ_GPR8I8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTZ_GPR8i8_IMM8_DFV_APX);
+
+    pub const CTESTZ_GPRV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTZ_GPRv_GPRv_DFV_APX);
+
+    pub const CTESTZ_GPRV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTZ_GPRv_IMMz_DFV_APX);
+
+    pub const CTESTZ_MEMI8_GPR8I8_DFV_APX: Iform =
+        Iform(ffi::XED_IFORM_CTESTZ_MEMi8_GPR8i8_DFV_APX);
+
+    pub const CTESTZ_MEMI8_IMM8_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTZ_MEMi8_IMM8_DFV_APX);
+
+    pub const CTESTZ_MEMV_GPRV_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTZ_MEMv_GPRv_DFV_APX);
+
+    pub const CTESTZ_MEMV_IMMZ_DFV_APX: Iform = Iform(ffi::XED_IFORM_CTESTZ_MEMv_IMMz_DFV_APX);
 
     pub const CVTDQ2PD_XMMPD_MEMQ: Iform = Iform(ffi::XED_IFORM_CVTDQ2PD_XMMpd_MEMq);
 
@@ -836,13 +2298,29 @@ impl Iform {
 
     pub const DEC_GPR8: Iform = Iform(ffi::XED_IFORM_DEC_GPR8);
 
+    pub const DEC_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_DEC_GPR8i8_APX);
+
+    pub const DEC_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_DEC_GPR8i8_GPR8i8_APX);
+
+    pub const DEC_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_DEC_GPR8i8_MEMi8_APX);
+
     pub const DEC_GPRV_48: Iform = Iform(ffi::XED_IFORM_DEC_GPRv_48);
+
+    pub const DEC_GPRV_APX: Iform = Iform(ffi::XED_IFORM_DEC_GPRv_APX);
 
     pub const DEC_GPRV_FFR1: Iform = Iform(ffi::XED_IFORM_DEC_GPRv_FFr1);
 
+    pub const DEC_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_DEC_GPRv_GPRv_APX);
+
+    pub const DEC_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_DEC_GPRv_MEMv_APX);
+
     pub const DEC_MEMB: Iform = Iform(ffi::XED_IFORM_DEC_MEMb);
 
+    pub const DEC_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_DEC_MEMi8_APX);
+
     pub const DEC_MEMV: Iform = Iform(ffi::XED_IFORM_DEC_MEMv);
+
+    pub const DEC_MEMV_APX: Iform = Iform(ffi::XED_IFORM_DEC_MEMv_APX);
 
     pub const DEC_LOCK_MEMB: Iform = Iform(ffi::XED_IFORM_DEC_LOCK_MEMb);
 
@@ -850,11 +2328,19 @@ impl Iform {
 
     pub const DIV_GPR8: Iform = Iform(ffi::XED_IFORM_DIV_GPR8);
 
+    pub const DIV_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_DIV_GPR8i8_APX);
+
     pub const DIV_GPRV: Iform = Iform(ffi::XED_IFORM_DIV_GPRv);
+
+    pub const DIV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_DIV_GPRv_APX);
 
     pub const DIV_MEMB: Iform = Iform(ffi::XED_IFORM_DIV_MEMb);
 
+    pub const DIV_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_DIV_MEMi8_APX);
+
     pub const DIV_MEMV: Iform = Iform(ffi::XED_IFORM_DIV_MEMv);
+
+    pub const DIV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_DIV_MEMv_APX);
 
     pub const DIVPD_XMMPD_MEMPD: Iform = Iform(ffi::XED_IFORM_DIVPD_XMMpd_MEMpd);
 
@@ -891,8 +2377,14 @@ impl Iform {
     pub const ENCODEKEY128_GPR32U8_GPR32U8: Iform =
         Iform(ffi::XED_IFORM_ENCODEKEY128_GPR32u8_GPR32u8);
 
+    pub const ENCODEKEY128_GPR32U8_GPR32U8_APX: Iform =
+        Iform(ffi::XED_IFORM_ENCODEKEY128_GPR32u8_GPR32u8_APX);
+
     pub const ENCODEKEY256_GPR32U8_GPR32U8: Iform =
         Iform(ffi::XED_IFORM_ENCODEKEY256_GPR32u8_GPR32u8);
+
+    pub const ENCODEKEY256_GPR32U8_GPR32U8_APX: Iform =
+        Iform(ffi::XED_IFORM_ENCODEKEY256_GPR32u8_GPR32u8_APX);
 
     pub const ENDBR32: Iform = Iform(ffi::XED_IFORM_ENDBR32);
 
@@ -900,9 +2392,17 @@ impl Iform {
 
     pub const ENQCMD_GPRA_MEMU32: Iform = Iform(ffi::XED_IFORM_ENQCMD_GPRa_MEMu32);
 
+    pub const ENQCMD_GPRAV_MEMU32_APX: Iform = Iform(ffi::XED_IFORM_ENQCMD_GPRav_MEMu32_APX);
+
     pub const ENQCMDS_GPRA_MEMU32: Iform = Iform(ffi::XED_IFORM_ENQCMDS_GPRa_MEMu32);
 
+    pub const ENQCMDS_GPRAV_MEMU32_APX: Iform = Iform(ffi::XED_IFORM_ENQCMDS_GPRav_MEMu32_APX);
+
     pub const ENTER_IMMW_IMMB: Iform = Iform(ffi::XED_IFORM_ENTER_IMMw_IMMb);
+
+    pub const ERETS: Iform = Iform(ffi::XED_IFORM_ERETS);
+
+    pub const ERETU: Iform = Iform(ffi::XED_IFORM_ERETU);
 
     pub const EXTRACTPS_GPR32D_XMMDQ_IMMB: Iform =
         Iform(ffi::XED_IFORM_EXTRACTPS_GPR32d_XMMdq_IMMb);
@@ -917,9 +2417,9 @@ impl Iform {
 
     pub const FABS: Iform = Iform(ffi::XED_IFORM_FABS);
 
-    pub const FADD_ST0_MEMM64REAL: Iform = Iform(ffi::XED_IFORM_FADD_ST0_MEMm64real);
+    pub const FADD_MEMM64REAL: Iform = Iform(ffi::XED_IFORM_FADD_MEMm64real);
 
-    pub const FADD_ST0_MEMMEM32REAL: Iform = Iform(ffi::XED_IFORM_FADD_ST0_MEMmem32real);
+    pub const FADD_MEMMEM32REAL: Iform = Iform(ffi::XED_IFORM_FADD_MEMmem32real);
 
     pub const FADD_ST0_X87: Iform = Iform(ffi::XED_IFORM_FADD_ST0_X87);
 
@@ -1261,31 +2761,63 @@ impl Iform {
 
     pub const IDIV_GPR8: Iform = Iform(ffi::XED_IFORM_IDIV_GPR8);
 
+    pub const IDIV_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_IDIV_GPR8i8_APX);
+
     pub const IDIV_GPRV: Iform = Iform(ffi::XED_IFORM_IDIV_GPRv);
+
+    pub const IDIV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_IDIV_GPRv_APX);
 
     pub const IDIV_MEMB: Iform = Iform(ffi::XED_IFORM_IDIV_MEMb);
 
+    pub const IDIV_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_IDIV_MEMi8_APX);
+
     pub const IDIV_MEMV: Iform = Iform(ffi::XED_IFORM_IDIV_MEMv);
+
+    pub const IDIV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_IDIV_MEMv_APX);
 
     pub const IMUL_GPR8: Iform = Iform(ffi::XED_IFORM_IMUL_GPR8);
 
+    pub const IMUL_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPR8i8_APX);
+
     pub const IMUL_GPRV: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv);
 
+    pub const IMUL_GPRV_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_APX);
+
     pub const IMUL_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv);
+
+    pub const IMUL_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_APX);
+
+    pub const IMUL_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_GPRv_APX);
+
+    pub const IMUL_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_IMM8_APX);
 
     pub const IMUL_GPRV_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_IMMb);
 
     pub const IMUL_GPRV_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_IMMz);
 
+    pub const IMUL_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_IMMz_APX);
+
+    pub const IMUL_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_GPRv_MEMv_APX);
+
     pub const IMUL_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_MEMv);
+
+    pub const IMUL_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_MEMv_APX);
+
+    pub const IMUL_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_MEMv_IMM8_APX);
 
     pub const IMUL_GPRV_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_MEMv_IMMb);
 
     pub const IMUL_GPRV_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_MEMv_IMMz);
 
+    pub const IMUL_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_IMUL_GPRv_MEMv_IMMz_APX);
+
     pub const IMUL_MEMB: Iform = Iform(ffi::XED_IFORM_IMUL_MEMb);
 
+    pub const IMUL_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_IMUL_MEMi8_APX);
+
     pub const IMUL_MEMV: Iform = Iform(ffi::XED_IFORM_IMUL_MEMv);
+
+    pub const IMUL_MEMV_APX: Iform = Iform(ffi::XED_IFORM_IMUL_MEMv_APX);
 
     pub const IN_AL_DX: Iform = Iform(ffi::XED_IFORM_IN_AL_DX);
 
@@ -1297,13 +2829,29 @@ impl Iform {
 
     pub const INC_GPR8: Iform = Iform(ffi::XED_IFORM_INC_GPR8);
 
+    pub const INC_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_INC_GPR8i8_APX);
+
+    pub const INC_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_INC_GPR8i8_GPR8i8_APX);
+
+    pub const INC_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_INC_GPR8i8_MEMi8_APX);
+
     pub const INC_GPRV_40: Iform = Iform(ffi::XED_IFORM_INC_GPRv_40);
+
+    pub const INC_GPRV_APX: Iform = Iform(ffi::XED_IFORM_INC_GPRv_APX);
 
     pub const INC_GPRV_FFR0: Iform = Iform(ffi::XED_IFORM_INC_GPRv_FFr0);
 
+    pub const INC_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_INC_GPRv_GPRv_APX);
+
+    pub const INC_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_INC_GPRv_MEMv_APX);
+
     pub const INC_MEMB: Iform = Iform(ffi::XED_IFORM_INC_MEMb);
 
+    pub const INC_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_INC_MEMi8_APX);
+
     pub const INC_MEMV: Iform = Iform(ffi::XED_IFORM_INC_MEMv);
+
+    pub const INC_MEMV_APX: Iform = Iform(ffi::XED_IFORM_INC_MEMv_APX);
 
     pub const INCSSPD_GPR32U8: Iform = Iform(ffi::XED_IFORM_INCSSPD_GPR32u8);
 
@@ -1342,6 +2890,9 @@ impl Iform {
 
     pub const INVEPT_GPR64_MEMDQ: Iform = Iform(ffi::XED_IFORM_INVEPT_GPR64_MEMdq);
 
+    pub const INVEPT_GPR64I64_MEMI128_APX: Iform =
+        Iform(ffi::XED_IFORM_INVEPT_GPR64i64_MEMi128_APX);
+
     pub const INVLPG_MEMB: Iform = Iform(ffi::XED_IFORM_INVLPG_MEMb);
 
     pub const INVLPGA_ARAX_ECX: Iform = Iform(ffi::XED_IFORM_INVLPGA_ArAX_ECX);
@@ -1354,9 +2905,15 @@ impl Iform {
 
     pub const INVPCID_GPR64_MEMDQ: Iform = Iform(ffi::XED_IFORM_INVPCID_GPR64_MEMdq);
 
+    pub const INVPCID_GPR64I64_MEMI128_APX: Iform =
+        Iform(ffi::XED_IFORM_INVPCID_GPR64i64_MEMi128_APX);
+
     pub const INVVPID_GPR32_MEMDQ: Iform = Iform(ffi::XED_IFORM_INVVPID_GPR32_MEMdq);
 
     pub const INVVPID_GPR64_MEMDQ: Iform = Iform(ffi::XED_IFORM_INVVPID_GPR64_MEMdq);
+
+    pub const INVVPID_GPR64I64_MEMI128_APX: Iform =
+        Iform(ffi::XED_IFORM_INVVPID_GPR64i64_MEMi128_APX);
 
     pub const IRET: Iform = Iform(ffi::XED_IFORM_IRET);
 
@@ -1401,6 +2958,8 @@ impl Iform {
     pub const JMP_RELBRD: Iform = Iform(ffi::XED_IFORM_JMP_RELBRd);
 
     pub const JMP_RELBRZ: Iform = Iform(ffi::XED_IFORM_JMP_RELBRz);
+
+    pub const JMPABS_ABSBRU64_APX: Iform = Iform(ffi::XED_IFORM_JMPABS_ABSBRu64_APX);
 
     pub const JMP_FAR_MEMP2: Iform = Iform(ffi::XED_IFORM_JMP_FAR_MEMp2);
 
@@ -1516,62 +3075,110 @@ impl Iform {
     pub const KANDW_MASKMSKW_MASKMSKW_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KANDW_MASKmskw_MASKmskw_MASKmskw_AVX512);
 
+    pub const KMOVB_GPR32U32_MASKMSKW_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVB_GPR32u32_MASKmskw_APX);
+
     pub const KMOVB_GPR32U32_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVB_GPR32u32_MASKmskw_AVX512);
+
+    pub const KMOVB_MASKMSKW_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVB_MASKmskw_GPR32u32_APX);
 
     pub const KMOVB_MASKMSKW_GPR32U32_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVB_MASKmskw_GPR32u32_AVX512);
 
+    pub const KMOVB_MASKMSKW_MASKU8_APX: Iform = Iform(ffi::XED_IFORM_KMOVB_MASKmskw_MASKu8_APX);
+
     pub const KMOVB_MASKMSKW_MASKU8_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVB_MASKmskw_MASKu8_AVX512);
+
+    pub const KMOVB_MASKMSKW_MEMU8_APX: Iform = Iform(ffi::XED_IFORM_KMOVB_MASKmskw_MEMu8_APX);
 
     pub const KMOVB_MASKMSKW_MEMU8_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVB_MASKmskw_MEMu8_AVX512);
 
+    pub const KMOVB_MEMU8_MASKMSKW_APX: Iform = Iform(ffi::XED_IFORM_KMOVB_MEMu8_MASKmskw_APX);
+
     pub const KMOVB_MEMU8_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVB_MEMu8_MASKmskw_AVX512);
+
+    pub const KMOVD_GPR32U32_MASKMSKW_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVD_GPR32u32_MASKmskw_APX);
 
     pub const KMOVD_GPR32U32_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVD_GPR32u32_MASKmskw_AVX512);
 
+    pub const KMOVD_MASKMSKW_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVD_MASKmskw_GPR32u32_APX);
+
     pub const KMOVD_MASKMSKW_GPR32U32_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVD_MASKmskw_GPR32u32_AVX512);
+
+    pub const KMOVD_MASKMSKW_MASKU32_APX: Iform = Iform(ffi::XED_IFORM_KMOVD_MASKmskw_MASKu32_APX);
 
     pub const KMOVD_MASKMSKW_MASKU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVD_MASKmskw_MASKu32_AVX512);
 
+    pub const KMOVD_MASKMSKW_MEMU32_APX: Iform = Iform(ffi::XED_IFORM_KMOVD_MASKmskw_MEMu32_APX);
+
     pub const KMOVD_MASKMSKW_MEMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVD_MASKmskw_MEMu32_AVX512);
+
+    pub const KMOVD_MEMU32_MASKMSKW_APX: Iform = Iform(ffi::XED_IFORM_KMOVD_MEMu32_MASKmskw_APX);
 
     pub const KMOVD_MEMU32_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVD_MEMu32_MASKmskw_AVX512);
 
+    pub const KMOVQ_GPR64U64_MASKMSKW_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVQ_GPR64u64_MASKmskw_APX);
+
     pub const KMOVQ_GPR64U64_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVQ_GPR64u64_MASKmskw_AVX512);
+
+    pub const KMOVQ_MASKMSKW_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVQ_MASKmskw_GPR64u64_APX);
 
     pub const KMOVQ_MASKMSKW_GPR64U64_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVQ_MASKmskw_GPR64u64_AVX512);
 
+    pub const KMOVQ_MASKMSKW_MASKU64_APX: Iform = Iform(ffi::XED_IFORM_KMOVQ_MASKmskw_MASKu64_APX);
+
     pub const KMOVQ_MASKMSKW_MASKU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVQ_MASKmskw_MASKu64_AVX512);
+
+    pub const KMOVQ_MASKMSKW_MEMU64_APX: Iform = Iform(ffi::XED_IFORM_KMOVQ_MASKmskw_MEMu64_APX);
 
     pub const KMOVQ_MASKMSKW_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVQ_MASKmskw_MEMu64_AVX512);
 
+    pub const KMOVQ_MEMU64_MASKMSKW_APX: Iform = Iform(ffi::XED_IFORM_KMOVQ_MEMu64_MASKmskw_APX);
+
     pub const KMOVQ_MEMU64_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVQ_MEMu64_MASKmskw_AVX512);
+
+    pub const KMOVW_GPR32U32_MASKMSKW_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVW_GPR32u32_MASKmskw_APX);
 
     pub const KMOVW_GPR32U32_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVW_GPR32u32_MASKmskw_AVX512);
 
+    pub const KMOVW_MASKMSKW_GPR32U32_APX: Iform =
+        Iform(ffi::XED_IFORM_KMOVW_MASKmskw_GPR32u32_APX);
+
     pub const KMOVW_MASKMSKW_GPR32U32_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVW_MASKmskw_GPR32u32_AVX512);
+
+    pub const KMOVW_MASKMSKW_MASKU16_APX: Iform = Iform(ffi::XED_IFORM_KMOVW_MASKmskw_MASKu16_APX);
 
     pub const KMOVW_MASKMSKW_MASKU16_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVW_MASKmskw_MASKu16_AVX512);
 
+    pub const KMOVW_MASKMSKW_MEMU16_APX: Iform = Iform(ffi::XED_IFORM_KMOVW_MASKmskw_MEMu16_APX);
+
     pub const KMOVW_MASKMSKW_MEMU16_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVW_MASKmskw_MEMu16_AVX512);
+
+    pub const KMOVW_MEMU16_MASKMSKW_APX: Iform = Iform(ffi::XED_IFORM_KMOVW_MEMu16_MASKmskw_APX);
 
     pub const KMOVW_MEMU16_MASKMSKW_AVX512: Iform =
         Iform(ffi::XED_IFORM_KMOVW_MEMu16_MASKmskw_AVX512);
@@ -1695,6 +3302,8 @@ impl Iform {
 
     pub const LDTILECFG_MEM: Iform = Iform(ffi::XED_IFORM_LDTILECFG_MEM);
 
+    pub const LDTILECFG_MEM_APX: Iform = Iform(ffi::XED_IFORM_LDTILECFG_MEM_APX);
+
     pub const LEA_GPRV_AGEN: Iform = Iform(ffi::XED_IFORM_LEA_GPRv_AGEN);
 
     pub const LEAVE: Iform = Iform(ffi::XED_IFORM_LEAVE);
@@ -1715,11 +3324,15 @@ impl Iform {
 
     pub const LIDT_MEMS64: Iform = Iform(ffi::XED_IFORM_LIDT_MEMs64);
 
+    pub const LKGS_GPR16U16: Iform = Iform(ffi::XED_IFORM_LKGS_GPR16u16);
+
+    pub const LKGS_MEMU16: Iform = Iform(ffi::XED_IFORM_LKGS_MEMu16);
+
     pub const LLDT_GPR16: Iform = Iform(ffi::XED_IFORM_LLDT_GPR16);
 
     pub const LLDT_MEMW: Iform = Iform(ffi::XED_IFORM_LLDT_MEMw);
 
-    pub const LLWPCB_VGPRYY: Iform = Iform(ffi::XED_IFORM_LLWPCB_VGPRyy);
+    pub const LLWPCB_GPRYY: Iform = Iform(ffi::XED_IFORM_LLWPCB_GPRyy);
 
     pub const LMSW_GPR16: Iform = Iform(ffi::XED_IFORM_LMSW_GPR16);
 
@@ -1751,19 +3364,23 @@ impl Iform {
 
     pub const LTR_MEMW: Iform = Iform(ffi::XED_IFORM_LTR_MEMw);
 
-    pub const LWPINS_VGPRYY_MEMD_IMMD: Iform = Iform(ffi::XED_IFORM_LWPINS_VGPRyy_MEMd_IMMd);
+    pub const LWPINS_GPRYY_GPR32D_IMMD: Iform = Iform(ffi::XED_IFORM_LWPINS_GPRyy_GPR32d_IMMd);
 
-    pub const LWPINS_VGPRYY_VGPR32Y_IMMD: Iform = Iform(ffi::XED_IFORM_LWPINS_VGPRyy_VGPR32y_IMMd);
+    pub const LWPINS_GPRYY_MEMD_IMMD: Iform = Iform(ffi::XED_IFORM_LWPINS_GPRyy_MEMd_IMMd);
 
-    pub const LWPVAL_VGPRYY_MEMD_IMMD: Iform = Iform(ffi::XED_IFORM_LWPVAL_VGPRyy_MEMd_IMMd);
+    pub const LWPVAL_GPRYY_GPR32D_IMMD: Iform = Iform(ffi::XED_IFORM_LWPVAL_GPRyy_GPR32d_IMMd);
 
-    pub const LWPVAL_VGPRYY_VGPR32Y_IMMD: Iform = Iform(ffi::XED_IFORM_LWPVAL_VGPRyy_VGPR32y_IMMd);
+    pub const LWPVAL_GPRYY_MEMD_IMMD: Iform = Iform(ffi::XED_IFORM_LWPVAL_GPRyy_MEMd_IMMd);
 
     pub const LZCNT_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_LZCNT_GPRv_GPRv);
 
+    pub const LZCNT_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_LZCNT_GPRv_GPRv_APX);
+
     pub const LZCNT_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_LZCNT_GPRv_MEMv);
 
-    pub const MASKMOVDQU_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_MASKMOVDQU_XMMdq_XMMdq);
+    pub const LZCNT_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_LZCNT_GPRv_MEMv_APX);
+
+    pub const MASKMOVDQU_XMMXUB_XMMXUB: Iform = Iform(ffi::XED_IFORM_MASKMOVDQU_XMMxub_XMMxub);
 
     pub const MASKMOVQ_MMXQ_MMXQ: Iform = Iform(ffi::XED_IFORM_MASKMOVQ_MMXq_MMXq);
 
@@ -1867,9 +3484,15 @@ impl Iform {
 
     pub const MOVAPS_XMMPS_XMMPS_0F29: Iform = Iform(ffi::XED_IFORM_MOVAPS_XMMps_XMMps_0F29);
 
+    pub const MOVBE_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_MOVBE_GPRv_GPRv_APX);
+
     pub const MOVBE_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_MOVBE_GPRv_MEMv);
 
+    pub const MOVBE_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_MOVBE_GPRv_MEMv_APX);
+
     pub const MOVBE_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_MOVBE_MEMv_GPRv);
+
+    pub const MOVBE_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_MOVBE_MEMv_GPRv_APX);
 
     pub const MOVD_GPR32_MMXD: Iform = Iform(ffi::XED_IFORM_MOVD_GPR32_MMXd);
 
@@ -1893,9 +3516,13 @@ impl Iform {
 
     pub const MOVDIR64B_GPRA_MEM: Iform = Iform(ffi::XED_IFORM_MOVDIR64B_GPRa_MEM);
 
+    pub const MOVDIR64B_GPRAV_MEMU32_APX: Iform = Iform(ffi::XED_IFORM_MOVDIR64B_GPRav_MEMu32_APX);
+
     pub const MOVDIRI_MEMU32_GPR32U32: Iform = Iform(ffi::XED_IFORM_MOVDIRI_MEMu32_GPR32u32);
 
     pub const MOVDIRI_MEMU64_GPR64U64: Iform = Iform(ffi::XED_IFORM_MOVDIRI_MEMu64_GPR64u64);
+
+    pub const MOVDIRI_MEMYU_GPRYU_APX: Iform = Iform(ffi::XED_IFORM_MOVDIRI_MEMyu_GPRyu_APX);
 
     pub const MOVDQ2Q_MMXQ_XMMQ: Iform = Iform(ffi::XED_IFORM_MOVDQ2Q_MMXq_XMMq);
 
@@ -2081,11 +3708,19 @@ impl Iform {
 
     pub const MUL_GPR8: Iform = Iform(ffi::XED_IFORM_MUL_GPR8);
 
+    pub const MUL_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_MUL_GPR8i8_APX);
+
     pub const MUL_GPRV: Iform = Iform(ffi::XED_IFORM_MUL_GPRv);
+
+    pub const MUL_GPRV_APX: Iform = Iform(ffi::XED_IFORM_MUL_GPRv_APX);
 
     pub const MUL_MEMB: Iform = Iform(ffi::XED_IFORM_MUL_MEMb);
 
+    pub const MUL_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_MUL_MEMi8_APX);
+
     pub const MUL_MEMV: Iform = Iform(ffi::XED_IFORM_MUL_MEMv);
+
+    pub const MUL_MEMV_APX: Iform = Iform(ffi::XED_IFORM_MUL_MEMv_APX);
 
     pub const MULPD_XMMPD_MEMPD: Iform = Iform(ffi::XED_IFORM_MULPD_XMMpd_MEMpd);
 
@@ -2103,15 +3738,25 @@ impl Iform {
 
     pub const MULSS_XMMSS_XMMSS: Iform = Iform(ffi::XED_IFORM_MULSS_XMMss_XMMss);
 
-    pub const MULX_VGPR32D_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_MULX_VGPR32d_VGPR32d_MEMd);
+    pub const MULX_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_MULX_GPR32d_GPR32d_GPR32d);
 
-    pub const MULX_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_MULX_VGPR32d_VGPR32d_VGPR32d);
+    pub const MULX_GPR32D_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_MULX_GPR32d_GPR32d_MEMd);
 
-    pub const MULX_VGPR64Q_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_MULX_VGPR64q_VGPR64q_MEMq);
+    pub const MULX_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_MULX_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const MULX_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_MULX_VGPR64q_VGPR64q_VGPR64q);
+    pub const MULX_GPR32I32_GPR32I32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_MULX_GPR32i32_GPR32i32_MEMi32_APX);
+
+    pub const MULX_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_MULX_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const MULX_GPR64I64_GPR64I64_MEMI64_APX: Iform =
+        Iform(ffi::XED_IFORM_MULX_GPR64i64_GPR64i64_MEMi64_APX);
+
+    pub const MULX_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_MULX_GPR64q_GPR64q_GPR64q);
+
+    pub const MULX_GPR64Q_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_MULX_GPR64q_GPR64q_MEMq);
 
     pub const MWAIT: Iform = Iform(ffi::XED_IFORM_MWAIT);
 
@@ -2119,11 +3764,27 @@ impl Iform {
 
     pub const NEG_GPR8: Iform = Iform(ffi::XED_IFORM_NEG_GPR8);
 
+    pub const NEG_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_NEG_GPR8i8_APX);
+
+    pub const NEG_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_NEG_GPR8i8_GPR8i8_APX);
+
+    pub const NEG_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_NEG_GPR8i8_MEMi8_APX);
+
     pub const NEG_GPRV: Iform = Iform(ffi::XED_IFORM_NEG_GPRv);
+
+    pub const NEG_GPRV_APX: Iform = Iform(ffi::XED_IFORM_NEG_GPRv_APX);
+
+    pub const NEG_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_NEG_GPRv_GPRv_APX);
+
+    pub const NEG_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_NEG_GPRv_MEMv_APX);
 
     pub const NEG_MEMB: Iform = Iform(ffi::XED_IFORM_NEG_MEMb);
 
+    pub const NEG_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_NEG_MEMi8_APX);
+
     pub const NEG_MEMV: Iform = Iform(ffi::XED_IFORM_NEG_MEMv);
+
+    pub const NEG_MEMV_APX: Iform = Iform(ffi::XED_IFORM_NEG_MEMv_APX);
 
     pub const NEG_LOCK_MEMB: Iform = Iform(ffi::XED_IFORM_NEG_LOCK_MEMb);
 
@@ -2147,6 +3808,8 @@ impl Iform {
 
     pub const NOP_GPRV_0F18R7: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_0F18r7);
 
+    pub const NOP_GPRV_0F1F: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_0F1F);
+
     pub const NOP_GPRV_GPRV_0F0D: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_GPRv_0F0D);
 
     pub const NOP_GPRV_GPRV_0F19: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_GPRv_0F19);
@@ -2161,8 +3824,6 @@ impl Iform {
 
     pub const NOP_GPRV_GPRV_0F1E: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_GPRv_0F1E);
 
-    pub const NOP_GPRV_GPRV_0F1F: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_GPRv_0F1F);
-
     pub const NOP_GPRV_MEM_0F1B: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_MEM_0F1B);
 
     pub const NOP_GPRV_MEMV_0F1A: Iform = Iform(ffi::XED_IFORM_NOP_GPRv_MEMv_0F1A);
@@ -2171,9 +3832,7 @@ impl Iform {
 
     pub const NOP_MEMV_0F18R5: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_0F18r5);
 
-    pub const NOP_MEMV_0F18R6: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_0F18r6);
-
-    pub const NOP_MEMV_0F18R7: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_0F18r7);
+    pub const NOP_MEMV_0F1F: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_0F1F);
 
     pub const NOP_MEMV_GPRV_0F19: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_GPRv_0F19);
 
@@ -2183,15 +3842,29 @@ impl Iform {
 
     pub const NOP_MEMV_GPRV_0F1E: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_GPRv_0F1E);
 
-    pub const NOP_MEMV_GPRV_0F1F: Iform = Iform(ffi::XED_IFORM_NOP_MEMv_GPRv_0F1F);
-
     pub const NOT_GPR8: Iform = Iform(ffi::XED_IFORM_NOT_GPR8);
+
+    pub const NOT_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_NOT_GPR8i8_APX);
+
+    pub const NOT_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_NOT_GPR8i8_GPR8i8_APX);
+
+    pub const NOT_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_NOT_GPR8i8_MEMi8_APX);
 
     pub const NOT_GPRV: Iform = Iform(ffi::XED_IFORM_NOT_GPRv);
 
+    pub const NOT_GPRV_APX: Iform = Iform(ffi::XED_IFORM_NOT_GPRv_APX);
+
+    pub const NOT_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_NOT_GPRv_GPRv_APX);
+
+    pub const NOT_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_NOT_GPRv_MEMv_APX);
+
     pub const NOT_MEMB: Iform = Iform(ffi::XED_IFORM_NOT_MEMb);
 
+    pub const NOT_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_NOT_MEMi8_APX);
+
     pub const NOT_MEMV: Iform = Iform(ffi::XED_IFORM_NOT_MEMv);
+
+    pub const NOT_MEMV_APX: Iform = Iform(ffi::XED_IFORM_NOT_MEMv_APX);
 
     pub const NOT_LOCK_MEMB: Iform = Iform(ffi::XED_IFORM_NOT_LOCK_MEMb);
 
@@ -2209,15 +3882,54 @@ impl Iform {
 
     pub const OR_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_OR_GPR8_MEMb);
 
+    pub const OR_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_GPR8i8_APX);
+
+    pub const OR_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_OR_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const OR_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const OR_GPR8I8_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const OR_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_IMM8_APX);
+
+    pub const OR_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_MEMi8_APX);
+
+    pub const OR_GPR8I8_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const OR_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPR8i8_MEMi8_IMM8_APX);
+
     pub const OR_GPRV_GPRV_09: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_09);
 
     pub const OR_GPRV_GPRV_0B: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_0B);
+
+    pub const OR_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_APX);
+
+    pub const OR_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_GPRv_APX);
+
+    pub const OR_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_IMM8_APX);
+
+    pub const OR_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_IMMz_APX);
+
+    pub const OR_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_GPRv_MEMv_APX);
+
+    pub const OR_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_IMM8_APX);
 
     pub const OR_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_OR_GPRv_IMMb);
 
     pub const OR_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_OR_GPRv_IMMz);
 
+    pub const OR_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_IMMz_APX);
+
     pub const OR_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_OR_GPRv_MEMv);
+
+    pub const OR_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_MEMv_APX);
+
+    pub const OR_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_MEMv_GPRv_APX);
+
+    pub const OR_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_MEMv_IMM8_APX);
+
+    pub const OR_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_OR_GPRv_MEMv_IMMz_APX);
 
     pub const OR_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_OR_MEMb_GPR8);
 
@@ -2225,11 +3937,21 @@ impl Iform {
 
     pub const OR_MEMB_IMMB_82R1: Iform = Iform(ffi::XED_IFORM_OR_MEMb_IMMb_82r1);
 
+    pub const OR_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_OR_MEMi8_GPR8i8_APX);
+
+    pub const OR_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_MEMi8_IMM8_APX);
+
     pub const OR_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_OR_MEMv_GPRv);
+
+    pub const OR_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_OR_MEMv_GPRv_APX);
+
+    pub const OR_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_OR_MEMv_IMM8_APX);
 
     pub const OR_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_OR_MEMv_IMMb);
 
     pub const OR_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_OR_MEMv_IMMz);
+
+    pub const OR_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_OR_MEMv_IMMz_APX);
 
     pub const OR_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_OR_OrAX_IMMz);
 
@@ -2437,6 +4159,8 @@ impl Iform {
 
     pub const PBLENDW_XMMDQ_XMMDQ_IMMB: Iform = Iform(ffi::XED_IFORM_PBLENDW_XMMdq_XMMdq_IMMb);
 
+    pub const PBNDKB: Iform = Iform(ffi::XED_IFORM_PBNDKB);
+
     pub const PCLMULQDQ_XMMDQ_MEMDQ_IMMB: Iform = Iform(ffi::XED_IFORM_PCLMULQDQ_XMMdq_MEMdq_IMMb);
 
     pub const PCLMULQDQ_XMMDQ_XMMDQ_IMMB: Iform = Iform(ffi::XED_IFORM_PCLMULQDQ_XMMdq_XMMdq_IMMb);
@@ -2535,25 +4259,45 @@ impl Iform {
 
     pub const PCONFIG64: Iform = Iform(ffi::XED_IFORM_PCONFIG64);
 
-    pub const PDEP_VGPR32D_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_PDEP_VGPR32d_VGPR32d_MEMd);
+    pub const PDEP_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_PDEP_GPR32d_GPR32d_GPR32d);
 
-    pub const PDEP_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_PDEP_VGPR32d_VGPR32d_VGPR32d);
+    pub const PDEP_GPR32D_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_PDEP_GPR32d_GPR32d_MEMd);
 
-    pub const PDEP_VGPR64Q_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_PDEP_VGPR64q_VGPR64q_MEMq);
+    pub const PDEP_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_PDEP_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const PDEP_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_PDEP_VGPR64q_VGPR64q_VGPR64q);
+    pub const PDEP_GPR32I32_GPR32I32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_PDEP_GPR32i32_GPR32i32_MEMi32_APX);
 
-    pub const PEXT_VGPR32D_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_PEXT_VGPR32d_VGPR32d_MEMd);
+    pub const PDEP_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_PDEP_GPR64i64_GPR64i64_GPR64i64_APX);
 
-    pub const PEXT_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_PEXT_VGPR32d_VGPR32d_VGPR32d);
+    pub const PDEP_GPR64I64_GPR64I64_MEMI64_APX: Iform =
+        Iform(ffi::XED_IFORM_PDEP_GPR64i64_GPR64i64_MEMi64_APX);
 
-    pub const PEXT_VGPR64Q_VGPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_PEXT_VGPR64q_VGPR64q_MEMq);
+    pub const PDEP_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_PDEP_GPR64q_GPR64q_GPR64q);
 
-    pub const PEXT_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_PEXT_VGPR64q_VGPR64q_VGPR64q);
+    pub const PDEP_GPR64Q_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_PDEP_GPR64q_GPR64q_MEMq);
+
+    pub const PEXT_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_PEXT_GPR32d_GPR32d_GPR32d);
+
+    pub const PEXT_GPR32D_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_PEXT_GPR32d_GPR32d_MEMd);
+
+    pub const PEXT_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_PEXT_GPR32i32_GPR32i32_GPR32i32_APX);
+
+    pub const PEXT_GPR32I32_GPR32I32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_PEXT_GPR32i32_GPR32i32_MEMi32_APX);
+
+    pub const PEXT_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_PEXT_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const PEXT_GPR64I64_GPR64I64_MEMI64_APX: Iform =
+        Iform(ffi::XED_IFORM_PEXT_GPR64i64_GPR64i64_MEMi64_APX);
+
+    pub const PEXT_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_PEXT_GPR64q_GPR64q_GPR64q);
+
+    pub const PEXT_GPR64Q_GPR64Q_MEMQ: Iform = Iform(ffi::XED_IFORM_PEXT_GPR64q_GPR64q_MEMq);
 
     pub const PEXTRB_GPR32D_XMMDQ_IMMB: Iform = Iform(ffi::XED_IFORM_PEXTRB_GPR32d_XMMdq_IMMb);
 
@@ -2933,19 +4677,30 @@ impl Iform {
 
     pub const POP_SS: Iform = Iform(ffi::XED_IFORM_POP_SS);
 
+    pub const POP2_GPR64U64_GPR64U64_APX: Iform = Iform(ffi::XED_IFORM_POP2_GPR64u64_GPR64u64_APX);
+
+    pub const POP2P_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_POP2P_GPR64u64_GPR64u64_APX);
+
     pub const POPA: Iform = Iform(ffi::XED_IFORM_POPA);
 
     pub const POPAD: Iform = Iform(ffi::XED_IFORM_POPAD);
 
     pub const POPCNT_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_POPCNT_GPRv_GPRv);
 
+    pub const POPCNT_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_POPCNT_GPRv_GPRv_APX);
+
     pub const POPCNT_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_POPCNT_GPRv_MEMv);
+
+    pub const POPCNT_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_POPCNT_GPRv_MEMv_APX);
 
     pub const POPF: Iform = Iform(ffi::XED_IFORM_POPF);
 
     pub const POPFD: Iform = Iform(ffi::XED_IFORM_POPFD);
 
     pub const POPFQ: Iform = Iform(ffi::XED_IFORM_POPFQ);
+
+    pub const POPP_GPR64: Iform = Iform(ffi::XED_IFORM_POPP_GPR64);
 
     pub const POR_MMXQ_MEMQ: Iform = Iform(ffi::XED_IFORM_POR_MMXq_MEMq);
 
@@ -2954,6 +4709,10 @@ impl Iform {
     pub const POR_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_POR_XMMdq_MEMdq);
 
     pub const POR_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_POR_XMMdq_XMMdq);
+
+    pub const PREFETCHIT0_MEMU8: Iform = Iform(ffi::XED_IFORM_PREFETCHIT0_MEMu8);
+
+    pub const PREFETCHIT1_MEMU8: Iform = Iform(ffi::XED_IFORM_PREFETCHIT1_MEMu8);
 
     pub const PREFETCHNTA_MEMMPREFETCH: Iform = Iform(ffi::XED_IFORM_PREFETCHNTA_MEMmprefetch);
 
@@ -3292,6 +5051,12 @@ impl Iform {
 
     pub const PUSH_SS: Iform = Iform(ffi::XED_IFORM_PUSH_SS);
 
+    pub const PUSH2_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_PUSH2_GPR64u64_GPR64u64_APX);
+
+    pub const PUSH2P_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_PUSH2P_GPR64u64_GPR64u64_APX);
+
     pub const PUSHA: Iform = Iform(ffi::XED_IFORM_PUSHA);
 
     pub const PUSHAD: Iform = Iform(ffi::XED_IFORM_PUSHAD);
@@ -3301,6 +5066,8 @@ impl Iform {
     pub const PUSHFD: Iform = Iform(ffi::XED_IFORM_PUSHFD);
 
     pub const PUSHFQ: Iform = Iform(ffi::XED_IFORM_PUSHFQ);
+
+    pub const PUSHP_GPR64: Iform = Iform(ffi::XED_IFORM_PUSHP_GPR64);
 
     pub const PVALIDATE_RAX_ECX_EDX: Iform = Iform(ffi::XED_IFORM_PVALIDATE_RAX_ECX_EDX);
 
@@ -3318,11 +5085,47 @@ impl Iform {
 
     pub const RCL_GPR8_ONE: Iform = Iform(ffi::XED_IFORM_RCL_GPR8_ONE);
 
+    pub const RCL_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_CL_APX);
+
+    pub const RCL_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_GPR8i8_CL_APX);
+
+    pub const RCL_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const RCL_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const RCL_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_IMM8_APX);
+
+    pub const RCL_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_MEMi8_CL_APX);
+
+    pub const RCL_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const RCL_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_MEMi8_ONE_APX);
+
+    pub const RCL_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPR8i8_ONE_APX);
+
     pub const RCL_GPRV_CL: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_CL);
+
+    pub const RCL_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_CL_APX);
+
+    pub const RCL_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_GPRv_CL_APX);
+
+    pub const RCL_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_GPRv_IMM8_APX);
+
+    pub const RCL_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_GPRv_ONE_APX);
+
+    pub const RCL_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_IMM8_APX);
 
     pub const RCL_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_IMMb);
 
+    pub const RCL_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_MEMv_CL_APX);
+
+    pub const RCL_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_MEMv_IMM8_APX);
+
+    pub const RCL_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_MEMv_ONE_APX);
+
     pub const RCL_GPRV_ONE: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_ONE);
+
+    pub const RCL_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_GPRv_ONE_APX);
 
     pub const RCL_MEMB_CL: Iform = Iform(ffi::XED_IFORM_RCL_MEMb_CL);
 
@@ -3330,11 +5133,23 @@ impl Iform {
 
     pub const RCL_MEMB_ONE: Iform = Iform(ffi::XED_IFORM_RCL_MEMb_ONE);
 
+    pub const RCL_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_MEMi8_CL_APX);
+
+    pub const RCL_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_MEMi8_IMM8_APX);
+
+    pub const RCL_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_MEMi8_ONE_APX);
+
     pub const RCL_MEMV_CL: Iform = Iform(ffi::XED_IFORM_RCL_MEMv_CL);
+
+    pub const RCL_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCL_MEMv_CL_APX);
+
+    pub const RCL_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCL_MEMv_IMM8_APX);
 
     pub const RCL_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_RCL_MEMv_IMMb);
 
     pub const RCL_MEMV_ONE: Iform = Iform(ffi::XED_IFORM_RCL_MEMv_ONE);
+
+    pub const RCL_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCL_MEMv_ONE_APX);
 
     pub const RCPPS_XMMPS_MEMPS: Iform = Iform(ffi::XED_IFORM_RCPPS_XMMps_MEMps);
 
@@ -3350,11 +5165,47 @@ impl Iform {
 
     pub const RCR_GPR8_ONE: Iform = Iform(ffi::XED_IFORM_RCR_GPR8_ONE);
 
+    pub const RCR_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_CL_APX);
+
+    pub const RCR_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_GPR8i8_CL_APX);
+
+    pub const RCR_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const RCR_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const RCR_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_IMM8_APX);
+
+    pub const RCR_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_MEMi8_CL_APX);
+
+    pub const RCR_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const RCR_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_MEMi8_ONE_APX);
+
+    pub const RCR_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPR8i8_ONE_APX);
+
     pub const RCR_GPRV_CL: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_CL);
+
+    pub const RCR_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_CL_APX);
+
+    pub const RCR_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_GPRv_CL_APX);
+
+    pub const RCR_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_GPRv_IMM8_APX);
+
+    pub const RCR_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_GPRv_ONE_APX);
+
+    pub const RCR_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_IMM8_APX);
 
     pub const RCR_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_IMMb);
 
+    pub const RCR_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_MEMv_CL_APX);
+
+    pub const RCR_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_MEMv_IMM8_APX);
+
+    pub const RCR_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_MEMv_ONE_APX);
+
     pub const RCR_GPRV_ONE: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_ONE);
+
+    pub const RCR_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_GPRv_ONE_APX);
 
     pub const RCR_MEMB_CL: Iform = Iform(ffi::XED_IFORM_RCR_MEMb_CL);
 
@@ -3362,17 +5213,31 @@ impl Iform {
 
     pub const RCR_MEMB_ONE: Iform = Iform(ffi::XED_IFORM_RCR_MEMb_ONE);
 
+    pub const RCR_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_MEMi8_CL_APX);
+
+    pub const RCR_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_MEMi8_IMM8_APX);
+
+    pub const RCR_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_MEMi8_ONE_APX);
+
     pub const RCR_MEMV_CL: Iform = Iform(ffi::XED_IFORM_RCR_MEMv_CL);
+
+    pub const RCR_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_RCR_MEMv_CL_APX);
+
+    pub const RCR_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_RCR_MEMv_IMM8_APX);
 
     pub const RCR_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_RCR_MEMv_IMMb);
 
     pub const RCR_MEMV_ONE: Iform = Iform(ffi::XED_IFORM_RCR_MEMv_ONE);
+
+    pub const RCR_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_RCR_MEMv_ONE_APX);
 
     pub const RDFSBASE_GPRY: Iform = Iform(ffi::XED_IFORM_RDFSBASE_GPRy);
 
     pub const RDGSBASE_GPRY: Iform = Iform(ffi::XED_IFORM_RDGSBASE_GPRy);
 
     pub const RDMSR: Iform = Iform(ffi::XED_IFORM_RDMSR);
+
+    pub const RDMSRLIST: Iform = Iform(ffi::XED_IFORM_RDMSRLIST);
 
     pub const RDPID_GPR32U32: Iform = Iform(ffi::XED_IFORM_RDPID_GPR32u32);
 
@@ -3500,11 +5365,47 @@ impl Iform {
 
     pub const ROL_GPR8_ONE: Iform = Iform(ffi::XED_IFORM_ROL_GPR8_ONE);
 
+    pub const ROL_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_CL_APX);
+
+    pub const ROL_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_GPR8i8_CL_APX);
+
+    pub const ROL_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const ROL_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const ROL_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_IMM8_APX);
+
+    pub const ROL_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_MEMi8_CL_APX);
+
+    pub const ROL_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const ROL_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_MEMi8_ONE_APX);
+
+    pub const ROL_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPR8i8_ONE_APX);
+
     pub const ROL_GPRV_CL: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_CL);
+
+    pub const ROL_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_CL_APX);
+
+    pub const ROL_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_GPRv_CL_APX);
+
+    pub const ROL_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_GPRv_IMM8_APX);
+
+    pub const ROL_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_GPRv_ONE_APX);
+
+    pub const ROL_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_IMM8_APX);
 
     pub const ROL_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_IMMb);
 
+    pub const ROL_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_MEMv_CL_APX);
+
+    pub const ROL_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_MEMv_IMM8_APX);
+
+    pub const ROL_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_MEMv_ONE_APX);
+
     pub const ROL_GPRV_ONE: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_ONE);
+
+    pub const ROL_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_GPRv_ONE_APX);
 
     pub const ROL_MEMB_CL: Iform = Iform(ffi::XED_IFORM_ROL_MEMb_CL);
 
@@ -3512,11 +5413,23 @@ impl Iform {
 
     pub const ROL_MEMB_ONE: Iform = Iform(ffi::XED_IFORM_ROL_MEMb_ONE);
 
+    pub const ROL_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_MEMi8_CL_APX);
+
+    pub const ROL_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_MEMi8_IMM8_APX);
+
+    pub const ROL_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_MEMi8_ONE_APX);
+
     pub const ROL_MEMV_CL: Iform = Iform(ffi::XED_IFORM_ROL_MEMv_CL);
+
+    pub const ROL_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROL_MEMv_CL_APX);
+
+    pub const ROL_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROL_MEMv_IMM8_APX);
 
     pub const ROL_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_ROL_MEMv_IMMb);
 
     pub const ROL_MEMV_ONE: Iform = Iform(ffi::XED_IFORM_ROL_MEMv_ONE);
+
+    pub const ROL_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROL_MEMv_ONE_APX);
 
     pub const ROR_GPR8_CL: Iform = Iform(ffi::XED_IFORM_ROR_GPR8_CL);
 
@@ -3524,11 +5437,47 @@ impl Iform {
 
     pub const ROR_GPR8_ONE: Iform = Iform(ffi::XED_IFORM_ROR_GPR8_ONE);
 
+    pub const ROR_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_CL_APX);
+
+    pub const ROR_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_GPR8i8_CL_APX);
+
+    pub const ROR_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const ROR_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const ROR_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_IMM8_APX);
+
+    pub const ROR_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_MEMi8_CL_APX);
+
+    pub const ROR_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const ROR_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_MEMi8_ONE_APX);
+
+    pub const ROR_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPR8i8_ONE_APX);
+
     pub const ROR_GPRV_CL: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_CL);
+
+    pub const ROR_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_CL_APX);
+
+    pub const ROR_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_GPRv_CL_APX);
+
+    pub const ROR_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_GPRv_IMM8_APX);
+
+    pub const ROR_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_GPRv_ONE_APX);
+
+    pub const ROR_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_IMM8_APX);
 
     pub const ROR_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_IMMb);
 
+    pub const ROR_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_MEMv_CL_APX);
+
+    pub const ROR_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_MEMv_IMM8_APX);
+
+    pub const ROR_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_MEMv_ONE_APX);
+
     pub const ROR_GPRV_ONE: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_ONE);
+
+    pub const ROR_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_GPRv_ONE_APX);
 
     pub const ROR_MEMB_CL: Iform = Iform(ffi::XED_IFORM_ROR_MEMb_CL);
 
@@ -3536,19 +5485,43 @@ impl Iform {
 
     pub const ROR_MEMB_ONE: Iform = Iform(ffi::XED_IFORM_ROR_MEMb_ONE);
 
+    pub const ROR_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_MEMi8_CL_APX);
+
+    pub const ROR_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_MEMi8_IMM8_APX);
+
+    pub const ROR_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_MEMi8_ONE_APX);
+
     pub const ROR_MEMV_CL: Iform = Iform(ffi::XED_IFORM_ROR_MEMv_CL);
+
+    pub const ROR_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_ROR_MEMv_CL_APX);
+
+    pub const ROR_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_ROR_MEMv_IMM8_APX);
 
     pub const ROR_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_ROR_MEMv_IMMb);
 
     pub const ROR_MEMV_ONE: Iform = Iform(ffi::XED_IFORM_ROR_MEMv_ONE);
 
-    pub const RORX_VGPR32D_MEMD_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_VGPR32d_MEMd_IMMb);
+    pub const ROR_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_ROR_MEMv_ONE_APX);
 
-    pub const RORX_VGPR32D_VGPR32D_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_VGPR32d_VGPR32d_IMMb);
+    pub const RORX_GPR32D_GPR32D_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_GPR32d_GPR32d_IMMb);
 
-    pub const RORX_VGPR64Q_MEMQ_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_VGPR64q_MEMq_IMMb);
+    pub const RORX_GPR32D_MEMD_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_GPR32d_MEMd_IMMb);
 
-    pub const RORX_VGPR64Q_VGPR64Q_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_VGPR64q_VGPR64q_IMMb);
+    pub const RORX_GPR32I32_GPR32I32_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_RORX_GPR32i32_GPR32i32_IMM8_APX);
+
+    pub const RORX_GPR32I32_MEMI32_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_RORX_GPR32i32_MEMi32_IMM8_APX);
+
+    pub const RORX_GPR64I64_GPR64I64_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_RORX_GPR64i64_GPR64i64_IMM8_APX);
+
+    pub const RORX_GPR64I64_MEMI64_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_RORX_GPR64i64_MEMi64_IMM8_APX);
+
+    pub const RORX_GPR64Q_GPR64Q_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_GPR64q_GPR64q_IMMb);
+
+    pub const RORX_GPR64Q_MEMQ_IMMB: Iform = Iform(ffi::XED_IFORM_RORX_GPR64q_MEMq_IMMb);
 
     pub const ROUNDPD_XMMPD_MEMPD_IMMB: Iform = Iform(ffi::XED_IFORM_ROUNDPD_XMMpd_MEMpd_IMMb);
 
@@ -3588,11 +5561,47 @@ impl Iform {
 
     pub const SAR_GPR8_ONE: Iform = Iform(ffi::XED_IFORM_SAR_GPR8_ONE);
 
+    pub const SAR_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_CL_APX);
+
+    pub const SAR_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_GPR8i8_CL_APX);
+
+    pub const SAR_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const SAR_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const SAR_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_IMM8_APX);
+
+    pub const SAR_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_MEMi8_CL_APX);
+
+    pub const SAR_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const SAR_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_MEMi8_ONE_APX);
+
+    pub const SAR_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPR8i8_ONE_APX);
+
     pub const SAR_GPRV_CL: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_CL);
+
+    pub const SAR_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_CL_APX);
+
+    pub const SAR_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_GPRv_CL_APX);
+
+    pub const SAR_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_GPRv_IMM8_APX);
+
+    pub const SAR_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_GPRv_ONE_APX);
+
+    pub const SAR_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_IMM8_APX);
 
     pub const SAR_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_IMMb);
 
+    pub const SAR_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_MEMv_CL_APX);
+
+    pub const SAR_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_MEMv_IMM8_APX);
+
+    pub const SAR_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_MEMv_ONE_APX);
+
     pub const SAR_GPRV_ONE: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_ONE);
+
+    pub const SAR_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_GPRv_ONE_APX);
 
     pub const SAR_MEMB_CL: Iform = Iform(ffi::XED_IFORM_SAR_MEMb_CL);
 
@@ -3600,21 +5609,43 @@ impl Iform {
 
     pub const SAR_MEMB_ONE: Iform = Iform(ffi::XED_IFORM_SAR_MEMb_ONE);
 
+    pub const SAR_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_MEMi8_CL_APX);
+
+    pub const SAR_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_MEMi8_IMM8_APX);
+
+    pub const SAR_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_MEMi8_ONE_APX);
+
     pub const SAR_MEMV_CL: Iform = Iform(ffi::XED_IFORM_SAR_MEMv_CL);
+
+    pub const SAR_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_SAR_MEMv_CL_APX);
+
+    pub const SAR_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SAR_MEMv_IMM8_APX);
 
     pub const SAR_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_SAR_MEMv_IMMb);
 
     pub const SAR_MEMV_ONE: Iform = Iform(ffi::XED_IFORM_SAR_MEMv_ONE);
 
-    pub const SARX_VGPR32D_MEMD_VGPR32D: Iform = Iform(ffi::XED_IFORM_SARX_VGPR32d_MEMd_VGPR32d);
+    pub const SAR_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SAR_MEMv_ONE_APX);
 
-    pub const SARX_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_SARX_VGPR32d_VGPR32d_VGPR32d);
+    pub const SARX_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_SARX_GPR32d_GPR32d_GPR32d);
 
-    pub const SARX_VGPR64Q_MEMQ_VGPR64Q: Iform = Iform(ffi::XED_IFORM_SARX_VGPR64q_MEMq_VGPR64q);
+    pub const SARX_GPR32D_MEMD_GPR32D: Iform = Iform(ffi::XED_IFORM_SARX_GPR32d_MEMd_GPR32d);
 
-    pub const SARX_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_SARX_VGPR64q_VGPR64q_VGPR64q);
+    pub const SARX_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_SARX_GPR32i32_GPR32i32_GPR32i32_APX);
+
+    pub const SARX_GPR32I32_MEMI32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_SARX_GPR32i32_MEMi32_GPR32i32_APX);
+
+    pub const SARX_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_SARX_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const SARX_GPR64I64_MEMI64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_SARX_GPR64i64_MEMi64_GPR64i64_APX);
+
+    pub const SARX_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_SARX_GPR64q_GPR64q_GPR64q);
+
+    pub const SARX_GPR64Q_MEMQ_GPR64Q: Iform = Iform(ffi::XED_IFORM_SARX_GPR64q_MEMq_GPR64q);
 
     pub const SAVEPREVSSP: Iform = Iform(ffi::XED_IFORM_SAVEPREVSSP);
 
@@ -3630,15 +5661,56 @@ impl Iform {
 
     pub const SBB_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_SBB_GPR8_MEMb);
 
+    pub const SBB_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPR8i8_GPR8i8_APX);
+
+    pub const SBB_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_SBB_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const SBB_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const SBB_GPR8I8_GPR8I8_MEMI8_APX: Iform =
+        Iform(ffi::XED_IFORM_SBB_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const SBB_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPR8i8_IMM8_APX);
+
+    pub const SBB_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPR8i8_MEMi8_APX);
+
+    pub const SBB_GPR8I8_MEMI8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_SBB_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const SBB_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPR8i8_MEMi8_IMM8_APX);
+
     pub const SBB_GPRV_GPRV_19: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_19);
 
     pub const SBB_GPRV_GPRV_1B: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_1B);
+
+    pub const SBB_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_APX);
+
+    pub const SBB_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_GPRv_APX);
+
+    pub const SBB_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_IMM8_APX);
+
+    pub const SBB_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_IMMz_APX);
+
+    pub const SBB_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_GPRv_MEMv_APX);
+
+    pub const SBB_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_IMM8_APX);
 
     pub const SBB_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_IMMb);
 
     pub const SBB_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_IMMz);
 
+    pub const SBB_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_IMMz_APX);
+
     pub const SBB_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_MEMv);
+
+    pub const SBB_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_MEMv_APX);
+
+    pub const SBB_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_MEMv_GPRv_APX);
+
+    pub const SBB_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_MEMv_IMM8_APX);
+
+    pub const SBB_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SBB_GPRv_MEMv_IMMz_APX);
 
     pub const SBB_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_SBB_MEMb_GPR8);
 
@@ -3646,11 +5718,21 @@ impl Iform {
 
     pub const SBB_MEMB_IMMB_82R3: Iform = Iform(ffi::XED_IFORM_SBB_MEMb_IMMb_82r3);
 
+    pub const SBB_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SBB_MEMi8_GPR8i8_APX);
+
+    pub const SBB_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_MEMi8_IMM8_APX);
+
     pub const SBB_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_SBB_MEMv_GPRv);
+
+    pub const SBB_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SBB_MEMv_GPRv_APX);
+
+    pub const SBB_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SBB_MEMv_IMM8_APX);
 
     pub const SBB_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_SBB_MEMv_IMMb);
 
     pub const SBB_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_SBB_MEMv_IMMz);
+
+    pub const SBB_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SBB_MEMv_IMMz_APX);
 
     pub const SBB_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_SBB_OrAX_IMMz);
 
@@ -3680,75 +5762,139 @@ impl Iform {
 
     pub const SEAMRET: Iform = Iform(ffi::XED_IFORM_SEAMRET);
 
-    pub const SENDUIPI_GPR32U32: Iform = Iform(ffi::XED_IFORM_SENDUIPI_GPR32u32);
+    pub const SENDUIPI_GPR64U32: Iform = Iform(ffi::XED_IFORM_SENDUIPI_GPR64u32);
 
     pub const SERIALIZE: Iform = Iform(ffi::XED_IFORM_SERIALIZE);
 
     pub const SETB_GPR8: Iform = Iform(ffi::XED_IFORM_SETB_GPR8);
 
+    pub const SETB_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETB_GPR8i8_APX);
+
     pub const SETB_MEMB: Iform = Iform(ffi::XED_IFORM_SETB_MEMb);
+
+    pub const SETB_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETB_MEMi8_APX);
 
     pub const SETBE_GPR8: Iform = Iform(ffi::XED_IFORM_SETBE_GPR8);
 
+    pub const SETBE_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETBE_GPR8i8_APX);
+
     pub const SETBE_MEMB: Iform = Iform(ffi::XED_IFORM_SETBE_MEMb);
+
+    pub const SETBE_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETBE_MEMi8_APX);
 
     pub const SETL_GPR8: Iform = Iform(ffi::XED_IFORM_SETL_GPR8);
 
+    pub const SETL_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETL_GPR8i8_APX);
+
     pub const SETL_MEMB: Iform = Iform(ffi::XED_IFORM_SETL_MEMb);
+
+    pub const SETL_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETL_MEMi8_APX);
 
     pub const SETLE_GPR8: Iform = Iform(ffi::XED_IFORM_SETLE_GPR8);
 
+    pub const SETLE_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETLE_GPR8i8_APX);
+
     pub const SETLE_MEMB: Iform = Iform(ffi::XED_IFORM_SETLE_MEMb);
+
+    pub const SETLE_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETLE_MEMi8_APX);
 
     pub const SETNB_GPR8: Iform = Iform(ffi::XED_IFORM_SETNB_GPR8);
 
+    pub const SETNB_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNB_GPR8i8_APX);
+
     pub const SETNB_MEMB: Iform = Iform(ffi::XED_IFORM_SETNB_MEMb);
+
+    pub const SETNB_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNB_MEMi8_APX);
 
     pub const SETNBE_GPR8: Iform = Iform(ffi::XED_IFORM_SETNBE_GPR8);
 
+    pub const SETNBE_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNBE_GPR8i8_APX);
+
     pub const SETNBE_MEMB: Iform = Iform(ffi::XED_IFORM_SETNBE_MEMb);
+
+    pub const SETNBE_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNBE_MEMi8_APX);
 
     pub const SETNL_GPR8: Iform = Iform(ffi::XED_IFORM_SETNL_GPR8);
 
+    pub const SETNL_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNL_GPR8i8_APX);
+
     pub const SETNL_MEMB: Iform = Iform(ffi::XED_IFORM_SETNL_MEMb);
+
+    pub const SETNL_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNL_MEMi8_APX);
 
     pub const SETNLE_GPR8: Iform = Iform(ffi::XED_IFORM_SETNLE_GPR8);
 
+    pub const SETNLE_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNLE_GPR8i8_APX);
+
     pub const SETNLE_MEMB: Iform = Iform(ffi::XED_IFORM_SETNLE_MEMb);
+
+    pub const SETNLE_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNLE_MEMi8_APX);
 
     pub const SETNO_GPR8: Iform = Iform(ffi::XED_IFORM_SETNO_GPR8);
 
+    pub const SETNO_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNO_GPR8i8_APX);
+
     pub const SETNO_MEMB: Iform = Iform(ffi::XED_IFORM_SETNO_MEMb);
+
+    pub const SETNO_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNO_MEMi8_APX);
 
     pub const SETNP_GPR8: Iform = Iform(ffi::XED_IFORM_SETNP_GPR8);
 
+    pub const SETNP_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNP_GPR8i8_APX);
+
     pub const SETNP_MEMB: Iform = Iform(ffi::XED_IFORM_SETNP_MEMb);
+
+    pub const SETNP_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNP_MEMi8_APX);
 
     pub const SETNS_GPR8: Iform = Iform(ffi::XED_IFORM_SETNS_GPR8);
 
+    pub const SETNS_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNS_GPR8i8_APX);
+
     pub const SETNS_MEMB: Iform = Iform(ffi::XED_IFORM_SETNS_MEMb);
+
+    pub const SETNS_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNS_MEMi8_APX);
 
     pub const SETNZ_GPR8: Iform = Iform(ffi::XED_IFORM_SETNZ_GPR8);
 
+    pub const SETNZ_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETNZ_GPR8i8_APX);
+
     pub const SETNZ_MEMB: Iform = Iform(ffi::XED_IFORM_SETNZ_MEMb);
+
+    pub const SETNZ_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETNZ_MEMi8_APX);
 
     pub const SETO_GPR8: Iform = Iform(ffi::XED_IFORM_SETO_GPR8);
 
+    pub const SETO_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETO_GPR8i8_APX);
+
     pub const SETO_MEMB: Iform = Iform(ffi::XED_IFORM_SETO_MEMb);
+
+    pub const SETO_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETO_MEMi8_APX);
 
     pub const SETP_GPR8: Iform = Iform(ffi::XED_IFORM_SETP_GPR8);
 
+    pub const SETP_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETP_GPR8i8_APX);
+
     pub const SETP_MEMB: Iform = Iform(ffi::XED_IFORM_SETP_MEMb);
+
+    pub const SETP_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETP_MEMi8_APX);
 
     pub const SETS_GPR8: Iform = Iform(ffi::XED_IFORM_SETS_GPR8);
 
+    pub const SETS_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETS_GPR8i8_APX);
+
     pub const SETS_MEMB: Iform = Iform(ffi::XED_IFORM_SETS_MEMb);
+
+    pub const SETS_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETS_MEMi8_APX);
 
     pub const SETSSBSY: Iform = Iform(ffi::XED_IFORM_SETSSBSY);
 
     pub const SETZ_GPR8: Iform = Iform(ffi::XED_IFORM_SETZ_GPR8);
 
+    pub const SETZ_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SETZ_GPR8i8_APX);
+
     pub const SETZ_MEMB: Iform = Iform(ffi::XED_IFORM_SETZ_MEMb);
+
+    pub const SETZ_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SETZ_MEMi8_APX);
 
     pub const SFENCE: Iform = Iform(ffi::XED_IFORM_SFENCE);
 
@@ -3756,40 +5902,78 @@ impl Iform {
 
     pub const SGDT_MEMS64: Iform = Iform(ffi::XED_IFORM_SGDT_MEMs64);
 
+    pub const SHA1MSG1_XMMI32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_SHA1MSG1_XMMi32_MEMi32_APX);
+
     pub const SHA1MSG1_XMMI32_MEMI32_SHA: Iform = Iform(ffi::XED_IFORM_SHA1MSG1_XMMi32_MEMi32_SHA);
+
+    pub const SHA1MSG1_XMMI32_XMMI32_APX: Iform = Iform(ffi::XED_IFORM_SHA1MSG1_XMMi32_XMMi32_APX);
 
     pub const SHA1MSG1_XMMI32_XMMI32_SHA: Iform = Iform(ffi::XED_IFORM_SHA1MSG1_XMMi32_XMMi32_SHA);
 
+    pub const SHA1MSG2_XMMI32_MEMI32_APX: Iform = Iform(ffi::XED_IFORM_SHA1MSG2_XMMi32_MEMi32_APX);
+
     pub const SHA1MSG2_XMMI32_MEMI32_SHA: Iform = Iform(ffi::XED_IFORM_SHA1MSG2_XMMi32_MEMi32_SHA);
 
+    pub const SHA1MSG2_XMMI32_XMMI32_APX: Iform = Iform(ffi::XED_IFORM_SHA1MSG2_XMMi32_XMMi32_APX);
+
     pub const SHA1MSG2_XMMI32_XMMI32_SHA: Iform = Iform(ffi::XED_IFORM_SHA1MSG2_XMMi32_XMMi32_SHA);
+
+    pub const SHA1NEXTE_XMMI32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA1NEXTE_XMMi32_MEMi32_APX);
 
     pub const SHA1NEXTE_XMMI32_MEMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA1NEXTE_XMMi32_MEMi32_SHA);
 
+    pub const SHA1NEXTE_XMMI32_XMMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA1NEXTE_XMMi32_XMMi32_APX);
+
     pub const SHA1NEXTE_XMMI32_XMMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA1NEXTE_XMMi32_XMMi32_SHA);
+
+    pub const SHA1RNDS4_XMMI32_MEMI32_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA1RNDS4_XMMi32_MEMi32_IMM8_APX);
 
     pub const SHA1RNDS4_XMMI32_MEMI32_IMM8_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA1RNDS4_XMMi32_MEMi32_IMM8_SHA);
 
+    pub const SHA1RNDS4_XMMI32_XMMI32_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA1RNDS4_XMMi32_XMMi32_IMM8_APX);
+
     pub const SHA1RNDS4_XMMI32_XMMI32_IMM8_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA1RNDS4_XMMi32_XMMi32_IMM8_SHA);
+
+    pub const SHA256MSG1_XMMI32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA256MSG1_XMMi32_MEMi32_APX);
 
     pub const SHA256MSG1_XMMI32_MEMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA256MSG1_XMMi32_MEMi32_SHA);
 
+    pub const SHA256MSG1_XMMI32_XMMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA256MSG1_XMMi32_XMMi32_APX);
+
     pub const SHA256MSG1_XMMI32_XMMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA256MSG1_XMMi32_XMMi32_SHA);
+
+    pub const SHA256MSG2_XMMI32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA256MSG2_XMMi32_MEMi32_APX);
 
     pub const SHA256MSG2_XMMI32_MEMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA256MSG2_XMMi32_MEMi32_SHA);
 
+    pub const SHA256MSG2_XMMI32_XMMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA256MSG2_XMMi32_XMMi32_APX);
+
     pub const SHA256MSG2_XMMI32_XMMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA256MSG2_XMMi32_XMMi32_SHA);
 
+    pub const SHA256RNDS2_XMMI32_MEMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA256RNDS2_XMMi32_MEMi32_APX);
+
     pub const SHA256RNDS2_XMMI32_MEMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA256RNDS2_XMMi32_MEMi32_SHA);
+
+    pub const SHA256RNDS2_XMMI32_XMMI32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHA256RNDS2_XMMi32_XMMi32_APX);
 
     pub const SHA256RNDS2_XMMI32_XMMI32_SHA: Iform =
         Iform(ffi::XED_IFORM_SHA256RNDS2_XMMi32_XMMi32_SHA);
@@ -3806,13 +5990,49 @@ impl Iform {
 
     pub const SHL_GPR8_ONE_D0R6: Iform = Iform(ffi::XED_IFORM_SHL_GPR8_ONE_D0r6);
 
+    pub const SHL_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_CL_APX);
+
+    pub const SHL_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_GPR8i8_CL_APX);
+
+    pub const SHL_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const SHL_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const SHL_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_IMM8_APX);
+
+    pub const SHL_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_MEMi8_CL_APX);
+
+    pub const SHL_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const SHL_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_MEMi8_ONE_APX);
+
+    pub const SHL_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPR8i8_ONE_APX);
+
+    pub const SHL_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_CL_APX);
+
     pub const SHL_GPRV_CL_D3R4: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_CL_D3r4);
 
     pub const SHL_GPRV_CL_D3R6: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_CL_D3r6);
 
+    pub const SHL_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_GPRv_CL_APX);
+
+    pub const SHL_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_GPRv_IMM8_APX);
+
+    pub const SHL_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_GPRv_ONE_APX);
+
+    pub const SHL_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_IMM8_APX);
+
     pub const SHL_GPRV_IMMB_C1R4: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_IMMb_C1r4);
 
     pub const SHL_GPRV_IMMB_C1R6: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_IMMb_C1r6);
+
+    pub const SHL_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_MEMv_CL_APX);
+
+    pub const SHL_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_MEMv_IMM8_APX);
+
+    pub const SHL_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_MEMv_ONE_APX);
+
+    pub const SHL_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_ONE_APX);
 
     pub const SHL_GPRV_ONE_D1R4: Iform = Iform(ffi::XED_IFORM_SHL_GPRv_ONE_D1r4);
 
@@ -3830,13 +6050,25 @@ impl Iform {
 
     pub const SHL_MEMB_ONE_D0R6: Iform = Iform(ffi::XED_IFORM_SHL_MEMb_ONE_D0r6);
 
+    pub const SHL_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_MEMi8_CL_APX);
+
+    pub const SHL_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_MEMi8_IMM8_APX);
+
+    pub const SHL_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_MEMi8_ONE_APX);
+
+    pub const SHL_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_CL_APX);
+
     pub const SHL_MEMV_CL_D3R4: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_CL_D3r4);
 
     pub const SHL_MEMV_CL_D3R6: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_CL_D3r6);
 
+    pub const SHL_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_IMM8_APX);
+
     pub const SHL_MEMV_IMMB_C1R4: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_IMMb_C1r4);
 
     pub const SHL_MEMV_IMMB_C1R6: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_IMMb_C1r6);
+
+    pub const SHL_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_ONE_APX);
 
     pub const SHL_MEMV_ONE_D1R4: Iform = Iform(ffi::XED_IFORM_SHL_MEMv_ONE_D1r4);
 
@@ -3844,21 +6076,49 @@ impl Iform {
 
     pub const SHLD_GPRV_GPRV_CL: Iform = Iform(ffi::XED_IFORM_SHLD_GPRv_GPRv_CL);
 
+    pub const SHLD_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHLD_GPRv_GPRv_CL_APX);
+
+    pub const SHLD_GPRV_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHLD_GPRv_GPRv_GPRv_CL_APX);
+
+    pub const SHLD_GPRV_GPRV_GPRV_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_SHLD_GPRv_GPRv_GPRv_IMM8_APX);
+
+    pub const SHLD_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHLD_GPRv_GPRv_IMM8_APX);
+
     pub const SHLD_GPRV_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SHLD_GPRv_GPRv_IMMb);
+
+    pub const SHLD_GPRV_MEMV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHLD_GPRv_MEMv_GPRv_CL_APX);
+
+    pub const SHLD_GPRV_MEMV_GPRV_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_SHLD_GPRv_MEMv_GPRv_IMM8_APX);
 
     pub const SHLD_MEMV_GPRV_CL: Iform = Iform(ffi::XED_IFORM_SHLD_MEMv_GPRv_CL);
 
+    pub const SHLD_MEMV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHLD_MEMv_GPRv_CL_APX);
+
+    pub const SHLD_MEMV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHLD_MEMv_GPRv_IMM8_APX);
+
     pub const SHLD_MEMV_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SHLD_MEMv_GPRv_IMMb);
 
-    pub const SHLX_VGPR32D_MEMD_VGPR32D: Iform = Iform(ffi::XED_IFORM_SHLX_VGPR32d_MEMd_VGPR32d);
+    pub const SHLX_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_SHLX_GPR32d_GPR32d_GPR32d);
 
-    pub const SHLX_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_SHLX_VGPR32d_VGPR32d_VGPR32d);
+    pub const SHLX_GPR32D_MEMD_GPR32D: Iform = Iform(ffi::XED_IFORM_SHLX_GPR32d_MEMd_GPR32d);
 
-    pub const SHLX_VGPR64Q_MEMQ_VGPR64Q: Iform = Iform(ffi::XED_IFORM_SHLX_VGPR64q_MEMq_VGPR64q);
+    pub const SHLX_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHLX_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const SHLX_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_SHLX_VGPR64q_VGPR64q_VGPR64q);
+    pub const SHLX_GPR32I32_MEMI32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHLX_GPR32i32_MEMi32_GPR32i32_APX);
+
+    pub const SHLX_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_SHLX_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const SHLX_GPR64I64_MEMI64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_SHLX_GPR64i64_MEMi64_GPR64i64_APX);
+
+    pub const SHLX_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_SHLX_GPR64q_GPR64q_GPR64q);
+
+    pub const SHLX_GPR64Q_MEMQ_GPR64Q: Iform = Iform(ffi::XED_IFORM_SHLX_GPR64q_MEMq_GPR64q);
 
     pub const SHR_GPR8_CL: Iform = Iform(ffi::XED_IFORM_SHR_GPR8_CL);
 
@@ -3866,11 +6126,47 @@ impl Iform {
 
     pub const SHR_GPR8_ONE: Iform = Iform(ffi::XED_IFORM_SHR_GPR8_ONE);
 
+    pub const SHR_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_CL_APX);
+
+    pub const SHR_GPR8I8_GPR8I8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_GPR8i8_CL_APX);
+
+    pub const SHR_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const SHR_GPR8I8_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_GPR8i8_ONE_APX);
+
+    pub const SHR_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_IMM8_APX);
+
+    pub const SHR_GPR8I8_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_MEMi8_CL_APX);
+
+    pub const SHR_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_MEMi8_IMM8_APX);
+
+    pub const SHR_GPR8I8_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_MEMi8_ONE_APX);
+
+    pub const SHR_GPR8I8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPR8i8_ONE_APX);
+
     pub const SHR_GPRV_CL: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_CL);
+
+    pub const SHR_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_CL_APX);
+
+    pub const SHR_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_GPRv_CL_APX);
+
+    pub const SHR_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_GPRv_IMM8_APX);
+
+    pub const SHR_GPRV_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_GPRv_ONE_APX);
+
+    pub const SHR_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_IMM8_APX);
 
     pub const SHR_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_IMMb);
 
+    pub const SHR_GPRV_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_MEMv_CL_APX);
+
+    pub const SHR_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_MEMv_IMM8_APX);
+
+    pub const SHR_GPRV_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_MEMv_ONE_APX);
+
     pub const SHR_GPRV_ONE: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_ONE);
+
+    pub const SHR_GPRV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_GPRv_ONE_APX);
 
     pub const SHR_MEMB_CL: Iform = Iform(ffi::XED_IFORM_SHR_MEMb_CL);
 
@@ -3878,29 +6174,69 @@ impl Iform {
 
     pub const SHR_MEMB_ONE: Iform = Iform(ffi::XED_IFORM_SHR_MEMb_ONE);
 
+    pub const SHR_MEMI8_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_MEMi8_CL_APX);
+
+    pub const SHR_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_MEMi8_IMM8_APX);
+
+    pub const SHR_MEMI8_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_MEMi8_ONE_APX);
+
     pub const SHR_MEMV_CL: Iform = Iform(ffi::XED_IFORM_SHR_MEMv_CL);
+
+    pub const SHR_MEMV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHR_MEMv_CL_APX);
+
+    pub const SHR_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHR_MEMv_IMM8_APX);
 
     pub const SHR_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_SHR_MEMv_IMMb);
 
     pub const SHR_MEMV_ONE: Iform = Iform(ffi::XED_IFORM_SHR_MEMv_ONE);
 
+    pub const SHR_MEMV_ONE_APX: Iform = Iform(ffi::XED_IFORM_SHR_MEMv_ONE_APX);
+
     pub const SHRD_GPRV_GPRV_CL: Iform = Iform(ffi::XED_IFORM_SHRD_GPRv_GPRv_CL);
+
+    pub const SHRD_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHRD_GPRv_GPRv_CL_APX);
+
+    pub const SHRD_GPRV_GPRV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHRD_GPRv_GPRv_GPRv_CL_APX);
+
+    pub const SHRD_GPRV_GPRV_GPRV_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_SHRD_GPRv_GPRv_GPRv_IMM8_APX);
+
+    pub const SHRD_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHRD_GPRv_GPRv_IMM8_APX);
 
     pub const SHRD_GPRV_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SHRD_GPRv_GPRv_IMMb);
 
+    pub const SHRD_GPRV_MEMV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHRD_GPRv_MEMv_GPRv_CL_APX);
+
+    pub const SHRD_GPRV_MEMV_GPRV_IMM8_APX: Iform =
+        Iform(ffi::XED_IFORM_SHRD_GPRv_MEMv_GPRv_IMM8_APX);
+
     pub const SHRD_MEMV_GPRV_CL: Iform = Iform(ffi::XED_IFORM_SHRD_MEMv_GPRv_CL);
+
+    pub const SHRD_MEMV_GPRV_CL_APX: Iform = Iform(ffi::XED_IFORM_SHRD_MEMv_GPRv_CL_APX);
+
+    pub const SHRD_MEMV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SHRD_MEMv_GPRv_IMM8_APX);
 
     pub const SHRD_MEMV_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SHRD_MEMv_GPRv_IMMb);
 
-    pub const SHRX_VGPR32D_MEMD_VGPR32D: Iform = Iform(ffi::XED_IFORM_SHRX_VGPR32d_MEMd_VGPR32d);
+    pub const SHRX_GPR32D_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_SHRX_GPR32d_GPR32d_GPR32d);
 
-    pub const SHRX_VGPR32D_VGPR32D_VGPR32D: Iform =
-        Iform(ffi::XED_IFORM_SHRX_VGPR32d_VGPR32d_VGPR32d);
+    pub const SHRX_GPR32D_MEMD_GPR32D: Iform = Iform(ffi::XED_IFORM_SHRX_GPR32d_MEMd_GPR32d);
 
-    pub const SHRX_VGPR64Q_MEMQ_VGPR64Q: Iform = Iform(ffi::XED_IFORM_SHRX_VGPR64q_MEMq_VGPR64q);
+    pub const SHRX_GPR32I32_GPR32I32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHRX_GPR32i32_GPR32i32_GPR32i32_APX);
 
-    pub const SHRX_VGPR64Q_VGPR64Q_VGPR64Q: Iform =
-        Iform(ffi::XED_IFORM_SHRX_VGPR64q_VGPR64q_VGPR64q);
+    pub const SHRX_GPR32I32_MEMI32_GPR32I32_APX: Iform =
+        Iform(ffi::XED_IFORM_SHRX_GPR32i32_MEMi32_GPR32i32_APX);
+
+    pub const SHRX_GPR64I64_GPR64I64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_SHRX_GPR64i64_GPR64i64_GPR64i64_APX);
+
+    pub const SHRX_GPR64I64_MEMI64_GPR64I64_APX: Iform =
+        Iform(ffi::XED_IFORM_SHRX_GPR64i64_MEMi64_GPR64i64_APX);
+
+    pub const SHRX_GPR64Q_GPR64Q_GPR64Q: Iform = Iform(ffi::XED_IFORM_SHRX_GPR64q_GPR64q_GPR64q);
+
+    pub const SHRX_GPR64Q_MEMQ_GPR64Q: Iform = Iform(ffi::XED_IFORM_SHRX_GPR64q_MEMq_GPR64q);
 
     pub const SHUFPD_XMMPD_MEMPD_IMMB: Iform = Iform(ffi::XED_IFORM_SHUFPD_XMMpd_MEMpd_IMMb);
 
@@ -3920,7 +6256,7 @@ impl Iform {
 
     pub const SLDT_MEMW: Iform = Iform(ffi::XED_IFORM_SLDT_MEMw);
 
-    pub const SLWPCB_VGPRYY: Iform = Iform(ffi::XED_IFORM_SLWPCB_VGPRyy);
+    pub const SLWPCB_GPRYY: Iform = Iform(ffi::XED_IFORM_SLWPCB_GPRyy);
 
     pub const SMSW_GPRV: Iform = Iform(ffi::XED_IFORM_SMSW_GPRv);
 
@@ -3968,6 +6304,8 @@ impl Iform {
 
     pub const STTILECFG_MEM: Iform = Iform(ffi::XED_IFORM_STTILECFG_MEM);
 
+    pub const STTILECFG_MEM_APX: Iform = Iform(ffi::XED_IFORM_STTILECFG_MEM_APX);
+
     pub const STUI: Iform = Iform(ffi::XED_IFORM_STUI);
 
     pub const SUB_AL_IMMB: Iform = Iform(ffi::XED_IFORM_SUB_AL_IMMb);
@@ -3982,15 +6320,56 @@ impl Iform {
 
     pub const SUB_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_SUB_GPR8_MEMb);
 
+    pub const SUB_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPR8i8_GPR8i8_APX);
+
+    pub const SUB_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_SUB_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const SUB_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const SUB_GPR8I8_GPR8I8_MEMI8_APX: Iform =
+        Iform(ffi::XED_IFORM_SUB_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const SUB_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPR8i8_IMM8_APX);
+
+    pub const SUB_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPR8i8_MEMi8_APX);
+
+    pub const SUB_GPR8I8_MEMI8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_SUB_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const SUB_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPR8i8_MEMi8_IMM8_APX);
+
     pub const SUB_GPRV_GPRV_29: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_29);
 
     pub const SUB_GPRV_GPRV_2B: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_2B);
+
+    pub const SUB_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_APX);
+
+    pub const SUB_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_GPRv_APX);
+
+    pub const SUB_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_IMM8_APX);
+
+    pub const SUB_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_IMMz_APX);
+
+    pub const SUB_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_GPRv_MEMv_APX);
+
+    pub const SUB_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_IMM8_APX);
 
     pub const SUB_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_IMMb);
 
     pub const SUB_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_IMMz);
 
+    pub const SUB_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_IMMz_APX);
+
     pub const SUB_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_MEMv);
+
+    pub const SUB_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_MEMv_APX);
+
+    pub const SUB_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_MEMv_GPRv_APX);
+
+    pub const SUB_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_MEMv_IMM8_APX);
+
+    pub const SUB_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SUB_GPRv_MEMv_IMMz_APX);
 
     pub const SUB_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_SUB_MEMb_GPR8);
 
@@ -3998,11 +6377,21 @@ impl Iform {
 
     pub const SUB_MEMB_IMMB_82R5: Iform = Iform(ffi::XED_IFORM_SUB_MEMb_IMMb_82r5);
 
+    pub const SUB_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_SUB_MEMi8_GPR8i8_APX);
+
+    pub const SUB_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_MEMi8_IMM8_APX);
+
     pub const SUB_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_SUB_MEMv_GPRv);
+
+    pub const SUB_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_SUB_MEMv_GPRv_APX);
+
+    pub const SUB_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_SUB_MEMv_IMM8_APX);
 
     pub const SUB_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_SUB_MEMv_IMMb);
 
     pub const SUB_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_SUB_MEMv_IMMz);
+
+    pub const SUB_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_SUB_MEMv_IMMz_APX);
 
     pub const SUB_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_SUB_OrAX_IMMz);
 
@@ -4038,7 +6427,7 @@ impl Iform {
 
     pub const SYSCALL: Iform = Iform(ffi::XED_IFORM_SYSCALL);
 
-    pub const SYSCALL_AMD: Iform = Iform(ffi::XED_IFORM_SYSCALL_AMD);
+    pub const SYSCALL_32: Iform = Iform(ffi::XED_IFORM_SYSCALL_32);
 
     pub const SYSENTER: Iform = Iform(ffi::XED_IFORM_SYSENTER);
 
@@ -4050,30 +6439,39 @@ impl Iform {
 
     pub const SYSRET_AMD: Iform = Iform(ffi::XED_IFORM_SYSRET_AMD);
 
-    pub const T1MSKC_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_T1MSKC_VGPR32d_MEMd);
+    pub const T1MSKC_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_T1MSKC_GPR32d_GPR32d);
 
-    pub const T1MSKC_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_T1MSKC_VGPR32d_VGPR32d);
+    pub const T1MSKC_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_T1MSKC_GPR32d_MEMd);
 
-    pub const T1MSKC_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_T1MSKC_VGPRyy_MEMy);
+    pub const T1MSKC_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_T1MSKC_GPRyy_GPRyy);
 
-    pub const T1MSKC_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_T1MSKC_VGPRyy_VGPRyy);
+    pub const T1MSKC_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_T1MSKC_GPRyy_MEMy);
+
+    pub const TCMMIMFP16PS_TMMF32_TMM2F16_TMM2F16: Iform =
+        Iform(ffi::XED_IFORM_TCMMIMFP16PS_TMMf32_TMM2f16_TMM2f16);
+
+    pub const TCMMRLFP16PS_TMMF32_TMM2F16_TMM2F16: Iform =
+        Iform(ffi::XED_IFORM_TCMMRLFP16PS_TMMf32_TMM2f16_TMM2f16);
 
     pub const TDCALL: Iform = Iform(ffi::XED_IFORM_TDCALL);
 
-    pub const TDPBF16PS_TMMF32_TMMU32_TMMU32: Iform =
-        Iform(ffi::XED_IFORM_TDPBF16PS_TMMf32_TMMu32_TMMu32);
+    pub const TDPBF16PS_TMMF32_TMM2BF16_TMM2BF16: Iform =
+        Iform(ffi::XED_IFORM_TDPBF16PS_TMMf32_TMM2bf16_TMM2bf16);
 
-    pub const TDPBSSD_TMMI32_TMMU32_TMMU32: Iform =
-        Iform(ffi::XED_IFORM_TDPBSSD_TMMi32_TMMu32_TMMu32);
+    pub const TDPBSSD_TMMI32_TMM4I8_TMM4I8: Iform =
+        Iform(ffi::XED_IFORM_TDPBSSD_TMMi32_TMM4i8_TMM4i8);
 
-    pub const TDPBSUD_TMMI32_TMMU32_TMMU32: Iform =
-        Iform(ffi::XED_IFORM_TDPBSUD_TMMi32_TMMu32_TMMu32);
+    pub const TDPBSUD_TMMI32_TMM4I8_TMM4U8: Iform =
+        Iform(ffi::XED_IFORM_TDPBSUD_TMMi32_TMM4i8_TMM4u8);
 
-    pub const TDPBUSD_TMMI32_TMMU32_TMMU32: Iform =
-        Iform(ffi::XED_IFORM_TDPBUSD_TMMi32_TMMu32_TMMu32);
+    pub const TDPBUSD_TMMI32_TMM4U8_TMM4I8: Iform =
+        Iform(ffi::XED_IFORM_TDPBUSD_TMMi32_TMM4u8_TMM4i8);
 
-    pub const TDPBUUD_TMMU32_TMMU32_TMMU32: Iform =
-        Iform(ffi::XED_IFORM_TDPBUUD_TMMu32_TMMu32_TMMu32);
+    pub const TDPBUUD_TMMU32_TMM4U8_TMM4U8: Iform =
+        Iform(ffi::XED_IFORM_TDPBUUD_TMMu32_TMM4u8_TMM4u8);
+
+    pub const TDPFP16PS_TMMF32_TMM2F16_TMM2F16: Iform =
+        Iform(ffi::XED_IFORM_TDPFP16PS_TMMf32_TMM2f16_TMM2f16);
 
     pub const TEST_AL_IMMB: Iform = Iform(ffi::XED_IFORM_TEST_AL_IMMb);
 
@@ -4107,11 +6505,20 @@ impl Iform {
 
     pub const TILELOADD_TMMU32_MEMU32: Iform = Iform(ffi::XED_IFORM_TILELOADD_TMMu32_MEMu32);
 
+    pub const TILELOADD_TMMU32_MEMU32_APX: Iform =
+        Iform(ffi::XED_IFORM_TILELOADD_TMMu32_MEMu32_APX);
+
     pub const TILELOADDT1_TMMU32_MEMU32: Iform = Iform(ffi::XED_IFORM_TILELOADDT1_TMMu32_MEMu32);
+
+    pub const TILELOADDT1_TMMU32_MEMU32_APX: Iform =
+        Iform(ffi::XED_IFORM_TILELOADDT1_TMMu32_MEMu32_APX);
 
     pub const TILERELEASE: Iform = Iform(ffi::XED_IFORM_TILERELEASE);
 
     pub const TILESTORED_MEMU32_TMMU32: Iform = Iform(ffi::XED_IFORM_TILESTORED_MEMu32_TMMu32);
+
+    pub const TILESTORED_MEMU32_TMMU32_APX: Iform =
+        Iform(ffi::XED_IFORM_TILESTORED_MEMu32_TMMu32_APX);
 
     pub const TILEZERO_TMMU32: Iform = Iform(ffi::XED_IFORM_TILEZERO_TMMu32);
 
@@ -4121,15 +6528,19 @@ impl Iform {
 
     pub const TZCNT_GPRV_GPRV: Iform = Iform(ffi::XED_IFORM_TZCNT_GPRv_GPRv);
 
+    pub const TZCNT_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_TZCNT_GPRv_GPRv_APX);
+
     pub const TZCNT_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_TZCNT_GPRv_MEMv);
 
-    pub const TZMSK_VGPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_TZMSK_VGPR32d_MEMd);
+    pub const TZCNT_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_TZCNT_GPRv_MEMv_APX);
 
-    pub const TZMSK_VGPR32D_VGPR32D: Iform = Iform(ffi::XED_IFORM_TZMSK_VGPR32d_VGPR32d);
+    pub const TZMSK_GPR32D_GPR32D: Iform = Iform(ffi::XED_IFORM_TZMSK_GPR32d_GPR32d);
 
-    pub const TZMSK_VGPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_TZMSK_VGPRyy_MEMy);
+    pub const TZMSK_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_TZMSK_GPR32d_MEMd);
 
-    pub const TZMSK_VGPRYY_VGPRYY: Iform = Iform(ffi::XED_IFORM_TZMSK_VGPRyy_VGPRyy);
+    pub const TZMSK_GPRYY_GPRYY: Iform = Iform(ffi::XED_IFORM_TZMSK_GPRyy_GPRyy);
+
+    pub const TZMSK_GPRYY_MEMY: Iform = Iform(ffi::XED_IFORM_TZMSK_GPRyy_MEMy);
 
     pub const UCOMISD_XMMSD_MEMSD: Iform = Iform(ffi::XED_IFORM_UCOMISD_XMMsd_MEMsd);
 
@@ -4173,6 +6584,24 @@ impl Iform {
 
     pub const UNPCKLPS_XMMPS_XMMQ: Iform = Iform(ffi::XED_IFORM_UNPCKLPS_XMMps_XMMq);
 
+    pub const URDMSR_GPR64U64_GPR64U64: Iform = Iform(ffi::XED_IFORM_URDMSR_GPR64u64_GPR64u64);
+
+    pub const URDMSR_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_URDMSR_GPR64u64_GPR64u64_APX);
+
+    pub const URDMSR_GPR64U64_IMM32: Iform = Iform(ffi::XED_IFORM_URDMSR_GPR64u64_IMM32);
+
+    pub const URDMSR_GPR64U64_IMM32_APX: Iform = Iform(ffi::XED_IFORM_URDMSR_GPR64u64_IMM32_APX);
+
+    pub const UWRMSR_GPR64U64_GPR64U64: Iform = Iform(ffi::XED_IFORM_UWRMSR_GPR64u64_GPR64u64);
+
+    pub const UWRMSR_GPR64U64_GPR64U64_APX: Iform =
+        Iform(ffi::XED_IFORM_UWRMSR_GPR64u64_GPR64u64_APX);
+
+    pub const UWRMSR_IMM32_GPR64U64: Iform = Iform(ffi::XED_IFORM_UWRMSR_IMM32_GPR64u64);
+
+    pub const UWRMSR_IMM32_GPR64U64_APX: Iform = Iform(ffi::XED_IFORM_UWRMSR_IMM32_GPR64u64_APX);
+
     pub const V4FMADDPS_ZMMF32_MASKMSKW_ZMMF32_MEMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_V4FMADDPS_ZMMf32_MASKmskw_ZMMf32_MEMf32_AVX512);
 
@@ -4211,6 +6640,24 @@ impl Iform {
     pub const VADDPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VADDPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VADDPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VADDPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VADDPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VADDPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VADDPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VADDPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VADDPS_XMMDQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VADDPS_XMMdq_XMMdq_MEMdq);
 
     pub const VADDPS_XMMDQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VADDPS_XMMdq_XMMdq_XMMdq);
@@ -4246,6 +6693,12 @@ impl Iform {
 
     pub const VADDSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VADDSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VADDSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VADDSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VADDSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VADDSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VADDSS_XMMdq_XMMdq_MEMd);
 
@@ -4547,6 +7000,16 @@ impl Iform {
     pub const VANDPS_ZMMU32_MASKMSKW_ZMMU32_ZMMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VANDPS_ZMMu32_MASKmskw_ZMMu32_ZMMu32_AVX512);
 
+    pub const VBCSTNEBF162PS_XMMF32_MEMBF16: Iform =
+        Iform(ffi::XED_IFORM_VBCSTNEBF162PS_XMMf32_MEMbf16);
+
+    pub const VBCSTNEBF162PS_YMMF32_MEMBF16: Iform =
+        Iform(ffi::XED_IFORM_VBCSTNEBF162PS_YMMf32_MEMbf16);
+
+    pub const VBCSTNESH2PS_XMMF32_MEMF16: Iform = Iform(ffi::XED_IFORM_VBCSTNESH2PS_XMMf32_MEMf16);
+
+    pub const VBCSTNESH2PS_YMMF32_MEMF16: Iform = Iform(ffi::XED_IFORM_VBCSTNESH2PS_YMMf32_MEMf16);
+
     pub const VBLENDMPD_XMMF64_MASKMSKW_XMMF64_MEMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VBLENDMPD_XMMf64_MASKmskw_XMMf64_MEMf64_AVX512);
 
@@ -4773,6 +7236,24 @@ impl Iform {
     pub const VCMPPD_YMMQQ_YMMQQ_YMMQQ_IMMB: Iform =
         Iform(ffi::XED_IFORM_VCMPPD_YMMqq_YMMqq_YMMqq_IMMb);
 
+    pub const VCMPPH_MASKMSKW_MASKMSKW_XMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPPH_MASKmskw_MASKmskw_XMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VCMPPH_MASKMSKW_MASKMSKW_XMMF16_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPPH_MASKmskw_MASKmskw_XMMf16_XMMf16_IMM8_AVX512);
+
+    pub const VCMPPH_MASKMSKW_MASKMSKW_YMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPPH_MASKmskw_MASKmskw_YMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VCMPPH_MASKMSKW_MASKMSKW_YMMF16_YMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPPH_MASKmskw_MASKmskw_YMMf16_YMMf16_IMM8_AVX512);
+
+    pub const VCMPPH_MASKMSKW_MASKMSKW_ZMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPPH_MASKmskw_MASKmskw_ZMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VCMPPH_MASKMSKW_MASKMSKW_ZMMF16_ZMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPPH_MASKmskw_MASKmskw_ZMMf16_ZMMf16_IMM8_AVX512);
+
     pub const VCMPPS_MASKMSKW_MASKMSKW_XMMF32_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCMPPS_MASKmskw_MASKmskw_XMMf32_MEMf32_IMM8_AVX512);
 
@@ -4815,6 +7296,12 @@ impl Iform {
     pub const VCMPSD_XMMDQ_XMMDQ_XMMQ_IMMB: Iform =
         Iform(ffi::XED_IFORM_VCMPSD_XMMdq_XMMdq_XMMq_IMMb);
 
+    pub const VCMPSH_MASKMSKW_MASKMSKW_XMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPSH_MASKmskw_MASKmskw_XMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VCMPSH_MASKMSKW_MASKMSKW_XMMF16_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCMPSH_MASKmskw_MASKmskw_XMMf16_XMMf16_IMM8_AVX512);
+
     pub const VCMPSS_MASKMSKW_MASKMSKW_XMMF32_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCMPSS_MASKmskw_MASKmskw_XMMf32_MEMf32_IMM8_AVX512);
 
@@ -4836,6 +7323,12 @@ impl Iform {
     pub const VCOMISD_XMMQ_MEMQ: Iform = Iform(ffi::XED_IFORM_VCOMISD_XMMq_MEMq);
 
     pub const VCOMISD_XMMQ_XMMQ: Iform = Iform(ffi::XED_IFORM_VCOMISD_XMMq_XMMq);
+
+    pub const VCOMISH_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCOMISH_XMMf16_MEMf16_AVX512);
+
+    pub const VCOMISH_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCOMISH_XMMf16_XMMf16_AVX512);
 
     pub const VCOMISS_XMMD_MEMD: Iform = Iform(ffi::XED_IFORM_VCOMISS_XMMd_MEMd);
 
@@ -4909,6 +7402,24 @@ impl Iform {
     pub const VCVTDQ2PD_ZMMF64_MASKMSKW_YMMI32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTDQ2PD_ZMMf64_MASKmskw_YMMi32_AVX512);
 
+    pub const VCVTDQ2PH_XMMF16_MASKMSKW_MEMI32_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTDQ2PH_XMMf16_MASKmskw_MEMi32_AVX512_VL128);
+
+    pub const VCVTDQ2PH_XMMF16_MASKMSKW_MEMI32_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTDQ2PH_XMMf16_MASKmskw_MEMi32_AVX512_VL256);
+
+    pub const VCVTDQ2PH_XMMF16_MASKMSKW_XMMI32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTDQ2PH_XMMf16_MASKmskw_XMMi32_AVX512);
+
+    pub const VCVTDQ2PH_XMMF16_MASKMSKW_YMMI32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTDQ2PH_XMMf16_MASKmskw_YMMi32_AVX512);
+
+    pub const VCVTDQ2PH_YMMF16_MASKMSKW_MEMI32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTDQ2PH_YMMf16_MASKmskw_MEMi32_AVX512);
+
+    pub const VCVTDQ2PH_YMMF16_MASKMSKW_ZMMI32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTDQ2PH_YMMf16_MASKmskw_ZMMi32_AVX512);
+
     pub const VCVTDQ2PS_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VCVTDQ2PS_XMMdq_MEMdq);
 
     pub const VCVTDQ2PS_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VCVTDQ2PS_XMMdq_XMMdq);
@@ -4953,6 +7464,30 @@ impl Iform {
     pub const VCVTNE2PS2BF16_ZMMBF16_MASKMSKW_ZMMF32_ZMMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTNE2PS2BF16_ZMMbf16_MASKmskw_ZMMf32_ZMMf32_AVX512);
 
+    pub const VCVTNEEBF162PS_XMMF32_MEM2BF16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEEBF162PS_XMMf32_MEM2bf16);
+
+    pub const VCVTNEEBF162PS_YMMF32_MEM2BF16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEEBF162PS_YMMf32_MEM2bf16);
+
+    pub const VCVTNEEPH2PS_XMMF32_MEM2F16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEEPH2PS_XMMf32_MEM2f16);
+
+    pub const VCVTNEEPH2PS_YMMF32_MEM2F16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEEPH2PS_YMMf32_MEM2f16);
+
+    pub const VCVTNEOBF162PS_XMMF32_MEM2BF16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEOBF162PS_XMMf32_MEM2bf16);
+
+    pub const VCVTNEOBF162PS_YMMF32_MEM2BF16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEOBF162PS_YMMf32_MEM2bf16);
+
+    pub const VCVTNEOPH2PS_XMMF32_MEM2F16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEOPH2PS_XMMf32_MEM2f16);
+
+    pub const VCVTNEOPH2PS_YMMF32_MEM2F16: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEOPH2PS_YMMf32_MEM2f16);
+
     pub const VCVTNEPS2BF16_XMMBF16_MASKMSKW_MEMF32_AVX512_VL128: Iform =
         Iform(ffi::XED_IFORM_VCVTNEPS2BF16_XMMbf16_MASKmskw_MEMf32_AVX512_VL128);
 
@@ -4964,6 +7499,18 @@ impl Iform {
 
     pub const VCVTNEPS2BF16_XMMBF16_MASKMSKW_YMMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTNEPS2BF16_XMMbf16_MASKmskw_YMMf32_AVX512);
+
+    pub const VCVTNEPS2BF16_XMMBF16_MEMF32_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEPS2BF16_XMMbf16_MEMf32_VL128);
+
+    pub const VCVTNEPS2BF16_XMMBF16_MEMF32_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEPS2BF16_XMMbf16_MEMf32_VL256);
+
+    pub const VCVTNEPS2BF16_XMMBF16_XMMF32: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEPS2BF16_XMMbf16_XMMf32);
+
+    pub const VCVTNEPS2BF16_XMMBF16_YMMF32: Iform =
+        Iform(ffi::XED_IFORM_VCVTNEPS2BF16_XMMbf16_YMMf32);
 
     pub const VCVTNEPS2BF16_YMMBF16_MASKMSKW_MEMF32_AVX512_VL512: Iform =
         Iform(ffi::XED_IFORM_VCVTNEPS2BF16_YMMbf16_MASKmskw_MEMf32_AVX512_VL512);
@@ -4996,6 +7543,24 @@ impl Iform {
 
     pub const VCVTPD2DQ_YMMI32_MASKMSKW_ZMMF64_AVX512_VL512: Iform =
         Iform(ffi::XED_IFORM_VCVTPD2DQ_YMMi32_MASKmskw_ZMMf64_AVX512_VL512);
+
+    pub const VCVTPD2PH_XMMF16_MASKMSKW_MEMF64_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTPD2PH_XMMf16_MASKmskw_MEMf64_AVX512_VL128);
+
+    pub const VCVTPD2PH_XMMF16_MASKMSKW_MEMF64_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTPD2PH_XMMf16_MASKmskw_MEMf64_AVX512_VL256);
+
+    pub const VCVTPD2PH_XMMF16_MASKMSKW_MEMF64_AVX512_VL512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPD2PH_XMMf16_MASKmskw_MEMf64_AVX512_VL512);
+
+    pub const VCVTPD2PH_XMMF16_MASKMSKW_XMMF64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPD2PH_XMMf16_MASKmskw_XMMf64_AVX512);
+
+    pub const VCVTPD2PH_XMMF16_MASKMSKW_YMMF64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPD2PH_XMMf16_MASKmskw_YMMf64_AVX512);
+
+    pub const VCVTPD2PH_XMMF16_MASKMSKW_ZMMF64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPD2PH_XMMf16_MASKmskw_ZMMf64_AVX512);
 
     pub const VCVTPD2PS_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VCVTPD2PS_XMMdq_MEMdq);
 
@@ -5077,6 +7642,42 @@ impl Iform {
     pub const VCVTPD2UQQ_ZMMU64_MASKMSKW_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTPD2UQQ_ZMMu64_MASKmskw_ZMMf64_AVX512);
 
+    pub const VCVTPH2DQ_XMMI32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2DQ_XMMi32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2DQ_XMMI32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2DQ_XMMi32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2DQ_YMMI32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2DQ_YMMi32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2DQ_YMMI32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2DQ_YMMi32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2DQ_ZMMI32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2DQ_ZMMi32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2DQ_ZMMI32_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2DQ_ZMMi32_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTPH2PD_XMMF64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PD_XMMf64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2PD_XMMF64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PD_XMMf64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2PD_YMMF64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PD_YMMf64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2PD_YMMF64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PD_YMMf64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2PD_ZMMF64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PD_ZMMf64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2PD_ZMMF64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PD_ZMMf64_MASKmskw_XMMf16_AVX512);
+
     pub const VCVTPH2PS_XMMDQ_MEMQ: Iform = Iform(ffi::XED_IFORM_VCVTPH2PS_XMMdq_MEMq);
 
     pub const VCVTPH2PS_XMMDQ_XMMQ: Iform = Iform(ffi::XED_IFORM_VCVTPH2PS_XMMdq_XMMq);
@@ -5102,6 +7703,114 @@ impl Iform {
 
     pub const VCVTPH2PS_ZMMF32_MASKMSKW_YMMF16_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTPH2PS_ZMMf32_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTPH2PSX_XMMF32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PSX_XMMf32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2PSX_XMMF32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PSX_XMMf32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2PSX_YMMF32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PSX_YMMf32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2PSX_YMMF32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PSX_YMMf32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2PSX_ZMMF32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PSX_ZMMf32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2PSX_ZMMF32_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2PSX_ZMMf32_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTPH2QQ_XMMI64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2QQ_XMMi64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2QQ_XMMI64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2QQ_XMMi64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2QQ_YMMI64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2QQ_YMMi64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2QQ_YMMI64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2QQ_YMMi64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2QQ_ZMMI64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2QQ_ZMMi64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2QQ_ZMMI64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2QQ_ZMMi64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UDQ_XMMU32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UDQ_XMMu32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UDQ_XMMU32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UDQ_XMMu32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UDQ_YMMU32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UDQ_YMMu32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UDQ_YMMU32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UDQ_YMMu32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UDQ_ZMMU32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UDQ_ZMMu32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UDQ_ZMMU32_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UDQ_ZMMu32_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTPH2UQQ_XMMU64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UQQ_XMMu64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UQQ_XMMU64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UQQ_XMMu64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UQQ_YMMU64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UQQ_YMMu64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UQQ_YMMU64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UQQ_YMMu64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UQQ_ZMMU64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UQQ_ZMMu64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UQQ_ZMMU64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UQQ_ZMMu64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UW_XMMU16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UW_XMMu16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UW_XMMU16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UW_XMMu16_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2UW_YMMU16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UW_YMMu16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UW_YMMU16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UW_YMMu16_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTPH2UW_ZMMU16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UW_ZMMu16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2UW_ZMMU16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2UW_ZMMu16_MASKmskw_ZMMf16_AVX512);
+
+    pub const VCVTPH2W_XMMI16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2W_XMMi16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2W_XMMI16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2W_XMMi16_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTPH2W_YMMI16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2W_YMMi16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2W_YMMI16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2W_YMMi16_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTPH2W_ZMMI16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2W_ZMMi16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTPH2W_ZMMI16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPH2W_ZMMi16_MASKmskw_ZMMf16_AVX512);
 
     pub const VCVTPS2DQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VCVTPS2DQ_XMMdq_MEMdq);
 
@@ -5181,6 +7890,24 @@ impl Iform {
     pub const VCVTPS2PH_YMMF16_MASKMSKW_ZMMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTPS2PH_YMMf16_MASKmskw_ZMMf32_IMM8_AVX512);
 
+    pub const VCVTPS2PHX_XMMF16_MASKMSKW_MEMF32_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTPS2PHX_XMMf16_MASKmskw_MEMf32_AVX512_VL128);
+
+    pub const VCVTPS2PHX_XMMF16_MASKMSKW_MEMF32_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTPS2PHX_XMMf16_MASKmskw_MEMf32_AVX512_VL256);
+
+    pub const VCVTPS2PHX_XMMF16_MASKMSKW_XMMF32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPS2PHX_XMMf16_MASKmskw_XMMf32_AVX512);
+
+    pub const VCVTPS2PHX_XMMF16_MASKMSKW_YMMF32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPS2PHX_XMMf16_MASKmskw_YMMf32_AVX512);
+
+    pub const VCVTPS2PHX_YMMF16_MASKMSKW_MEMF32_AVX512_VL512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPS2PHX_YMMf16_MASKmskw_MEMf32_AVX512_VL512);
+
+    pub const VCVTPS2PHX_YMMF16_MASKMSKW_ZMMF32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTPS2PHX_YMMf16_MASKmskw_ZMMf32_AVX512);
+
     pub const VCVTPS2QQ_XMMI64_MASKMSKW_MEMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTPS2QQ_XMMi64_MASKmskw_MEMf32_AVX512);
 
@@ -5253,6 +7980,24 @@ impl Iform {
     pub const VCVTQQ2PD_ZMMI64_MASKMSKW_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTQQ2PD_ZMMi64_MASKmskw_ZMMf64_AVX512);
 
+    pub const VCVTQQ2PH_XMMF16_MASKMSKW_MEMU64_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTQQ2PH_XMMf16_MASKmskw_MEMu64_AVX512_VL128);
+
+    pub const VCVTQQ2PH_XMMF16_MASKMSKW_MEMU64_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTQQ2PH_XMMf16_MASKmskw_MEMu64_AVX512_VL256);
+
+    pub const VCVTQQ2PH_XMMF16_MASKMSKW_MEMU64_AVX512_VL512: Iform =
+        Iform(ffi::XED_IFORM_VCVTQQ2PH_XMMf16_MASKmskw_MEMu64_AVX512_VL512);
+
+    pub const VCVTQQ2PH_XMMF16_MASKMSKW_XMMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTQQ2PH_XMMf16_MASKmskw_XMMu64_AVX512);
+
+    pub const VCVTQQ2PH_XMMF16_MASKMSKW_YMMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTQQ2PH_XMMf16_MASKmskw_YMMu64_AVX512);
+
+    pub const VCVTQQ2PH_XMMF16_MASKMSKW_ZMMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTQQ2PH_XMMf16_MASKmskw_ZMMu64_AVX512);
+
     pub const VCVTQQ2PS_XMMF32_MASKMSKW_MEMU64_AVX512_VL128: Iform =
         Iform(ffi::XED_IFORM_VCVTQQ2PS_XMMf32_MASKmskw_MEMu64_AVX512_VL128);
 
@@ -5270,6 +8015,12 @@ impl Iform {
 
     pub const VCVTQQ2PS_YMMF32_MASKMSKW_ZMMU64_AVX512_VL512: Iform =
         Iform(ffi::XED_IFORM_VCVTQQ2PS_YMMf32_MASKmskw_ZMMu64_AVX512_VL512);
+
+    pub const VCVTSD2SH_XMMF16_MASKMSKW_XMMF64_MEMF64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSD2SH_XMMf16_MASKmskw_XMMf64_MEMf64_AVX512);
+
+    pub const VCVTSD2SH_XMMF16_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSD2SH_XMMf16_MASKmskw_XMMf64_XMMf64_AVX512);
 
     pub const VCVTSD2SI_GPR32D_MEMQ: Iform = Iform(ffi::XED_IFORM_VCVTSD2SI_GPR32d_MEMq);
 
@@ -5313,6 +8064,42 @@ impl Iform {
     pub const VCVTSD2USI_GPR64U64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTSD2USI_GPR64u64_XMMf64_AVX512);
 
+    pub const VCVTSH2SD_XMMF64_MASKMSKW_XMMF64_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SD_XMMf64_MASKmskw_XMMf64_MEMf16_AVX512);
+
+    pub const VCVTSH2SD_XMMF64_MASKMSKW_XMMF64_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SD_XMMf64_MASKmskw_XMMf64_XMMf16_AVX512);
+
+    pub const VCVTSH2SI_GPR32I32_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SI_GPR32i32_MEMf16_AVX512);
+
+    pub const VCVTSH2SI_GPR32I32_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SI_GPR32i32_XMMf16_AVX512);
+
+    pub const VCVTSH2SI_GPR64I64_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SI_GPR64i64_MEMf16_AVX512);
+
+    pub const VCVTSH2SI_GPR64I64_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SI_GPR64i64_XMMf16_AVX512);
+
+    pub const VCVTSH2SS_XMMF32_MASKMSKW_XMMF32_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SS_XMMf32_MASKmskw_XMMf32_MEMf16_AVX512);
+
+    pub const VCVTSH2SS_XMMF32_MASKMSKW_XMMF32_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2SS_XMMf32_MASKmskw_XMMf32_XMMf16_AVX512);
+
+    pub const VCVTSH2USI_GPR32U32_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2USI_GPR32u32_MEMf16_AVX512);
+
+    pub const VCVTSH2USI_GPR32U32_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2USI_GPR32u32_XMMf16_AVX512);
+
+    pub const VCVTSH2USI_GPR64U64_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2USI_GPR64u64_MEMf16_AVX512);
+
+    pub const VCVTSH2USI_GPR64U64_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSH2USI_GPR64u64_XMMf16_AVX512);
+
     pub const VCVTSI2SD_XMMDQ_XMMDQ_GPR32D: Iform =
         Iform(ffi::XED_IFORM_VCVTSI2SD_XMMdq_XMMdq_GPR32d);
 
@@ -5334,6 +8121,18 @@ impl Iform {
 
     pub const VCVTSI2SD_XMMF64_XMMF64_MEMI64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTSI2SD_XMMf64_XMMf64_MEMi64_AVX512);
+
+    pub const VCVTSI2SH_XMMF16_XMMF16_GPR32I32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSI2SH_XMMf16_XMMf16_GPR32i32_AVX512);
+
+    pub const VCVTSI2SH_XMMF16_XMMF16_GPR64I64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSI2SH_XMMf16_XMMf16_GPR64i64_AVX512);
+
+    pub const VCVTSI2SH_XMMF16_XMMF16_MEMI32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSI2SH_XMMf16_XMMf16_MEMi32_AVX512);
+
+    pub const VCVTSI2SH_XMMF16_XMMF16_MEMI64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSI2SH_XMMf16_XMMf16_MEMi64_AVX512);
 
     pub const VCVTSI2SS_XMMDQ_XMMDQ_GPR32D: Iform =
         Iform(ffi::XED_IFORM_VCVTSI2SS_XMMdq_XMMdq_GPR32d);
@@ -5366,6 +8165,12 @@ impl Iform {
 
     pub const VCVTSS2SD_XMMF64_MASKMSKW_XMMF32_XMMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTSS2SD_XMMf64_MASKmskw_XMMf32_XMMf32_AVX512);
+
+    pub const VCVTSS2SH_XMMF16_MASKMSKW_XMMF16_MEMF32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSS2SH_XMMf16_MASKmskw_XMMf16_MEMf32_AVX512);
+
+    pub const VCVTSS2SH_XMMF16_MASKMSKW_XMMF16_XMMF32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTSS2SH_XMMf16_MASKmskw_XMMf16_XMMf32_AVX512);
 
     pub const VCVTSS2SI_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_VCVTSS2SI_GPR32d_MEMd);
 
@@ -5479,6 +8284,114 @@ impl Iform {
     pub const VCVTTPD2UQQ_ZMMU64_MASKMSKW_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTTPD2UQQ_ZMMu64_MASKmskw_ZMMf64_AVX512);
 
+    pub const VCVTTPH2DQ_XMMI32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2DQ_XMMi32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2DQ_XMMI32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2DQ_XMMi32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2DQ_YMMI32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2DQ_YMMi32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2DQ_YMMI32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2DQ_YMMi32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2DQ_ZMMI32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2DQ_ZMMi32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2DQ_ZMMI32_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2DQ_ZMMi32_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTTPH2QQ_XMMI64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2QQ_XMMi64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2QQ_XMMI64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2QQ_XMMi64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2QQ_YMMI64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2QQ_YMMi64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2QQ_YMMI64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2QQ_YMMi64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2QQ_ZMMI64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2QQ_ZMMi64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2QQ_ZMMI64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2QQ_ZMMi64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UDQ_XMMU32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UDQ_XMMu32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UDQ_XMMU32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UDQ_XMMu32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UDQ_YMMU32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UDQ_YMMu32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UDQ_YMMU32_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UDQ_YMMu32_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UDQ_ZMMU32_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UDQ_ZMMu32_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UDQ_ZMMU32_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UDQ_ZMMu32_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTTPH2UQQ_XMMU64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UQQ_XMMu64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UQQ_XMMU64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UQQ_XMMu64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UQQ_YMMU64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UQQ_YMMu64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UQQ_YMMU64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UQQ_YMMu64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UQQ_ZMMU64_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UQQ_ZMMu64_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UQQ_ZMMU64_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UQQ_ZMMu64_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UW_XMMU16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UW_XMMu16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UW_XMMU16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UW_XMMu16_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2UW_YMMU16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UW_YMMu16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UW_YMMU16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UW_YMMu16_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTTPH2UW_ZMMU16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UW_ZMMu16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2UW_ZMMU16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2UW_ZMMu16_MASKmskw_ZMMf16_AVX512);
+
+    pub const VCVTTPH2W_XMMI16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2W_XMMi16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2W_XMMI16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2W_XMMi16_MASKmskw_XMMf16_AVX512);
+
+    pub const VCVTTPH2W_YMMI16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2W_YMMi16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2W_YMMI16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2W_YMMi16_MASKmskw_YMMf16_AVX512);
+
+    pub const VCVTTPH2W_ZMMI16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2W_ZMMi16_MASKmskw_MEMf16_AVX512);
+
+    pub const VCVTTPH2W_ZMMI16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTPH2W_ZMMi16_MASKmskw_ZMMf16_AVX512);
+
     pub const VCVTTPS2DQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VCVTTPS2DQ_XMMdq_MEMdq);
 
     pub const VCVTTPS2DQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VCVTTPS2DQ_XMMdq_XMMdq);
@@ -5591,6 +8504,30 @@ impl Iform {
     pub const VCVTTSD2USI_GPR64U64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTTSD2USI_GPR64u64_XMMf64_AVX512);
 
+    pub const VCVTTSH2SI_GPR32I32_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2SI_GPR32i32_MEMf16_AVX512);
+
+    pub const VCVTTSH2SI_GPR32I32_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2SI_GPR32i32_XMMf16_AVX512);
+
+    pub const VCVTTSH2SI_GPR64I64_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2SI_GPR64i64_MEMf16_AVX512);
+
+    pub const VCVTTSH2SI_GPR64I64_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2SI_GPR64i64_XMMf16_AVX512);
+
+    pub const VCVTTSH2USI_GPR32U32_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2USI_GPR32u32_MEMf16_AVX512);
+
+    pub const VCVTTSH2USI_GPR32U32_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2USI_GPR32u32_XMMf16_AVX512);
+
+    pub const VCVTTSH2USI_GPR64U64_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2USI_GPR64u64_MEMf16_AVX512);
+
+    pub const VCVTTSH2USI_GPR64U64_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTTSH2USI_GPR64u64_XMMf16_AVX512);
+
     pub const VCVTTSS2SI_GPR32D_MEMD: Iform = Iform(ffi::XED_IFORM_VCVTTSS2SI_GPR32d_MEMd);
 
     pub const VCVTTSS2SI_GPR32D_XMMD: Iform = Iform(ffi::XED_IFORM_VCVTTSS2SI_GPR32d_XMMd);
@@ -5641,6 +8578,24 @@ impl Iform {
     pub const VCVTUDQ2PD_ZMMF64_MASKMSKW_YMMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTUDQ2PD_ZMMf64_MASKmskw_YMMu32_AVX512);
 
+    pub const VCVTUDQ2PH_XMMF16_MASKMSKW_MEMU32_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTUDQ2PH_XMMf16_MASKmskw_MEMu32_AVX512_VL128);
+
+    pub const VCVTUDQ2PH_XMMF16_MASKMSKW_MEMU32_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTUDQ2PH_XMMf16_MASKmskw_MEMu32_AVX512_VL256);
+
+    pub const VCVTUDQ2PH_XMMF16_MASKMSKW_XMMU32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUDQ2PH_XMMf16_MASKmskw_XMMu32_AVX512);
+
+    pub const VCVTUDQ2PH_XMMF16_MASKMSKW_YMMU32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUDQ2PH_XMMf16_MASKmskw_YMMu32_AVX512);
+
+    pub const VCVTUDQ2PH_YMMF16_MASKMSKW_MEMU32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUDQ2PH_YMMf16_MASKmskw_MEMu32_AVX512);
+
+    pub const VCVTUDQ2PH_YMMF16_MASKMSKW_ZMMU32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUDQ2PH_YMMf16_MASKmskw_ZMMu32_AVX512);
+
     pub const VCVTUDQ2PS_XMMF32_MASKMSKW_MEMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTUDQ2PS_XMMf32_MASKmskw_MEMu32_AVX512);
 
@@ -5677,6 +8632,24 @@ impl Iform {
     pub const VCVTUQQ2PD_ZMMF64_MASKMSKW_ZMMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTUQQ2PD_ZMMf64_MASKmskw_ZMMu64_AVX512);
 
+    pub const VCVTUQQ2PH_XMMF16_MASKMSKW_MEMU64_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VCVTUQQ2PH_XMMf16_MASKmskw_MEMu64_AVX512_VL128);
+
+    pub const VCVTUQQ2PH_XMMF16_MASKMSKW_MEMU64_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VCVTUQQ2PH_XMMf16_MASKmskw_MEMu64_AVX512_VL256);
+
+    pub const VCVTUQQ2PH_XMMF16_MASKMSKW_MEMU64_AVX512_VL512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUQQ2PH_XMMf16_MASKmskw_MEMu64_AVX512_VL512);
+
+    pub const VCVTUQQ2PH_XMMF16_MASKMSKW_XMMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUQQ2PH_XMMf16_MASKmskw_XMMu64_AVX512);
+
+    pub const VCVTUQQ2PH_XMMF16_MASKMSKW_YMMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUQQ2PH_XMMf16_MASKmskw_YMMu64_AVX512);
+
+    pub const VCVTUQQ2PH_XMMF16_MASKMSKW_ZMMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUQQ2PH_XMMf16_MASKmskw_ZMMu64_AVX512);
+
     pub const VCVTUQQ2PS_XMMF32_MASKMSKW_MEMU64_AVX512_VL128: Iform =
         Iform(ffi::XED_IFORM_VCVTUQQ2PS_XMMf32_MASKmskw_MEMu64_AVX512_VL128);
 
@@ -5707,6 +8680,18 @@ impl Iform {
     pub const VCVTUSI2SD_XMMF64_XMMF64_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTUSI2SD_XMMf64_XMMf64_MEMu64_AVX512);
 
+    pub const VCVTUSI2SH_XMMF16_XMMF16_GPR32U32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUSI2SH_XMMf16_XMMf16_GPR32u32_AVX512);
+
+    pub const VCVTUSI2SH_XMMF16_XMMF16_GPR64U64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUSI2SH_XMMf16_XMMf16_GPR64u64_AVX512);
+
+    pub const VCVTUSI2SH_XMMF16_XMMF16_MEMU32_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUSI2SH_XMMf16_XMMf16_MEMu32_AVX512);
+
+    pub const VCVTUSI2SH_XMMF16_XMMF16_MEMU64_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUSI2SH_XMMf16_XMMf16_MEMu64_AVX512);
+
     pub const VCVTUSI2SS_XMMF32_XMMF32_GPR32U32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTUSI2SS_XMMf32_XMMf32_GPR32u32_AVX512);
 
@@ -5718,6 +8703,42 @@ impl Iform {
 
     pub const VCVTUSI2SS_XMMF32_XMMF32_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VCVTUSI2SS_XMMf32_XMMf32_MEMu64_AVX512);
+
+    pub const VCVTUW2PH_XMMF16_MASKMSKW_MEMU16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUW2PH_XMMf16_MASKmskw_MEMu16_AVX512);
+
+    pub const VCVTUW2PH_XMMF16_MASKMSKW_XMMU16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUW2PH_XMMf16_MASKmskw_XMMu16_AVX512);
+
+    pub const VCVTUW2PH_YMMF16_MASKMSKW_MEMU16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUW2PH_YMMf16_MASKmskw_MEMu16_AVX512);
+
+    pub const VCVTUW2PH_YMMF16_MASKMSKW_YMMU16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUW2PH_YMMf16_MASKmskw_YMMu16_AVX512);
+
+    pub const VCVTUW2PH_ZMMF16_MASKMSKW_MEMU16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUW2PH_ZMMf16_MASKmskw_MEMu16_AVX512);
+
+    pub const VCVTUW2PH_ZMMF16_MASKMSKW_ZMMU16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTUW2PH_ZMMf16_MASKmskw_ZMMu16_AVX512);
+
+    pub const VCVTW2PH_XMMF16_MASKMSKW_MEMI16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTW2PH_XMMf16_MASKmskw_MEMi16_AVX512);
+
+    pub const VCVTW2PH_XMMF16_MASKMSKW_XMMI16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTW2PH_XMMf16_MASKmskw_XMMi16_AVX512);
+
+    pub const VCVTW2PH_YMMF16_MASKMSKW_MEMI16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTW2PH_YMMf16_MASKmskw_MEMi16_AVX512);
+
+    pub const VCVTW2PH_YMMF16_MASKMSKW_YMMI16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTW2PH_YMMf16_MASKmskw_YMMi16_AVX512);
+
+    pub const VCVTW2PH_ZMMF16_MASKMSKW_MEMI16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTW2PH_ZMMf16_MASKmskw_MEMi16_AVX512);
+
+    pub const VCVTW2PH_ZMMF16_MASKMSKW_ZMMI16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VCVTW2PH_ZMMf16_MASKmskw_ZMMi16_AVX512);
 
     pub const VDBPSADBW_XMMU16_MASKMSKW_XMMU8_MEMU8_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VDBPSADBW_XMMu16_MASKmskw_XMMu8_MEMu8_IMM8_AVX512);
@@ -5763,6 +8784,24 @@ impl Iform {
     pub const VDIVPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VDIVPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VDIVPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VDIVPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VDIVPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VDIVPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VDIVPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VDIVPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VDIVPS_XMMDQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VDIVPS_XMMdq_XMMdq_MEMdq);
 
     pub const VDIVPS_XMMDQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VDIVPS_XMMdq_XMMdq_XMMdq);
@@ -5798,6 +8837,12 @@ impl Iform {
 
     pub const VDIVSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VDIVSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VDIVSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VDIVSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VDIVSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VDIVSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VDIVSS_XMMdq_XMMdq_MEMd);
 
@@ -5996,6 +9041,54 @@ impl Iform {
     pub const VEXTRACTPS_MEMF32_XMMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VEXTRACTPS_MEMf32_XMMf32_IMM8_AVX512);
 
+    pub const VFCMADDCPH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCPH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMADDCPH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCPH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
+    pub const VFCMADDCPH_YMM2F16_MASKMSKW_YMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCPH_YMM2f16_MASKmskw_YMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMADDCPH_YMM2F16_MASKMSKW_YMM2F16_YMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCPH_YMM2f16_MASKmskw_YMM2f16_YMM2f16_AVX512);
+
+    pub const VFCMADDCPH_ZMM2F16_MASKMSKW_ZMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCPH_ZMM2f16_MASKmskw_ZMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMADDCPH_ZMM2F16_MASKMSKW_ZMM2F16_ZMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCPH_ZMM2f16_MASKmskw_ZMM2f16_ZMM2f16_AVX512);
+
+    pub const VFCMADDCSH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCSH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMADDCSH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMADDCSH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
+    pub const VFCMULCPH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCPH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMULCPH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCPH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
+    pub const VFCMULCPH_YMM2F16_MASKMSKW_YMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCPH_YMM2f16_MASKmskw_YMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMULCPH_YMM2F16_MASKMSKW_YMM2F16_YMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCPH_YMM2f16_MASKmskw_YMM2f16_YMM2f16_AVX512);
+
+    pub const VFCMULCPH_ZMM2F16_MASKMSKW_ZMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCPH_ZMM2f16_MASKmskw_ZMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMULCPH_ZMM2F16_MASKMSKW_ZMM2F16_ZMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCPH_ZMM2f16_MASKmskw_ZMM2f16_ZMM2f16_AVX512);
+
+    pub const VFCMULCSH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCSH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFCMULCSH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFCMULCSH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
     pub const VFIXUPIMMPD_XMMF64_MASKMSKW_XMMF64_MEMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFIXUPIMMPD_XMMf64_MASKmskw_XMMf64_MEMf64_IMM8_AVX512);
 
@@ -6074,6 +9167,24 @@ impl Iform {
     pub const VFMADD132PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD132PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMADD132PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADD132PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMADD132PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMADD132PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMADD132PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMADD132PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMADD132PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADD132PS_XMMdq_XMMdq_MEMdq);
 
@@ -6115,6 +9226,12 @@ impl Iform {
 
     pub const VFMADD132SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD132SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFMADD132SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADD132SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD132SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFMADD132SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFMADD132SS_XMMdq_XMMd_MEMd);
@@ -6158,6 +9275,24 @@ impl Iform {
     pub const VFMADD213PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD213PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMADD213PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADD213PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMADD213PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMADD213PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMADD213PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMADD213PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMADD213PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADD213PS_XMMdq_XMMdq_MEMdq);
 
@@ -6199,6 +9334,12 @@ impl Iform {
 
     pub const VFMADD213SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD213SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFMADD213SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADD213SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD213SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFMADD213SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFMADD213SS_XMMdq_XMMd_MEMd);
@@ -6242,6 +9383,24 @@ impl Iform {
     pub const VFMADD231PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD231PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMADD231PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADD231PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMADD231PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMADD231PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMADD231PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMADD231PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMADD231PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADD231PS_XMMdq_XMMdq_MEMdq);
 
@@ -6284,6 +9443,12 @@ impl Iform {
     pub const VFMADD231SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD231SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
 
+    pub const VFMADD231SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADD231SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADD231SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
     pub const VFMADD231SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFMADD231SS_XMMdq_XMMd_MEMd);
 
@@ -6295,6 +9460,30 @@ impl Iform {
 
     pub const VFMADD231SS_XMMF32_MASKMSKW_XMMF32_XMMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADD231SS_XMMf32_MASKmskw_XMMf32_XMMf32_AVX512);
+
+    pub const VFMADDCPH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCPH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFMADDCPH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCPH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
+    pub const VFMADDCPH_YMM2F16_MASKMSKW_YMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCPH_YMM2f16_MASKmskw_YMM2f16_MEM2f16_AVX512);
+
+    pub const VFMADDCPH_YMM2F16_MASKMSKW_YMM2F16_YMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCPH_YMM2f16_MASKmskw_YMM2f16_YMM2f16_AVX512);
+
+    pub const VFMADDCPH_ZMM2F16_MASKMSKW_ZMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCPH_ZMM2f16_MASKmskw_ZMM2f16_MEM2f16_AVX512);
+
+    pub const VFMADDCPH_ZMM2F16_MASKMSKW_ZMM2F16_ZMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCPH_ZMM2f16_MASKmskw_ZMM2f16_ZMM2f16_AVX512);
+
+    pub const VFMADDCSH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCSH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFMADDCSH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDCSH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
 
     pub const VFMADDPD_XMMDQ_XMMDQ_MEMDQ_XMMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADDPD_XMMdq_XMMdq_MEMdq_XMMdq);
@@ -6380,6 +9569,24 @@ impl Iform {
     pub const VFMADDSUB132PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADDSUB132PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMADDSUB132PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB132PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB132PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB132PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMADDSUB132PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB132PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB132PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB132PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMADDSUB132PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB132PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB132PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB132PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMADDSUB132PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADDSUB132PS_XMMdq_XMMdq_MEMdq);
 
@@ -6440,6 +9647,24 @@ impl Iform {
     pub const VFMADDSUB213PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADDSUB213PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMADDSUB213PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB213PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB213PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB213PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMADDSUB213PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB213PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB213PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB213PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMADDSUB213PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB213PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB213PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB213PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMADDSUB213PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADDSUB213PS_XMMdq_XMMdq_MEMdq);
 
@@ -6499,6 +9724,24 @@ impl Iform {
 
     pub const VFMADDSUB231PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMADDSUB231PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
+
+    pub const VFMADDSUB231PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB231PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB231PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB231PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMADDSUB231PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB231PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB231PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB231PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMADDSUB231PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB231PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMADDSUB231PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMADDSUB231PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
 
     pub const VFMADDSUB231PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMADDSUB231PS_XMMdq_XMMdq_MEMdq);
@@ -6596,6 +9839,24 @@ impl Iform {
     pub const VFMSUB132PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUB132PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMSUB132PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB132PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMSUB132PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB132PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMSUB132PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB132PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMSUB132PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMSUB132PS_XMMdq_XMMdq_MEMdq);
 
@@ -6637,6 +9898,12 @@ impl Iform {
 
     pub const VFMSUB132SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUB132SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFMSUB132SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB132SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB132SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFMSUB132SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFMSUB132SS_XMMdq_XMMd_MEMd);
@@ -6680,6 +9947,24 @@ impl Iform {
     pub const VFMSUB213PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUB213PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMSUB213PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB213PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMSUB213PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB213PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMSUB213PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB213PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMSUB213PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMSUB213PS_XMMdq_XMMdq_MEMdq);
 
@@ -6721,6 +10006,12 @@ impl Iform {
 
     pub const VFMSUB213SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUB213SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFMSUB213SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB213SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB213SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFMSUB213SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFMSUB213SS_XMMdq_XMMd_MEMd);
@@ -6764,6 +10055,24 @@ impl Iform {
     pub const VFMSUB231PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUB231PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMSUB231PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB231PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMSUB231PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB231PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMSUB231PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB231PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMSUB231PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMSUB231PS_XMMdq_XMMdq_MEMdq);
 
@@ -6806,6 +10115,12 @@ impl Iform {
     pub const VFMSUB231SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUB231SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
 
+    pub const VFMSUB231SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUB231SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUB231SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
     pub const VFMSUB231SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFMSUB231SS_XMMdq_XMMd_MEMd);
 
@@ -6847,6 +10162,24 @@ impl Iform {
 
     pub const VFMSUBADD132PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUBADD132PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
+
+    pub const VFMSUBADD132PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD132PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD132PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD132PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMSUBADD132PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD132PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD132PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD132PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMSUBADD132PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD132PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD132PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD132PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
 
     pub const VFMSUBADD132PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMSUBADD132PS_XMMdq_XMMdq_MEMdq);
@@ -6908,6 +10241,24 @@ impl Iform {
     pub const VFMSUBADD213PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUBADD213PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFMSUBADD213PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD213PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD213PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD213PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMSUBADD213PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD213PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD213PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD213PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMSUBADD213PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD213PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD213PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD213PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFMSUBADD213PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMSUBADD213PS_XMMdq_XMMdq_MEMdq);
 
@@ -6967,6 +10318,24 @@ impl Iform {
 
     pub const VFMSUBADD231PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFMSUBADD231PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
+
+    pub const VFMSUBADD231PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD231PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD231PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD231PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFMSUBADD231PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD231PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD231PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD231PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFMSUBADD231PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD231PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFMSUBADD231PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMSUBADD231PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
 
     pub const VFMSUBADD231PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFMSUBADD231PS_XMMdq_XMMdq_MEMdq);
@@ -7088,6 +10457,30 @@ impl Iform {
     pub const VFMSUBSS_XMMDQ_XMMD_XMMD_XMMD: Iform =
         Iform(ffi::XED_IFORM_VFMSUBSS_XMMdq_XMMd_XMMd_XMMd);
 
+    pub const VFMULCPH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCPH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFMULCPH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCPH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
+    pub const VFMULCPH_YMM2F16_MASKMSKW_YMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCPH_YMM2f16_MASKmskw_YMM2f16_MEM2f16_AVX512);
+
+    pub const VFMULCPH_YMM2F16_MASKMSKW_YMM2F16_YMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCPH_YMM2f16_MASKmskw_YMM2f16_YMM2f16_AVX512);
+
+    pub const VFMULCPH_ZMM2F16_MASKMSKW_ZMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCPH_ZMM2f16_MASKmskw_ZMM2f16_MEM2f16_AVX512);
+
+    pub const VFMULCPH_ZMM2F16_MASKMSKW_ZMM2F16_ZMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCPH_ZMM2f16_MASKmskw_ZMM2f16_ZMM2f16_AVX512);
+
+    pub const VFMULCSH_XMM2F16_MASKMSKW_XMM2F16_MEM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCSH_XMM2f16_MASKmskw_XMM2f16_MEM2f16_AVX512);
+
+    pub const VFMULCSH_XMM2F16_MASKMSKW_XMM2F16_XMM2F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFMULCSH_XMM2f16_MASKmskw_XMM2f16_XMM2f16_AVX512);
+
     pub const VFNMADD132PD_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMADD132PD_XMMdq_XMMdq_MEMdq);
 
@@ -7117,6 +10510,24 @@ impl Iform {
 
     pub const VFNMADD132PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMADD132PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
+
+    pub const VFNMADD132PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD132PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFNMADD132PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD132PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFNMADD132PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD132PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
 
     pub const VFNMADD132PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMADD132PS_XMMdq_XMMdq_MEMdq);
@@ -7160,6 +10571,12 @@ impl Iform {
     pub const VFNMADD132SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMADD132SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
 
+    pub const VFNMADD132SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD132SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD132SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
     pub const VFNMADD132SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFNMADD132SS_XMMdq_XMMd_MEMd);
 
@@ -7201,6 +10618,24 @@ impl Iform {
 
     pub const VFNMADD213PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMADD213PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
+
+    pub const VFNMADD213PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD213PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFNMADD213PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD213PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFNMADD213PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD213PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
 
     pub const VFNMADD213PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMADD213PS_XMMdq_XMMdq_MEMdq);
@@ -7244,6 +10679,12 @@ impl Iform {
     pub const VFNMADD213SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMADD213SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
 
+    pub const VFNMADD213SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD213SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD213SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
     pub const VFNMADD213SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFNMADD213SS_XMMdq_XMMd_MEMd);
 
@@ -7286,6 +10727,24 @@ impl Iform {
     pub const VFNMADD231PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMADD231PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFNMADD231PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD231PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFNMADD231PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD231PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFNMADD231PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD231PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFNMADD231PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMADD231PS_XMMdq_XMMdq_MEMdq);
 
@@ -7327,6 +10786,12 @@ impl Iform {
 
     pub const VFNMADD231SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMADD231SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFNMADD231SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMADD231SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMADD231SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFNMADD231SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFNMADD231SS_XMMdq_XMMd_MEMd);
@@ -7424,6 +10889,24 @@ impl Iform {
     pub const VFNMSUB132PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB132PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFNMSUB132PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB132PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFNMSUB132PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB132PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFNMSUB132PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB132PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFNMSUB132PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB132PS_XMMdq_XMMdq_MEMdq);
 
@@ -7465,6 +10948,12 @@ impl Iform {
 
     pub const VFNMSUB132SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB132SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFNMSUB132SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB132SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB132SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFNMSUB132SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB132SS_XMMdq_XMMd_MEMd);
@@ -7508,6 +10997,24 @@ impl Iform {
     pub const VFNMSUB213PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB213PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFNMSUB213PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB213PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFNMSUB213PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB213PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFNMSUB213PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB213PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFNMSUB213PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB213PS_XMMdq_XMMdq_MEMdq);
 
@@ -7549,6 +11056,12 @@ impl Iform {
 
     pub const VFNMSUB213SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB213SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFNMSUB213SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB213SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB213SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFNMSUB213SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB213SS_XMMdq_XMMd_MEMd);
@@ -7592,6 +11105,24 @@ impl Iform {
     pub const VFNMSUB231PD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB231PD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VFNMSUB231PH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231PH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB231PH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231PH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VFNMSUB231PH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231PH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB231PH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231PH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VFNMSUB231PH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231PH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB231PH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231PH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VFNMSUB231PS_XMMDQ_XMMDQ_MEMDQ: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB231PS_XMMdq_XMMdq_MEMdq);
 
@@ -7633,6 +11164,12 @@ impl Iform {
 
     pub const VFNMSUB231SD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB231SD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VFNMSUB231SH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231SH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VFNMSUB231SH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFNMSUB231SH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VFNMSUB231SS_XMMDQ_XMMD_MEMD: Iform =
         Iform(ffi::XED_IFORM_VFNMSUB231SS_XMMdq_XMMd_MEMd);
@@ -7718,6 +11255,24 @@ impl Iform {
     pub const VFPCLASSPD_MASKMSKW_MASKMSKW_ZMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFPCLASSPD_MASKmskw_MASKmskw_ZMMf64_IMM8_AVX512);
 
+    pub const VFPCLASSPH_MASKMSKW_MASKMSKW_MEMF16_IMM8_AVX512_VL128: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSPH_MASKmskw_MASKmskw_MEMf16_IMM8_AVX512_VL128);
+
+    pub const VFPCLASSPH_MASKMSKW_MASKMSKW_MEMF16_IMM8_AVX512_VL256: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSPH_MASKmskw_MASKmskw_MEMf16_IMM8_AVX512_VL256);
+
+    pub const VFPCLASSPH_MASKMSKW_MASKMSKW_MEMF16_IMM8_AVX512_VL512: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSPH_MASKmskw_MASKmskw_MEMf16_IMM8_AVX512_VL512);
+
+    pub const VFPCLASSPH_MASKMSKW_MASKMSKW_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSPH_MASKmskw_MASKmskw_XMMf16_IMM8_AVX512);
+
+    pub const VFPCLASSPH_MASKMSKW_MASKMSKW_YMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSPH_MASKmskw_MASKmskw_YMMf16_IMM8_AVX512);
+
+    pub const VFPCLASSPH_MASKMSKW_MASKMSKW_ZMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSPH_MASKmskw_MASKmskw_ZMMf16_IMM8_AVX512);
+
     pub const VFPCLASSPS_MASKMSKW_MASKMSKW_MEMF32_IMM8_AVX512_VL128: Iform =
         Iform(ffi::XED_IFORM_VFPCLASSPS_MASKmskw_MASKmskw_MEMf32_IMM8_AVX512_VL128);
 
@@ -7741,6 +11296,12 @@ impl Iform {
 
     pub const VFPCLASSSD_MASKMSKW_MASKMSKW_XMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFPCLASSSD_MASKmskw_MASKmskw_XMMf64_IMM8_AVX512);
+
+    pub const VFPCLASSSH_MASKMSKW_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSSH_MASKmskw_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VFPCLASSSH_MASKMSKW_MASKMSKW_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VFPCLASSSH_MASKmskw_MASKmskw_XMMf16_IMM8_AVX512);
 
     pub const VFPCLASSSS_MASKMSKW_MASKMSKW_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VFPCLASSSS_MASKmskw_MASKmskw_MEMf32_IMM8_AVX512);
@@ -7874,6 +11435,24 @@ impl Iform {
     pub const VGETEXPPD_ZMMF64_MASKMSKW_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETEXPPD_ZMMf64_MASKmskw_ZMMf64_AVX512);
 
+    pub const VGETEXPPH_XMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPPH_XMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VGETEXPPH_XMMF16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPPH_XMMf16_MASKmskw_XMMf16_AVX512);
+
+    pub const VGETEXPPH_YMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPPH_YMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VGETEXPPH_YMMF16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPPH_YMMf16_MASKmskw_YMMf16_AVX512);
+
+    pub const VGETEXPPH_ZMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPPH_ZMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VGETEXPPH_ZMMF16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPPH_ZMMf16_MASKmskw_ZMMf16_AVX512);
+
     pub const VGETEXPPS_XMMF32_MASKMSKW_MEMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETEXPPS_XMMf32_MASKmskw_MEMf32_AVX512);
 
@@ -7897,6 +11476,12 @@ impl Iform {
 
     pub const VGETEXPSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETEXPSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VGETEXPSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VGETEXPSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETEXPSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VGETEXPSS_XMMF32_MASKMSKW_XMMF32_MEMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETEXPSS_XMMf32_MASKmskw_XMMf32_MEMf32_AVX512);
@@ -7922,6 +11507,24 @@ impl Iform {
     pub const VGETMANTPD_ZMMF64_MASKMSKW_ZMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETMANTPD_ZMMf64_MASKmskw_ZMMf64_IMM8_AVX512);
 
+    pub const VGETMANTPH_XMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTPH_XMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VGETMANTPH_XMMF16_MASKMSKW_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTPH_XMMf16_MASKmskw_XMMf16_IMM8_AVX512);
+
+    pub const VGETMANTPH_YMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTPH_YMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VGETMANTPH_YMMF16_MASKMSKW_YMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTPH_YMMf16_MASKmskw_YMMf16_IMM8_AVX512);
+
+    pub const VGETMANTPH_ZMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTPH_ZMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VGETMANTPH_ZMMF16_MASKMSKW_ZMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTPH_ZMMf16_MASKmskw_ZMMf16_IMM8_AVX512);
+
     pub const VGETMANTPS_XMMF32_MASKMSKW_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETMANTPS_XMMf32_MASKmskw_MEMf32_IMM8_AVX512);
 
@@ -7945,6 +11548,12 @@ impl Iform {
 
     pub const VGETMANTSD_XMMF64_MASKMSKW_XMMF64_XMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETMANTSD_XMMf64_MASKmskw_XMMf64_XMMf64_IMM8_AVX512);
+
+    pub const VGETMANTSH_XMMF16_MASKMSKW_XMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTSH_XMMf16_MASKmskw_XMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VGETMANTSH_XMMF16_MASKMSKW_XMMF16_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VGETMANTSH_XMMf16_MASKmskw_XMMf16_XMMf16_IMM8_AVX512);
 
     pub const VGETMANTSS_XMMF32_MASKMSKW_XMMF32_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VGETMANTSS_XMMf32_MASKmskw_XMMf32_MEMf32_IMM8_AVX512);
@@ -8176,7 +11785,7 @@ impl Iform {
 
     pub const VLDMXCSR_MEMD: Iform = Iform(ffi::XED_IFORM_VLDMXCSR_MEMd);
 
-    pub const VMASKMOVDQU_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VMASKMOVDQU_XMMdq_XMMdq);
+    pub const VMASKMOVDQU_XMMXUB_XMMXUB: Iform = Iform(ffi::XED_IFORM_VMASKMOVDQU_XMMxub_XMMxub);
 
     pub const VMASKMOVPD_MEMDQ_XMMDQ_XMMDQ: Iform =
         Iform(ffi::XED_IFORM_VMASKMOVPD_MEMdq_XMMdq_XMMdq);
@@ -8228,6 +11837,24 @@ impl Iform {
     pub const VMAXPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMAXPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VMAXPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VMAXPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VMAXPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VMAXPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VMAXPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VMAXPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VMAXPS_XMMDQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VMAXPS_XMMdq_XMMdq_MEMdq);
 
     pub const VMAXPS_XMMDQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VMAXPS_XMMdq_XMMdq_XMMdq);
@@ -8263,6 +11890,12 @@ impl Iform {
 
     pub const VMAXSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMAXSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VMAXSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VMAXSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMAXSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VMAXSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VMAXSS_XMMdq_XMMdq_MEMd);
 
@@ -8306,6 +11939,24 @@ impl Iform {
     pub const VMINPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMINPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VMINPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VMINPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VMINPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VMINPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VMINPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VMINPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VMINPS_XMMDQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VMINPS_XMMdq_XMMdq_MEMdq);
 
     pub const VMINPS_XMMDQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VMINPS_XMMdq_XMMdq_XMMdq);
@@ -8341,6 +11992,12 @@ impl Iform {
 
     pub const VMINSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMINSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VMINSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VMINSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMINSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VMINSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VMINSS_XMMdq_XMMdq_MEMd);
 
@@ -8837,6 +12494,15 @@ impl Iform {
     pub const VMOVSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMOVSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
 
+    pub const VMOVSH_MEMF16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMOVSH_MEMf16_MASKmskw_XMMf16_AVX512);
+
+    pub const VMOVSH_XMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMOVSH_XMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VMOVSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMOVSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
     pub const VMOVSHDUP_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VMOVSHDUP_XMMdq_MEMdq);
 
     pub const VMOVSHDUP_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VMOVSHDUP_XMMdq_XMMdq);
@@ -8992,6 +12658,16 @@ impl Iform {
     pub const VMOVUPS_ZMMF32_MASKMSKW_ZMMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMOVUPS_ZMMf32_MASKmskw_ZMMf32_AVX512);
 
+    pub const VMOVW_GPR32F16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMOVW_GPR32f16_XMMf16_AVX512);
+
+    pub const VMOVW_MEMF16_XMMF16_AVX512: Iform = Iform(ffi::XED_IFORM_VMOVW_MEMf16_XMMf16_AVX512);
+
+    pub const VMOVW_XMMF16_GPR32F16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMOVW_XMMf16_GPR32f16_AVX512);
+
+    pub const VMOVW_XMMF16_MEMF16_AVX512: Iform = Iform(ffi::XED_IFORM_VMOVW_XMMf16_MEMf16_AVX512);
+
     pub const VMPSADBW_XMMDQ_XMMDQ_MEMDQ_IMMB: Iform =
         Iform(ffi::XED_IFORM_VMPSADBW_XMMdq_XMMdq_MEMdq_IMMb);
 
@@ -9048,6 +12724,24 @@ impl Iform {
     pub const VMULPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMULPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VMULPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VMULPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VMULPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VMULPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VMULPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VMULPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VMULPS_XMMDQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VMULPS_XMMdq_XMMdq_MEMdq);
 
     pub const VMULPS_XMMDQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VMULPS_XMMdq_XMMdq_XMMdq);
@@ -9083,6 +12777,12 @@ impl Iform {
 
     pub const VMULSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VMULSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VMULSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VMULSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VMULSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VMULSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VMULSS_XMMdq_XMMdq_MEMd);
 
@@ -10658,6 +14358,54 @@ impl Iform {
     pub const VPCONFLICTQ_ZMMU64_MASKMSKW_ZMMU64_AVX512CD: Iform =
         Iform(ffi::XED_IFORM_VPCONFLICTQ_ZMMu64_MASKmskw_ZMMu64_AVX512CD);
 
+    pub const VPDPBSSD_XMMI32_XMM4I8_MEM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSD_XMMi32_XMM4i8_MEM4i8);
+
+    pub const VPDPBSSD_XMMI32_XMM4I8_XMM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSD_XMMi32_XMM4i8_XMM4i8);
+
+    pub const VPDPBSSD_YMMI32_YMM4I8_MEM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSD_YMMi32_YMM4i8_MEM4i8);
+
+    pub const VPDPBSSD_YMMI32_YMM4I8_YMM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSD_YMMi32_YMM4i8_YMM4i8);
+
+    pub const VPDPBSSDS_XMMI32_XMM4I8_MEM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSDS_XMMi32_XMM4i8_MEM4i8);
+
+    pub const VPDPBSSDS_XMMI32_XMM4I8_XMM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSDS_XMMi32_XMM4i8_XMM4i8);
+
+    pub const VPDPBSSDS_YMMI32_YMM4I8_MEM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSDS_YMMi32_YMM4i8_MEM4i8);
+
+    pub const VPDPBSSDS_YMMI32_YMM4I8_YMM4I8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSSDS_YMMi32_YMM4i8_YMM4i8);
+
+    pub const VPDPBSUD_XMMI32_XMM4I8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUD_XMMi32_XMM4i8_MEM4u8);
+
+    pub const VPDPBSUD_XMMI32_XMM4I8_XMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUD_XMMi32_XMM4i8_XMM4u8);
+
+    pub const VPDPBSUD_YMMI32_YMM4I8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUD_YMMi32_YMM4i8_MEM4u8);
+
+    pub const VPDPBSUD_YMMI32_YMM4I8_YMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUD_YMMi32_YMM4i8_YMM4u8);
+
+    pub const VPDPBSUDS_XMMI32_XMM4I8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUDS_XMMi32_XMM4i8_MEM4u8);
+
+    pub const VPDPBSUDS_XMMI32_XMM4I8_XMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUDS_XMMi32_XMM4i8_XMM4u8);
+
+    pub const VPDPBSUDS_YMMI32_YMM4I8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUDS_YMMi32_YMM4i8_MEM4u8);
+
+    pub const VPDPBSUDS_YMMI32_YMM4I8_YMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBSUDS_YMMi32_YMM4i8_YMM4u8);
+
     pub const VPDPBUSD_XMMI32_MASKMSKW_XMMU8_MEMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPDPBUSD_XMMi32_MASKmskw_XMMu8_MEMu32_AVX512);
 
@@ -10718,6 +14466,30 @@ impl Iform {
     pub const VPDPBUSDS_ZMMI32_MASKMSKW_ZMMU8_ZMMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPDPBUSDS_ZMMi32_MASKmskw_ZMMu8_ZMMu32_AVX512);
 
+    pub const VPDPBUUD_XMMU32_XMM4U8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUD_XMMu32_XMM4u8_MEM4u8);
+
+    pub const VPDPBUUD_XMMU32_XMM4U8_XMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUD_XMMu32_XMM4u8_XMM4u8);
+
+    pub const VPDPBUUD_YMMU32_YMM4U8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUD_YMMu32_YMM4u8_MEM4u8);
+
+    pub const VPDPBUUD_YMMU32_YMM4U8_YMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUD_YMMu32_YMM4u8_YMM4u8);
+
+    pub const VPDPBUUDS_XMMU32_XMM4U8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUDS_XMMu32_XMM4u8_MEM4u8);
+
+    pub const VPDPBUUDS_XMMU32_XMM4U8_XMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUDS_XMMu32_XMM4u8_XMM4u8);
+
+    pub const VPDPBUUDS_YMMU32_YMM4U8_MEM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUDS_YMMu32_YMM4u8_MEM4u8);
+
+    pub const VPDPBUUDS_YMMU32_YMM4U8_YMM4U8: Iform =
+        Iform(ffi::XED_IFORM_VPDPBUUDS_YMMu32_YMM4u8_YMM4u8);
+
     pub const VPDPWSSD_XMMI32_MASKMSKW_XMMI16_MEMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPDPWSSD_XMMi32_MASKmskw_XMMi16_MEMu32_AVX512);
 
@@ -10777,6 +14549,78 @@ impl Iform {
 
     pub const VPDPWSSDS_ZMMI32_MASKMSKW_ZMMI16_ZMMU32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPDPWSSDS_ZMMi32_MASKmskw_ZMMi16_ZMMu32_AVX512);
+
+    pub const VPDPWSUD_XMMI32_XMM2I16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUD_XMMi32_XMM2i16_MEM2u16);
+
+    pub const VPDPWSUD_XMMI32_XMM2I16_XMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUD_XMMi32_XMM2i16_XMM2u16);
+
+    pub const VPDPWSUD_YMMI32_YMM2I16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUD_YMMi32_YMM2i16_MEM2u16);
+
+    pub const VPDPWSUD_YMMI32_YMM2I16_YMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUD_YMMi32_YMM2i16_YMM2u16);
+
+    pub const VPDPWSUDS_XMMI32_XMM2I16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUDS_XMMi32_XMM2i16_MEM2u16);
+
+    pub const VPDPWSUDS_XMMI32_XMM2I16_XMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUDS_XMMi32_XMM2i16_XMM2u16);
+
+    pub const VPDPWSUDS_YMMI32_YMM2I16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUDS_YMMi32_YMM2i16_MEM2u16);
+
+    pub const VPDPWSUDS_YMMI32_YMM2I16_YMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWSUDS_YMMi32_YMM2i16_YMM2u16);
+
+    pub const VPDPWUSD_XMMI32_XMM2U16_MEM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSD_XMMi32_XMM2u16_MEM2i16);
+
+    pub const VPDPWUSD_XMMI32_XMM2U16_XMM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSD_XMMi32_XMM2u16_XMM2i16);
+
+    pub const VPDPWUSD_YMMI32_YMM2U16_MEM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSD_YMMi32_YMM2u16_MEM2i16);
+
+    pub const VPDPWUSD_YMMI32_YMM2U16_YMM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSD_YMMi32_YMM2u16_YMM2i16);
+
+    pub const VPDPWUSDS_XMMI32_XMM2U16_MEM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSDS_XMMi32_XMM2u16_MEM2i16);
+
+    pub const VPDPWUSDS_XMMI32_XMM2U16_XMM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSDS_XMMi32_XMM2u16_XMM2i16);
+
+    pub const VPDPWUSDS_YMMI32_YMM2U16_MEM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSDS_YMMi32_YMM2u16_MEM2i16);
+
+    pub const VPDPWUSDS_YMMI32_YMM2U16_YMM2I16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUSDS_YMMi32_YMM2u16_YMM2i16);
+
+    pub const VPDPWUUD_XMMU32_XMM2U16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUD_XMMu32_XMM2u16_MEM2u16);
+
+    pub const VPDPWUUD_XMMU32_XMM2U16_XMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUD_XMMu32_XMM2u16_XMM2u16);
+
+    pub const VPDPWUUD_YMMU32_YMM2U16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUD_YMMu32_YMM2u16_MEM2u16);
+
+    pub const VPDPWUUD_YMMU32_YMM2U16_YMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUD_YMMu32_YMM2u16_YMM2u16);
+
+    pub const VPDPWUUDS_XMMU32_XMM2U16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUDS_XMMu32_XMM2u16_MEM2u16);
+
+    pub const VPDPWUUDS_XMMU32_XMM2U16_XMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUDS_XMMu32_XMM2u16_XMM2u16);
+
+    pub const VPDPWUUDS_YMMU32_YMM2U16_MEM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUDS_YMMu32_YMM2u16_MEM2u16);
+
+    pub const VPDPWUUDS_YMMU32_YMM2U16_YMM2U16: Iform =
+        Iform(ffi::XED_IFORM_VPDPWUUDS_YMMu32_YMM2u16_YMM2u16);
 
     pub const VPERM2F128_YMMQQ_YMMQQ_MEMQQ_IMMB: Iform =
         Iform(ffi::XED_IFORM_VPERM2F128_YMMqq_YMMqq_MEMqq_IMMb);
@@ -11731,11 +15575,23 @@ impl Iform {
     pub const VPMADD52HUQ_XMMU64_MASKMSKW_XMMU64_XMMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52HUQ_XMMu64_MASKmskw_XMMu64_XMMu64_AVX512);
 
+    pub const VPMADD52HUQ_XMMU64_XMMU64_MEMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52HUQ_XMMu64_XMMu64_MEMu64);
+
+    pub const VPMADD52HUQ_XMMU64_XMMU64_XMMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52HUQ_XMMu64_XMMu64_XMMu64);
+
     pub const VPMADD52HUQ_YMMU64_MASKMSKW_YMMU64_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52HUQ_YMMu64_MASKmskw_YMMu64_MEMu64_AVX512);
 
     pub const VPMADD52HUQ_YMMU64_MASKMSKW_YMMU64_YMMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52HUQ_YMMu64_MASKmskw_YMMu64_YMMu64_AVX512);
+
+    pub const VPMADD52HUQ_YMMU64_YMMU64_MEMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52HUQ_YMMu64_YMMu64_MEMu64);
+
+    pub const VPMADD52HUQ_YMMU64_YMMU64_YMMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52HUQ_YMMu64_YMMu64_YMMu64);
 
     pub const VPMADD52HUQ_ZMMU64_MASKMSKW_ZMMU64_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52HUQ_ZMMu64_MASKmskw_ZMMu64_MEMu64_AVX512);
@@ -11749,11 +15605,23 @@ impl Iform {
     pub const VPMADD52LUQ_XMMU64_MASKMSKW_XMMU64_XMMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52LUQ_XMMu64_MASKmskw_XMMu64_XMMu64_AVX512);
 
+    pub const VPMADD52LUQ_XMMU64_XMMU64_MEMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52LUQ_XMMu64_XMMu64_MEMu64);
+
+    pub const VPMADD52LUQ_XMMU64_XMMU64_XMMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52LUQ_XMMu64_XMMu64_XMMu64);
+
     pub const VPMADD52LUQ_YMMU64_MASKMSKW_YMMU64_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52LUQ_YMMu64_MASKmskw_YMMu64_MEMu64_AVX512);
 
     pub const VPMADD52LUQ_YMMU64_MASKMSKW_YMMU64_YMMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52LUQ_YMMu64_MASKmskw_YMMu64_YMMu64_AVX512);
+
+    pub const VPMADD52LUQ_YMMU64_YMMU64_MEMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52LUQ_YMMu64_YMMu64_MEMu64);
+
+    pub const VPMADD52LUQ_YMMU64_YMMU64_YMMU64: Iform =
+        Iform(ffi::XED_IFORM_VPMADD52LUQ_YMMu64_YMMu64_YMMu64);
 
     pub const VPMADD52LUQ_ZMMU64_MASKMSKW_ZMMU64_MEMU64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VPMADD52LUQ_ZMMu64_MASKmskw_ZMMu64_MEMu64_AVX512);
@@ -15406,6 +19274,24 @@ impl Iform {
     pub const VRCP28SS_XMMF32_MASKMSKW_XMMF32_XMMF32_AVX512ER: Iform =
         Iform(ffi::XED_IFORM_VRCP28SS_XMMf32_MASKmskw_XMMf32_XMMf32_AVX512ER);
 
+    pub const VRCPPH_XMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPPH_XMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VRCPPH_XMMF16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPPH_XMMf16_MASKmskw_XMMf16_AVX512);
+
+    pub const VRCPPH_YMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPPH_YMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VRCPPH_YMMF16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPPH_YMMf16_MASKmskw_YMMf16_AVX512);
+
+    pub const VRCPPH_ZMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPPH_ZMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VRCPPH_ZMMF16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPPH_ZMMf16_MASKmskw_ZMMf16_AVX512);
+
     pub const VRCPPS_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VRCPPS_XMMdq_MEMdq);
 
     pub const VRCPPS_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VRCPPS_XMMdq_XMMdq);
@@ -15413,6 +19299,12 @@ impl Iform {
     pub const VRCPPS_YMMQQ_MEMQQ: Iform = Iform(ffi::XED_IFORM_VRCPPS_YMMqq_MEMqq);
 
     pub const VRCPPS_YMMQQ_YMMQQ: Iform = Iform(ffi::XED_IFORM_VRCPPS_YMMqq_YMMqq);
+
+    pub const VRCPSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VRCPSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRCPSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VRCPSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VRCPSS_XMMdq_XMMdq_MEMd);
 
@@ -15435,6 +19327,24 @@ impl Iform {
 
     pub const VREDUCEPD_ZMMF64_MASKMSKW_ZMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VREDUCEPD_ZMMf64_MASKmskw_ZMMf64_IMM8_AVX512);
+
+    pub const VREDUCEPH_XMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCEPH_XMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VREDUCEPH_XMMF16_MASKMSKW_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCEPH_XMMf16_MASKmskw_XMMf16_IMM8_AVX512);
+
+    pub const VREDUCEPH_YMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCEPH_YMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VREDUCEPH_YMMF16_MASKMSKW_YMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCEPH_YMMf16_MASKmskw_YMMf16_IMM8_AVX512);
+
+    pub const VREDUCEPH_ZMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCEPH_ZMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VREDUCEPH_ZMMF16_MASKMSKW_ZMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCEPH_ZMMf16_MASKmskw_ZMMf16_IMM8_AVX512);
 
     pub const VREDUCEPS_XMMF32_MASKMSKW_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VREDUCEPS_XMMf32_MASKmskw_MEMf32_IMM8_AVX512);
@@ -15460,6 +19370,12 @@ impl Iform {
     pub const VREDUCESD_XMMF64_MASKMSKW_XMMF64_XMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VREDUCESD_XMMf64_MASKmskw_XMMf64_XMMf64_IMM8_AVX512);
 
+    pub const VREDUCESH_XMMF16_MASKMSKW_XMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCESH_XMMf16_MASKmskw_XMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VREDUCESH_XMMF16_MASKMSKW_XMMF16_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VREDUCESH_XMMf16_MASKmskw_XMMf16_XMMf16_IMM8_AVX512);
+
     pub const VREDUCESS_XMMF32_MASKMSKW_XMMF32_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VREDUCESS_XMMf32_MASKmskw_XMMf32_MEMf32_IMM8_AVX512);
 
@@ -15484,6 +19400,24 @@ impl Iform {
     pub const VRNDSCALEPD_ZMMF64_MASKMSKW_ZMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VRNDSCALEPD_ZMMf64_MASKmskw_ZMMf64_IMM8_AVX512);
 
+    pub const VRNDSCALEPH_XMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALEPH_XMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VRNDSCALEPH_XMMF16_MASKMSKW_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALEPH_XMMf16_MASKmskw_XMMf16_IMM8_AVX512);
+
+    pub const VRNDSCALEPH_YMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALEPH_YMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VRNDSCALEPH_YMMF16_MASKMSKW_YMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALEPH_YMMf16_MASKmskw_YMMf16_IMM8_AVX512);
+
+    pub const VRNDSCALEPH_ZMMF16_MASKMSKW_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALEPH_ZMMf16_MASKmskw_MEMf16_IMM8_AVX512);
+
+    pub const VRNDSCALEPH_ZMMF16_MASKMSKW_ZMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALEPH_ZMMf16_MASKmskw_ZMMf16_IMM8_AVX512);
+
     pub const VRNDSCALEPS_XMMF32_MASKMSKW_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VRNDSCALEPS_XMMf32_MASKmskw_MEMf32_IMM8_AVX512);
 
@@ -15507,6 +19441,12 @@ impl Iform {
 
     pub const VRNDSCALESD_XMMF64_MASKMSKW_XMMF64_XMMF64_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VRNDSCALESD_XMMf64_MASKmskw_XMMf64_XMMf64_IMM8_AVX512);
+
+    pub const VRNDSCALESH_XMMF16_MASKMSKW_XMMF16_MEMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALESH_XMMf16_MASKmskw_XMMf16_MEMf16_IMM8_AVX512);
+
+    pub const VRNDSCALESH_XMMF16_MASKMSKW_XMMF16_XMMF16_IMM8_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRNDSCALESH_XMMf16_MASKmskw_XMMf16_XMMf16_IMM8_AVX512);
 
     pub const VRNDSCALESS_XMMF32_MASKMSKW_XMMF32_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VRNDSCALESS_XMMf32_MASKmskw_XMMf32_MEMf32_IMM8_AVX512);
@@ -15614,6 +19554,24 @@ impl Iform {
     pub const VRSQRT28SS_XMMF32_MASKMSKW_XMMF32_XMMF32_AVX512ER: Iform =
         Iform(ffi::XED_IFORM_VRSQRT28SS_XMMf32_MASKmskw_XMMf32_XMMf32_AVX512ER);
 
+    pub const VRSQRTPH_XMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTPH_XMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VRSQRTPH_XMMF16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTPH_XMMf16_MASKmskw_XMMf16_AVX512);
+
+    pub const VRSQRTPH_YMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTPH_YMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VRSQRTPH_YMMF16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTPH_YMMf16_MASKmskw_YMMf16_AVX512);
+
+    pub const VRSQRTPH_ZMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTPH_ZMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VRSQRTPH_ZMMF16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTPH_ZMMf16_MASKmskw_ZMMf16_AVX512);
+
     pub const VRSQRTPS_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VRSQRTPS_XMMdq_MEMdq);
 
     pub const VRSQRTPS_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VRSQRTPS_XMMdq_XMMdq);
@@ -15621,6 +19579,12 @@ impl Iform {
     pub const VRSQRTPS_YMMQQ_MEMQQ: Iform = Iform(ffi::XED_IFORM_VRSQRTPS_YMMqq_MEMqq);
 
     pub const VRSQRTPS_YMMQQ_YMMQQ: Iform = Iform(ffi::XED_IFORM_VRSQRTPS_YMMqq_YMMqq);
+
+    pub const VRSQRTSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VRSQRTSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VRSQRTSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VRSQRTSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VRSQRTSS_XMMdq_XMMdq_MEMd);
 
@@ -15643,6 +19607,24 @@ impl Iform {
 
     pub const VSCALEFPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSCALEFPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
+
+    pub const VSCALEFPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VSCALEFPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VSCALEFPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VSCALEFPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VSCALEFPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VSCALEFPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
 
     pub const VSCALEFPS_XMMF32_MASKMSKW_XMMF32_MEMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSCALEFPS_XMMf32_MASKmskw_XMMf32_MEMf32_AVX512);
@@ -15667,6 +19649,12 @@ impl Iform {
 
     pub const VSCALEFSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSCALEFSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VSCALEFSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VSCALEFSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSCALEFSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VSCALEFSS_XMMF32_MASKMSKW_XMMF32_MEMF32_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSCALEFSS_XMMf32_MASKmskw_XMMf32_MEMf32_AVX512);
@@ -15733,6 +19721,13 @@ impl Iform {
 
     pub const VSCATTERQPS_MEMF32_MASKMSKW_YMMF32_AVX512_VL512: Iform =
         Iform(ffi::XED_IFORM_VSCATTERQPS_MEMf32_MASKmskw_YMMf32_AVX512_VL512);
+
+    pub const VSHA512MSG1_YMMU64_XMMU64: Iform = Iform(ffi::XED_IFORM_VSHA512MSG1_YMMu64_XMMu64);
+
+    pub const VSHA512MSG2_YMMU64_YMMU64: Iform = Iform(ffi::XED_IFORM_VSHA512MSG2_YMMu64_YMMu64);
+
+    pub const VSHA512RNDS2_YMMU64_YMMU64_XMMU64: Iform =
+        Iform(ffi::XED_IFORM_VSHA512RNDS2_YMMu64_YMMu64_XMMu64);
 
     pub const VSHUFF32X4_YMMF32_MASKMSKW_YMMF32_MEMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSHUFF32X4_YMMf32_MASKmskw_YMMf32_MEMf32_IMM8_AVX512);
@@ -15842,6 +19837,48 @@ impl Iform {
     pub const VSHUFPS_ZMMF32_MASKMSKW_ZMMF32_ZMMF32_IMM8_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSHUFPS_ZMMf32_MASKmskw_ZMMf32_ZMMf32_IMM8_AVX512);
 
+    pub const VSM3MSG1_XMMU32_XMMU32_MEMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM3MSG1_XMMu32_XMMu32_MEMu32);
+
+    pub const VSM3MSG1_XMMU32_XMMU32_XMMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM3MSG1_XMMu32_XMMu32_XMMu32);
+
+    pub const VSM3MSG2_XMMU32_XMMU32_MEMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM3MSG2_XMMu32_XMMu32_MEMu32);
+
+    pub const VSM3MSG2_XMMU32_XMMU32_XMMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM3MSG2_XMMu32_XMMu32_XMMu32);
+
+    pub const VSM3RNDS2_XMMU32_XMMU32_MEMU32_IMM8: Iform =
+        Iform(ffi::XED_IFORM_VSM3RNDS2_XMMu32_XMMu32_MEMu32_IMM8);
+
+    pub const VSM3RNDS2_XMMU32_XMMU32_XMMU32_IMM8: Iform =
+        Iform(ffi::XED_IFORM_VSM3RNDS2_XMMu32_XMMu32_XMMu32_IMM8);
+
+    pub const VSM4KEY4_XMMU32_XMMU32_MEMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4KEY4_XMMu32_XMMu32_MEMu32);
+
+    pub const VSM4KEY4_XMMU32_XMMU32_XMMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4KEY4_XMMu32_XMMu32_XMMu32);
+
+    pub const VSM4KEY4_YMMU32_YMMU32_MEMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4KEY4_YMMu32_YMMu32_MEMu32);
+
+    pub const VSM4KEY4_YMMU32_YMMU32_YMMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4KEY4_YMMu32_YMMu32_YMMu32);
+
+    pub const VSM4RNDS4_XMMU32_XMMU32_MEMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4RNDS4_XMMu32_XMMu32_MEMu32);
+
+    pub const VSM4RNDS4_XMMU32_XMMU32_XMMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4RNDS4_XMMu32_XMMu32_XMMu32);
+
+    pub const VSM4RNDS4_YMMU32_YMMU32_MEMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4RNDS4_YMMu32_YMMu32_MEMu32);
+
+    pub const VSM4RNDS4_YMMU32_YMMU32_YMMU32: Iform =
+        Iform(ffi::XED_IFORM_VSM4RNDS4_YMMu32_YMMu32_YMMu32);
+
     pub const VSQRTPD_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VSQRTPD_XMMdq_MEMdq);
 
     pub const VSQRTPD_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VSQRTPD_XMMdq_XMMdq);
@@ -15867,6 +19904,24 @@ impl Iform {
 
     pub const VSQRTPD_ZMMF64_MASKMSKW_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSQRTPD_ZMMf64_MASKmskw_ZMMf64_AVX512);
+
+    pub const VSQRTPH_XMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTPH_XMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VSQRTPH_XMMF16_MASKMSKW_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTPH_XMMf16_MASKmskw_XMMf16_AVX512);
+
+    pub const VSQRTPH_YMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTPH_YMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VSQRTPH_YMMF16_MASKMSKW_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTPH_YMMf16_MASKmskw_YMMf16_AVX512);
+
+    pub const VSQRTPH_ZMMF16_MASKMSKW_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTPH_ZMMf16_MASKmskw_MEMf16_AVX512);
+
+    pub const VSQRTPH_ZMMF16_MASKMSKW_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTPH_ZMMf16_MASKmskw_ZMMf16_AVX512);
 
     pub const VSQRTPS_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VSQRTPS_XMMdq_MEMdq);
 
@@ -15903,6 +19958,12 @@ impl Iform {
 
     pub const VSQRTSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSQRTSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
+
+    pub const VSQRTSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VSQRTSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSQRTSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
 
     pub const VSQRTSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VSQRTSS_XMMdq_XMMdq_MEMd);
 
@@ -15942,6 +20003,24 @@ impl Iform {
     pub const VSUBPD_ZMMF64_MASKMSKW_ZMMF64_ZMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSUBPD_ZMMf64_MASKmskw_ZMMf64_ZMMf64_AVX512);
 
+    pub const VSUBPH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBPH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VSUBPH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBPH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
+    pub const VSUBPH_YMMF16_MASKMSKW_YMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBPH_YMMf16_MASKmskw_YMMf16_MEMf16_AVX512);
+
+    pub const VSUBPH_YMMF16_MASKMSKW_YMMF16_YMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBPH_YMMf16_MASKmskw_YMMf16_YMMf16_AVX512);
+
+    pub const VSUBPH_ZMMF16_MASKMSKW_ZMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBPH_ZMMf16_MASKmskw_ZMMf16_MEMf16_AVX512);
+
+    pub const VSUBPH_ZMMF16_MASKMSKW_ZMMF16_ZMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBPH_ZMMf16_MASKmskw_ZMMf16_ZMMf16_AVX512);
+
     pub const VSUBPS_XMMDQ_XMMDQ_MEMDQ: Iform = Iform(ffi::XED_IFORM_VSUBPS_XMMdq_XMMdq_MEMdq);
 
     pub const VSUBPS_XMMDQ_XMMDQ_XMMDQ: Iform = Iform(ffi::XED_IFORM_VSUBPS_XMMdq_XMMdq_XMMdq);
@@ -15978,6 +20057,12 @@ impl Iform {
     pub const VSUBSD_XMMF64_MASKMSKW_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VSUBSD_XMMf64_MASKmskw_XMMf64_XMMf64_AVX512);
 
+    pub const VSUBSH_XMMF16_MASKMSKW_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBSH_XMMf16_MASKmskw_XMMf16_MEMf16_AVX512);
+
+    pub const VSUBSH_XMMF16_MASKMSKW_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VSUBSH_XMMf16_MASKmskw_XMMf16_XMMf16_AVX512);
+
     pub const VSUBSS_XMMDQ_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VSUBSS_XMMdq_XMMdq_MEMd);
 
     pub const VSUBSS_XMMDQ_XMMDQ_XMMD: Iform = Iform(ffi::XED_IFORM_VSUBSS_XMMdq_XMMdq_XMMd);
@@ -16013,6 +20098,12 @@ impl Iform {
 
     pub const VUCOMISD_XMMF64_XMMF64_AVX512: Iform =
         Iform(ffi::XED_IFORM_VUCOMISD_XMMf64_XMMf64_AVX512);
+
+    pub const VUCOMISH_XMMF16_MEMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VUCOMISH_XMMf16_MEMf16_AVX512);
+
+    pub const VUCOMISH_XMMF16_XMMF16_AVX512: Iform =
+        Iform(ffi::XED_IFORM_VUCOMISH_XMMf16_XMMf16_AVX512);
 
     pub const VUCOMISS_XMMDQ_MEMD: Iform = Iform(ffi::XED_IFORM_VUCOMISS_XMMdq_MEMd);
 
@@ -16210,15 +20301,27 @@ impl Iform {
 
     pub const WRMSR: Iform = Iform(ffi::XED_IFORM_WRMSR);
 
+    pub const WRMSRLIST: Iform = Iform(ffi::XED_IFORM_WRMSRLIST);
+
+    pub const WRMSRNS: Iform = Iform(ffi::XED_IFORM_WRMSRNS);
+
     pub const WRPKRU: Iform = Iform(ffi::XED_IFORM_WRPKRU);
 
     pub const WRSSD_MEMU32_GPR32U32: Iform = Iform(ffi::XED_IFORM_WRSSD_MEMu32_GPR32u32);
 
+    pub const WRSSD_MEMU32_GPR32U32_APX: Iform = Iform(ffi::XED_IFORM_WRSSD_MEMu32_GPR32u32_APX);
+
     pub const WRSSQ_MEMU64_GPR64U64: Iform = Iform(ffi::XED_IFORM_WRSSQ_MEMu64_GPR64u64);
+
+    pub const WRSSQ_MEMU64_GPR64U64_APX: Iform = Iform(ffi::XED_IFORM_WRSSQ_MEMu64_GPR64u64_APX);
 
     pub const WRUSSD_MEMU32_GPR32U32: Iform = Iform(ffi::XED_IFORM_WRUSSD_MEMu32_GPR32u32);
 
+    pub const WRUSSD_MEMU32_GPR32U32_APX: Iform = Iform(ffi::XED_IFORM_WRUSSD_MEMu32_GPR32u32_APX);
+
     pub const WRUSSQ_MEMU64_GPR64U64: Iform = Iform(ffi::XED_IFORM_WRUSSQ_MEMu64_GPR64u64);
+
+    pub const WRUSSQ_MEMU64_GPR64U64_APX: Iform = Iform(ffi::XED_IFORM_WRUSSQ_MEMu64_GPR64u64_APX);
 
     pub const XABORT_IMMB: Iform = Iform(ffi::XED_IFORM_XABORT_IMMb);
 
@@ -16264,15 +20367,56 @@ impl Iform {
 
     pub const XOR_GPR8_MEMB: Iform = Iform(ffi::XED_IFORM_XOR_GPR8_MEMb);
 
+    pub const XOR_GPR8I8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPR8i8_GPR8i8_APX);
+
+    pub const XOR_GPR8I8_GPR8I8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_XOR_GPR8i8_GPR8i8_GPR8i8_APX);
+
+    pub const XOR_GPR8I8_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPR8i8_GPR8i8_IMM8_APX);
+
+    pub const XOR_GPR8I8_GPR8I8_MEMI8_APX: Iform =
+        Iform(ffi::XED_IFORM_XOR_GPR8i8_GPR8i8_MEMi8_APX);
+
+    pub const XOR_GPR8I8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPR8i8_IMM8_APX);
+
+    pub const XOR_GPR8I8_MEMI8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPR8i8_MEMi8_APX);
+
+    pub const XOR_GPR8I8_MEMI8_GPR8I8_APX: Iform =
+        Iform(ffi::XED_IFORM_XOR_GPR8i8_MEMi8_GPR8i8_APX);
+
+    pub const XOR_GPR8I8_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPR8i8_MEMi8_IMM8_APX);
+
     pub const XOR_GPRV_GPRV_31: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_31);
 
     pub const XOR_GPRV_GPRV_33: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_33);
+
+    pub const XOR_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_APX);
+
+    pub const XOR_GPRV_GPRV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_GPRv_APX);
+
+    pub const XOR_GPRV_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_IMM8_APX);
+
+    pub const XOR_GPRV_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_IMMz_APX);
+
+    pub const XOR_GPRV_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_GPRv_MEMv_APX);
+
+    pub const XOR_GPRV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_IMM8_APX);
 
     pub const XOR_GPRV_IMMB: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_IMMb);
 
     pub const XOR_GPRV_IMMZ: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_IMMz);
 
+    pub const XOR_GPRV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_IMMz_APX);
+
     pub const XOR_GPRV_MEMV: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_MEMv);
+
+    pub const XOR_GPRV_MEMV_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_MEMv_APX);
+
+    pub const XOR_GPRV_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_MEMv_GPRv_APX);
+
+    pub const XOR_GPRV_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_MEMv_IMM8_APX);
+
+    pub const XOR_GPRV_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_XOR_GPRv_MEMv_IMMz_APX);
 
     pub const XOR_MEMB_GPR8: Iform = Iform(ffi::XED_IFORM_XOR_MEMb_GPR8);
 
@@ -16280,11 +20424,21 @@ impl Iform {
 
     pub const XOR_MEMB_IMMB_82R6: Iform = Iform(ffi::XED_IFORM_XOR_MEMb_IMMb_82r6);
 
+    pub const XOR_MEMI8_GPR8I8_APX: Iform = Iform(ffi::XED_IFORM_XOR_MEMi8_GPR8i8_APX);
+
+    pub const XOR_MEMI8_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_MEMi8_IMM8_APX);
+
     pub const XOR_MEMV_GPRV: Iform = Iform(ffi::XED_IFORM_XOR_MEMv_GPRv);
+
+    pub const XOR_MEMV_GPRV_APX: Iform = Iform(ffi::XED_IFORM_XOR_MEMv_GPRv_APX);
+
+    pub const XOR_MEMV_IMM8_APX: Iform = Iform(ffi::XED_IFORM_XOR_MEMv_IMM8_APX);
 
     pub const XOR_MEMV_IMMB: Iform = Iform(ffi::XED_IFORM_XOR_MEMv_IMMb);
 
     pub const XOR_MEMV_IMMZ: Iform = Iform(ffi::XED_IFORM_XOR_MEMv_IMMz);
+
+    pub const XOR_MEMV_IMMZ_APX: Iform = Iform(ffi::XED_IFORM_XOR_MEMv_IMMz_APX);
 
     pub const XOR_ORAX_IMMZ: Iform = Iform(ffi::XED_IFORM_XOR_OrAX_IMMz);
 

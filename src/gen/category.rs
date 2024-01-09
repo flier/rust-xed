@@ -25,6 +25,8 @@ impl Category {
 
     pub const AMX_TILE: Category = Category(ffi::XED_CATEGORY_AMX_TILE);
 
+    pub const APX: Category = Category(ffi::XED_CATEGORY_APX);
+
     pub const AVX: Category = Category(ffi::XED_CATEGORY_AVX);
 
     pub const AVX2: Category = Category(ffi::XED_CATEGORY_AVX2);
@@ -42,6 +44,8 @@ impl Category {
     pub const AVX512_VBMI: Category = Category(ffi::XED_CATEGORY_AVX512_VBMI);
 
     pub const AVX512_VP2INTERSECT: Category = Category(ffi::XED_CATEGORY_AVX512_VP2INTERSECT);
+
+    pub const AVX_IFMA: Category = Category(ffi::XED_CATEGORY_AVX_IFMA);
 
     pub const BINARY: Category = Category(ffi::XED_CATEGORY_BINARY);
 
@@ -91,6 +95,10 @@ impl Category {
 
     pub const FMA4: Category = Category(ffi::XED_CATEGORY_FMA4);
 
+    pub const FP16: Category = Category(ffi::XED_CATEGORY_FP16);
+
+    pub const FRED: Category = Category(ffi::XED_CATEGORY_FRED);
+
     pub const GATHER: Category = Category(ffi::XED_CATEGORY_GATHER);
 
     pub const GFNI: Category = Category(ffi::XED_CATEGORY_GFNI);
@@ -113,6 +121,8 @@ impl Category {
 
     pub const LEGACY: Category = Category(ffi::XED_CATEGORY_LEGACY);
 
+    pub const LKGS: Category = Category(ffi::XED_CATEGORY_LKGS);
+
     pub const LOGICAL: Category = Category(ffi::XED_CATEGORY_LOGICAL);
 
     pub const LOGICAL_FP: Category = Category(ffi::XED_CATEGORY_LOGICAL_FP);
@@ -127,7 +137,11 @@ impl Category {
 
     pub const MPX: Category = Category(ffi::XED_CATEGORY_MPX);
 
+    pub const MSRLIST: Category = Category(ffi::XED_CATEGORY_MSRLIST);
+
     pub const NOP: Category = Category(ffi::XED_CATEGORY_NOP);
+
+    pub const PBNDKB: Category = Category(ffi::XED_CATEGORY_PBNDKB);
 
     pub const PCLMULQDQ: Category = Category(ffi::XED_CATEGORY_PCLMULQDQ);
 
@@ -173,6 +187,8 @@ impl Category {
 
     pub const SHA: Category = Category(ffi::XED_CATEGORY_SHA);
 
+    pub const SHA512: Category = Category(ffi::XED_CATEGORY_SHA512);
+
     pub const SHIFT: Category = Category(ffi::XED_CATEGORY_SHIFT);
 
     pub const SMAP: Category = Category(ffi::XED_CATEGORY_SMAP);
@@ -197,6 +213,8 @@ impl Category {
 
     pub const UNCOND_BR: Category = Category(ffi::XED_CATEGORY_UNCOND_BR);
 
+    pub const USER_MSR: Category = Category(ffi::XED_CATEGORY_USER_MSR);
+
     pub const VAES: Category = Category(ffi::XED_CATEGORY_VAES);
 
     pub const VBMI2: Category = Category(ffi::XED_CATEGORY_VBMI2);
@@ -214,6 +232,8 @@ impl Category {
     pub const WAITPKG: Category = Category(ffi::XED_CATEGORY_WAITPKG);
 
     pub const WIDENOP: Category = Category(ffi::XED_CATEGORY_WIDENOP);
+
+    pub const WRMSRNS: Category = Category(ffi::XED_CATEGORY_WRMSRNS);
 
     pub const X87_ALU: Category = Category(ffi::XED_CATEGORY_X87_ALU);
 

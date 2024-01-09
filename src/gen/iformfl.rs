@@ -17,9 +17,17 @@ impl Iformfl {
 
     pub const AAD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AAD_LAST);
 
+    pub const AADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_AADD_FIRST);
+
+    pub const AADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AADD_LAST);
+
     pub const AAM_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_AAM_FIRST);
 
     pub const AAM_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AAM_LAST);
+
+    pub const AAND_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_AAND_FIRST);
+
+    pub const AAND_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AAND_LAST);
 
     pub const AAS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_AAS_FIRST);
 
@@ -157,9 +165,17 @@ impl Iformfl {
 
     pub const AND_LOCK_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AND_LOCK_LAST);
 
+    pub const AOR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_AOR_FIRST);
+
+    pub const AOR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AOR_LAST);
+
     pub const ARPL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_ARPL_FIRST);
 
     pub const ARPL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_ARPL_LAST);
+
+    pub const AXOR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_AXOR_FIRST);
+
+    pub const AXOR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_AXOR_LAST);
 
     pub const BEXTR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_BEXTR_FIRST);
 
@@ -313,6 +329,70 @@ impl Iformfl {
 
     pub const CBW_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CBW_LAST);
 
+    pub const CCMPB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPB_FIRST);
+
+    pub const CCMPB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPB_LAST);
+
+    pub const CCMPBE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPBE_FIRST);
+
+    pub const CCMPBE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPBE_LAST);
+
+    pub const CCMPF_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPF_FIRST);
+
+    pub const CCMPF_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPF_LAST);
+
+    pub const CCMPL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPL_FIRST);
+
+    pub const CCMPL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPL_LAST);
+
+    pub const CCMPLE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPLE_FIRST);
+
+    pub const CCMPLE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPLE_LAST);
+
+    pub const CCMPNB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNB_FIRST);
+
+    pub const CCMPNB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNB_LAST);
+
+    pub const CCMPNBE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNBE_FIRST);
+
+    pub const CCMPNBE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNBE_LAST);
+
+    pub const CCMPNL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNL_FIRST);
+
+    pub const CCMPNL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNL_LAST);
+
+    pub const CCMPNLE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNLE_FIRST);
+
+    pub const CCMPNLE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNLE_LAST);
+
+    pub const CCMPNO_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNO_FIRST);
+
+    pub const CCMPNO_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNO_LAST);
+
+    pub const CCMPNS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNS_FIRST);
+
+    pub const CCMPNS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNS_LAST);
+
+    pub const CCMPNZ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNZ_FIRST);
+
+    pub const CCMPNZ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPNZ_LAST);
+
+    pub const CCMPO_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPO_FIRST);
+
+    pub const CCMPO_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPO_LAST);
+
+    pub const CCMPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPS_FIRST);
+
+    pub const CCMPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPS_LAST);
+
+    pub const CCMPT_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPT_FIRST);
+
+    pub const CCMPT_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPT_LAST);
+
+    pub const CCMPZ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPZ_FIRST);
+
+    pub const CCMPZ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CCMPZ_LAST);
+
     pub const CDQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CDQ_FIRST);
 
     pub const CDQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CDQ_LAST);
@@ -320,6 +400,70 @@ impl Iformfl {
     pub const CDQE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CDQE_FIRST);
 
     pub const CDQE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CDQE_LAST);
+
+    pub const CFCMOVB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVB_FIRST);
+
+    pub const CFCMOVB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVB_LAST);
+
+    pub const CFCMOVBE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVBE_FIRST);
+
+    pub const CFCMOVBE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVBE_LAST);
+
+    pub const CFCMOVL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVL_FIRST);
+
+    pub const CFCMOVL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVL_LAST);
+
+    pub const CFCMOVLE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVLE_FIRST);
+
+    pub const CFCMOVLE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVLE_LAST);
+
+    pub const CFCMOVNB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNB_FIRST);
+
+    pub const CFCMOVNB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNB_LAST);
+
+    pub const CFCMOVNBE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNBE_FIRST);
+
+    pub const CFCMOVNBE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNBE_LAST);
+
+    pub const CFCMOVNL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNL_FIRST);
+
+    pub const CFCMOVNL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNL_LAST);
+
+    pub const CFCMOVNLE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNLE_FIRST);
+
+    pub const CFCMOVNLE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNLE_LAST);
+
+    pub const CFCMOVNO_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNO_FIRST);
+
+    pub const CFCMOVNO_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNO_LAST);
+
+    pub const CFCMOVNP_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNP_FIRST);
+
+    pub const CFCMOVNP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNP_LAST);
+
+    pub const CFCMOVNS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNS_FIRST);
+
+    pub const CFCMOVNS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNS_LAST);
+
+    pub const CFCMOVNZ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNZ_FIRST);
+
+    pub const CFCMOVNZ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVNZ_LAST);
+
+    pub const CFCMOVO_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVO_FIRST);
+
+    pub const CFCMOVO_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVO_LAST);
+
+    pub const CFCMOVP_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVP_FIRST);
+
+    pub const CFCMOVP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVP_LAST);
+
+    pub const CFCMOVS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVS_FIRST);
+
+    pub const CFCMOVS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVS_LAST);
+
+    pub const CFCMOVZ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVZ_FIRST);
+
+    pub const CFCMOVZ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CFCMOVZ_LAST);
 
     pub const CLAC_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CLAC_FIRST);
 
@@ -445,6 +589,58 @@ impl Iformfl {
 
     pub const CMP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMP_LAST);
 
+    pub const CMPBEXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPBEXADD_FIRST);
+
+    pub const CMPBEXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPBEXADD_LAST);
+
+    pub const CMPBXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPBXADD_FIRST);
+
+    pub const CMPBXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPBXADD_LAST);
+
+    pub const CMPLEXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPLEXADD_FIRST);
+
+    pub const CMPLEXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPLEXADD_LAST);
+
+    pub const CMPLXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPLXADD_FIRST);
+
+    pub const CMPLXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPLXADD_LAST);
+
+    pub const CMPNBEXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNBEXADD_FIRST);
+
+    pub const CMPNBEXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNBEXADD_LAST);
+
+    pub const CMPNBXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNBXADD_FIRST);
+
+    pub const CMPNBXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNBXADD_LAST);
+
+    pub const CMPNLEXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNLEXADD_FIRST);
+
+    pub const CMPNLEXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNLEXADD_LAST);
+
+    pub const CMPNLXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNLXADD_FIRST);
+
+    pub const CMPNLXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNLXADD_LAST);
+
+    pub const CMPNOXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNOXADD_FIRST);
+
+    pub const CMPNOXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNOXADD_LAST);
+
+    pub const CMPNPXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNPXADD_FIRST);
+
+    pub const CMPNPXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNPXADD_LAST);
+
+    pub const CMPNSXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNSXADD_FIRST);
+
+    pub const CMPNSXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNSXADD_LAST);
+
+    pub const CMPNZXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNZXADD_FIRST);
+
+    pub const CMPNZXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPNZXADD_LAST);
+
+    pub const CMPOXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPOXADD_FIRST);
+
+    pub const CMPOXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPOXADD_LAST);
+
     pub const CMPPD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPPD_FIRST);
 
     pub const CMPPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPPD_LAST);
@@ -452,6 +648,10 @@ impl Iformfl {
     pub const CMPPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPPS_FIRST);
 
     pub const CMPPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPPS_LAST);
+
+    pub const CMPPXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPPXADD_FIRST);
+
+    pub const CMPPXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPPXADD_LAST);
 
     pub const CMPSB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPSB_FIRST);
 
@@ -477,6 +677,10 @@ impl Iformfl {
 
     pub const CMPSW_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPSW_LAST);
 
+    pub const CMPSXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPSXADD_FIRST);
+
+    pub const CMPSXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPSXADD_LAST);
+
     pub const CMPXCHG_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPXCHG_FIRST);
 
     pub const CMPXCHG_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPXCHG_LAST);
@@ -501,6 +705,10 @@ impl Iformfl {
 
     pub const CMPXCHG_LOCK_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPXCHG_LOCK_LAST);
 
+    pub const CMPZXADD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPZXADD_FIRST);
+
+    pub const CMPZXADD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CMPZXADD_LAST);
+
     pub const COMISD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_COMISD_FIRST);
 
     pub const COMISD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_COMISD_LAST);
@@ -520,6 +728,70 @@ impl Iformfl {
     pub const CRC32_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CRC32_FIRST);
 
     pub const CRC32_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CRC32_LAST);
+
+    pub const CTESTB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTB_FIRST);
+
+    pub const CTESTB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTB_LAST);
+
+    pub const CTESTBE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTBE_FIRST);
+
+    pub const CTESTBE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTBE_LAST);
+
+    pub const CTESTF_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTF_FIRST);
+
+    pub const CTESTF_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTF_LAST);
+
+    pub const CTESTL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTL_FIRST);
+
+    pub const CTESTL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTL_LAST);
+
+    pub const CTESTLE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTLE_FIRST);
+
+    pub const CTESTLE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTLE_LAST);
+
+    pub const CTESTNB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNB_FIRST);
+
+    pub const CTESTNB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNB_LAST);
+
+    pub const CTESTNBE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNBE_FIRST);
+
+    pub const CTESTNBE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNBE_LAST);
+
+    pub const CTESTNL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNL_FIRST);
+
+    pub const CTESTNL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNL_LAST);
+
+    pub const CTESTNLE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNLE_FIRST);
+
+    pub const CTESTNLE_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNLE_LAST);
+
+    pub const CTESTNO_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNO_FIRST);
+
+    pub const CTESTNO_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNO_LAST);
+
+    pub const CTESTNS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNS_FIRST);
+
+    pub const CTESTNS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNS_LAST);
+
+    pub const CTESTNZ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNZ_FIRST);
+
+    pub const CTESTNZ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTNZ_LAST);
+
+    pub const CTESTO_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTO_FIRST);
+
+    pub const CTESTO_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTO_LAST);
+
+    pub const CTESTS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTS_FIRST);
+
+    pub const CTESTS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTS_LAST);
+
+    pub const CTESTT_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTT_FIRST);
+
+    pub const CTESTT_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTT_LAST);
+
+    pub const CTESTZ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTZ_FIRST);
+
+    pub const CTESTZ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_CTESTZ_LAST);
 
     pub const CVTDQ2PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_CVTDQ2PD_FIRST);
 
@@ -704,6 +976,14 @@ impl Iformfl {
     pub const ENTER_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_ENTER_FIRST);
 
     pub const ENTER_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_ENTER_LAST);
+
+    pub const ERETS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_ERETS_FIRST);
+
+    pub const ERETS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_ERETS_LAST);
+
+    pub const ERETU_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_ERETU_FIRST);
+
+    pub const ERETU_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_ERETU_LAST);
 
     pub const EXTRACTPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_EXTRACTPS_FIRST);
 
@@ -1273,6 +1553,10 @@ impl Iformfl {
 
     pub const JMP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_JMP_LAST);
 
+    pub const JMPABS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_JMPABS_FIRST);
+
+    pub const JMPABS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_JMPABS_LAST);
+
     pub const JMP_FAR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_JMP_FAR_FIRST);
 
     pub const JMP_FAR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_JMP_FAR_LAST);
@@ -1588,6 +1872,10 @@ impl Iformfl {
     pub const LIDT_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_LIDT_FIRST);
 
     pub const LIDT_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_LIDT_LAST);
+
+    pub const LKGS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_LKGS_FIRST);
+
+    pub const LKGS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_LKGS_LAST);
 
     pub const LLDT_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_LLDT_FIRST);
 
@@ -2073,6 +2361,10 @@ impl Iformfl {
 
     pub const PBLENDW_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PBLENDW_LAST);
 
+    pub const PBNDKB_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PBNDKB_FIRST);
+
+    pub const PBNDKB_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PBNDKB_LAST);
+
     pub const PCLMULQDQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PCLMULQDQ_FIRST);
 
     pub const PCLMULQDQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PCLMULQDQ_LAST);
@@ -2441,6 +2733,14 @@ impl Iformfl {
 
     pub const POP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POP_LAST);
 
+    pub const POP2_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_POP2_FIRST);
+
+    pub const POP2_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POP2_LAST);
+
+    pub const POP2P_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_POP2P_FIRST);
+
+    pub const POP2P_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POP2P_LAST);
+
     pub const POPA_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_POPA_FIRST);
 
     pub const POPA_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POPA_LAST);
@@ -2465,9 +2765,21 @@ impl Iformfl {
 
     pub const POPFQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POPFQ_LAST);
 
+    pub const POPP_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_POPP_FIRST);
+
+    pub const POPP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POPP_LAST);
+
     pub const POR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_POR_FIRST);
 
     pub const POR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_POR_LAST);
+
+    pub const PREFETCHIT0_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PREFETCHIT0_FIRST);
+
+    pub const PREFETCHIT0_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PREFETCHIT0_LAST);
+
+    pub const PREFETCHIT1_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PREFETCHIT1_FIRST);
+
+    pub const PREFETCHIT1_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PREFETCHIT1_LAST);
 
     pub const PREFETCHNTA_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PREFETCHNTA_FIRST);
 
@@ -2662,6 +2974,14 @@ impl Iformfl {
 
     pub const PUSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSH_LAST);
 
+    pub const PUSH2_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSH2_FIRST);
+
+    pub const PUSH2_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSH2_LAST);
+
+    pub const PUSH2P_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSH2P_FIRST);
+
+    pub const PUSH2P_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSH2P_LAST);
+
     pub const PUSHA_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSHA_FIRST);
 
     pub const PUSHA_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSHA_LAST);
@@ -2681,6 +3001,10 @@ impl Iformfl {
     pub const PUSHFQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSHFQ_FIRST);
 
     pub const PUSHFQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSHFQ_LAST);
+
+    pub const PUSHP_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSHP_FIRST);
+
+    pub const PUSHP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_PUSHP_LAST);
 
     pub const PVALIDATE_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_PVALIDATE_FIRST);
 
@@ -2717,6 +3041,10 @@ impl Iformfl {
     pub const RDMSR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_RDMSR_FIRST);
 
     pub const RDMSR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_RDMSR_LAST);
+
+    pub const RDMSRLIST_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_RDMSRLIST_FIRST);
+
+    pub const RDMSRLIST_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_RDMSRLIST_LAST);
 
     pub const RDPID_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_RDPID_FIRST);
 
@@ -3310,9 +3638,9 @@ impl Iformfl {
 
     pub const SYSCALL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_SYSCALL_LAST);
 
-    pub const SYSCALL_AMD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_SYSCALL_AMD_FIRST);
+    pub const SYSCALL_32_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_SYSCALL_32_FIRST);
 
-    pub const SYSCALL_AMD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_SYSCALL_AMD_LAST);
+    pub const SYSCALL_32_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_SYSCALL_32_LAST);
 
     pub const SYSENTER_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_SYSENTER_FIRST);
 
@@ -3338,6 +3666,14 @@ impl Iformfl {
 
     pub const T1MSKC_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_T1MSKC_LAST);
 
+    pub const TCMMIMFP16PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_TCMMIMFP16PS_FIRST);
+
+    pub const TCMMIMFP16PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_TCMMIMFP16PS_LAST);
+
+    pub const TCMMRLFP16PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_TCMMRLFP16PS_FIRST);
+
+    pub const TCMMRLFP16PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_TCMMRLFP16PS_LAST);
+
     pub const TDCALL_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_TDCALL_FIRST);
 
     pub const TDCALL_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_TDCALL_LAST);
@@ -3361,6 +3697,10 @@ impl Iformfl {
     pub const TDPBUUD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_TDPBUUD_FIRST);
 
     pub const TDPBUUD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_TDPBUUD_LAST);
+
+    pub const TDPFP16PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_TDPFP16PS_FIRST);
+
+    pub const TDPFP16PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_TDPFP16PS_LAST);
 
     pub const TEST_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_TEST_FIRST);
 
@@ -3454,6 +3794,14 @@ impl Iformfl {
 
     pub const UNPCKLPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_UNPCKLPS_LAST);
 
+    pub const URDMSR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_URDMSR_FIRST);
+
+    pub const URDMSR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_URDMSR_LAST);
+
+    pub const UWRMSR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_UWRMSR_FIRST);
+
+    pub const UWRMSR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_UWRMSR_LAST);
+
     pub const V4FMADDPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_V4FMADDPS_FIRST);
 
     pub const V4FMADDPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_V4FMADDPS_LAST);
@@ -3474,6 +3822,10 @@ impl Iformfl {
 
     pub const VADDPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDPD_LAST);
 
+    pub const VADDPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDPH_FIRST);
+
+    pub const VADDPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDPH_LAST);
+
     pub const VADDPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDPS_FIRST);
 
     pub const VADDPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDPS_LAST);
@@ -3481,6 +3833,10 @@ impl Iformfl {
     pub const VADDSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDSD_FIRST);
 
     pub const VADDSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDSD_LAST);
+
+    pub const VADDSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDSH_FIRST);
+
+    pub const VADDSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDSH_LAST);
 
     pub const VADDSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VADDSS_FIRST);
 
@@ -3541,6 +3897,14 @@ impl Iformfl {
     pub const VANDPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VANDPS_FIRST);
 
     pub const VANDPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VANDPS_LAST);
+
+    pub const VBCSTNEBF162PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VBCSTNEBF162PS_FIRST);
+
+    pub const VBCSTNEBF162PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VBCSTNEBF162PS_LAST);
+
+    pub const VBCSTNESH2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VBCSTNESH2PS_FIRST);
+
+    pub const VBCSTNESH2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VBCSTNESH2PS_LAST);
 
     pub const VBLENDMPD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VBLENDMPD_FIRST);
 
@@ -3626,6 +3990,10 @@ impl Iformfl {
 
     pub const VCMPPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPPD_LAST);
 
+    pub const VCMPPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPPH_FIRST);
+
+    pub const VCMPPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPPH_LAST);
+
     pub const VCMPPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPPS_FIRST);
 
     pub const VCMPPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPPS_LAST);
@@ -3634,6 +4002,10 @@ impl Iformfl {
 
     pub const VCMPSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPSD_LAST);
 
+    pub const VCMPSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPSH_FIRST);
+
+    pub const VCMPSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPSH_LAST);
+
     pub const VCMPSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPSS_FIRST);
 
     pub const VCMPSS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCMPSS_LAST);
@@ -3641,6 +4013,10 @@ impl Iformfl {
     pub const VCOMISD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCOMISD_FIRST);
 
     pub const VCOMISD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCOMISD_LAST);
+
+    pub const VCOMISH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCOMISH_FIRST);
+
+    pub const VCOMISH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCOMISH_LAST);
 
     pub const VCOMISS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCOMISS_FIRST);
 
@@ -3658,6 +4034,10 @@ impl Iformfl {
 
     pub const VCVTDQ2PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTDQ2PD_LAST);
 
+    pub const VCVTDQ2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTDQ2PH_FIRST);
+
+    pub const VCVTDQ2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTDQ2PH_LAST);
+
     pub const VCVTDQ2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTDQ2PS_FIRST);
 
     pub const VCVTDQ2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTDQ2PS_LAST);
@@ -3666,6 +4046,22 @@ impl Iformfl {
 
     pub const VCVTNE2PS2BF16_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNE2PS2BF16_LAST);
 
+    pub const VCVTNEEBF162PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEEBF162PS_FIRST);
+
+    pub const VCVTNEEBF162PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEEBF162PS_LAST);
+
+    pub const VCVTNEEPH2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEEPH2PS_FIRST);
+
+    pub const VCVTNEEPH2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEEPH2PS_LAST);
+
+    pub const VCVTNEOBF162PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEOBF162PS_FIRST);
+
+    pub const VCVTNEOBF162PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEOBF162PS_LAST);
+
+    pub const VCVTNEOPH2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEOPH2PS_FIRST);
+
+    pub const VCVTNEOPH2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEOPH2PS_LAST);
+
     pub const VCVTNEPS2BF16_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEPS2BF16_FIRST);
 
     pub const VCVTNEPS2BF16_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTNEPS2BF16_LAST);
@@ -3673,6 +4069,10 @@ impl Iformfl {
     pub const VCVTPD2DQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPD2DQ_FIRST);
 
     pub const VCVTPD2DQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPD2DQ_LAST);
+
+    pub const VCVTPD2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPD2PH_FIRST);
+
+    pub const VCVTPD2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPD2PH_LAST);
 
     pub const VCVTPD2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPD2PS_FIRST);
 
@@ -3690,9 +4090,41 @@ impl Iformfl {
 
     pub const VCVTPD2UQQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPD2UQQ_LAST);
 
+    pub const VCVTPH2DQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2DQ_FIRST);
+
+    pub const VCVTPH2DQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2DQ_LAST);
+
+    pub const VCVTPH2PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2PD_FIRST);
+
+    pub const VCVTPH2PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2PD_LAST);
+
     pub const VCVTPH2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2PS_FIRST);
 
     pub const VCVTPH2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2PS_LAST);
+
+    pub const VCVTPH2PSX_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2PSX_FIRST);
+
+    pub const VCVTPH2PSX_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2PSX_LAST);
+
+    pub const VCVTPH2QQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2QQ_FIRST);
+
+    pub const VCVTPH2QQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2QQ_LAST);
+
+    pub const VCVTPH2UDQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2UDQ_FIRST);
+
+    pub const VCVTPH2UDQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2UDQ_LAST);
+
+    pub const VCVTPH2UQQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2UQQ_FIRST);
+
+    pub const VCVTPH2UQQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2UQQ_LAST);
+
+    pub const VCVTPH2UW_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2UW_FIRST);
+
+    pub const VCVTPH2UW_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2UW_LAST);
+
+    pub const VCVTPH2W_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2W_FIRST);
+
+    pub const VCVTPH2W_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPH2W_LAST);
 
     pub const VCVTPS2DQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPS2DQ_FIRST);
 
@@ -3705,6 +4137,10 @@ impl Iformfl {
     pub const VCVTPS2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPS2PH_FIRST);
 
     pub const VCVTPS2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPS2PH_LAST);
+
+    pub const VCVTPS2PHX_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPS2PHX_FIRST);
+
+    pub const VCVTPS2PHX_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPS2PHX_LAST);
 
     pub const VCVTPS2QQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTPS2QQ_FIRST);
 
@@ -3722,9 +4158,17 @@ impl Iformfl {
 
     pub const VCVTQQ2PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTQQ2PD_LAST);
 
+    pub const VCVTQQ2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTQQ2PH_FIRST);
+
+    pub const VCVTQQ2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTQQ2PH_LAST);
+
     pub const VCVTQQ2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTQQ2PS_FIRST);
 
     pub const VCVTQQ2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTQQ2PS_LAST);
+
+    pub const VCVTSD2SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSD2SH_FIRST);
+
+    pub const VCVTSD2SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSD2SH_LAST);
 
     pub const VCVTSD2SI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSD2SI_FIRST);
 
@@ -3738,9 +4182,29 @@ impl Iformfl {
 
     pub const VCVTSD2USI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSD2USI_LAST);
 
+    pub const VCVTSH2SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2SD_FIRST);
+
+    pub const VCVTSH2SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2SD_LAST);
+
+    pub const VCVTSH2SI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2SI_FIRST);
+
+    pub const VCVTSH2SI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2SI_LAST);
+
+    pub const VCVTSH2SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2SS_FIRST);
+
+    pub const VCVTSH2SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2SS_LAST);
+
+    pub const VCVTSH2USI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2USI_FIRST);
+
+    pub const VCVTSH2USI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSH2USI_LAST);
+
     pub const VCVTSI2SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSI2SD_FIRST);
 
     pub const VCVTSI2SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSI2SD_LAST);
+
+    pub const VCVTSI2SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSI2SH_FIRST);
+
+    pub const VCVTSI2SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSI2SH_LAST);
 
     pub const VCVTSI2SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSI2SS_FIRST);
 
@@ -3749,6 +4213,10 @@ impl Iformfl {
     pub const VCVTSS2SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSS2SD_FIRST);
 
     pub const VCVTSS2SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSS2SD_LAST);
+
+    pub const VCVTSS2SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSS2SH_FIRST);
+
+    pub const VCVTSS2SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSS2SH_LAST);
 
     pub const VCVTSS2SI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTSS2SI_FIRST);
 
@@ -3774,6 +4242,30 @@ impl Iformfl {
 
     pub const VCVTTPD2UQQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPD2UQQ_LAST);
 
+    pub const VCVTTPH2DQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2DQ_FIRST);
+
+    pub const VCVTTPH2DQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2DQ_LAST);
+
+    pub const VCVTTPH2QQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2QQ_FIRST);
+
+    pub const VCVTTPH2QQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2QQ_LAST);
+
+    pub const VCVTTPH2UDQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2UDQ_FIRST);
+
+    pub const VCVTTPH2UDQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2UDQ_LAST);
+
+    pub const VCVTTPH2UQQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2UQQ_FIRST);
+
+    pub const VCVTTPH2UQQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2UQQ_LAST);
+
+    pub const VCVTTPH2UW_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2UW_FIRST);
+
+    pub const VCVTTPH2UW_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2UW_LAST);
+
+    pub const VCVTTPH2W_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2W_FIRST);
+
+    pub const VCVTTPH2W_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPH2W_LAST);
+
     pub const VCVTTPS2DQ_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPS2DQ_FIRST);
 
     pub const VCVTTPS2DQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTPS2DQ_LAST);
@@ -3798,6 +4290,14 @@ impl Iformfl {
 
     pub const VCVTTSD2USI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSD2USI_LAST);
 
+    pub const VCVTTSH2SI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSH2SI_FIRST);
+
+    pub const VCVTTSH2SI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSH2SI_LAST);
+
+    pub const VCVTTSH2USI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSH2USI_FIRST);
+
+    pub const VCVTTSH2USI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSH2USI_LAST);
+
     pub const VCVTTSS2SI_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSS2SI_FIRST);
 
     pub const VCVTTSS2SI_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTTSS2SI_LAST);
@@ -3810,6 +4310,10 @@ impl Iformfl {
 
     pub const VCVTUDQ2PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUDQ2PD_LAST);
 
+    pub const VCVTUDQ2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUDQ2PH_FIRST);
+
+    pub const VCVTUDQ2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUDQ2PH_LAST);
+
     pub const VCVTUDQ2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUDQ2PS_FIRST);
 
     pub const VCVTUDQ2PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUDQ2PS_LAST);
@@ -3817,6 +4321,10 @@ impl Iformfl {
     pub const VCVTUQQ2PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUQQ2PD_FIRST);
 
     pub const VCVTUQQ2PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUQQ2PD_LAST);
+
+    pub const VCVTUQQ2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUQQ2PH_FIRST);
+
+    pub const VCVTUQQ2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUQQ2PH_LAST);
 
     pub const VCVTUQQ2PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUQQ2PS_FIRST);
 
@@ -3826,9 +4334,21 @@ impl Iformfl {
 
     pub const VCVTUSI2SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUSI2SD_LAST);
 
+    pub const VCVTUSI2SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUSI2SH_FIRST);
+
+    pub const VCVTUSI2SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUSI2SH_LAST);
+
     pub const VCVTUSI2SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUSI2SS_FIRST);
 
     pub const VCVTUSI2SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUSI2SS_LAST);
+
+    pub const VCVTUW2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUW2PH_FIRST);
+
+    pub const VCVTUW2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTUW2PH_LAST);
+
+    pub const VCVTW2PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTW2PH_FIRST);
+
+    pub const VCVTW2PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VCVTW2PH_LAST);
 
     pub const VDBPSADBW_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDBPSADBW_FIRST);
 
@@ -3838,6 +4358,10 @@ impl Iformfl {
 
     pub const VDIVPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVPD_LAST);
 
+    pub const VDIVPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVPH_FIRST);
+
+    pub const VDIVPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVPH_LAST);
+
     pub const VDIVPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVPS_FIRST);
 
     pub const VDIVPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVPS_LAST);
@@ -3845,6 +4369,10 @@ impl Iformfl {
     pub const VDIVSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVSD_FIRST);
 
     pub const VDIVSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVSD_LAST);
+
+    pub const VDIVSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVSH_FIRST);
+
+    pub const VDIVSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVSH_LAST);
 
     pub const VDIVSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VDIVSS_FIRST);
 
@@ -3930,6 +4458,22 @@ impl Iformfl {
 
     pub const VEXTRACTPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VEXTRACTPS_LAST);
 
+    pub const VFCMADDCPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMADDCPH_FIRST);
+
+    pub const VFCMADDCPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMADDCPH_LAST);
+
+    pub const VFCMADDCSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMADDCSH_FIRST);
+
+    pub const VFCMADDCSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMADDCSH_LAST);
+
+    pub const VFCMULCPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMULCPH_FIRST);
+
+    pub const VFCMULCPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMULCPH_LAST);
+
+    pub const VFCMULCSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMULCSH_FIRST);
+
+    pub const VFCMULCSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFCMULCSH_LAST);
+
     pub const VFIXUPIMMPD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFIXUPIMMPD_FIRST);
 
     pub const VFIXUPIMMPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFIXUPIMMPD_LAST);
@@ -3950,6 +4494,10 @@ impl Iformfl {
 
     pub const VFMADD132PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132PD_LAST);
 
+    pub const VFMADD132PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132PH_FIRST);
+
+    pub const VFMADD132PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132PH_LAST);
+
     pub const VFMADD132PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132PS_FIRST);
 
     pub const VFMADD132PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132PS_LAST);
@@ -3957,6 +4505,10 @@ impl Iformfl {
     pub const VFMADD132SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132SD_FIRST);
 
     pub const VFMADD132SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132SD_LAST);
+
+    pub const VFMADD132SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132SH_FIRST);
+
+    pub const VFMADD132SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132SH_LAST);
 
     pub const VFMADD132SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD132SS_FIRST);
 
@@ -3966,6 +4518,10 @@ impl Iformfl {
 
     pub const VFMADD213PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213PD_LAST);
 
+    pub const VFMADD213PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213PH_FIRST);
+
+    pub const VFMADD213PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213PH_LAST);
+
     pub const VFMADD213PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213PS_FIRST);
 
     pub const VFMADD213PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213PS_LAST);
@@ -3973,6 +4529,10 @@ impl Iformfl {
     pub const VFMADD213SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213SD_FIRST);
 
     pub const VFMADD213SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213SD_LAST);
+
+    pub const VFMADD213SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213SH_FIRST);
+
+    pub const VFMADD213SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213SH_LAST);
 
     pub const VFMADD213SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD213SS_FIRST);
 
@@ -3982,6 +4542,10 @@ impl Iformfl {
 
     pub const VFMADD231PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231PD_LAST);
 
+    pub const VFMADD231PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231PH_FIRST);
+
+    pub const VFMADD231PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231PH_LAST);
+
     pub const VFMADD231PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231PS_FIRST);
 
     pub const VFMADD231PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231PS_LAST);
@@ -3990,9 +4554,21 @@ impl Iformfl {
 
     pub const VFMADD231SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231SD_LAST);
 
+    pub const VFMADD231SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231SH_FIRST);
+
+    pub const VFMADD231SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231SH_LAST);
+
     pub const VFMADD231SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231SS_FIRST);
 
     pub const VFMADD231SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADD231SS_LAST);
+
+    pub const VFMADDCPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDCPH_FIRST);
+
+    pub const VFMADDCPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDCPH_LAST);
+
+    pub const VFMADDCSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDCSH_FIRST);
+
+    pub const VFMADDCSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDCSH_LAST);
 
     pub const VFMADDPD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDPD_FIRST);
 
@@ -4014,6 +4590,10 @@ impl Iformfl {
 
     pub const VFMADDSUB132PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB132PD_LAST);
 
+    pub const VFMADDSUB132PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB132PH_FIRST);
+
+    pub const VFMADDSUB132PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB132PH_LAST);
+
     pub const VFMADDSUB132PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB132PS_FIRST);
 
     pub const VFMADDSUB132PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB132PS_LAST);
@@ -4022,6 +4602,10 @@ impl Iformfl {
 
     pub const VFMADDSUB213PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB213PD_LAST);
 
+    pub const VFMADDSUB213PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB213PH_FIRST);
+
+    pub const VFMADDSUB213PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB213PH_LAST);
+
     pub const VFMADDSUB213PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB213PS_FIRST);
 
     pub const VFMADDSUB213PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB213PS_LAST);
@@ -4029,6 +4613,10 @@ impl Iformfl {
     pub const VFMADDSUB231PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB231PD_FIRST);
 
     pub const VFMADDSUB231PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB231PD_LAST);
+
+    pub const VFMADDSUB231PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB231PH_FIRST);
+
+    pub const VFMADDSUB231PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB231PH_LAST);
 
     pub const VFMADDSUB231PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMADDSUB231PS_FIRST);
 
@@ -4046,6 +4634,10 @@ impl Iformfl {
 
     pub const VFMSUB132PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132PD_LAST);
 
+    pub const VFMSUB132PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132PH_FIRST);
+
+    pub const VFMSUB132PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132PH_LAST);
+
     pub const VFMSUB132PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132PS_FIRST);
 
     pub const VFMSUB132PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132PS_LAST);
@@ -4053,6 +4645,10 @@ impl Iformfl {
     pub const VFMSUB132SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132SD_FIRST);
 
     pub const VFMSUB132SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132SD_LAST);
+
+    pub const VFMSUB132SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132SH_FIRST);
+
+    pub const VFMSUB132SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132SH_LAST);
 
     pub const VFMSUB132SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB132SS_FIRST);
 
@@ -4062,6 +4658,10 @@ impl Iformfl {
 
     pub const VFMSUB213PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213PD_LAST);
 
+    pub const VFMSUB213PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213PH_FIRST);
+
+    pub const VFMSUB213PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213PH_LAST);
+
     pub const VFMSUB213PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213PS_FIRST);
 
     pub const VFMSUB213PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213PS_LAST);
@@ -4069,6 +4669,10 @@ impl Iformfl {
     pub const VFMSUB213SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213SD_FIRST);
 
     pub const VFMSUB213SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213SD_LAST);
+
+    pub const VFMSUB213SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213SH_FIRST);
+
+    pub const VFMSUB213SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213SH_LAST);
 
     pub const VFMSUB213SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB213SS_FIRST);
 
@@ -4078,6 +4682,10 @@ impl Iformfl {
 
     pub const VFMSUB231PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231PD_LAST);
 
+    pub const VFMSUB231PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231PH_FIRST);
+
+    pub const VFMSUB231PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231PH_LAST);
+
     pub const VFMSUB231PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231PS_FIRST);
 
     pub const VFMSUB231PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231PS_LAST);
@@ -4085,6 +4693,10 @@ impl Iformfl {
     pub const VFMSUB231SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231SD_FIRST);
 
     pub const VFMSUB231SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231SD_LAST);
+
+    pub const VFMSUB231SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231SH_FIRST);
+
+    pub const VFMSUB231SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231SH_LAST);
 
     pub const VFMSUB231SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUB231SS_FIRST);
 
@@ -4094,6 +4706,10 @@ impl Iformfl {
 
     pub const VFMSUBADD132PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD132PD_LAST);
 
+    pub const VFMSUBADD132PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD132PH_FIRST);
+
+    pub const VFMSUBADD132PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD132PH_LAST);
+
     pub const VFMSUBADD132PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD132PS_FIRST);
 
     pub const VFMSUBADD132PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD132PS_LAST);
@@ -4102,6 +4718,10 @@ impl Iformfl {
 
     pub const VFMSUBADD213PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD213PD_LAST);
 
+    pub const VFMSUBADD213PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD213PH_FIRST);
+
+    pub const VFMSUBADD213PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD213PH_LAST);
+
     pub const VFMSUBADD213PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD213PS_FIRST);
 
     pub const VFMSUBADD213PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD213PS_LAST);
@@ -4109,6 +4729,10 @@ impl Iformfl {
     pub const VFMSUBADD231PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD231PD_FIRST);
 
     pub const VFMSUBADD231PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD231PD_LAST);
+
+    pub const VFMSUBADD231PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD231PH_FIRST);
+
+    pub const VFMSUBADD231PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD231PH_LAST);
 
     pub const VFMSUBADD231PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBADD231PS_FIRST);
 
@@ -4138,9 +4762,21 @@ impl Iformfl {
 
     pub const VFMSUBSS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMSUBSS_LAST);
 
+    pub const VFMULCPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMULCPH_FIRST);
+
+    pub const VFMULCPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMULCPH_LAST);
+
+    pub const VFMULCSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMULCSH_FIRST);
+
+    pub const VFMULCSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFMULCSH_LAST);
+
     pub const VFNMADD132PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132PD_FIRST);
 
     pub const VFNMADD132PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132PD_LAST);
+
+    pub const VFNMADD132PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132PH_FIRST);
+
+    pub const VFNMADD132PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132PH_LAST);
 
     pub const VFNMADD132PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132PS_FIRST);
 
@@ -4150,6 +4786,10 @@ impl Iformfl {
 
     pub const VFNMADD132SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132SD_LAST);
 
+    pub const VFNMADD132SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132SH_FIRST);
+
+    pub const VFNMADD132SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132SH_LAST);
+
     pub const VFNMADD132SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132SS_FIRST);
 
     pub const VFNMADD132SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD132SS_LAST);
@@ -4157,6 +4797,10 @@ impl Iformfl {
     pub const VFNMADD213PD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213PD_FIRST);
 
     pub const VFNMADD213PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213PD_LAST);
+
+    pub const VFNMADD213PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213PH_FIRST);
+
+    pub const VFNMADD213PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213PH_LAST);
 
     pub const VFNMADD213PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213PS_FIRST);
 
@@ -4166,6 +4810,10 @@ impl Iformfl {
 
     pub const VFNMADD213SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213SD_LAST);
 
+    pub const VFNMADD213SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213SH_FIRST);
+
+    pub const VFNMADD213SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213SH_LAST);
+
     pub const VFNMADD213SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213SS_FIRST);
 
     pub const VFNMADD213SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD213SS_LAST);
@@ -4174,6 +4822,10 @@ impl Iformfl {
 
     pub const VFNMADD231PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231PD_LAST);
 
+    pub const VFNMADD231PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231PH_FIRST);
+
+    pub const VFNMADD231PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231PH_LAST);
+
     pub const VFNMADD231PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231PS_FIRST);
 
     pub const VFNMADD231PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231PS_LAST);
@@ -4181,6 +4833,10 @@ impl Iformfl {
     pub const VFNMADD231SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231SD_FIRST);
 
     pub const VFNMADD231SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231SD_LAST);
+
+    pub const VFNMADD231SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231SH_FIRST);
+
+    pub const VFNMADD231SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231SH_LAST);
 
     pub const VFNMADD231SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMADD231SS_FIRST);
 
@@ -4206,6 +4862,10 @@ impl Iformfl {
 
     pub const VFNMSUB132PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132PD_LAST);
 
+    pub const VFNMSUB132PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132PH_FIRST);
+
+    pub const VFNMSUB132PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132PH_LAST);
+
     pub const VFNMSUB132PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132PS_FIRST);
 
     pub const VFNMSUB132PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132PS_LAST);
@@ -4213,6 +4873,10 @@ impl Iformfl {
     pub const VFNMSUB132SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132SD_FIRST);
 
     pub const VFNMSUB132SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132SD_LAST);
+
+    pub const VFNMSUB132SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132SH_FIRST);
+
+    pub const VFNMSUB132SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132SH_LAST);
 
     pub const VFNMSUB132SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB132SS_FIRST);
 
@@ -4222,6 +4886,10 @@ impl Iformfl {
 
     pub const VFNMSUB213PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213PD_LAST);
 
+    pub const VFNMSUB213PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213PH_FIRST);
+
+    pub const VFNMSUB213PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213PH_LAST);
+
     pub const VFNMSUB213PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213PS_FIRST);
 
     pub const VFNMSUB213PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213PS_LAST);
@@ -4229,6 +4897,10 @@ impl Iformfl {
     pub const VFNMSUB213SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213SD_FIRST);
 
     pub const VFNMSUB213SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213SD_LAST);
+
+    pub const VFNMSUB213SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213SH_FIRST);
+
+    pub const VFNMSUB213SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213SH_LAST);
 
     pub const VFNMSUB213SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB213SS_FIRST);
 
@@ -4238,6 +4910,10 @@ impl Iformfl {
 
     pub const VFNMSUB231PD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231PD_LAST);
 
+    pub const VFNMSUB231PH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231PH_FIRST);
+
+    pub const VFNMSUB231PH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231PH_LAST);
+
     pub const VFNMSUB231PS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231PS_FIRST);
 
     pub const VFNMSUB231PS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231PS_LAST);
@@ -4245,6 +4921,10 @@ impl Iformfl {
     pub const VFNMSUB231SD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231SD_FIRST);
 
     pub const VFNMSUB231SD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231SD_LAST);
+
+    pub const VFNMSUB231SH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231SH_FIRST);
+
+    pub const VFNMSUB231SH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231SH_LAST);
 
     pub const VFNMSUB231SS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFNMSUB231SS_FIRST);
 
@@ -4270,6 +4950,10 @@ impl Iformfl {
 
     pub const VFPCLASSPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSPD_LAST);
 
+    pub const VFPCLASSPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSPH_FIRST);
+
+    pub const VFPCLASSPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSPH_LAST);
+
     pub const VFPCLASSPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSPS_FIRST);
 
     pub const VFPCLASSPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSPS_LAST);
@@ -4277,6 +4961,10 @@ impl Iformfl {
     pub const VFPCLASSSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSSD_FIRST);
 
     pub const VFPCLASSSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSSD_LAST);
+
+    pub const VFPCLASSSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSSH_FIRST);
+
+    pub const VFPCLASSSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSSH_LAST);
 
     pub const VFPCLASSSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VFPCLASSSS_FIRST);
 
@@ -4350,6 +5038,10 @@ impl Iformfl {
 
     pub const VGETEXPPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPPD_LAST);
 
+    pub const VGETEXPPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPPH_FIRST);
+
+    pub const VGETEXPPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPPH_LAST);
+
     pub const VGETEXPPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPPS_FIRST);
 
     pub const VGETEXPPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPPS_LAST);
@@ -4357,6 +5049,10 @@ impl Iformfl {
     pub const VGETEXPSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPSD_FIRST);
 
     pub const VGETEXPSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPSD_LAST);
+
+    pub const VGETEXPSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPSH_FIRST);
+
+    pub const VGETEXPSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPSH_LAST);
 
     pub const VGETEXPSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETEXPSS_FIRST);
 
@@ -4366,6 +5062,10 @@ impl Iformfl {
 
     pub const VGETMANTPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTPD_LAST);
 
+    pub const VGETMANTPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTPH_FIRST);
+
+    pub const VGETMANTPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTPH_LAST);
+
     pub const VGETMANTPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTPS_FIRST);
 
     pub const VGETMANTPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTPS_LAST);
@@ -4373,6 +5073,10 @@ impl Iformfl {
     pub const VGETMANTSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTSD_FIRST);
 
     pub const VGETMANTSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTSD_LAST);
+
+    pub const VGETMANTSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTSH_FIRST);
+
+    pub const VGETMANTSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTSH_LAST);
 
     pub const VGETMANTSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VGETMANTSS_FIRST);
 
@@ -4474,6 +5178,10 @@ impl Iformfl {
 
     pub const VMAXPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXPD_LAST);
 
+    pub const VMAXPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXPH_FIRST);
+
+    pub const VMAXPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXPH_LAST);
+
     pub const VMAXPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXPS_FIRST);
 
     pub const VMAXPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXPS_LAST);
@@ -4481,6 +5189,10 @@ impl Iformfl {
     pub const VMAXSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXSD_FIRST);
 
     pub const VMAXSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXSD_LAST);
+
+    pub const VMAXSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXSH_FIRST);
+
+    pub const VMAXSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXSH_LAST);
 
     pub const VMAXSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMAXSS_FIRST);
 
@@ -4502,6 +5214,10 @@ impl Iformfl {
 
     pub const VMINPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINPD_LAST);
 
+    pub const VMINPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINPH_FIRST);
+
+    pub const VMINPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINPH_LAST);
+
     pub const VMINPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINPS_FIRST);
 
     pub const VMINPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINPS_LAST);
@@ -4509,6 +5225,10 @@ impl Iformfl {
     pub const VMINSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINSD_FIRST);
 
     pub const VMINSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINSD_LAST);
+
+    pub const VMINSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINSH_FIRST);
+
+    pub const VMINSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINSH_LAST);
 
     pub const VMINSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMINSS_FIRST);
 
@@ -4630,6 +5350,10 @@ impl Iformfl {
 
     pub const VMOVSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVSD_LAST);
 
+    pub const VMOVSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVSH_FIRST);
+
+    pub const VMOVSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVSH_LAST);
+
     pub const VMOVSHDUP_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVSHDUP_FIRST);
 
     pub const VMOVSHDUP_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVSHDUP_LAST);
@@ -4649,6 +5373,10 @@ impl Iformfl {
     pub const VMOVUPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVUPS_FIRST);
 
     pub const VMOVUPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVUPS_LAST);
+
+    pub const VMOVW_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVW_FIRST);
+
+    pub const VMOVW_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMOVW_LAST);
 
     pub const VMPSADBW_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMPSADBW_FIRST);
 
@@ -4682,6 +5410,10 @@ impl Iformfl {
 
     pub const VMULPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULPD_LAST);
 
+    pub const VMULPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULPH_FIRST);
+
+    pub const VMULPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULPH_LAST);
+
     pub const VMULPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULPS_FIRST);
 
     pub const VMULPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULPS_LAST);
@@ -4689,6 +5421,10 @@ impl Iformfl {
     pub const VMULSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULSD_FIRST);
 
     pub const VMULSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULSD_LAST);
+
+    pub const VMULSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULSH_FIRST);
+
+    pub const VMULSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULSH_LAST);
 
     pub const VMULSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VMULSS_FIRST);
 
@@ -5038,6 +5774,22 @@ impl Iformfl {
 
     pub const VPCONFLICTQ_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPCONFLICTQ_LAST);
 
+    pub const VPDPBSSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSSD_FIRST);
+
+    pub const VPDPBSSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSSD_LAST);
+
+    pub const VPDPBSSDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSSDS_FIRST);
+
+    pub const VPDPBSSDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSSDS_LAST);
+
+    pub const VPDPBSUD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSUD_FIRST);
+
+    pub const VPDPBSUD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSUD_LAST);
+
+    pub const VPDPBSUDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSUDS_FIRST);
+
+    pub const VPDPBSUDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBSUDS_LAST);
+
     pub const VPDPBUSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUSD_FIRST);
 
     pub const VPDPBUSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUSD_LAST);
@@ -5046,6 +5798,14 @@ impl Iformfl {
 
     pub const VPDPBUSDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUSDS_LAST);
 
+    pub const VPDPBUUD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUUD_FIRST);
+
+    pub const VPDPBUUD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUUD_LAST);
+
+    pub const VPDPBUUDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUUDS_FIRST);
+
+    pub const VPDPBUUDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPBUUDS_LAST);
+
     pub const VPDPWSSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSSD_FIRST);
 
     pub const VPDPWSSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSSD_LAST);
@@ -5053,6 +5813,30 @@ impl Iformfl {
     pub const VPDPWSSDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSSDS_FIRST);
 
     pub const VPDPWSSDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSSDS_LAST);
+
+    pub const VPDPWSUD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSUD_FIRST);
+
+    pub const VPDPWSUD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSUD_LAST);
+
+    pub const VPDPWSUDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSUDS_FIRST);
+
+    pub const VPDPWSUDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWSUDS_LAST);
+
+    pub const VPDPWUSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUSD_FIRST);
+
+    pub const VPDPWUSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUSD_LAST);
+
+    pub const VPDPWUSDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUSDS_FIRST);
+
+    pub const VPDPWUSDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUSDS_LAST);
+
+    pub const VPDPWUUD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUUD_FIRST);
+
+    pub const VPDPWUUD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUUD_LAST);
+
+    pub const VPDPWUUDS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUUDS_FIRST);
+
+    pub const VPDPWUUDS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPDPWUUDS_LAST);
 
     pub const VPERM2F128_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VPERM2F128_FIRST);
 
@@ -6102,9 +6886,17 @@ impl Iformfl {
 
     pub const VRCP28SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCP28SS_LAST);
 
+    pub const VRCPPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPPH_FIRST);
+
+    pub const VRCPPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPPH_LAST);
+
     pub const VRCPPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPPS_FIRST);
 
     pub const VRCPPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPPS_LAST);
+
+    pub const VRCPSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPSH_FIRST);
+
+    pub const VRCPSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPSH_LAST);
 
     pub const VRCPSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRCPSS_FIRST);
 
@@ -6114,6 +6906,10 @@ impl Iformfl {
 
     pub const VREDUCEPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCEPD_LAST);
 
+    pub const VREDUCEPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCEPH_FIRST);
+
+    pub const VREDUCEPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCEPH_LAST);
+
     pub const VREDUCEPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCEPS_FIRST);
 
     pub const VREDUCEPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCEPS_LAST);
@@ -6121,6 +6917,10 @@ impl Iformfl {
     pub const VREDUCESD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCESD_FIRST);
 
     pub const VREDUCESD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCESD_LAST);
+
+    pub const VREDUCESH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCESH_FIRST);
+
+    pub const VREDUCESH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCESH_LAST);
 
     pub const VREDUCESS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VREDUCESS_FIRST);
 
@@ -6130,6 +6930,10 @@ impl Iformfl {
 
     pub const VRNDSCALEPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALEPD_LAST);
 
+    pub const VRNDSCALEPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALEPH_FIRST);
+
+    pub const VRNDSCALEPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALEPH_LAST);
+
     pub const VRNDSCALEPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALEPS_FIRST);
 
     pub const VRNDSCALEPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALEPS_LAST);
@@ -6137,6 +6941,10 @@ impl Iformfl {
     pub const VRNDSCALESD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALESD_FIRST);
 
     pub const VRNDSCALESD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALESD_LAST);
+
+    pub const VRNDSCALESH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALESH_FIRST);
+
+    pub const VRNDSCALESH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALESH_LAST);
 
     pub const VRNDSCALESS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRNDSCALESS_FIRST);
 
@@ -6190,9 +6998,17 @@ impl Iformfl {
 
     pub const VRSQRT28SS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRT28SS_LAST);
 
+    pub const VRSQRTPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTPH_FIRST);
+
+    pub const VRSQRTPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTPH_LAST);
+
     pub const VRSQRTPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTPS_FIRST);
 
     pub const VRSQRTPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTPS_LAST);
+
+    pub const VRSQRTSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTSH_FIRST);
+
+    pub const VRSQRTSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTSH_LAST);
 
     pub const VRSQRTSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VRSQRTSS_FIRST);
 
@@ -6202,6 +7018,10 @@ impl Iformfl {
 
     pub const VSCALEFPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFPD_LAST);
 
+    pub const VSCALEFPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFPH_FIRST);
+
+    pub const VSCALEFPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFPH_LAST);
+
     pub const VSCALEFPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFPS_FIRST);
 
     pub const VSCALEFPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFPS_LAST);
@@ -6209,6 +7029,10 @@ impl Iformfl {
     pub const VSCALEFSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFSD_FIRST);
 
     pub const VSCALEFSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFSD_LAST);
+
+    pub const VSCALEFSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFSH_FIRST);
+
+    pub const VSCALEFSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFSH_LAST);
 
     pub const VSCALEFSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCALEFSS_FIRST);
 
@@ -6262,6 +7086,18 @@ impl Iformfl {
 
     pub const VSCATTERQPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSCATTERQPS_LAST);
 
+    pub const VSHA512MSG1_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHA512MSG1_FIRST);
+
+    pub const VSHA512MSG1_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHA512MSG1_LAST);
+
+    pub const VSHA512MSG2_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHA512MSG2_FIRST);
+
+    pub const VSHA512MSG2_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHA512MSG2_LAST);
+
+    pub const VSHA512RNDS2_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHA512RNDS2_FIRST);
+
+    pub const VSHA512RNDS2_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHA512RNDS2_LAST);
+
     pub const VSHUFF32X4_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHUFF32X4_FIRST);
 
     pub const VSHUFF32X4_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHUFF32X4_LAST);
@@ -6286,9 +7122,33 @@ impl Iformfl {
 
     pub const VSHUFPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSHUFPS_LAST);
 
+    pub const VSM3MSG1_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM3MSG1_FIRST);
+
+    pub const VSM3MSG1_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM3MSG1_LAST);
+
+    pub const VSM3MSG2_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM3MSG2_FIRST);
+
+    pub const VSM3MSG2_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM3MSG2_LAST);
+
+    pub const VSM3RNDS2_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM3RNDS2_FIRST);
+
+    pub const VSM3RNDS2_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM3RNDS2_LAST);
+
+    pub const VSM4KEY4_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM4KEY4_FIRST);
+
+    pub const VSM4KEY4_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM4KEY4_LAST);
+
+    pub const VSM4RNDS4_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM4RNDS4_FIRST);
+
+    pub const VSM4RNDS4_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSM4RNDS4_LAST);
+
     pub const VSQRTPD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTPD_FIRST);
 
     pub const VSQRTPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTPD_LAST);
+
+    pub const VSQRTPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTPH_FIRST);
+
+    pub const VSQRTPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTPH_LAST);
 
     pub const VSQRTPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTPS_FIRST);
 
@@ -6297,6 +7157,10 @@ impl Iformfl {
     pub const VSQRTSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTSD_FIRST);
 
     pub const VSQRTSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTSD_LAST);
+
+    pub const VSQRTSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTSH_FIRST);
+
+    pub const VSQRTSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTSH_LAST);
 
     pub const VSQRTSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSQRTSS_FIRST);
 
@@ -6310,6 +7174,10 @@ impl Iformfl {
 
     pub const VSUBPD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBPD_LAST);
 
+    pub const VSUBPH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBPH_FIRST);
+
+    pub const VSUBPH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBPH_LAST);
+
     pub const VSUBPS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBPS_FIRST);
 
     pub const VSUBPS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBPS_LAST);
@@ -6317,6 +7185,10 @@ impl Iformfl {
     pub const VSUBSD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBSD_FIRST);
 
     pub const VSUBSD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBSD_LAST);
+
+    pub const VSUBSH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBSH_FIRST);
+
+    pub const VSUBSH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBSH_LAST);
 
     pub const VSUBSS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VSUBSS_FIRST);
 
@@ -6333,6 +7205,10 @@ impl Iformfl {
     pub const VUCOMISD_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VUCOMISD_FIRST);
 
     pub const VUCOMISD_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VUCOMISD_LAST);
+
+    pub const VUCOMISH_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VUCOMISH_FIRST);
+
+    pub const VUCOMISH_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_VUCOMISH_LAST);
 
     pub const VUCOMISS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_VUCOMISS_FIRST);
 
@@ -6389,6 +7265,14 @@ impl Iformfl {
     pub const WRMSR_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRMSR_FIRST);
 
     pub const WRMSR_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRMSR_LAST);
+
+    pub const WRMSRLIST_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRMSRLIST_FIRST);
+
+    pub const WRMSRLIST_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRMSRLIST_LAST);
+
+    pub const WRMSRNS_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRMSRNS_FIRST);
+
+    pub const WRMSRNS_LAST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRMSRNS_LAST);
 
     pub const WRPKRU_FIRST: Iformfl = Iformfl(ffi::XED_IFORMFL_WRPKRU_FIRST);
 

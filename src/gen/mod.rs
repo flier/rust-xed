@@ -1,6 +1,6 @@
 use std::mem::MaybeUninit;
 
-use derive_more::Deref;
+use derive_more::{Deref, From, Into};
 use lazy_static::lazy_static;
 
 use crate::raw::ToBool;
@@ -28,35 +28,6 @@ pub use self::category::*;
 
 mod chip;
 pub use self::chip::*;
-
-mod cpuid_bit;
-pub use self::cpuid_bit::CpuidBit;
-
-impl CpuidBit {
-    /// This provides the details of the CPUID bit specification, if the enumeration value is not sufficient.  
-    pub fn rec(self) -> Option<CpuidRec> {
-        let mut rec = MaybeUninit::zeroed();
-
-        unsafe {
-            if ffi::xed_get_cpuid_rec(self.into(), rec.as_mut_ptr()) != 0 {
-                Some(CpuidRec(rec.assume_init()))
-            } else {
-                None
-            }
-        }
-    }
-}
-
-#[repr(transparent)]
-#[derive(Clone, Copy, Debug, Deref)]
-pub struct CpuidRec(ffi::xed_cpuid_rec_t);
-
-impl CpuidRec {
-    /// the register containing the bit (EAX,EBX,ECX,EDX)
-    pub fn reg(&self) -> Reg {
-        self.0.reg.into()
-    }
-}
 
 mod error;
 pub use self::error::Error as Errno;
@@ -107,13 +78,24 @@ mod isa_set;
 pub use self::isa_set::IsaSet;
 
 impl IsaSet {
-    /// Returns the name of the i'th cpuid bit associated with this isa-set.
-    pub fn cpuid_bits(self) -> impl Iterator<Item = CpuidBit> {
+    /// Returns the name of the cpuid bit associated with this isa-set.
+    pub fn cpuid_groups(self) -> impl Iterator<Item = CpuidGroup> {
         unsafe {
-            (0..ffi::XED_MAX_CPUID_BITS_PER_ISA_SET).flat_map(move |i| {
-                let bit = ffi::xed_get_cpuid_bit_for_isa_set(self.into(), i);
+            (0..ffi::XED_MAX_CPUID_GROUPS_PER_ISA_SET).flat_map(move |i| {
+                let g = ffi::xed_get_cpuid_group_enum_for_isa_set(self.into(), i);
 
-                (bit != 0).then(|| bit.into())
+                (g != 0).then(|| g.into())
+            })
+        }
+    }
+
+    /// Returns the name of the cpuid record associated with the given cpuid group.
+    pub fn cpuid_recs(self) -> impl Iterator<Item = CpuidRec> {
+        unsafe {
+            (0..ffi::XED_MAX_CPUID_RECS_PER_GROUP).flat_map(move |i| {
+                let r = ffi::xed_get_cpuid_rec_enum_for_group(self.into(), i);
+
+                (r != 0).then(|| r.into())
             })
         }
     }
@@ -198,3 +180,32 @@ pub use self::syntax::*;
 
 mod operand_element_type;
 pub use self::operand_element_type::*;
+
+mod cpuid_group;
+pub use self::cpuid_group::*;
+
+mod cpuid_rec;
+pub use self::cpuid_rec::*;
+
+#[repr(transparent)]
+#[derive(Clone, Copy, Debug, Deref, From, Into)]
+pub struct CpuidRecords(ffi::xed_cpuid_rec_t);
+
+impl CpuidRecords {
+    pub fn reg(self) -> Reg {
+        self.0.reg.into()
+    }
+}
+
+impl CpuidRec {
+    /// provides the details of the CPUID specification, if the enumeration value is not sufficient.
+    pub fn rec(self) -> Option<CpuidRecords> {
+        let mut rec = MaybeUninit::zeroed();
+
+        unsafe {
+            ffi::xed_get_cpuid_rec(self.into(), rec.as_mut_ptr())
+                .bool()
+                .then(|| rec.assume_init().into())
+        }
+    }
+}

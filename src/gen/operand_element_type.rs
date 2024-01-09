@@ -44,14 +44,6 @@ impl OperandElementType {
     /// depends on other fields in the instruction
     pub const VARIABLE: OperandElementType =
         OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_VARIABLE);
-
-    /// 16b floating point
-    pub const FLOAT16: OperandElementType =
-        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_FLOAT16);
-
-    /// bfloat16 floating point
-    pub const BFLOAT16: OperandElementType =
-        OperandElementType(ffi::XED_OPERAND_ELEMENT_TYPE_BFLOAT16);
 }
 
 impl fmt::Display for OperandElementType {

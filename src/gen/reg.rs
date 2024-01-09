@@ -139,6 +139,38 @@ impl Reg {
 
     pub const R15W: Reg = Reg(ffi::XED_REG_R15W);
 
+    pub const R16W: Reg = Reg(ffi::XED_REG_R16W);
+
+    pub const R17W: Reg = Reg(ffi::XED_REG_R17W);
+
+    pub const R18W: Reg = Reg(ffi::XED_REG_R18W);
+
+    pub const R19W: Reg = Reg(ffi::XED_REG_R19W);
+
+    pub const R20W: Reg = Reg(ffi::XED_REG_R20W);
+
+    pub const R21W: Reg = Reg(ffi::XED_REG_R21W);
+
+    pub const R22W: Reg = Reg(ffi::XED_REG_R22W);
+
+    pub const R23W: Reg = Reg(ffi::XED_REG_R23W);
+
+    pub const R24W: Reg = Reg(ffi::XED_REG_R24W);
+
+    pub const R25W: Reg = Reg(ffi::XED_REG_R25W);
+
+    pub const R26W: Reg = Reg(ffi::XED_REG_R26W);
+
+    pub const R27W: Reg = Reg(ffi::XED_REG_R27W);
+
+    pub const R28W: Reg = Reg(ffi::XED_REG_R28W);
+
+    pub const R29W: Reg = Reg(ffi::XED_REG_R29W);
+
+    pub const R30W: Reg = Reg(ffi::XED_REG_R30W);
+
+    pub const R31W: Reg = Reg(ffi::XED_REG_R31W);
+
     pub const GPR16_LAST: Reg = Reg(ffi::XED_REG_GPR16_LAST);
 
     pub const EAX: Reg = Reg(ffi::XED_REG_EAX);
@@ -174,6 +206,38 @@ impl Reg {
     pub const R14D: Reg = Reg(ffi::XED_REG_R14D);
 
     pub const R15D: Reg = Reg(ffi::XED_REG_R15D);
+
+    pub const R16D: Reg = Reg(ffi::XED_REG_R16D);
+
+    pub const R17D: Reg = Reg(ffi::XED_REG_R17D);
+
+    pub const R18D: Reg = Reg(ffi::XED_REG_R18D);
+
+    pub const R19D: Reg = Reg(ffi::XED_REG_R19D);
+
+    pub const R20D: Reg = Reg(ffi::XED_REG_R20D);
+
+    pub const R21D: Reg = Reg(ffi::XED_REG_R21D);
+
+    pub const R22D: Reg = Reg(ffi::XED_REG_R22D);
+
+    pub const R23D: Reg = Reg(ffi::XED_REG_R23D);
+
+    pub const R24D: Reg = Reg(ffi::XED_REG_R24D);
+
+    pub const R25D: Reg = Reg(ffi::XED_REG_R25D);
+
+    pub const R26D: Reg = Reg(ffi::XED_REG_R26D);
+
+    pub const R27D: Reg = Reg(ffi::XED_REG_R27D);
+
+    pub const R28D: Reg = Reg(ffi::XED_REG_R28D);
+
+    pub const R29D: Reg = Reg(ffi::XED_REG_R29D);
+
+    pub const R30D: Reg = Reg(ffi::XED_REG_R30D);
+
+    pub const R31D: Reg = Reg(ffi::XED_REG_R31D);
 
     pub const GPR32_LAST: Reg = Reg(ffi::XED_REG_GPR32_LAST);
 
@@ -211,6 +275,38 @@ impl Reg {
 
     pub const R15: Reg = Reg(ffi::XED_REG_R15);
 
+    pub const R16: Reg = Reg(ffi::XED_REG_R16);
+
+    pub const R17: Reg = Reg(ffi::XED_REG_R17);
+
+    pub const R18: Reg = Reg(ffi::XED_REG_R18);
+
+    pub const R19: Reg = Reg(ffi::XED_REG_R19);
+
+    pub const R20: Reg = Reg(ffi::XED_REG_R20);
+
+    pub const R21: Reg = Reg(ffi::XED_REG_R21);
+
+    pub const R22: Reg = Reg(ffi::XED_REG_R22);
+
+    pub const R23: Reg = Reg(ffi::XED_REG_R23);
+
+    pub const R24: Reg = Reg(ffi::XED_REG_R24);
+
+    pub const R25: Reg = Reg(ffi::XED_REG_R25);
+
+    pub const R26: Reg = Reg(ffi::XED_REG_R26);
+
+    pub const R27: Reg = Reg(ffi::XED_REG_R27);
+
+    pub const R28: Reg = Reg(ffi::XED_REG_R28);
+
+    pub const R29: Reg = Reg(ffi::XED_REG_R29);
+
+    pub const R30: Reg = Reg(ffi::XED_REG_R30);
+
+    pub const R31: Reg = Reg(ffi::XED_REG_R31);
+
     pub const GPR64_LAST: Reg = Reg(ffi::XED_REG_GPR64_LAST);
 
     pub const AL: Reg = Reg(ffi::XED_REG_AL);
@@ -246,6 +342,38 @@ impl Reg {
     pub const R14B: Reg = Reg(ffi::XED_REG_R14B);
 
     pub const R15B: Reg = Reg(ffi::XED_REG_R15B);
+
+    pub const R16B: Reg = Reg(ffi::XED_REG_R16B);
+
+    pub const R17B: Reg = Reg(ffi::XED_REG_R17B);
+
+    pub const R18B: Reg = Reg(ffi::XED_REG_R18B);
+
+    pub const R19B: Reg = Reg(ffi::XED_REG_R19B);
+
+    pub const R20B: Reg = Reg(ffi::XED_REG_R20B);
+
+    pub const R21B: Reg = Reg(ffi::XED_REG_R21B);
+
+    pub const R22B: Reg = Reg(ffi::XED_REG_R22B);
+
+    pub const R23B: Reg = Reg(ffi::XED_REG_R23B);
+
+    pub const R24B: Reg = Reg(ffi::XED_REG_R24B);
+
+    pub const R25B: Reg = Reg(ffi::XED_REG_R25B);
+
+    pub const R26B: Reg = Reg(ffi::XED_REG_R26B);
+
+    pub const R27B: Reg = Reg(ffi::XED_REG_R27B);
+
+    pub const R28B: Reg = Reg(ffi::XED_REG_R28B);
+
+    pub const R29B: Reg = Reg(ffi::XED_REG_R29B);
+
+    pub const R30B: Reg = Reg(ffi::XED_REG_R30B);
+
+    pub const R31B: Reg = Reg(ffi::XED_REG_R31B);
 
     pub const GPR8_LAST: Reg = Reg(ffi::XED_REG_GPR8_LAST);
 
@@ -358,6 +486,40 @@ impl Reg {
     pub const GSBASE: Reg = Reg(ffi::XED_REG_GSBASE);
 
     pub const TILECONFIG: Reg = Reg(ffi::XED_REG_TILECONFIG);
+
+    pub const IA32_KERNEL_GS_BASE: Reg = Reg(ffi::XED_REG_IA32_KERNEL_GS_BASE);
+
+    pub const DFV0: Reg = Reg(ffi::XED_REG_DFV0);
+
+    pub const DFV1: Reg = Reg(ffi::XED_REG_DFV1);
+
+    pub const DFV2: Reg = Reg(ffi::XED_REG_DFV2);
+
+    pub const DFV3: Reg = Reg(ffi::XED_REG_DFV3);
+
+    pub const DFV4: Reg = Reg(ffi::XED_REG_DFV4);
+
+    pub const DFV5: Reg = Reg(ffi::XED_REG_DFV5);
+
+    pub const DFV6: Reg = Reg(ffi::XED_REG_DFV6);
+
+    pub const DFV7: Reg = Reg(ffi::XED_REG_DFV7);
+
+    pub const DFV8: Reg = Reg(ffi::XED_REG_DFV8);
+
+    pub const DFV9: Reg = Reg(ffi::XED_REG_DFV9);
+
+    pub const DFV10: Reg = Reg(ffi::XED_REG_DFV10);
+
+    pub const DFV11: Reg = Reg(ffi::XED_REG_DFV11);
+
+    pub const DFV12: Reg = Reg(ffi::XED_REG_DFV12);
+
+    pub const DFV13: Reg = Reg(ffi::XED_REG_DFV13);
+
+    pub const DFV14: Reg = Reg(ffi::XED_REG_DFV14);
+
+    pub const DFV15: Reg = Reg(ffi::XED_REG_DFV15);
 
     pub const PSEUDO_LAST: Reg = Reg(ffi::XED_REG_PSEUDO_LAST);
 

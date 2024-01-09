@@ -19,15 +19,55 @@ impl Exception {
 
     pub const AMX_E1: Exception = Exception(ffi::XED_EXCEPTION_AMX_E1);
 
+    pub const AMX_E1_EVEX: Exception = Exception(ffi::XED_EXCEPTION_AMX_E1_EVEX);
+
     pub const AMX_E2: Exception = Exception(ffi::XED_EXCEPTION_AMX_E2);
 
+    pub const AMX_E2_EVEX: Exception = Exception(ffi::XED_EXCEPTION_AMX_E2_EVEX);
+
     pub const AMX_E3: Exception = Exception(ffi::XED_EXCEPTION_AMX_E3);
+
+    pub const AMX_E3_EVEX: Exception = Exception(ffi::XED_EXCEPTION_AMX_E3_EVEX);
 
     pub const AMX_E4: Exception = Exception(ffi::XED_EXCEPTION_AMX_E4);
 
     pub const AMX_E5: Exception = Exception(ffi::XED_EXCEPTION_AMX_E5);
 
     pub const AMX_E6: Exception = Exception(ffi::XED_EXCEPTION_AMX_E6);
+
+    pub const APX_EVEX_BMI: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_BMI);
+
+    pub const APX_EVEX_CCMP: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_CCMP);
+
+    pub const APX_EVEX_CET_WRSS: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_CET_WRSS);
+
+    pub const APX_EVEX_CET_WRUSS: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_CET_WRUSS);
+
+    pub const APX_EVEX_CFCMOV: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_CFCMOV);
+
+    pub const APX_EVEX_CMPCCXADD: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_CMPCCXADD);
+
+    pub const APX_EVEX_ENQCMD: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_ENQCMD);
+
+    pub const APX_EVEX_INT: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_INT);
+
+    pub const APX_EVEX_INVEPT: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_INVEPT);
+
+    pub const APX_EVEX_INVPCID: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_INVPCID);
+
+    pub const APX_EVEX_INVVPID: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_INVVPID);
+
+    pub const APX_EVEX_KEYLOCKER: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_KEYLOCKER);
+
+    pub const APX_EVEX_KMOV: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_KMOV);
+
+    pub const APX_EVEX_PP2: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_PP2);
+
+    pub const APX_EVEX_RAO_INT: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_RAO_INT);
+
+    pub const APX_EVEX_SHA: Exception = Exception(ffi::XED_EXCEPTION_APX_EVEX_SHA);
+
+    pub const APX_LEGACY_JMPABS: Exception = Exception(ffi::XED_EXCEPTION_APX_LEGACY_JMPABS);
 
     pub const AVX512_E1: Exception = Exception(ffi::XED_EXCEPTION_AVX512_E1);
 
@@ -77,6 +117,8 @@ impl Exception {
 
     pub const AVX_TYPE_12: Exception = Exception(ffi::XED_EXCEPTION_AVX_TYPE_12);
 
+    pub const AVX_TYPE_14: Exception = Exception(ffi::XED_EXCEPTION_AVX_TYPE_14);
+
     pub const AVX_TYPE_2: Exception = Exception(ffi::XED_EXCEPTION_AVX_TYPE_2);
 
     pub const AVX_TYPE_2D: Exception = Exception(ffi::XED_EXCEPTION_AVX_TYPE_2D);
@@ -96,6 +138,8 @@ impl Exception {
     pub const AVX_TYPE_7: Exception = Exception(ffi::XED_EXCEPTION_AVX_TYPE_7);
 
     pub const AVX_TYPE_8: Exception = Exception(ffi::XED_EXCEPTION_AVX_TYPE_8);
+
+    pub const LEGACY_RAO_INT: Exception = Exception(ffi::XED_EXCEPTION_LEGACY_RAO_INT);
 
     pub const MMX_FP: Exception = Exception(ffi::XED_EXCEPTION_MMX_FP);
 
@@ -124,6 +168,12 @@ impl Exception {
     pub const SSE_TYPE_5: Exception = Exception(ffi::XED_EXCEPTION_SSE_TYPE_5);
 
     pub const SSE_TYPE_7: Exception = Exception(ffi::XED_EXCEPTION_SSE_TYPE_7);
+
+    pub const USER_MSR_EVEX: Exception = Exception(ffi::XED_EXCEPTION_USER_MSR_EVEX);
+
+    pub const USER_MSR_LEGACY: Exception = Exception(ffi::XED_EXCEPTION_USER_MSR_LEGACY);
+
+    pub const USER_MSR_VEX: Exception = Exception(ffi::XED_EXCEPTION_USER_MSR_VEX);
 }
 
 impl fmt::Display for Exception {

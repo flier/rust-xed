@@ -138,7 +138,7 @@ impl Inst {
         /// Return the instruction zero-based iform number based on masking the corresponding `Iform`.
         iform_dispatch: u32 { xed_decoded_inst_get_iform_enum_dispatch }
 
-        branch_displacement: i32 { get; }
+        branch_displacement: i64 { get; }
         branch_displacement_width: u32 { get; }
 
         unsigned_immediate: u64 { get; }
@@ -368,11 +368,11 @@ impl Inst {
         unsafe { ffi::xed_patch_disp(self.as_mut_ptr(), bytes.as_mut_ptr(), disp.into()) }.bool()
     }
 
-    /// Replace a branch displacement.
+    /// Replace a relative/absolute branch displacement.
     ///
     /// The widths of original displacement and replacement must match.
-    pub fn patch_relbr(&mut self, bytes: &mut [u8], disp: enc::Operand) -> bool {
-        unsafe { ffi::xed_patch_relbr(self.as_mut_ptr(), bytes.as_mut_ptr(), disp.into()) }.bool()
+    pub fn patch_brdisp(&mut self, bytes: &mut [u8], disp: enc::Operand) -> bool {
+        unsafe { ffi::xed_patch_brdisp(self.as_mut_ptr(), bytes.as_mut_ptr(), disp.into()) }.bool()
     }
 
     /// Replace an imm0 immediate value.
