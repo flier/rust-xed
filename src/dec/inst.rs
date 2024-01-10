@@ -161,6 +161,7 @@ impl Inst {
         /// This returns true if the flags are read or written.
         uses_rflags: bool
 
+        /// Return the number of memory operands
         number_of_memory_operands: u32
 
         conditionally_writes_registers: bool

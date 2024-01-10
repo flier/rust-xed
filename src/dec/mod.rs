@@ -1,3 +1,4 @@
+pub mod agen;
 mod inst;
 mod mem;
 mod operand;

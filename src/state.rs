@@ -39,6 +39,16 @@ impl fmt::Debug for State {
 }
 
 impl State {
+    pub const REAL16: State = State(ffi::xed_state_t {
+        mmode: ffi::XED_MACHINE_MODE_REAL_16,
+        stack_addr_width: ffi::XED_ADDRESS_WIDTH_16b,
+    });
+
+    pub const REAL32: State = State(ffi::xed_state_t {
+        mmode: ffi::XED_MACHINE_MODE_REAL_32,
+        stack_addr_width: ffi::XED_ADDRESS_WIDTH_32b,
+    });
+
     pub const LEGACY16: State = State(ffi::xed_state_t {
         mmode: ffi::XED_MACHINE_MODE_LEGACY_16,
         stack_addr_width: ffi::XED_ADDRESS_WIDTH_16b,

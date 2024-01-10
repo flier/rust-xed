@@ -25,3 +25,13 @@ impl From<Errno> for Result<()> {
         }
     }
 }
+
+pub trait ToResult {
+    fn result(self) -> Result<()>;
+}
+
+impl ToResult for ffi::xed_error_enum_t {
+    fn result(self) -> Result<()> {
+        Errno::from(self).into()
+    }
+}

@@ -1,7 +1,7 @@
 use crate::{dec::Inst, ffi, indexed_properties, Reg};
 
 #[derive(Clone, Copy, Debug)]
-pub struct MemOperand<I>(I, u32);
+pub struct MemOperand<I>(pub(crate) I, pub(crate) u32);
 
 impl<I> From<(I, u32)> for MemOperand<I> {
     fn from((inst, idx): (I, u32)) -> Self {
