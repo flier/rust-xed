@@ -1,3 +1,5 @@
+use std::ffi::CStr;
+
 use crate::ffi;
 
 pub trait SignExtend {
@@ -26,4 +28,14 @@ impl SignExtend for u32 {
 /// Set the verbosity level for XED
 pub fn set_verbosity(level: i32) {
     unsafe { ffi::xed_set_verbosity(level) }
+}
+
+/// Returns a string representing XED svn commit revision and time stamp.
+pub fn version() -> &'static str {
+    unsafe { CStr::from_ptr(ffi::xed_get_version()).to_str().unwrap() }
+}
+
+/// Returns a copyright string.
+pub fn copyright() -> &'static str {
+    unsafe { CStr::from_ptr(ffi::xed_get_copyright()).to_str().unwrap() }
 }

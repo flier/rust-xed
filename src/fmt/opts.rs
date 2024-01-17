@@ -1,9 +1,11 @@
 use std::mem;
 
+use derive_more::{From, Into};
+
 use crate::ffi;
 
 #[repr(transparent)]
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, From, Into)]
 pub struct Options(ffi::xed_format_options_t);
 
 impl Default for Options {
@@ -13,6 +15,10 @@ impl Default for Options {
 }
 
 impl Options {
+    pub fn new() -> Self {
+        Self::default()
+    }
+
     /// XED prints the hex address before any symbolic name for branch targets.
     ///
     /// If set to false, then XED will not print the hex address before a valid symbolic name.

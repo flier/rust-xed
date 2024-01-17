@@ -193,6 +193,10 @@ impl Inst {
         sse: bool
     }
 
+    properties! { prefix = xed3_operand;
+        vl: u32 { get; }
+    }
+
     /// Create and zero the decode structure completely.
     pub fn new() -> Self {
         let mut inst = MaybeUninit::zeroed();
