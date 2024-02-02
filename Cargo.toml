@@ -1,10 +1,20 @@
 [package]
 name = "xed"
 version = "0.1.0"
+authors = ["Flier Lu <flier.lu@gmail.com>"]
 edition = "2021"
+license = "Apache-2.0"
+description = "Rust bindings for Intel XED."
 resolver = "2"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/flier/rust-xed"
+readme = "README.md"
+keywords = ["xed", "intel", "x86", "x86_64"]
+categories = [
+    "encoding",
+    "external-ffi-bindings",
+    "hardware-support",
+    "parsing",
+]
 
 [features]
 default = ["full"]
